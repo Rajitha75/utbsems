@@ -1,0 +1,128 @@
+body{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.top_header{
+	background:url(../images/header.jpg) no-repeat;
+	background-size:cover;
+	height:auto;
+	min-height:86px;
+	padding: 3px 15px;
+	margin-bottom:10px;
+}
+.top_footer{
+    background:url(../images/header.jpg) no-repeat;
+	background-size:cover;
+	height:auto;
+	min-height:43px;
+	padding: 3px 15px;
+	margin-bottom:10px;
+    margin-top: 15px;
+}
+.ft_pad{
+    padding: 10px;
+    color: #fff;
+}
+.title_header{
+	margin:15px 0;
+}
+.text{
+	text-align:right;
+}
+.title_header h1{
+	color:#fff;
+	font-weight:600;
+	font-size: 26px;
+    margin: 5px 0;
+	text-transform: uppercase;
+}
+.title_header span{
+	font-size:14px;
+	color:#fff;
+}
+.border{
+	border:1px solid #e3dfe4;
+}
+.map{
+	/* min-height:208px; */
+}
+.address{
+	margin: 35px 15px;
+	border-left:5px #ed4559 solid;
+	padding-left: 15px;
+    font-size: 18px;
+	font-weight: normal;
+}
+.address h2{
+	color:#4b96f3;
+	font-size:18px;
+	font-weight:600;
+	text-transform: uppercase;
+}
+
+.description{
+	margin:10px;
+    color: #4e4e4e;
+    font-size: 14px;
+}
+.description b, .description strong{
+    font-weight: 600;
+    color: #121212;
+}
+.description h4{
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+.description .tit{
+	background:#e7505a;
+	padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.img1{float:left !important;padding-left:10px !important;}
+
+.table > tbody > tr > td {
+    font-size: 14px;
+    border-top:0px dashed #b3b3b3;
+    vertical-align: middle;
+}
+.table > tbody > tr {
+    border-bottom:1px dashed #b3b3b3;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: #f8f8f8;
+}
+
+.t_width{ 
+    width: 170px;
+}
+
+
+@media (min-width: 1100px) { 
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+@media (max-width: 767px) {  
+
+
+}
+
+@media (max-width: 479px) {
+.title_header h1{font-size:20px;}
+.text{text-align:left;}
+	
+}
+
+@media (max-width: 359px) {  
+.title_header h1{font-size:20px;}
+.text{text-align:left;}
+
+}

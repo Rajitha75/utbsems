@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ padding:0px; margin:0px; font-family: 'Titillium Web', sans-serif; font-size:13px;}
+
+
+.left-section{ width:260px; position:fixed; top:0; bottom:0; left:0; background:#081929 url(../images/pdf-bg-img.jpg) no-repeat bottom left;}
+.left-section .logo{ text-align:center; padding:20px 0;}
+.left-section .map-sec{ padding:15px;}
+.left-section .address-sec{margin: 15px;
+border-left: 3px solid #ed4559;
+padding: 0 0 0 15px;
+color: #fff;}
+
+.content-section{ margin-left:260px;}
+.content-section .project-title{ background:#ed4559; position:relative; padding:15px; font-size:23px; overflow:hidden; color:#fff;}
+.content-section .project-title .title-last{ position:absolute; top:0; right:-15px; width: 110px; height: 67px; -webkit-transform: skew(-16deg); -moz-transform: skew(-16deg); -o-transform: skew(-16deg); background: #081929; border-left:3px solid #fff;}
+.content-section .list-section {
+    padding: 20px 0;
+}
+
+.project-content-main{ overflow:hidden; margin-bottom:15px; border-bottom:1px dashed #ddd; padding-bottom:15px;}
+.project-content-main .main-wrapper{border-left: 3px solid #ed4559; padding: 0 0 0 15px;}
+.project-content-main .main-wrapper .label-name{ color: #696969;
+text-transform: uppercase;
+font-size: 12px;}
+.project-content-main .main-wrapper .field-name{ font-weight:600;}

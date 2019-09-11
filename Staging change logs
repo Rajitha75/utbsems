@@ -1,0 +1,110 @@
+Staging Server Release notes:
+
+15-03-2018
+•	Changed status for active and inactive dynamic fields.
+•	Added css for dynamic fields in both frontend and backend. 
+•	Added help icons for dynamic fields in both frontend and backend.
+•	Fixed communique and contact details issue. 
+•	Included CSS for help icons in both frontend and backend.
+•	Fixed end date issue in project update page.
+•	Added mandatory validation for company name for CSR user.
+•	Added help icons for static fields as well in both frontend and backend create project forms. 
+•	Validation check for duplicate fields in dynamic fields section.
+•	Updated next and back button functionality in section 6 in create project form.
+•	Updated CSS for frontend info icons. 
+
+
+
+14-03-2018
+•	 fixed contact details validation issue and image upload issue in form wizard
+•	 Added the tabs for project view and write the css for the inner description of all fields.
+•	 Added new pdf template
+•	Added dynamic fields in create project form and are saving in database too.
+•	PDF new template few modifications and Updated CSS for create project form
+•	Added filters for dynamic fields list in frontend/backend forms.
+•	Displaying dynamic fields in project details view for frontend(google maps) and backend pop-up view
+
+
+13-03-2018
+•	Updated CSS for ckeditor. 
+•	Added new ckeditor(2013) from theme in frontend and backend.
+•	Removed add-slashes for communique as the logo and other images in email template are not getting displayed.
+•	Added validation for image and documents upload in project creation form.
+•	Added newly included fields into frontend UI.  
+•	Showing organization name only for CSR project types. 
+•	Added scroll bar for project content in all tabs for project view.
+•	Added css for project details content and project fields in backend with scroll bar. 
+•	Fixed validation issue in interest of rate tab.
+•	Express your interest button not responding issue – fixed.
+
+
+12-03-2018
+•	Adding CSR project type, removed CSR from project category, few text changes and fields switching.
+•	Order of numbers display in project approval list in backend. 
+
+
+10-03-2018
+•	Fixed youtube link issue (embedded code validation) in create project form in both frontend and backend.  
+•	Fixed uploading multiple images and multiple documents issue in create project form of both frontend and backend.
+
+
+9-03-2018
+•	Fixed update project form issue and validations in change password form
+•	All the new fields (CSR – MIR report) added to backend view in all projects table.
+
+
+7-03-2018
+•	Updated CSS for create project page tabs navigation frontend and backend.
+•	Frontend create project form css file added
+•	Added style-wizard.css in backend and updated project wizard css file.
+•	Email validation issue has been fixed
+•	Create project form tabs has been disabled -- unless the current tab is filled, user cannot jump into another tab
+•	Mobile validation issues has been fixed in create project form.
+
+
+
+6-03-2018
+•	Added the responsive CSS for the project wizard.
+•	Updated icon images and responsive css for mobile devices
+•	Added contact info tab in create project form 
+•	Strip slashes added for few files in frontend and backend.
+•	Filters added for subscription list table. 
+•	Filters refresh button issue fixed in subscription list table.
+
+
+5-03-2018
+•	Form Widget added in backend and fixed issues in frontend
+•	Update CSS for project co-owner heading 
+•	Pdf generation frontend/backend
+
+
+2-03-2018
+•	Updated CSS/Responsive CSS for the project wizard.
+•	Changed model to variable name
+•	Frontend/backend PDF issue resolved 
+•	Validations for fields in Media tab in create project form
+•	Updated CSS file for project pdf download page
+•	Added dynamic fields to backend
+•	Frontend/backend pdf – not displaying and downloading in other tabs. 
+
+
+1-03-2018
+•	Form widget has been added
+•	Replace model with common model
+•	Included pdf generation in backend projects list view tab.
+•	Added PDF generation button in frontend all projects, projects initiated by me, participated by me tabs files
+•	Project update wizard completed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

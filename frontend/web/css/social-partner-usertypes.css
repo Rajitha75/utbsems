@@ -1,0 +1,255 @@
+ .user-profile-img{float:left;}
+ .view-all-projects-btn {
+    margin: 40px auto;
+    text-align: center;
+}
+.post-item1  h3{padding:0;margin:0;line-height:20px;    position: absolute;left: 50%;transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);    text-align: center;width:100%;padding-top: 60px;-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);}
+.sec-head h4 {padding-left: 15px;}
+.address-main{float:left;line-height: 24px;font-size: 14px;}
+.map-icon{float:left;margin-right:10px;}
+.phone-icon{float:left;margin-right:10px;}
+.phone-no-details{float:left;line-height: 24px;font-size: 14px;}
+.post-item1{box-shadow:2px 2px 2px 0 #c0c0c0;margin-bottom: 30px;overflow:hidden;height: 180px;border-radius: 10px;}
+.post-item1 .content{position:relative;}
+h3 span.name-project{font-weight: 500;   color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;line-height: 25px;}
+.over-lay:hover h3 span.name-project{ font-weight: 500;   color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+    background: rgb(37, 37, 37);
+    text-transform: uppercase;
+    padding: 4px 6px;
+    border-radius: 4px;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content1{position:relative;background: url(./images/agriculture-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content2{position:relative;background: url(./images/community-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;-webkit-transition: all .6s;    -moz-transition: all .6s;    -o-transition: all .6s;}
+.post-item1 .content3{position:relative;background: url(./images/education-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content4{position:relative;background: url(./images/healthcare-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content5{position:relative;background: url(./images/infrastructure-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content6{position:relative;background: url(./images/technology-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content7{position:relative;background: url(./images/agriculture-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content8{position:relative;background: url(./images/community-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content9{position:relative;background: url(./images/technology-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content10{position:relative;background: url(./images/infrastructure-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content11{position:relative;background: url(./images/agriculture-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}
+.post-item1 .content12{position:relative;background: url(./images/education-img.png) no-repeat top center;background-size: cover;height: 100%;width: 100%;transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;}	
+.content1:hover, .content2:hover, .content3:hover, .content4:hover, .content5:hover, .content6:hover, .content7:hover, .content8:hover, .content9:hover, .content10:hover, .content11:hover, .content12:hover {transform: scale(1.1);}
+.usertype-icon-image .usertype5, .usertype-icon-image .usertype3, .usertype-icon-image .usertype1, .usertype-icon-image .usertype6, .usertype-icon-image .usertype7, .usertype-icon-image .usertype14, .usertype-icon-image .usertype15,  .usertype10{width: 60px;}
+.usertype-icon-image  img.usertype11 {width: 120px;margin-top:10px;}
+.usertype-icon-image {
+    padding-top: 5px;
+}
+
+.over-lay{/*background-color: rgb(37, 37, 37, .6);*/
+background: rgba(236,79,79,1);
+background: -moz-linear-gradient(top, rgba(236,79,79,1) 0%, rgba(234,29,101,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(236,79,79,1)), color-stop(100%, rgba(234,29,101,1)));
+background: -webkit-linear-gradient(top, rgba(236,79,79,1) 0%, rgba(234,29,101,1) 100%);
+background: -o-linear-gradient(top, rgba(236,79,79,1) 0%, rgba(234,29,101,1) 100%);
+background: -ms-linear-gradient(top, rgba(236,79,79,1) 0%, rgba(234,29,101,1) 100%);
+background: linear-gradient(to bottom, rgba(236,79,79,1) 0%, rgba(234,29,101,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec4f4f', endColorstr='#ea1d65', GradientType=0 );
+    transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    height: 182px;}
+.over-lay{
+padding: 0;
+    margin: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+	height:100%;
+	}
+.over-lay:hover {
+    background: rgb(234, 28, 102, 0.9);
+}
+.count-no {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px 30px;
+    color: #fff;
+    font-weight: 500;
+}
+.posts.section1{/*margin-top:70px;*/ margin-top:30px;}
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,600,600i,700');
+body {
+  line-height: 1.4;font-family: 'Titillium Web', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {font-family: 'Titillium Web', sans-serif;
+  color: #121212;
+    font-size: 15px;
+	    line-height: 26px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  transition: all .3s ease-in 0s;
+}
+
+iframe {
+  border: 0;
+}
+
+a, a:focus, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus, a:hover {
+  color: #28ABE3;
+}
+
+.btn-main {
+      background: #ff5558;
+    border: 1px solid #ff5558;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 7px 25px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.btn-main:hover {
+  color: #fff;
+}
+
+.btn-transparent {
+  color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 14px 35px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+.btn-transparent:hover {
+  color: #fff;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.btn:focus {
+  color: #ddd;
+}
+
+#home {
+  position: relative;
+}
+
+.section {
+  padding: 30px 0;
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+.section-xs {
+  padding: 40px 0;
+}
+
+.footer{position:relative !important;}
+
+
+
+

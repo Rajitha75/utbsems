@@ -1,0 +1,598 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release 1.6 -- Released to Production on - 07-05-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 04-05-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	 Projects table - project view popup - tabs are not clickable - issue fixed
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 02-05-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	modify the css for email verification popup
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 01-05-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	displayAllProjects rotate text
+•	export to excel button alignment in mobile mode
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 30-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	commented "throw new \Exception" in catch
+•	added the css for flash popup
+•	Displaying success message after user signup
+•	COMMUNIQUE page time alignment
+•	change the css for resent email link
+•	signup popup username  validation
+•	Updated URL for displaying tab icons in create project
+•	adjust the alignment Export to excel button in mobile mode
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 27-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Sharing project through email from google map page
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 26-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	changed the icon from pdf to excel in export to excel button - backend
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 25-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Map page >> Organization name filter - on clicking the arrow at organization name, it is not responding >> added the class
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 24-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Fixed issue, project view popup tabs are not clickable
+•	Displaying feedback message in multiple lines and displaying feedback message popup in center of the page
+•	added the css for long text in feedback popup
+•	Added css for td to remove the white spacing for long text.
+•	Map page >> Organization name filter - on clicking the arrow at organization name, it is not responding >> Fixed
+
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 23-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Displaying feedback view in backend
+•	Displaying feedback form view in popup - Backend
+•	Modified SMS test - Frontend
+•	Added the css for the header navigation link.
+•	Added id for logout form
+•	Fixed SME logout after changing the password
+•	fixed profile submission issue
+•	fixed profile issue for sme and admin user
+•	Fixed the notification and messages drop down opening issue in frontend dashboard page.
+•	fixed issues
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 20-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Fixed co-owner issues
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 19-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added EquiPPP logo in excel report
+•	Added EquiPPP logo in excel report
+•	When guest user login, checking with latest OTP code
+•	fixed issues
+•	Changed static images URLs to dynamic URLs
+•	path for images in create project form
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 18-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated static URL to dynamic URL for SME profile and avatar image
+•	Added export to excel function in common controller
+•	Modified static path to dynamic path - "/equippp/frontend/web" to "Yii::$app->request->BaseUrl"
+•	Export projects list to excel - frontend
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 17-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated not authorized php file
+•	Fixed jquery issue for feedback popup in all page.
+•	Fixed issue, displaying organization name hint icon when hint text is available
+•	Displaying feedback form from the create project page
+•	Solved the design issue in feedback popup.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 16-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added condition for displaying "Feedback" form
+•	Added "actionGuest_users" function in AdminController file
+•	Modified "refresh" icon to "reset" icon
+•	Included “feedback” form from header links
+•	Removed the css conflicts.
+•	Update the css for feedback form by adding new class to override the another css.
+•	Removed the conflict in css file and add the css in header file for feedback form.
+•	Feedback popup design issue solved.
+•	Checking dynamic fields count. based on the count displaying dynamic fields with heading
+•	Added required table columns in "getprojectdetailsforpdf" function
+•	Added "Feedback" link in inside pages
+•	not authorized condition added for project report
+•	Created configuration variables for SMS
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 13-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Fixed "Back" button in Guest user OTP popup
+•	Displaying "-NA-" in PDF file if there is no SME assigned for the project
+•	changes in projects controller
+•	displaying icons for sme and admin status in frontend and restricting non authorized users from viewing project details
+•	Added validation for admin username while creating new admin
+•	Fixed issue while adding Communique data into database
+•	pdf download with default project name
+•	Backend >> Feedbacks - There is a design issue in the page and at the filter also.>>Fixed
+•	Home >> Feedback form - There is a design issue with validations in the feedback form.>>Fixed
+•	when download pdf default name in backend and frontend
+•	git test - equippp duplicate server color change
+•	Update the alignment issue in footer and header for navigation link.
+•	added condition for hint icons, making admin status to active while assigning sme
+•	Added the back button in feedback OTP form.
+•	Replaced refresh icon by reset icon.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 12-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added database views
+•	Modified labels of static fields while updating hints  (Backend)
+•	Modified OTP text while login as guest user
+•	Fixed Feedback form submission when login as Guest user
+•	Test /equippp git automation
+•	Added the pdf download icon in all projects page in frontend and backend.
+•	Refresh icon change into Reset icon>> Added Reset Icon.
+•	Fixed the location label alignment issue in create project.
+•	Header logo image and user name drop down alignment issue fixed in backend. 
+•	Displaying footer in end of the last page
+•	Fixed the validation message alignment issue in backend login and also fixed the alignment issue for navigation link in backend dashboard page. 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 11-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Exporting all projects list to PDF format (Frontend)
+•	Modified heading for projects list in PDF format (Backend)
+•	fixed issues
+•	Modified the css changes for backend in all project pdf Download.
+•	Pdf generation for all project in frontend
+•	Decrease the font size for all project pdf download.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 10-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Pdf icon for display all projects
+•	all projects pdf download icon style
+•	Update the all project design pdf download in table format.
+•	pdf code modified
+•	pdf generation for list of projects in frontend
+•	fixed pdf issue and added filtering for pdf data also
+•	Added the css for all project pdf download.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 09-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	pdf functionality completed
+•	Updated the css for text are in feedback form.
+•	Home >> Feedback form - There is a design issue with validations in the feedback form >> Fixed
+•	Home >> sign up form - There is a design issue with validations in the sign up form >> Fixed
+•	Home >> login form - There is a design issue with validations in the login form >> Fixed
+•	fixed logout in backend
+•	Fixed sending SMS to mobile
+•	Call sendSMS with in if condition
+•	Added export to PDF button in all three tabs of projects list 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 06-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	frontend generate all project pdf
+•	 backend left navigation list item top border added for feedback link.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 05-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Fixed the alignment issue for the date-picker in backend admin list page.
+•	Added the dropdown toggle menu for backend in header navigation.
+•	backend projects list view export to pdf
+•	fixed duplicate user issue
+•	fixed profile edit issue
+•	added feedback form in maps page
+•	added reset-profile-password and profile set and fixed issues
+•	fixed displaying feedback popup properly
+•	Fixed the design issue of error msg for project description in create project and update project.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 04-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	fixed admin user getting created twice issue and saving sme status as null
+•	Create project >> Embedded video link - On clicking add more button, there is an alignment issue >> Fixed
+•	Backend >> add line in the left menu >> Fixed
+•	Backend >> admin user list - Design issue in the filter >> Fixed
+•	backend >> in communique sent mail page date picker alignment is not proper >> Fixed
+•	disabling radio button in edit
+•	Renamed "Communique" folder to "communique"
+•	fixed co-owner and query issue in frontend
+•	Fixed the alignment issue of how it works link for navigation in frontend dashboard page.
+•	Fixed the alignment issue for feedback link before login and after login in frontend.
+•	Displaying "Feedback" link to all users
+•	fixed SME issue while creating
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 03-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	added filter in admin list and fixed sme issue
+•	Update the css for hint icon in backend for project data page.
+•	Update the css for the hint icon in backend for project data page and also fixed the error msg alignment in dynamic fields.
+•	Displaying hint icons in project approve/ reject page
+•	Update the css for hint icons in backend.
+•	create sme issue fixed
+•	Displaying projects details with 2 status columns (admin status, SME status)
+•	Displaying guest user details in the backend
+•	mail template changed
+•	Decrease the height of guest user popup in home page. and added the tooltip for the project location icon.
+•	Added the classes for feedback navigation text in home page.
+•	Create project - The alignment of the validations were not proper in the others tab >> Fixed
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 02-04-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	SMS integration with OTP for frontend
+•	added feeback list display functionality in backend
+•	saving of feedback functionality added
+•	Added the css for the map location icon in both end.
+•	added location icon for all projects list view 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 30-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	SMS gateway for guest user
+•	added feedback form and guest modal for both guest and registered users
+•	updated css for date-picker for frontend and backend.
+•	Updated the css for the tabs in project view in frontend and backend.
+•	changed dashboard data for sme user
+•	Updated the css for hint icon alignment issues in fronted
+•	Updated css for the hint icon color and alignment.
+•	Fixed issue -- Backend >> Settings >> Create Dynamic fields and update dynamic fields >> User can create the dynamic fields with huge data, It is going to dynamic fields list here page alignment is not proper.>> for frontend field >> 
+•	Fixed issue -- Backend >> All projects - The To date filter is coming to the next line.>> Fixed.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 29-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added SME_project status condition for displaying projects in both frontend & backend. 
+•	Updated highchart.js
+•	Changed logic for SME
+•	PDF new design(html) included
+•	Fixed design issue in create project – alignment of validations
+•	Added css for project highlight in maps projects view page
+•	Added column names for icons in all projects table
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 28-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated the css for project tab fields and project details panel
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 27-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Update the css for the progress bar.
+•	Displaying project details into PDF format
+•	Map page >> Project view - There is a design issue when clicked on the comments tab in the project view.
+•	Added the css for the create project in both.
+•	Added the css for the progress bar, Proposed Estimated Budget, Expressions Received and removed the borders for each project list in search project
+•	Update the css for the dynamic form fields in backend.
+•	Added columns to displaying while exporting to pdf and replaced variable name to display hint for "amount" field
+•	 Issue fixed in admin update
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 26-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	added columns to displaying while exporting to pdf and replaced variable name to display hint for "amount" field
+•	 issue fixed in admin update
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Release notes for staging - 23-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	projects list according to role
+•	 modifications in pdf
+•	 Backend >> Settings >> Create Dynamic fields and update dynamic fields >> User can create the dynamic fields with huge data, It is going to dynamic fields list here page alignment is not proper.
+•	Frontend & backend >> All projects >> In this while opening the popup background table alignment is not proper.
+•	 Fixed issue - if we delete the uploaded images or documents, the conformation dialogue is displaying at the bottom of the page. -- Frontend >> Edit project
+•	Fixed above design issues and added the tooltip for info icon.
+•	 added sme status in filter in projects list and change status functionality
+•	 Update CHANGELOG
+•	 scenarios in create-user
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release 1.5 -- Released to Production on - 22-03-2018
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging - 22-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Backend - displaying hint icons for static fields
+•	Fixed issue while creating project participation from frontend
+•	Added SME functionality
+•	Backend - updated Targeted Govt Authority in project details
+•	Update the css for the dynamic fields title and table in backend
+•	Frontend - Displaying project title in comments -> view popup.
+•	Frontend >> Create project >> Basic info >> back button is in enable position compare to backend.
+•	Map page >> Project view - There is a design issue when clicked on the comments tab in the project view.
+•	Added the css for the signin button in intro page. 
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging - 21-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added wrapper to home page which includes guest user login, sign up and sign in.
+•	Updated alignment issues in creating and updating project form.
+•	Updated displaying company name for CSR user.
+•	Hided validation messages.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging - 20-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Document error validation fixed in creating and updating project form.
+•	Dynamic fields design modified and aligned.
+•	Displaying not set if there is no username or company name – fixed this issue. 
+•	Updated css for dynamic fields, tabs and images document upload tabs. 
+•	Create user CSR drop down hidden.
+•	Edit project – if uploaded images or docs deleted, confirmation message is not displayed properly. 
+•	Fixed displaying home page blocks with animation
+•	Displaying scroll bar after sign in or sign up – fixed this issue. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging - 19-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added “share project” in project view page in google maps layout page.
+•	Edit dynamic fields issue fixed. 
+•	Fixed DOB field date issue (displaying and saving) in backend create user form.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging - 16-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated css for fields with long text in project PDF file.
+•	Updated next and back buttons functionality in create project form.
+•	Updated CSS for add more fields in embedded video link
+•	Included dynamic fields in PDF
+•	Added css for document upload and image upload in create project form.
+•	Displaying company name or user name based on user type in create project form.
+•	Displaying investors list in projects’s view (frontend & backend)
+•	Fixed displaying validations in filters from dynamic fileds list
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging - 15-03-2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Changed status for active and inactive dynamic fields.
+•	Added css for dynamic fields in both frontend and backend. 
+•	Added help icons for dynamic fields in both frontend and backend.
+•	Fixed communique and contact details issue. 
+•	Included CSS for help icons in both frontend and backend.
+•	Fixed end date issue in project update page.
+•	Added mandatory validation for company name for CSR user.
+•	Added help icons for static fields as well in both frontend and backend create project forms. 
+•	Validation check for duplicate fields in dynamic fields section.
+•	Updated next and back button functionality in section 6 in create project form.
+•	Updated CSS for frontend info icons. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 14-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	 fixed contact details validation issue and image upload issue in form wizard
+•	 Added the tabs for project view and write the css for the inner description of all fields.
+•	 Added new pdf template
+•	Added dynamic fields in create project form and are saving in database too.
+•	PDF new template few modifications and Updated CSS for create project form
+•	Added filters for dynamic fields list in frontend/backend forms.
+•	Displaying dynamic fields in project details view for frontend(google maps) and backend pop-up view
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 13-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated CSS for ckeditor. 
+•	Added new ckeditor(2013) from theme in frontend and backend.
+•	Removed add-slashes for communique as the logo and other images in email template are not getting displayed.
+•	Added validation for image and documents upload in project creation form.
+•	Added newly included fields into frontend UI.  
+•	Showing organization name only for CSR project types. 
+•	Added scroll bar for project content in all tabs for project view.
+•	Added css for project details content and project fields in backend with scroll bar. 
+•	Fixed validation issue in interest of rate tab.
+•	Express your interest button not responding issue – fixed.
+ 
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 12-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Adding CSR project type, removed CSR from project category, few text changes and fields switching.
+•	Order of numbers display in project approval list in backend. 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 10-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Fixed youtube link issue (embedded code validation) in create project form in both frontend and backend.  
+•	Fixed uploading multiple images and multiple documents issue in create project form of both frontend and backend.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 9-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Fixed update project form issue and validations in change password form
+•	All the new fields (CSR – MIR report) added to backend view in all projects table.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 7-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated CSS for create project page tabs navigation frontend and backend.
+•	Frontend create project form css file added
+•	Added style-wizard.css in backend and updated project wizard css file.
+•	Email validation issue has been fixed
+•	Create project form tabs has been disabled -- unless the current tab is filled, user cannot jump into another tab
+•	Mobile validation issues has been fixed in create project form.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 6-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Added the responsive CSS for the project wizard.
+•	Updated icon images and responsive css for mobile devices
+•	Added contact info tab in create project form 
+•	Strip slashes added for few files in frontend and backend.
+•	Filters added for subscription list table. 
+•	Filters refresh button issue fixed in subscription list table.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 5-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Form Widget added in backend and fixed issues in frontend
+•	Update CSS for project co-owner heading 
+•	Pdf generation frontend/backend
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 2-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Updated CSS/Responsive CSS for the project wizard.
+•	Changed model to variable name
+•	Frontend/backend PDF issue resolved 
+•	Validations for fields in Media tab in create project form
+•	Updated CSS file for project pdf download page
+•	Added dynamic fields to backend
+•	Frontend/backend pdf – not displaying and downloading in other tabs.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Release notes for staging 1-03-2018 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+•	Form widget has been added
+•	Replace model with common model
+•	Included pdf generation in backend projects list view tab.
+•	Added PDF generation button in frontend all projects, projects initiated by me, participated by me tabs files
+•	Project update wizard completed. 
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Release 1.4 (13-Feb-2018)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+•	Included XSS validations for all the forms in the platform.
+•	Created corn job for all emails for different scenarios.
+•	Included google analytics code in production server. 
+•	The logo in the mail templates has be replaced with the old one.
+•	 All the CSS and JS files have been minified.
+•	Bundling of JS and CSS is done to reduce load time and number of requests to the server 
+•	Enabled csrf_token in all the forms to avoid resubmission.
+•	Replaced $_POST and $_GET variables with Yii2 predefined syntax formats.
+•	Replaced * with required columns in all MySQL queries.
+•	Changed queries written in normal MYSQL format to Yii2 framework syntax format
+•	Comments before writing any code describing the functionality (for all controllers).
+•	All the images on the platform have been compressed.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Release 1.3 (14-Aug-2017)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enhancements:
+-------------
+•	Replaced the old home page with new one. Designs given by Sandeep (Equivas) and Team.
+•	Added Contact Us page which captures few details of the user – Name, contact, email id.
+•	Changed placement of Create project form fields and added few more. 
+•	Included Organization name drop down in Google maps page.
+•	UI/UX of project view page and projects list (right side) in google maps page.
+•	Disabled social icons in project view page. 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Release 1.2 (08-MAY-2017)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Fixes:  240 issues fixed.
+
+Enhancements:
+-------------
+•	AWS Integration.
+•	Added search filter for frontend and backend Communique Page.
+•	Display graph on selection of multiple projects.
+•	Contact us form added.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Release 1.1  (06-JUN-2016)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Enhancements: 
+-------------
+•	Filtering the projects list (List by usertype, Initiated Projects, Participated Projects) and added from Date and to Date
+•	Check if profile is set or not while creating project redirect to profile page with flash msg
+•	Moved Dashboard to quick access link (On header top right corner) and removed ‘User Profile’
+•	Added global variable for EquiPPP email address
+•	Removed the code for creating url in email templates and generating the path using global variable
+•	Modified home page with new design.
+•	If a user has already participated in a particular project show an alert message and override the previous participation details with the current details.
+
+Fixes: 
+------
+•	Showing date in d-m-y format instead of time format : Frontend/view/site/mapdata
+•	popup is not showing up in participate project in map page, instead it is redirecting to login page.
+•	create project link is not working. Removed unnecessary code from views/index.php
+•	(projects are not displaying those are not having images)changed query for showing projects are not having images too.in map page
+•	show recent and most viewed project when project status is active only
+•	Email verification was not working properly and forgot password functionality was missing
+•	Added contact us email validation
+•	If a project has no images the system is throwing an error near variable which is getting images. 
+	Displaying the variable only if there are images and date format issue for date of birth while submitting a profile.
+•	While user signup setting the default status modified as per the master table i.e, pending in database.
+•	Error message must hide when validation is fulfilled for estimated amount and invested amount while project submission.
+•	Remove the update and add co-owner button in all projects display list. Display the buttons in the list of projects under "projects initiated by me"
+•	Restrict the start date to current date and end date to +45 days of selected start date in create project form
+•	Fields are not getting cleared when category is changed in project participation form
+
+
+DEPENDENT FILES:
+----------------
+For STAGING:
+	•	XXXXX.Database.STAGING.publish.sql
+
+
+For PRODUCTION:
+	•	XXXXX.Database.PROD.publish.sql
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Release 1.0  (20-MAY-2016)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+•	First Release.
+
+
+(Sep 21, 2017)
+---------------
+Create project form with given fields for Individual and CSR
+Validations for both forms
+ Configure AWS S3 bucket and uploads to AWS S3 bucket
+Display same project fields in backend also and can change the status
+For CSR user change while displaying Project Status
+
+New fields for saving city and state added and gmap page project listing changes
+Project form and gmap page modifications reverted to older version- As advised by Sandeep
+Project participation feature added
+Project and map page added CSR category filter enhancements
+All the project fields added and displaying in google maps page
+Social networking icons in map page redirected to coming-soon
+Backend date filter issue fixed
+
+(Dec 04, 2017)
+---------------
+hide social links and redirect coming soon pages (when click on project categories in home page) to google map page
+Error log and DB exceptions while sending emails
+Send email using API call
+

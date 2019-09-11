@@ -1,0 +1,406 @@
+li.active > a.hidden-xs {
+ display: block!important;
+}
+li.active > a.visible-xs {
+	display: none!important; 
+}
+.nav-pills.nav-wizard > li {
+  position: relative;
+  overflow: visible;
+  border-right: 10px solid #fff;
+  border-left: 10px solid #fff;
+}
+.nav-pills.nav-wizard > li:first-child {
+  border-left: 0;
+}
+.nav-pills.nav-wizard > li:first-child a {
+  border-radius: 0;
+}
+.nav-pills.nav-wizard > li:last-child {
+  border-right: 0;
+}
+.nav-pills.nav-wizard > li:last-child a {
+  border-radius: 0;
+}
+.nav-pills.nav-wizard > li a {
+  border-radius: 0;
+  background-color: #eee;
+  padding: 20px 0;
+}
+.nav-pills.nav-wizard > li .nav-arrow {
+position: absolute;
+top: 0px;
+right: -40px;
+width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 40px 0 40px 40px;
+border-color: transparent transparent transparent #eee;
+z-index: 150;
+}
+.nav-pills.nav-wizard > li .nav-wedge {
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 40px 0 39px 40px;
+    border-color: #eee #eee #eee transparent;
+    z-index: 150;
+}
+
+#myWizard .nav.nav-pills.nav-wizard > li {
+   display:inline-block;
+    /*width: 150px;*/
+    text-align: left;
+}
+#myWizard .nav.nav-pills.nav-wizard > li + li {
+    margin-left: 24px;
+}
+
+.nav-pills.nav-wizard > li:hover .nav-arrow {
+  border-color: transparent transparent transparent #aaa;
+}
+.nav-pills.nav-wizard > li:hover .nav-wedge {
+  border-color: #aaa #aaa #aaa transparent;
+}
+.nav-pills.nav-wizard > li:hover a {
+  background-color: #aaa;
+  color: #fff;
+}
+.nav-pills.nav-wizard > li.active .nav-arrow {
+  border-color: transparent transparent transparent #ffa500;
+}
+.nav-pills.nav-wizard > li.active .nav-wedge {
+  border-color: #ffa500 #ffa500 #ffa500 transparent;
+}
+.nav-pills.nav-wizard > li.active a {
+  background-color:#ffa500;
+    display: block;
+    overflow: hidden;
+}
+/* CSS for Credit Card Payment form */
+.credit-card-box .panel-title {
+    display: inline;
+    font-weight: bold;	
+}
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+}
+.credit-card-box label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+.credit-card-box .payment-errors {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+.credit-card-box label {
+    display: block;
+}
+
+.credit-card-box .display-tr {
+    display: table-row;
+}
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+/* Just looks nicer */
+.credit-card-box .panel-heading img {
+    min-width: 180px;
+}
+
+/*custom style*/
+
+
+
+
+.nav-pills.nav-wizard > li.active a, .nav-pills.nav-wizard > li.active a:hover, .nav-pills.nav-wizard > li.active a:focus{background:#ffa500;}
+#myWizard{margin:10px auto;}
+#myWizard .nav.nav-pills.nav-wizard > li > a{display: block;line-height: 25px;text-align:left;}
+#myWizard .nav.nav-pills.nav-wizard > li.disabled.active{background:transparent;}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span{font-weight:600;color:#00224c;word-wrap:break-word;font-size:13px;}
+#myWizard .nav.nav-pills.nav-wizard > li.active > a > span{color:#fff;}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span > img {vertical-align: middle;padding:0 5px 0 3px;}
+#myWizard .well{border-radius:0;width:100%;box-shadow:none;overflow:hidden;}
+#myWizard .nav-pills, #myWizard .nav-tabs, #myWizard .navbar-inner{width:100%;padding:0;}
+#myWizard .navbar{margin-bottom:-1px;width: 100%;padding: 0;}	
+#myWizard .label-name{text-align:left;float: left;width: 180px;}
+#myWizard .label-name label{color:#373e4a;font-weight:600;text-transform:capitalize;line-height:18px;}
+#myWizard .label-input-field{float:left;width:396px;}
+.projects-form.participation-border #myWizard .form-group{display:block;overflow:hidden;padding:0;margin:0 0 15px 0 !important;}
+.well{padding:10px 5px !important;}
+.projects-form.participation-border #myWizard .form-group input[type="number"], .projects-form.participation-border #myWizard .form-group input[type="text"], .projects-form.participation-border #myWizard .form-group input[type="file"], 
+.projects-form.participation-border #myWizard .form-group input[type="password"], .projects-form.participation-border #myWizard .form-group select, 
+.projects-form.participation-border #myWizard .form-group textarea{border-radius:0 !important;box-shadow:none;border: 1px solid #787878;width: 320px;background:#fff;border-radius:0;}
+#myWizard .form-actions .btn-warning{background-color: #ffa500;border-color: #f9b02b;border-radius:0;text-transform:capitalize;padding:5px 10px;font-size:15px;}
+#myWizard .form-actions .btn-primary{background-color:#36c6d3;border-color:#28c2d0;border-radius:0;text-transform:capitalize;padding:5px 10px;font-size:15px;}
+.location{padding-left:40px;}
+#myWizard .well .form-actions .btn.btn-sm.btn-primary.ui-wizard-content.ui-formwizard-button{margin:0 !important;border-radius:0 !important;margin-left:3px !important;}
+#myWizard .form-group label.control-label {
+    font-weight: 600;
+    float: left;
+    width: 150px;
+}
+
+.nav-pills>li.active a{padding-top:14px !important;}
+.img.ui-datepicker-trigger{right:68px !important;}
+
+.projects-form.participation-border #myWizard .form-group.field-projects-latitude, 
+.projects-form.participation-border #myWizard .form-group.field-projects-longitude{margin: 0 !important;padding: 0 !important;}
+
+.form-group.field-projects-project_desc div#cke_projects-project_desc, 
+.form-group.field-projects-impact_of_project div#cke_projects-impact_of_project, 
+.form-group.field-projects-need_of_project div#cke_projects-need_of_project,
+.form-group.field-projects-project_desc span#cke_projects-project_desc, 
+.form-group.field-projects-impact_of_project span#cke_projects-impact_of_project, 
+.form-group.field-projects-need_of_project span#cke_projects-need_of_project{float: left;width: 320px;}
+.projects-form.participation-border .add-more-icon{margin-right:0;}
+.projects-form.participation-border .add-more-in{display: inline-block;overflow: hidden;float: right;padding-right: 17px;}
+.projects-form.participation-border #myWizard .form-group input#projects-primary_contact[type="text"], .projects-form.participation-border #myWizard .form-group input#projects-secondary_contact[type="text"]{width:100% !important;float:left;border-left:none !important;}
+.page-content-wrapper .projects-form.participation-border #myWizard .form-group.field-projects-primary_contact, 
+.page-content-wrapper .projects-form.participation-border #myWizard .form-group.field-projects-secondary_contact{overflow:hidden !important;}
+
+
+#errorGovtAuthorityName {
+        display: none;
+    }
+	.active-img-c{display:none;}
+	ul li.active a{text-align:center;}
+	ul li.active span.hidden-mobile-d .active-img-c {display: block;color:#fff !important;}
+	ul li.active span.hidden-mobile-d .active-b-img {display: none;}
+	ul li.active span.la-name-sp{padding:10px 0 0 1px;text-align:center;}
+	#map_canvas{padding:0;margin:0;}
+	.ui-datepicker-trigger{right:55px !important;cursor:pointer;}
+	.nav>li.disabled>a:focus, .nav>li.disabled>a:hover{background:#aaa;}
+	ul li.active a:focus	, ul li.active:hover{background:transparent;}
+	.nav-pills>li.active a{padding-bottom:0;}
+	.nav > li > a{padding:0;display:block;line-height:20px;}
+	#myWizard .nav.nav-pills.nav-wizard > li > a {
+    display: block;
+    line-height: 31px;
+    text-align: left;
+    padding: 14px 5px 18px 6px;
+}
+ul li span.la-name-sp, ul li.active span.la-name-sp{
+    padding-top: 10px;
+    display: inline-block;
+}
+.nav>li.disabled>a>span.la-name-sp, .nav-pills>li a{color:#777;}
+#myWizard .nav.nav-pills.nav-wizard > li.active > a{padding:14px 9px 18px 11px;line-height: 31px;}
+.project-tabs {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 20px;
+}
+span.hidden-mobile-d {
+    float: left;
+}
+.nav-pills.nav-wizard > li .nav-arrow{border-width: 36px 0 37px 37px;right: -37px;}
+.nav-pills.nav-wizard > li .nav-wedge{border-width: 36px 0 37px 37px;left: -35px;}
+#myWizard .nav.nav-pills.nav-wizard > li + li {
+    margin-left: 18px;
+}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span > i.fa.fa-phone {
+    font-size: 24px;
+    position: relative;
+    top: 10px;
+    padding-right: 5px;
+    color: #727272;
+	left:3px;
+}
+#myWizard .nav.nav-pills.nav-wizard > li.active > a > span > i.fa.fa-phone{top:15px;}
+.participation-border{padding:0;}
+.has-error .help-block{clear:both;display:inline-block;padding-left: 150px;padding-top: 4px;}
+.projects-form.participation-border #myWizard .form-group.map-image-main{margin:0 0 0 10% !important;}
+.participation-border{float:none;}
+#myWizard {margin: 10px auto;width: 100%;}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span{text-transform:uppercase;font-size:12px;}
+#ui-datepicker-div{z-index:999 !important;}
+.projects-form.participation-border #myWizard .form-group input[type="file"]{padding:5px;}
+
+/*a.cke_combo_button, a#cke_20, a#cke_21, a#cke_22, a#cke_23, a#cke_24, a#cke_25, a#cke_26{display: none !important;}*/
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+/*@media (min-width:800px) and (max-width:1280px) {
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a, 
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li.active > a{padding:14px 0px 18px 2px !important;}
+}*/
+
+@media (min-width: 1281px) {
+#myWizard{width:100%;}
+#myWizard .nav-tabs, #myWizard .navbar-inner{width:100%;padding:0;}
+#myWizard .nav.nav-pills.nav-wizard > li > a{padding:14px 7px 18px 5px;}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span{font-size:12px;}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span > img {vertical-align: middle;padding: 0 3px 0 3px;}
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+#myWizard .nav-tabs, #myWizard .navbar-inner{width:100%;padding:0;}
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a {padding: 14px 15px 18px 15px;}
+.page-container .has-error .help-block{padding-left:0;}
+.page-container .projects-form.participation-border .add-more-in{padding-right:12px;}
+.page-container .projects-form.participation-border #myWizard .form-group.map-image-main{margin:0 !important;padding:0;}
+.hidden-mobile-d{display:none;}
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/*@media (max-width: 900px) {
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a {padding: 14px 12px 18px 10px;}
+}
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   #myWizard .nav-tabs, #myWizard .navbar-inner{width:100%;padding:0;}
+  .projects-form.participation-border #myWizard #myWizard{width:100%;padding: 0 5px;}
+  .projects-form.participation-border #myWizard .form-group.map-image-main{margin:0;padding:0;}
+  .ui-datepicker-trigger{right:40px !important;}
+  .has-error .help-block{padding-left:0;}
+  .hidden-mobile-d{display:none;}
+  .projects-form.participation-border  #myWizard .nav.nav-pills.nav-wizard > li.active > a {padding: 14px 9px 18px 9px;line-height: 31px;}
+  .projects-form.participation-border  #myWizard .nav.nav-pills.nav-wizard > li > a{padding:14px 5px 18px 6px;line-height: 31px;}
+  .projects-form.participation-border  #myWizard .nav.nav-pills.nav-wizard > li > a > span{font-size:12px;}
+  .nav-pills.nav-wizard > li .nav-arrow{right: -36px;}
+  
+
+}
+/*@media (min-width:900px) and (max-width:1440px) {
+#myWizard{width:100%;}
+#myWizard .nav-pills, #myWizard .nav-tabs, #myWizard .navbar-inner{width:100%;padding:0;}
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a, 
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li.active > a{padding:14px 6px 18px 7px !important;}
+}*/
+
+
+/*@media (max-width:991px){
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a {
+    padding: 14px 16px 18px 15px;
+}
+}*/
+
+/*
+@media (min-width:768px) and (max-width:1024px) {
+
+}
+@media (min-width:600px) and (max-width:1024px) {
+.page-container .projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a {
+    padding: 14px 4px 18px 5px !important;
+}
+}*/
+@media (max-width:768px){
+#myWizard .nav-pills, #myWizard .nav-tabs, #myWizard .navbar-inner{width:100%;padding:0;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a{padding:14px 4px 18px 3px !important;}
+.projects-form.participation-border  #myWizard .nav.nav-pills.nav-wizard > li.active > a {padding:14px 3px 18px 3px !important;}
+.projects-form.participation-border .ui-datepicker-trigger {right: 26px !important;}
+.projects-form.participation-border #myWizard .form-group{overflow:visible !important;}
+.projects-form.participation-border #myWizard .form-group input[type="number"], .projects-form.participation-border #myWizard .form-group input[type="text"], .projects-form.participation-border #myWizard .form-group input[type="file"], 
+.projects-form.participation-border #myWizard .form-group input[type="password"], .projects-form.participation-border #myWizard .form-group select, 
+.projects-form.participation-border #myWizard .form-group textarea{width:100%;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a > span{font-size:11px !important;}
+}
+
+@media (min-width:650px) and (max-width:767px){
+.projects-form.participation-border #myWizard #myWizard{width:100%;padding: 0 5px;}
+.hidden-mobile-d{display:none;}
+#myWizard .nav.nav-pills.nav-wizard > li > a > span{font-size:12px;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a{padding:14px 2px 18px 2px !important;}
+.projects-form.participation-border  #myWizard .nav.nav-pills.nav-wizard > li.active > a {padding:14px 2px 18px 2px !important;}
+.hidden-mobile-d, .nav-pills.nav-wizard > li .nav-wedge, .nav-pills.nav-wizard > li .nav-arrow{display:none;}
+.projects-form.participation-border #myWizard .nav-pills.nav-wizard > li{border-left: none;width: 100%;border-right: none;margin-bottom:2px;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li.active > a {padding:10px 20px !important;line-height:15px !important;}
+.projects-form.participation-border #myWizard .nav-pills.nav-wizard > li{border-left: none;width: 100%;border-right: none;margin-bottom:2px;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li + li{margin-left:0;}
+.projects-form.participation-border #myWizard ul li span.la-name-sp, ul li.active span.la-name-sp{padding-top:0px;}
+.projects-form.participation-border #myWizard ul li span.la-name-sp, ul li span.la-name-sp{padding-top:0px;}
+.projects-form.participation-border #myWizard .form-group label.control-label{width:100%;float:none;}
+.projects-form.participation-border #myWizard #myWizard .nav.nav-pills.nav-wizard > li > a > span{font-size:13px;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a{padding:10px 20px !important;line-height:15px !important;}
+.projects-form.participation-border #myWizard .form-actions .col-sm-7.col-sm-offset-5{text-align:center;}
+}
+
+@media (min-width:320px) and (max-width:649px){
+.projects-form.participation-border #myWizard #myWizard{width:100%;padding: 0 5px;}
+.hidden-mobile-d, .nav-pills.nav-wizard > li .nav-wedge, .nav-pills.nav-wizard > li .nav-arrow{display:none;}
+.projects-form.participation-border #myWizard #myWizard .nav.nav-pills.nav-wizard > li > a > span{font-size:13px;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li > a{padding:10px 20px !important;line-height:15px !important;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li.active > a {padding:10px 20px !important;line-height:15px !important;}
+.projects-form.participation-border #myWizard .nav-pills.nav-wizard > li{border-left: none;width: 100%;border-right: none;margin-bottom:2px;}
+.projects-form.participation-border #myWizard .nav.nav-pills.nav-wizard > li + li{margin-left:0;}
+.projects-form.participation-border #myWizard ul li span.la-name-sp, ul li.active span.la-name-sp{padding-top:0px;}
+.projects-form.participation-border #myWizard ul li span.la-name-sp, ul li span.la-name-sp{padding-top:0px;}
+.projects-form.participation-border #myWizard .form-group label.control-label{width:100%;float:none;}
+.projects-form.participation-border #myWizard .form-group input[type="number"], .projects-form.participation-border #myWizard .form-group input[type="text"], .projects-form.participation-border #myWizard .form-group input[type="file"], 
+.projects-form.participation-border #myWizard .form-group input[type="password"], .projects-form.participation-border #myWizard .form-group select, 
+.projects-form.participation-border #myWizard .form-group textarea{width:100%;float:none;}
+.projects-form.participation-border #myWizard .form-actions .col-sm-7.col-sm-offset-5{text-align:center;}
+.form-group.field-projects-project_desc div#cke_projects-project_desc, 
+.form-group.field-projects-impact_of_project div#cke_projects-impact_of_project, 
+.form-group.field-projects-need_of_project div#cke_projects-need_of_project,
+	.form-group.field-projects-project_desc span#cke_projects-project_desc, 
+.form-group.field-projects-impact_of_project span#cke_projects-impact_of_project, 
+.form-group.field-projects-need_of_project span#cke_projects-need_of_project{float: none;width: 100%;}
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+
+
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  //CSS
+  
+}
+
+

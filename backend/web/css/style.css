@@ -1,0 +1,87 @@
+body{    background: #f6f6f6;}
+/*---Project Details----*/
+.project-details {
+    background-color: #fff;
+    border-radius: .25rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, .1);
+       padding: 15px !important	;
+    position: relative;    padding-bottom: 35px !important;
+}
+.project-details  h4{color: #f83b6f;
+    border-bottom: 1px solid;    font-size: 22px;}
+.pd-social a {padding: 15px 10px;}
+.pd-social a i{    background: #08557f;
+    padding: 11px;
+    border-radius: 50%;color: #fff;
+}
+
+.pd-social a i.fag{background: #08557f; }
+.pd-social a i.fai{background: #3395bc; }
+.pd-social a i.fat{background: #04c5fc; }
+.pd-social a i.faf{background: #5086c6; }
+.pd-social a i.faw{background: #06cd70; }
+@media (min-width: 36rem) {
+    .ts-bokeh-background {
+        -webkit-filter: blur(2.5rem);
+                filter: blur(2.5rem);
+    }
+
+    .ts-sm-h__auto {
+        height: auto;
+    }
+
+    .project-details-description dt {
+        float: left;
+    }
+
+    .project-details-description dd {
+        text-align: right;    margin-bottom: .9rem;
+    }
+}
+.icons ul{list-style:none;padding-left:0px !important}
+.icons ul li{ display:inline;font-size: 25px;color: #fa4979;
+}
+.icons ul li i{background: linear-gradient(#f83848, #fc59a8);color:#fff;font-size: 20px;padding: 10px;border-radius: 50%;margin-left: 15px;}
+.icons ul li span {margin-left: 15px;}
+/*-----Quick Info----*/
+/** -- Quick Info */
+
+.quick-info {
+    text-align: center;
+    padding: 0;
+    overflow: hidden;    margin-bottom: 30px;
+}
+p{text-align:justify}
+ h3{text-align:left}
+.quick-info .quick-info__item {
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    width: 100%;
+}
+
+.quick-info .quick-info__item h6 {
+    color: rgba(25, 19, 19, 0.77);
+        font-size: 14px;
+}
+
+.quick-info .quick-info__item figure {
+    margin-bottom: 0;
+    font-size: 1.9rem;
+    color: #ce677a;
+}
+.quick-info__item  .ff{padding-top: 14px}
+.quick-info .quick-info__item {
+        border-right: .0625rem solid rgba(25, 25, 25, .1);
+        padding: 3rem 1rem;background: #fff;
+    min-height: 200px;
+    }
+.express{    width: 270px;
+    background: #fe5c67;
+    padding: 5px;
+    border-radius: 15px;color:#fff;text-align:center}
+		
+.Features li.active>a{background:#ed4559  !important;color:#fff !important}
+.Features li a{color:#5969ff}
