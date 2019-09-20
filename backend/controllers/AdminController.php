@@ -412,7 +412,7 @@ class AdminController extends \common\controllers\CommonController
                         $student->religionother = isset($postvariable['Religion (other)']) ? $postvariable['Religion (other)'] : '';
                         $student->gender = isset($studentdetails['Gender']) ? $studentdetails['Gender'] : '';
                         $student->martial_status = isset($studentdetails['Martial Status']) ? $studentdetails['Martial Status'] : '';
-                        $student->dob = isset($studentdetails['Date of Birth']) ? $studentdetails['Date of Birth'] : '';
+                        $student->dob = isset($studentdetails['Date of Birth']) ? str_replace('/', '-',$studentdetails['Date of Birth']) : '';
                         $student->specialneeds = isset($studentdetails['Special Needs']) ? $studentdetails['Special Needs'] : '';
                         $student->type_of_entry = isset($studentdetails['Type of Entry']) ? $studentdetails['Type of Entry'] : '';
                         $student->typeofentryother = isset($studentdetails['Type of Entry (other)']) ? $studentdetails['Type of Entry (other)'] : '';
@@ -443,7 +443,7 @@ class AdminController extends \common\controllers\CommonController
                         $student->ic_color = isset($studentdetails['IC Color']) ? $studentdetails['IC Color'] : '';
                         $student->gaurdian_relation = isset($postvariable['Gaurdian Relation']) ? $postvariable['Gaurdian Relation'] : '';
                         $student->mobile_home = isset($postvariable['Telephone No.(Home)']) ? $postvariable['Telephone No.(Home)'] : '';
-                        $student->father_ic_color = isset($postvariable['Father/Guardian IC Colour ']) ? $postvariable['Father/Guardian IC Colour '] : '';
+                        $student->father_ic_color = isset($postvariable['Father/Guardian IC Colour']) ? $postvariable['Father/Guardian IC Colour '] : '';
                         $student->gaurdian_employment = isset($postvariable['Father/Guardian Employment']) ? $postvariable['Father/Guardian Employment'] : '';
                         $student->gaurdian_employer = isset($postvariable['Father/Guardian Employer']) ? $postvariable['Father/Guardian Employer'] : '';
                         $student->remarks = isset($postvariable['Remarks']) ? $postvariable['Remarks'] : '';
@@ -455,8 +455,8 @@ class AdminController extends \common\controllers\CommonController
                 $student->mode = isset($postvariable['Mode']) ? $postvariable['Mode'] : '';
                 $student->utb_email_address = isset($postvariable['UTB Email Address']) ? $postvariable['UTB Email Address'] : '';
                 $student->degree_classification = isset($postvariable['Degree Classification']) ? $postvariable['Degree Classification'] : '';
-                $student->date_of_registration = isset($postvariable['Date of Registration']) ? $postvariable['Date of Registration'] : '';
-                $student->date_of_leaving = isset($postvariable['Date of Leaving']) ? $postvariable['date_of_leaving'] : '';
+                $student->date_of_registration = isset($postvariable['Date of Registration']) ? str_replace('/', '-', $postvariable['Date of Registration']) : '';
+                $student->date_of_leaving = isset($postvariable['Date of Leaving']) ? str_replace('/', '-',$postvariable['date_of_leaving']) : '';
                 $student->previous_roll_no = isset($postvariable['Previous Roll No']) ? $postvariable['Previous Roll No'] : '';
                 $student->previous_programme_name = isset($postvariable['Previous Programme Name']) ? $postvariable['Previous Programme Name'] : '';
                 $student->previous_intake_no = isset($postvariable['Previous Intake No']) ? $postvariable['Previous Intake No'] : '';
