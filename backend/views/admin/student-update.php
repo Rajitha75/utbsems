@@ -10,7 +10,32 @@ use yii\helpers\Url;
 
 $storagemodel = new Storage();
 ?>
+<style>
+.form-group input, .form-group select, .form-group textarea {
+    width: 60% !important;
+    float: left !important;
+}
 
+.form-group label.control-label{
+	float: left !important;
+    padding-right: 20px !important;
+	width:160px;
+}
+
+.form-group{
+	width: 94%;
+}
+
+img.ui-datepicker-trigger {
+	right: 34px;
+    margin-top: 2px;
+}
+
+.field-createstudentform-dob , .field-createstudentform-date_of_registration, ..field-createstudentform-date_of_leaving{
+	width: 82% !important;
+}
+
+</style>
 
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));

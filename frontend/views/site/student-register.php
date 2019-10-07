@@ -76,19 +76,7 @@ html.intro-over, html.intro-over body {
 	 p.help-block.help-block-error{/*top: 67px !important;*/bottom: 25px; left:o; right:auto;}
 	}
 
-	.form-group label.control-label{
-	float: left !important;
-    padding-right: 20px !important;
-	width:160px;
-}
-.form-group input, .form-group select, .form-group textarea {
-    width: 70% !important;
-    float: left !important;
-}
 
-.field-createstudentform-gender, .field-createstudentform-martial_status{
-	width:33%
-}
 </style>
 
 <div class="login_page">
