@@ -75,7 +75,22 @@ html.intro-over, html.intro-over body {
 	@media (max-width: 400px) {
 	 p.help-block.help-block-error{/*top: 67px !important;*/bottom: 25px; left:o; right:auto;}
 	}
+
+	.form-group label.control-label{
+	float: left !important;
+    padding-right: 20px !important;
+	width:160px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 70% !important;
+    float: left !important;
+}
+
+.field-createstudentform-gender, .field-createstudentform-martial_status{
+	width:33%
+}
 </style>
+
 <div class="login_page">
 <div class="site-login">
     
@@ -129,7 +144,7 @@ html.intro-over, html.intro-over body {
 	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>');
 
     echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
@@ -282,11 +297,11 @@ html.intro-over, html.intro-over body {
 
 		<?php 
 		echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
+                            'yearRange'=> '-20:0',
                             'defaultDate' => '-70y',
                             'changeYear' => true,
                             'maxDate' => 0, 
@@ -300,11 +315,11 @@ html.intro-over, html.intro-over body {
 
 <?php 
 		echo $form->field($userformmodel, 'date_of_leaving')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
+                            'yearRange'=> '-20:+0',
                             'defaultDate' => '-70y',
                             'changeYear' => true,
                             'maxDate' => 0, 

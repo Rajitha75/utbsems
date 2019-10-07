@@ -11,6 +11,7 @@ use yii\helpers\Url;
 $storagemodel = new Storage();
 ?>
 
+
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));
 $range = range($fromyear, $fromyear+40);
@@ -99,10 +100,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	
 	<?php echo $form->field($userformmodel,'gender')->radioList(['Male' => 'Male', 'Female' => 'Female'])->label('Gender <span class="mandatory">*</span>'); ?>
 
-	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>');
+	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>'); ?>
 
+<?php echo '<div class="studentdob">';
     echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
@@ -116,7 +118,8 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
                             'buttonText' => 'Select date',
                              'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
                         ],
-		])->textInput(['readonly' => true])->label('Date of Birth <span class="mandatory">*</span>'); ?>
+		])->textInput(['readonly' => true])->label('Date of Birth <span class="mandatory">*</span>'); 
+		echo '</div>'; ?>
 		
 		<?php echo $form->field($userformmodel, 'place_of_birth')->textInput(['value' => (isset($studentdata['place_of_birth'])? $studentdata['place_of_birth'] : ''), 'autocomplete' => 'off' ])->label('Place of Birth <span class="mandatory">*</span>');?>
 
@@ -253,11 +256,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 
 		<?php 
 		echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
+                            'yearRange'=> '-20:+0',
                             'defaultDate' => '-70y',
                             'changeYear' => true,
                             'maxDate' => 0, 
@@ -271,11 +274,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 
 <?php 
 		echo $form->field($userformmodel, 'date_of_leaving')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
+                            'yearRange'=> '-20:+0',
                             'defaultDate' => '-70y',
                             'changeYear' => true,
                             'maxDate' => 0, 

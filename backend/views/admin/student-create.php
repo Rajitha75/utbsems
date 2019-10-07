@@ -15,6 +15,32 @@ $this->title = 'Create Student';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
+<style>
+.form-group input, .form-group select, .form-group textarea {
+    width: 60% !important;
+    float: left !important;
+}
+
+.form-group label.control-label{
+	float: left !important;
+    padding-right: 20px !important;
+	width:160px;
+}
+
+.form-group{
+	width: 94%;
+}
+
+img.ui-datepicker-trigger {
+	right: 34px;
+    margin-top: 2px;
+}
+
+.field-createstudentform-dob , .field-createstudentform-date_of_registration, ..field-createstudentform-date_of_leaving{
+	width: 82% !important;
+}
+
+</style>
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));
 $range = range($fromyear, $fromyear+40);
@@ -68,7 +94,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Marital Status <span class="mandatory">*</span>');
 
     echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
@@ -220,11 +246,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 
 <?php 
 echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
-	'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+	'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
 				'options' => ['class' => 'form-control'],            
 				'clientOptions' => [
 					'changeMonth' => true,
-					'yearRange'=> '-70:-18',
+					'yearRange'=> '-20:+0',
 					'defaultDate' => '-70y',
 					'changeYear' => true,
 					'maxDate' => 0, 
@@ -238,11 +264,11 @@ echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DateP
 
 <?php 
 echo $form->field($userformmodel, 'date_of_leaving')->widget(\yii\jui\DatePicker::classname(), [
-	'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+	'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
 				'options' => ['class' => 'form-control'],            
 				'clientOptions' => [
 					'changeMonth' => true,
-					'yearRange'=> '-70:-18',
+					'yearRange'=> '-20:+0',
 					'defaultDate' => '-70y',
 					'changeYear' => true,
 					'maxDate' => 0, 

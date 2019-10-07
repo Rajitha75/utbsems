@@ -14,6 +14,25 @@ $this->title = 'Create Admin';
 $this->params['breadcrumbs'][] = $this->title;
 echo "<h1 class='box-title'>$this->title </h1>"; 
 ?>
+<style>
+.form-group input, .form-group select, .form-group textarea {
+    width: 60% !important;
+    float: left !important;
+}
+
+.form-group label.control-label{
+	float: left !important;
+    padding-right: 20px !important;
+	width:160px;
+}
+
+.form-group{
+	width: 94%;
+	padding-bottom: 40px;
+}
+
+
+</style>
 <div class="row">
         <div class="col-xs-12 col-sm-12">
 
@@ -34,9 +53,10 @@ echo "<h1 class='box-title'>$this->title </h1>";
 
 	<?php echo $form->field($userformmodel, 'email')->textInput(['autocomplete' => 'off'])->label('Email <span class="mandatory">*</span>');?>
 	
+	<?php echo $form->field($userformmodel, 'mobile')->textInput(['autocomplete' => 'off'])->label('Mobile <span class="mandatory">*</span>');?>
+	
 	<?php echo $form->field($userformmodel,'gender')->radioList(['Male' => 'Male', 'Female' => 'Female'])->label('Gender <span class="mandatory">*</span>'); ?>
 
-	<?php echo $form->field($userformmodel, 'mobile')->textInput(['autocomplete' => 'off'])->label('Mobile <span class="mandatory">*</span>');?>
 		
 		</div>
  

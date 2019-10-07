@@ -185,7 +185,7 @@ position: absolute;
  <!-- Latest compiled and minified JavaScript -->
 <!--<script src="js/bootstrap.min.js" type="text/javascript"></script>-->
 
-<script src="<?php echo Yii::getAlias('@web'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
+<!--<script src="<?php // echo Yii::getAlias('@web'); ?>/js/bootstrap.min.js" type="text/javascript"></script>-->
 
 
 <script>

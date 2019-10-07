@@ -108,7 +108,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>');
 
     echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
@@ -257,11 +257,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 
 		<?php 
 		echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
+                            'yearRange'=> '-20:+0',
                             'defaultDate' => '-70y',
                             'changeYear' => true,
                             'maxDate' => 0, 
@@ -275,11 +275,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 
 <?php 
 		echo $form->field($userformmodel, 'date_of_leaving')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'yyyy-MM-dd', 'options' => ['class' => 'form-control'],
+			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
                         'clientOptions' => [
                             'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
+                            'yearRange'=> '-20:+0',
                             'defaultDate' => '-70y',
                             'changeYear' => true,
                             'maxDate' => 0, 
