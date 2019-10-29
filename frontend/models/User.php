@@ -384,5 +384,6 @@ class User extends \yii\db\ActiveRecord
 	public static function isprofileset($uid){
 		$user = (new Query())->select('is_profile_set')->from('user')->where(['id' => $uid])->all();
 		return $user[0]['is_profile_set'];
-	}
+    }
+    
 }

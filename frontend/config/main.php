@@ -20,8 +20,10 @@ return [
             'enablePrettyUrl' => true,
             'rules' => [
                 'login'=>'site/login',
-		'student-login'=>'site/student-login',
+        'student-login'=>'site/student-login',
+        'student-details'=>'site/student-details',
                 'professor-login'=>'site/professor-login',
+                'exam-officers-login'=>'site/exam-officers-login',
 				'reset-password'=>'site/request-password-reset',
 				'signupotp'=>'site/signupotp',
 				'resendotp'=>'site/resendotp',

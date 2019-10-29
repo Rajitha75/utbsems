@@ -159,75 +159,74 @@ ul li{list-style:none;}
               <table class="table table-striped" width="100%" cellpadding="0" cellspacing="0" style="padding:0 10px;">
    
     <tbody>
+    <tr style="background:#f8f8f8;">
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;color:#208992 !important;font-weight:bold;"><?php echo !empty($studentdata['name']) ? strtoupper($studentdata['name']) : ''; ?>&nbsp;</td>
+        <td style="padding:15px!important;font-size: 12px !important;"></td>
+        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"></td>
+        </tr>
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Roll No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Roll No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['rollno']) ? $studentdata['rollno'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Rumpun :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Rumpun :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['rumpun']) ? $studentdata['rumpun'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="background:#f8f8f8;">
-        <td style="padding:15px!important;font-size: 12px !important;">Nationality :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Nationality :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['nationality']) ? $studentdata['nationality'] : (!empty($studentdata['nationalityother']) ? $studentdata['nationalityother'] : ''); ?></td>
-        <td style="padding:15px!important;font-size: 12px !important;">IC No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">IC No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['ic_no']) ? $studentdata['ic_no'] : ''; ?>&nbsp;</td>
       </tr>
       <tr>
-        <td style="padding:15px!important;font-size: 12px !important;">IC Color :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">IC Color :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['ic_color']) ? $studentdata['ic_color'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Passport No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Passport No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['passportno']) ? $studentdata['passportno'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="background:#f8f8f8;">
-        <td style="padding:15px!important;font-size: 12px !important;">Race :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Race :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['race']) ? $studentdata['race'] : (!empty($studentdata['raceother']) ? $studentdata['raceother'] : ''); ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Religion :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Religion :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['religion']) ? $studentdata['religion'] : (!empty($studentdata['religionother']) ? $studentdata['religionother'] : ''); ?>&nbsp;</td>
       </tr>
 
       <tr>
-       <td style="padding:15px!important;font-size: 12px !important;">Gender :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Gender :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['gender']) ? $studentdata['gender'] : ''; ?>&nbsp;</td>
-       <td style="padding:15px!important;font-size: 12px !important;">Marital Status :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Marital Status :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['martial_status']) ? $studentdata['martial_status'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr>
-       <td style="padding:15px!important;font-size: 12px !important;">Date of Birth :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Date of Birth :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['dob']) ? $studentdata['dob'] : ''; ?>&nbsp;</td>
-       <td style="padding:15px!important;font-size: 12px !important;">Place of Birth :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Place of Birth :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['place_of_birth']) ? $studentdata['place_of_birth'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr>
-       <td style="padding:15px!important;font-size: 12px !important;">Telephone No. (Mobile) :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Telephone No (Mobile) :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['telephone_mobile']) ? $studentdata['telephone_mobile'] : ''; ?>&nbsp;</td>
-       <td style="padding:15px!important;font-size: 12px !important;">Telephone No. (Home) :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Telephone No. (Home) :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['tele_home']) ? $studentdata['tele_home'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr>
-       <td style="padding:15px!important;font-size: 12px !important;">Email :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Email (other):</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['email']) ? $studentdata['email'] : ''; ?>&nbsp;</td>
-       <td style="padding:15px!important;font-size: 12px !important;">Email (Other) :</td>
-       <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['emailother']) ? $studentdata['emailother'] : ''; ?>&nbsp;</td>
-      </tr>
-
-      <tr>
-       <td style="padding:15px!important;font-size: 12px !important;">Name of Last School Attended :</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Name of Last School Attended :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['lastschoolname']) ? $studentdata['lastschoolname'] : ''; ?>&nbsp;</td>
-       <td style="padding:15px!important;font-size: 12px !important;">Type of Entry :</td>
-       <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['type_of_entry']) ? $studentdata['type_of_entry'] : (!empty($studentdata['typeofentryother']) ? $studentdata['typeofentryother'] : ''); ?>&nbsp;</td>
+       
       </tr>
 
       <tr>
-       <td style="padding:15px!important;font-size: 12px !important;">Special Needs :</td>
+      <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Type of Entry :</td>
+       <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['type_of_entry']) ? $studentdata['type_of_entry'] :  ''; ?>&nbsp;</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Special Needs :</td>
        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['email']) ? $studentdata['email'] : ''; ?>&nbsp;</td>
-       <td style="padding:15px!important;font-size: 12px !important;"></td>
-       <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;">&nbsp;</td>
-      </tr>
-      
+      </tr>      
     </tbody>
 
   </table>
@@ -245,16 +244,16 @@ ul li{list-style:none;}
    
     <tbody>
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Postal Address :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Postal Address :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['address']) ? $studentdata['address'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Address Line 2 :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Address Line 2 :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['address2']) ? $studentdata['address2'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="background:#f8f8f8;">
-        <td style="padding:15px!important;font-size: 12px !important;">Address Line 3 :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Address Line 3 :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['address3']) ? $studentdata['address3'] : ''; ?></td>
-        <td style="padding:15px!important;font-size: 12px !important;">Postal Code :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Postal Code :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['postal_code']) ? $studentdata['postal_code'] : ''; ?>&nbsp;</td>
       </tr>
       
@@ -269,15 +268,15 @@ ul li{list-style:none;}
             </div>
             <div class="clearfix"></div>
       <div class="description">
-         <div class="tit">Bank Details</div>
+         <div class="tit">Bank Information</div>
              <div class="container">
               <table class="table table-striped" width="100%" cellpadding="0" cellspacing="0" style="padding:0 10px;">
    
     <tbody>
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Bank Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Bank Name :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['bank_name']) ? $studentdata['bank_name'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Bank Account No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Bank Account No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['account_no']) ? $studentdata['account_no'] : ''; ?>&nbsp;</td>
       </tr>
       
@@ -299,51 +298,51 @@ ul li{list-style:none;}
    
     <tbody>
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Father / Gaurdian Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Gaurdian Name :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['father_name']) ? $studentdata['father_name'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Guardian Relation :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Guardian Relation :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['gaurdian_relation']) ? $studentdata['gaurdian_relation'] : ''; ?>&nbsp;</td>
       </tr>
       
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Father / Gaurdian IC No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Gaurdian IC No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['fathericno']) ? $studentdata['fathericno'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Father / Gaurdian IC Color :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Gaurdian IC Color :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['father_ic_color']) ? $studentdata['father_ic_color'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Father\'s Telephone No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father\'s Telephone No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['father_mobile']) ? $studentdata['father_mobile'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Telephone No (Home) :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Telephone No (Home) :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['mobile_home']) ? $studentdata['mobile_home'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Father/Guardian Employment :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father/Guardian Employment :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['gaurdian_employment']) ? $studentdata['gaurdian_employment'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Father/Guardian Employer :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father/Guardian Employer :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['gaurdian_employer']) ? $studentdata['gaurdian_employer'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Remarks :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Remarks :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['remarks']) ? $studentdata['remarks'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Telephone No. (Work) :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Telephone No. (Work) :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['telphone_work']) ? $studentdata['telphone_work'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Mother Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Mother Name :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['mother_name']) ? $studentdata['mother_name'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Mother IC No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Mother IC No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['mothericno']) ? $studentdata['mothericno'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Mother IC Color :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Mother IC Color :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['mother_ic_color']) ? $studentdata['mother_ic_color'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Mother\'s Telephone No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Mother\'s Telephone No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['mother_mobile']) ? $studentdata['mother_mobile'] : ''; ?>&nbsp;</td>
       </tr>
     </tbody>
@@ -363,56 +362,56 @@ ul li{list-style:none;}
    
     <tbody>
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Sponsor Type :</td>
-        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['sponsor_type']) ? $studentdata['sponsor_type'] : ( !empty($studentdata['sponsor_type_other']) ? $studentdata['sponsor_type_other'] : ''); ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Programme Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Sponsor Type :</td>
+        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['sponsor_type']) ? $studentdata['sponsor_type'] : ''; ?>&nbsp;</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Programme Name :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['programme_name']) ? $studentdata['programme_name'] : ''; ?>&nbsp;</td>
       </tr>
       
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Entry :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Entry :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['entry']) ? $studentdata['entry'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Status of Student :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Status of Student :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['status_of_student']) ? $studentdata['status_of_student'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Status Remarks :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Status Remarks :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['status_remarks']) ? $studentdata['status_remarks'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Intake No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Intake No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['intake']) ? $studentdata['intake'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Mode :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Mode :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['mode']) ? $studentdata['mode'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">UTB Email Address :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">UTB Email Address :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['utb_email_address']) ? $studentdata['utb_email_address'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Degree Classification :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Degree Classification :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['degree_classification']) ? $studentdata['degree_classification'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Date of Registration :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Date of Registration :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['date_of_registration']) ? $studentdata['date_of_registration'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Date of Leaving :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Date of Leaving :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['date_of_leaving']) ? $studentdata['date_of_leaving'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Previous Roll No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Previous Roll No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['previous_roll_no']) ? $studentdata['previous_roll_no'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Previous Programme Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Previous Programme Name :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['previous_programme_name']) ? $studentdata['previous_programme_name'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;">Previous Intake No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Previous Intake No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['previous_intake_no']) ? $studentdata['previous_intake_no'] : ''; ?>&nbsp;</td>
       </tr>
 
       <tr style="border: dashed #b3b3b3 !important;border-width: 10px 0 0 10px !important;">
-        <td style="padding:15px!important;font-size: 12px !important;">Previous UTB Email :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Previous UTB Email :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['previous_utb_email']) ? $studentdata['previous_utb_email'] : ''; ?>&nbsp;</td>
         <td style="padding:15px!important;font-size: 12px !important;"></td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;">&nbsp;</td>

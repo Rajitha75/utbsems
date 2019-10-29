@@ -35,7 +35,7 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$ap
 
                 <!-- Navbar Brand -->
                 <a href="<?php echo yii::getAlias('@web'); ?>/../../" class="navbar-brand ">
-                    <img style="width:235px" src="<?php echo Yii::getAlias('@web'); ?>/images/homepage/utbsems-logo.png">
+                    <img style="width:235px" src="<?php echo Yii::getAlias('@web'); ?>/images/homepage/utb-logo.png">
                 </a>
             </div>
 
@@ -50,7 +50,8 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$ap
                     <li><a class="myprofile" href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-profile">My profile </a> </li>
                      <?php }else{ ?>
                     <li><a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">Student Login</a></li>
-                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">Professors Login</a> </li>                   
+                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">Lecturers Login</a> </li>                   
+                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../exam-officers-login">Exam Officers Login</a> </li>                   
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../backend/web/site/login">Administrator Login</a> </li>
                     <?php } ?>  
                     <?php if(isset(Yii::$app->user->identity->id)) { ?>
@@ -58,6 +59,7 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$ap
                                 <form class="logoutform" action="<?php echo Yii::$app->homeUrl;?>site/logout" method="post" style="margin:0px;">
                                     <input type="hidden" name="_csrf" value="<?php echo Yii::$app->request->getCsrfToken(); ?>">
                                     <button type="submit" class="no-style">Log Out</button>
+									</form>
                             </li>
                     <?php } ?>            
 
@@ -158,13 +160,19 @@ position: absolute;
 
 
 </style>
-<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccess')) ) { 
+<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccess') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified')) ) { 
     if(Yii::$app->session->getFlash('signupsuccess')){
-    $flashmsg = 'You are registered successfully!'; 
+    $flashmsg = 'You are registered successfully! Please follow the steps in your email to verify your account'; 
     }
     if(Yii::$app->session->getFlash('studentupdatesuccess')){
         $flashmsg = 'Profile Updated successfully! '; 
         }
+        if(Yii::$app->session->getFlash('studentdetails')){
+            $flashmsg = 'Thank you for creating an account at UTBSEMS. </br>Thank you for your interest to study in UTB.</br>You may now login and submit online application '; 
+            }
+		if(Yii::$app->session->getFlash('studentdetailsverified')){
+            $flashmsg = 'Your email is already verified '; 
+            }
         ?>
 <div id="manualfeedback" ><div id="forceflashmodal" class="alert-success front-noti alert fade in" style="z-index: 999999">
 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

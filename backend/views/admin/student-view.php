@@ -106,12 +106,8 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'value' => stripslashes($studentdetails['tele_home']),
                     ],
                     [
-                        'attribute'=>'Email',       
-                        'value' => stripslashes($studentdetails['email']),
-                    ],
-                    [
                         'attribute'=>'Email (other)',       
-                        'value' => stripslashes($studentdetails['emailother']),
+                        'value' => stripslashes($studentdetails['email']),
                     ],
                     [
                         'attribute'=>'Name of Last School Attended',       
@@ -121,10 +117,10 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'attribute'=>'Type of Entry',       
                         'value' => stripslashes($studentdetails['type_of_entry']),
                     ],
-                    [
+                   /* [
                         'attribute'=>'Type of Entry (Other)',       
                         'value' => ($studentdetails['type_of_entry'] == 'Other') ? stripslashes($studentdetails['typeofentryother']) : 'NA',
-                    ],
+                    ],*/
                     [
                         'attribute'=>'Special Needs',       
                         'value' => stripslashes($studentdetails['specialneeds']),
@@ -220,7 +216,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
                 ],
                 ]);
             ?>
-                <h1 class="box-title" style="background-color:#31539c;"><?php echo "Bank Details"; ?></h1> 
+                <h1 class="box-title" style="background-color:#31539c;"><?php echo "Bank Information"; ?></h1> 
             <?php    echo DetailView::widget([
                     'model' => $studentdetails,
                     'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
@@ -245,10 +241,10 @@ echo "<h1 class='box-title'>$this->title </h1>";
                             'attribute'=>'Sponsor Type',       
                             'value' => stripslashes($studentdetails['sponsor_type']),
                         ],
-                        [
+                        /*[
                             'attribute'=>'Sponsor Type (Other)',       
                             'value' => ($studentdetails['sponsor_type'] == 'Other') ? stripslashes($studentdetails['sponsor_type_other']) : 'NA',
-                        ],
+                        ],*/
                     [
                         'attribute'=>'Programme Name',       
                         'value' => stripslashes($studentdetails['programme_name']),

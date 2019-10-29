@@ -19,7 +19,9 @@ use Yii;
 class Student extends \yii\db\ActiveRecord
 {
 	//public $name,$rollno,$nationality,$passportno,$race,$religion,$gender,$martial_status,$dob,$place_of_birth,$telephone_mobile,$email,$lastschoolname,$father_name,$fathericno,$father_mobile,$mother_name,$mothericno,$mother_mobile,$address,$address2,$address3,$postal_code,$bank_name,$account_no,$programme_name,$programme_code,$intake,$entry;
-	public $studentname;
+    public $studentname;
+    public $school;
+    public $userid;
 		
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 1;
@@ -98,9 +100,9 @@ class Student extends \yii\db\ActiveRecord
             if(!empty($martialstatus))   $uQuery->andWhere(['LIKE' , 'martial_status', $martialstatus]);
             if(!empty($mobile))   $uQuery->andWhere(['LIKE' , 'telephone_mobile', $mobile]);
             if(!empty($telehome))   $uQuery->andWhere(['LIKE' , 'tele_home', $telehome]);
-            if(!empty($email))   $uQuery->andWhere('s.email LIKE "%'.$email.'%" OR emailother LIKE "%'.$email.'%"');
+            if(!empty($email))   $uQuery->andWhere('s.email LIKE "%'.$email.'%"');
             
-            if(!empty($typeofentry))   $uQuery->andWhere('s.type_of_entry LIKE "%'.$typeofentry.'%" OR typeofentryother LIKE "%'.$typeofentry.'%"');
+            if(!empty($typeofentry))   $uQuery->andWhere('s.type_of_entry LIKE "%'.$typeofentry.'%"');
             if(!empty($address))   $uQuery->andWhere('s.address LIKE "%'.$address.'%" OR address2 LIKE "%'.$address.'%" OR address3 LIKE "%'.$address.'%"');
             if(!empty($bankname))   $uQuery->andWhere(['LIKE' , 'bank_name', $bankname]);
             if(!empty($accountno))   $uQuery->andWhere(['LIKE' , 'account_no', $accountno]);
@@ -109,7 +111,7 @@ class Student extends \yii\db\ActiveRecord
 
             if(!empty($mothername))   $uQuery->andWhere(['LIKE' , 'mother_name', $mothername]);
             if(!empty($mothericno))   $uQuery->andWhere(['LIKE' , 'mothericno', $mothericno]);
-            if(!empty($sponsortype))   $uQuery->andWhere('s.sponsor_type LIKE "%'.$sponsortype.'%" OR sponsor_type_other LIKE "%'.$sponsortype.'%"');
+            if(!empty($sponsortype))   $uQuery->andWhere('s.sponsor_type LIKE "%'.$sponsortype.'%"');
             if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);
             if(!empty($entry))   $uQuery->andWhere(['entry' => $entry]);
             if(!empty($status))   $uQuery->andWhere(['status_of_student' => $status]);

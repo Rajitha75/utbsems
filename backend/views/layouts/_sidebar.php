@@ -1,7 +1,7 @@
 <style>
 .page-sidebar .page-sidebar-menu>li.start>a{border-top-color:#3d4957 !important;}
 </style>
-
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <!-- BEGIN CONTAINER -->
 <!--        <div class="page-container">-->
             <!-- BEGIN SIDEBAR -->
@@ -26,23 +26,24 @@
                         </li>
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link nav-toggle">
-                                <i class="icon-user"></i>
+                                <i class="icon-user" style="margin-top: 5px;"></i>
                                 <span class="title">Users</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                             <li class="nav-item  ">
-                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/students-list");?>" class="nav-link nav-toggle">
-                                        <i class="icon-user"></i>
-                                        <span class="title">Students List</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
                                     <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/student-create");?>" class="nav-link nav-toggle">
-                                        <i class="icon-user"></i>
+                                        <i class="icon-group"></i>
                                         <span class="title">Create Student</span>
                                     </a>
                                 </li>
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/students-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Students List</span>
+                                    </a>
+                                </li>
+                                
                                 <li class="nav-item  ">
                                     <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/admin-create");?>" class="nav-link nav-toggle">
                                         <i class="icon-user"></i>
@@ -51,7 +52,7 @@
                                 </li>
                                 <li class="nav-item  ">
                                     <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/admins-list");?>" class="nav-link nav-toggle">
-                                        <i class="icon-user"></i>
+                                        <i class="icon-th-list"></i>
                                         <span class="title">Admin Users</span>
                                     </a>
                                 </li>
@@ -61,9 +62,14 @@
                         </li>
                         <li class="nav-item">
                             <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/import-students");?>" class="nav-link nav-toggle">
-                                <i class="icon-user"></i>
+                                <i class="icon-cloud-upload" style="margin-top: 5px;"></i>
                                 <span class="title">Import Students</span>
-                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/reports");?>" class="nav-link nav-toggle">
+                                <i class="icon-bar-chart" style="margin-top: 5px;"></i>
+                                <span class="title">Reports</span>
                             </a>
                         </li>
                     </ul>

@@ -1006,7 +1006,8 @@ span.media-ribbon img {
     vertical-align: middle;
     word-wrap: break-word;
     word-break: break-all;
-    text-align: center;
+    /*text-align: center;*/
+	text-align:left;
 }
 .pop-table .summary {
     text-align: right;
@@ -2616,7 +2617,7 @@ img.MultiFile-preview {
 }
 .table-striped.table>tbody>tr>td {
     word-break: inherit !important;
-    padding: 5px !important;
+    padding: 5px 5px 5px 20px !important;
     white-space: nowrap
 }
 .finance-dropdwon .checker {
@@ -10274,6 +10275,13 @@ div#imagesgallerytabs .partanerpagebtn .partners_page img {
 .final_hedarsectionblock ul li a i {
     width: auto;
 }
+.center-table{
+	width: 60%;
+    margin: 0 auto;
+}
+.center-table table{
+    margin-bottom: 50px;
+}
 @media(max-width:1030px) {
     #slide-nav #slidemenu {
         background: rgba(34, 34, 34, 0.89);
@@ -10288,6 +10296,10 @@ div#imagesgallerytabs .partanerpagebtn .partners_page img {
         top: 0;
         overflow: scroll;
     }
+	.center-table{
+	width: 100%;
+    margin: 0 auto;
+}
     .final_hedarsectionblock .slide-active ul li,
     .final_hedarsectionblock .slide-active ul {
         float: left;

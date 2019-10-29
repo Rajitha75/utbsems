@@ -18,21 +18,25 @@ return [
             'schemaCache' => 'cache',
         ],
         'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@common/mail',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => false,
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.gmail.com',
-                'username' => 'rajitha.ganji75@gmail.com',
-                'password' => 'rajitha75',
-                'port' => '587',
-                'encryption' => 'tls',
-            ],
+        'class' => 'yii\swiftmailer\Mailer',
+        'useFileTransport' => false,
+        'transport' => [
+            'class' => 'Swift_SmtpTransport',
+            'host' => 'smtp.gmail.com',  
+            'username' => 'utbsemsuniversity@gmail.com',
+            'password' => 'UTBsems@2019',
+            'port' => '465', 
+            'encryption' => 'ssl', 
+			'streamOptions' => [ 
+			  'ssl' => [ 
+				'allow_self_signed' => true,
+				'verify_peer' => false,
+				'verify_peer_name' => false,
+			  ]
+			]
         ],
+		
+    ],
         'user' => [
             'class' => 'webvimark\modules\UserManagement\components\UserConfig',
 

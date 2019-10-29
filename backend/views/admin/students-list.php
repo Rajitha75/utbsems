@@ -67,7 +67,6 @@ echo "<div class='participation-border fl-left all-userlst'>";
 		'Bachelor of Business in Business Information System' => 'Bachelor of Business in Business Information System',
 		'Bachelor of Business in Business Information System(Part Time)' => 'Bachelor of Business in Business Information System(Part Time)',
 		'Bachelor of Business in Finance and Risk Management' => 'Bachelor of Business in Finance and Risk Management',
-		'Government Scholarship' => 'Government Scholarship',
 		'Bachelor of Business in Marketing and Information Systems' => 'Bachelor of Business in Marketing and Information Systems',
 		'Bachelor of Business in Technology Management' => 'Bachelor of Business in Technology Management',
 		'Master in Management and Technology' => 'Master in Management and Technology',
@@ -167,7 +166,7 @@ echo "<div class='participation-border fl-left all-userlst'>";
     <div class="col-xs-4 col-sm-3">
 	<?php echo $form->field($model, 'gender')->dropDownList([ 'Male' => 'Male', 'Female' => 'Female'],['prompt' => 'Gender'])->label(false); ?>
 	
-    <?php echo $form->field($model, 'martial_status')->dropDownList([ 'Married' => 'Married', 'Single' => 'Single'],['prompt' => 'Religion'])->label(false); ?>
+    <?php echo $form->field($model, 'martial_status')->dropDownList([ 'Married' => 'Married', 'Single' => 'Single'],['prompt' => 'Martial Status'])->label(false); ?>
     
 		<?php echo $form->field($model, 'telephone_mobile')->textInput(array('placeholder' => 'Telephone No. (Mobile)'),['autocomplete' => 'off'])->label(false);?>
 
@@ -203,7 +202,6 @@ echo "<div class='participation-border fl-left all-userlst'>";
 		'Bachelor of Business in Business Information System' => 'Bachelor of Business in Business Information System',
 		'Bachelor of Business in Business Information System(Part Time)' => 'Bachelor of Business in Business Information System(Part Time)',
 		'Bachelor of Business in Finance and Risk Management' => 'Bachelor of Business in Finance and Risk Management',
-		'Government Scholarship' => 'Government Scholarship',
 		'Bachelor of Business in Marketing and Information Systems' => 'Bachelor of Business in Marketing and Information Systems',
 		'Bachelor of Business in Technology Management' => 'Bachelor of Business in Technology Management',
 		'Master in Management and Technology' => 'Master in Management and Technology',
@@ -258,7 +256,7 @@ echo $form->field($model, 'date_of_registration')->widget(\yii\jui\DatePicker::c
 				'options' => ['class' => 'form-control'],            
 				'clientOptions' => [
 					'changeMonth' => true,
-					'yearRange'=> '-20:+0',
+					'yearRange'=> '-40:+20',
 					'defaultDate' => '-70y',
 					'changeYear' => true,
 					'maxDate' => 0, 
@@ -276,7 +274,7 @@ echo $form->field($model, 'date_of_leaving')->widget(\yii\jui\DatePicker::classn
 				'options' => ['class' => 'form-control'],            
 				'clientOptions' => [
 					'changeMonth' => true,
-					'yearRange'=> '-20:+0',
+					'yearRange'=> '-40:+20',
 					'defaultDate' => '-70y',
 					'changeYear' => true,
 					'maxDate' => 0, 
@@ -394,7 +392,7 @@ echo GridView::widget([
             ],
             [
                 'attribute' => 'email',
-                'label' => 'Email',
+                'label' => 'Email (other)',
                 'value' => function($model) {
                     return $model['email'] ? stripslashes($model['email']) : 'Not Assigned';
                 }

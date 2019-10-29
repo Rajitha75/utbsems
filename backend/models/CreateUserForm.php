@@ -38,7 +38,6 @@ class CreateUserForm extends \yii\db\ActiveRecord
     public $place_of_birth;
     public $telephone_mobile;
     public $tele_home;
-    public $emailother;
     public $lastschoolname;
     public $type_of_entry;
     public $specialneeds;

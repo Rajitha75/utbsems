@@ -3373,7 +3373,7 @@ ul.page-sidebar-menu.page-header-fixed {
 .login_page .site-login .form-group {
     margin: 0 10%;
     margin-bottom: 25px !important;
-    position: relative
+    position: relative;
 }
 
 .login_page p.help-block.help-block-error {

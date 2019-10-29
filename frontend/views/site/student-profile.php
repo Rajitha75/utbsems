@@ -18,26 +18,37 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
     .fancybox-wrap { width: 60% !important; margin: 0 auto; }
     .fancybox-inner { width: 100% !important; }
 </style>
+<script>
+$(document).ready(function(){
+   // $('.prjdetails td').attr('align','center');
+})
+</script>
 
 <div class="user-view participation-border fl-left" style="margin-top: 80px;">
 <div> 
 <h1 class="box-title"><?php echo Html::encode($this->title) ?></h1>
-<?php if (!file_exists('frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
-<div class="editprofile-sec"><div class="profileimage">
-<img style="width:120px; height:130px"src="<?php echo 'frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />
+
+<div class="editprofile-sec">
+    <div class="profileimage">
+    <?php if (!file_exists('frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
+<img style="width:120px; height:130px"src="<?php echo 'frontend/web/images/avatar.png'; ?>" />
+<?php }else{ ?>
+    <img style="width:120px; height:130px"src="<?php echo 'frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />
+<?php } ?>
 </div>
 <a class="btn" href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-edit-profile">Edit Profile</a></div>
-<?php } ?>
+
        <br>
  
        
        </div>
-<div class="container">
+<div class="container prjdetails" >
+<div class="center-table">
        <h1 class="box-title" style="background-color:#31539c;"><?php echo "Personal Information"; ?></h1>
        <?php //print_r($studentdetails); exit;
         echo DetailView::widget([
                 'model' => $studentdetails,
-				'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+				'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
                 'attributes' => [
                     [
                         'attribute' => 'Name',
@@ -117,10 +128,6 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
                         'value' => stripslashes($studentdetails['email']),
                     ],
                     [
-                        'attribute'=>'Email (other)',       
-                        'value' => stripslashes($studentdetails['emailother']),
-                    ],
-                    [
                         'attribute'=>'Name of Last School Attended',       
                         'value' => stripslashes($studentdetails['lastschoolname']),
                     ],
@@ -128,10 +135,10 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
                         'attribute'=>'Type of Entry',       
                         'value' => stripslashes($studentdetails['type_of_entry']),
                     ],
-                    [
+                    /*[
                         'attribute'=>'Type of Entry (Other)',       
                         'value' => ($studentdetails['type_of_entry'] == 'Other') ? stripslashes($studentdetails['typeofentryother']) : 'NA',
-                    ],
+                    ],*/
                     [
                         'attribute'=>'Special Needs',       
                         'value' => stripslashes($studentdetails['specialneeds']),
@@ -142,7 +149,7 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
         <h1 class="box-title" style="background-color:#31539c;"><?php echo "Parents Information"; ?></h1> 
     <?php    echo DetailView::widget([
             'model' => $studentdetails,
-            'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+            'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
             'attributes' => [
                     [
                         'attribute'=>'Father/Guardian Name',       
@@ -206,7 +213,7 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
     <h1 class="box-title" style="background-color:#31539c;"><?php echo "Postal Address"; ?></h1> 
 <?php    echo DetailView::widget([
         'model' => $studentdetails,
-        'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+        'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
         'attributes' => [
                     [
                         'attribute'=>'Postal Address',       
@@ -230,7 +237,7 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
                 <h1 class="box-title" style="background-color:#31539c;"><?php echo "Bank Details"; ?></h1> 
             <?php    echo DetailView::widget([
                     'model' => $studentdetails,
-                    'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+                    'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
                     'attributes' => [
                     [
                         'attribute'=>'Bank Name',       
@@ -246,16 +253,16 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
                 <h1 class="box-title" style="background-color:#31539c;"><?php echo "Programme Information"; ?></h1> 
             <?php    echo DetailView::widget([
                     'model' => $studentdetails,
-                    'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+                    'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
                     'attributes' => [
                         [
                             'attribute'=>'Sponsor Type',       
                             'value' => stripslashes($studentdetails['sponsor_type']),
                         ],
-                        [
+                        /*[
                             'attribute'=>'Sponsor Type (Other)',       
                             'value' => ($studentdetails['sponsor_type'] == 'Other') ? stripslashes($studentdetails['sponsor_type_other']) : 'NA',
-                        ],
+                        ],*/
                     [
                         'attribute'=>'Programme Name',       
                         'value' => stripslashes($studentdetails['programme_name']),
@@ -320,5 +327,6 @@ $phpdateformat = Yii::getAlias('@phpdateformat');
                 ],
             ]);
     ?>
+	</div>
 </div>
 </div>

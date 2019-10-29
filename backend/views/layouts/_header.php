@@ -35,7 +35,7 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess')) || ($flash = Yii::$
 
                 <!-- Navbar Brand -->
                 <a href="<?php echo yii::getAlias('@web'); ?>/../../backend/web/" class="navbar-brand ">
-                    <img style="width:235px" src="<?php echo Yii::getAlias('@web'); ?>/images/utbsems-logo.png">
+                    <img style="width:235px" src="<?php echo Yii::getAlias('@web'); ?>/images/utb-logo.png">
                 </a>
             </div>
 
@@ -47,7 +47,8 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess')) || ($flash = Yii::$
                 <ul class="nav navbar-nav menu_header">
                 <?php if(!Yii::$app->user->id){ ?>
                    <li><a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">Student Login</a></li>
-                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">Professors Login</a> </li>                   
+                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">Professors Login</a> </li>    
+                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../exam-officers-login">Exam Officers Login</a> </li>                                  
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../backend/web/site/login">Administrator Login</a> </li>
                 <?php } if(Yii::$app->user->id){ ?>
                         <li class="login-sec">

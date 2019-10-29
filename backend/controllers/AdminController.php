@@ -118,6 +118,7 @@ class AdminController extends \common\controllers\CommonController
     {
             $userformmodel = new \common\models\CreateStudentForm();
             $signup = new \frontend\models\SignupForm();
+            $countries = User::countrieslist();
             $student = new Student;
             if($userformmodel->load(Yii::$app->request->post())){
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
@@ -144,12 +145,11 @@ class AdminController extends \common\controllers\CommonController
                 $student->dob = isset($postvariable['dob']) ? $postvariable['dob'] : '';
                 $student->specialneeds = isset($postvariable['specialneeds']) ? $postvariable['specialneeds'] : '';
                 $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
-                $student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
+                //$student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
                 $student->place_of_birth = isset($postvariable['place_of_birth']) ? $postvariable['place_of_birth'] : '';
                 $student->telephone_mobile = isset($postvariable['telephone_mobile']) ? $postvariable['telephone_mobile'] : '';
                 $student->tele_home = isset($postvariable['tele_home']) ? $postvariable['tele_home'] : '';
                 $student->email = isset($postvariable['email']) ? $postvariable['email'] : '';
-                $student->emailother = isset($postvariable['emailother']) ? $postvariable['emailother'] : '';
                 $student->lastschoolname = isset($postvariable['lastschoolname']) ? $postvariable['lastschoolname'] : '';
                 $student->father_name = isset($postvariable['father_name']) ? $postvariable['father_name'] : '';
                 $student->fathericno = isset($postvariable['fathericno']) ? $postvariable['fathericno'] : '';
@@ -164,7 +164,20 @@ class AdminController extends \common\controllers\CommonController
                 $student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
                 $student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
                 $student->sponsor_type = isset($postvariable['sponsor_type']) ? $postvariable['sponsor_type'] : '';
-                $student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+                //$student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+
+                $student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
+                $student->employer_address = isset($postvariable['employer_address']) ? $postvariable['employer_address'] : '';
+                $student->employer_address2 = isset($postvariable['employer_address2']) ? $postvariable['employer_address2'] : '';
+                $student->employer_address3 = isset($postvariable['employer_address3']) ? $postvariable['employer_address3'] : '';
+                $student->employer_postal_code = isset($postvariable['employer_postal_code']) ? $postvariable['employer_postal_code'] : '';
+                $student->position_held = isset($postvariable['position_held']) ? $postvariable['position_held'] : '';
+                $student->employment_mode = isset($postvariable['employment_mode']) ? $postvariable['employment_mode'] : '';
+                $student->emp_from_month = isset($postvariable['emp_from_month']) ? $postvariable['emp_from_month'] : '';
+                $student->emp_from_year = isset($postvariable['emp_from_year']) ? $postvariable['emp_from_year'] : '';
+                $student->emp_to_month = isset($postvariable['emp_to_month']) ? $postvariable['emp_to_month'] : '';
+                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';
+
                 $student->programme_name = isset($postvariable['programme_name']) ? $postvariable['programme_name'] : '';
                 $student->intake = isset($postvariable['intake']) ? $postvariable['intake'] : '';
                 $student->entry = isset($postvariable['entry']) ? $postvariable['entry'] : '';
@@ -218,12 +231,14 @@ class AdminController extends \common\controllers\CommonController
             }
             return $this->render('student-create',[
                 'userformmodel'=>$userformmodel,
+                'countries'=>$countries
                     ]);
     }
 
     public function actionStudentUpdate(){
         //print_r($studentdata[0]['name']); exit;
             $userformmodel = new \common\models\CreateStudentForm();
+            $countries = User::countrieslist();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $student = Student::find()->where(['id'=>$postvariable['studentid']])->one();
@@ -252,11 +267,11 @@ class AdminController extends \common\controllers\CommonController
                 }
 
                 $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
-                if($postvariable['type_of_entry'] == 'Other'){
+                /*if($postvariable['type_of_entry'] == 'Other'){
                     $student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
                 }else{
                     $student->typeofentryother = '';
-                }
+                }*/
                 
                 $student->gender = isset($postvariable['gender']) ? $postvariable['gender'] : '';
                 $student->martial_status = isset($postvariable['martial_status']) ? $postvariable['martial_status'] : '';
@@ -266,7 +281,6 @@ class AdminController extends \common\controllers\CommonController
                 $student->telephone_mobile = isset($postvariable['telephone_mobile']) ? $postvariable['telephone_mobile'] : '';
                 $student->tele_home = isset($postvariable['tele_home']) ? $postvariable['tele_home'] : '';
                 $student->email = isset($postvariable['email']) ? $postvariable['email'] : '';
-                $student->emailother = isset($postvariable['emailother']) ? $postvariable['emailother'] : '';
                 $student->lastschoolname = isset($postvariable['lastschoolname']) ? $postvariable['lastschoolname'] : '';
                 $student->father_name = isset($postvariable['father_name']) ? $postvariable['father_name'] : '';
                 $student->fathericno = isset($postvariable['fathericno']) ? $postvariable['fathericno'] : '';
@@ -281,7 +295,22 @@ class AdminController extends \common\controllers\CommonController
                 $student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
                 $student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
                 $student->sponsor_type = isset($postvariable['sponsor_type']) ? $postvariable['sponsor_type'] : '';
-                $student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+                //$student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+
+                $student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
+                $student->employer_address = isset($postvariable['employer_address']) ? $postvariable['employer_address'] : '';
+                $student->employer_address2 = isset($postvariable['employer_address2']) ? $postvariable['employer_address2'] : '';
+                $student->employer_address3 = isset($postvariable['employer_address3']) ? $postvariable['employer_address3'] : '';
+                $student->employer_postal_code = isset($postvariable['employer_postal_code']) ? $postvariable['employer_postal_code'] : '';
+                $student->position_held = isset($postvariable['position_held']) ? $postvariable['position_held'] : '';
+                $student->employment_mode = isset($postvariable['employment_mode']) ? $postvariable['employment_mode'] : '';
+                $student->emp_from_month = isset($postvariable['emp_from_month']) ? $postvariable['emp_from_month'] : '';
+                $student->emp_from_year = isset($postvariable['emp_from_year']) ? $postvariable['emp_from_year'] : '';
+                $student->emp_to_month = isset($postvariable['emp_to_month']) ? $postvariable['emp_to_month'] : '';
+                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';
+
+                
+
                 $student->programme_name = isset($postvariable['programme_name']) ? $postvariable['programme_name'] : '';
                 $student->intake = isset($postvariable['intake']) ? $postvariable['intake'] : '';
                 $student->entry = isset($postvariable['entry']) ? $postvariable['entry'] : '';
@@ -335,6 +364,7 @@ class AdminController extends \common\controllers\CommonController
         return $this->render('student-update',[
             'userformmodel'=>$userformmodel,
             'studentdata'=>$studentdata[0],
+            'countries'=>$countries
                 ]);
         }
     }
@@ -453,12 +483,11 @@ class AdminController extends \common\controllers\CommonController
                         $student->dob = isset($studentdetails['Date of Birth']) ? str_replace('/', '-',$studentdetails['Date of Birth']) : '';
                         $student->specialneeds = isset($studentdetails['Special Needs']) ? $studentdetails['Special Needs'] : '';
                         $student->type_of_entry = isset($studentdetails['Type of Entry']) ? $studentdetails['Type of Entry'] : '';
-                        $student->typeofentryother = isset($studentdetails['Type of Entry (other)']) ? $studentdetails['Type of Entry (other)'] : '';
+                        //$student->typeofentryother = isset($studentdetails['Type of Entry (other)']) ? $studentdetails['Type of Entry (other)'] : '';
                         $student->place_of_birth = isset($studentdetails['Place of Birth']) ? $studentdetails['Place of Birth'] : '';
                         $student->telephone_mobile = isset($studentdetails['Telephone No(Mobile)']) ? $studentdetails['Telephone No(Mobile)'] : '';
                         $student->tele_home = isset($studentdetails['Telephone No (Home)']) ? $studentdetails['Telephone No (Home)'] : '';
                         $student->email = isset($studentdetails['Email']) ? $studentdetails['Email'] : '';
-                        $student->emailother = isset($studentdetails['Email (other)']) ? $studentdetails['Email (other)'] : '';
                         $student->lastschoolname = isset($studentdetails['Name of Last School Attended']) ? $studentdetails['Name of Last School Attended'] : '';
                         $student->father_name = isset($studentdetails['Father / Gaurdian Name']) ? $studentdetails['Father / Gaurdian Name'] : '';
                         $student->fathericno = isset($studentdetails['Father / Gaurdian IC No']) ? $studentdetails['Father / Gaurdian IC No'] : '';
@@ -473,7 +502,21 @@ class AdminController extends \common\controllers\CommonController
                         $student->bank_name = isset($studentdetails['Bank Name']) ? $studentdetails['Bank Name'] : '';
                         $student->account_no = isset($studentdetails['Bank Account No']) ? $studentdetails['Bank Account No'] : '';                        
                 $student->sponsor_type = isset($studentdetails['Sponsor Type']) ? $studentdetails['Sponsor Type'] : '';
-                $student->sponsor_type_other = isset($studentdetails['Sponsor Type (other)']) ? $studentdetails['Sponsor Type (other)'] : '';
+                //$student->sponsor_type_other = isset($studentdetails['Sponsor Type (other)']) ? $studentdetails['Sponsor Type (other)'] : '';
+
+
+                $student->employer_name = isset($postvariable['Employer Name']) ? $postvariable['Employer Name'] : '';
+                $student->employer_address = isset($postvariable['Employer Address Line 1']) ? $postvariable['Employer Address Line 1'] : '';
+                $student->employer_address2 = isset($postvariable['Employer Address Line 2']) ? $postvariable['Employer Address Line 2'] : '';
+                $student->employer_address3 = isset($postvariable['Employer Address Line 3']) ? $postvariable['Employer Address Line 3'] : '';
+                $student->employer_postal_code = isset($postvariable['Employer Postal Code']) ? $postvariable['Employer Postal Code'] : '';
+                $student->position_held = isset($postvariable['Position Held']) ? $postvariable['Position Held'] : '';
+                $student->employment_mode = isset($postvariable['Employment Mode']) ? $postvariable['Employment Mode'] : '';
+                $student->emp_from_month = isset($postvariable['Duration From (Month)']) ? $postvariable['Duration From (Month)'] : '';
+                $student->emp_from_year = isset($postvariable['Duration From (Year)']) ? $postvariable['Duration From (Year)'] : '';
+                $student->emp_to_month = isset($postvariable['Duration To (Month)']) ? $postvariable['Duration To (Month)'] : '';
+                $student->emp_to_year = isset($postvariable['Duration To (Year)']) ? $postvariable['Duration To (Year)'] : '';
+               
                         $student->programme_name = isset($studentdetails['Programme No']) ? $studentdetails['Programme No'] : '';
                         $student->intake = isset($studentdetails['Intake']) ? $studentdetails['Intake'] : '';
                         $student->entry = isset($studentdetails['Entry']) ? $studentdetails['Entry'] : '';
@@ -550,12 +593,19 @@ class AdminController extends \common\controllers\CommonController
         $id = Yii::$app->getRequest()->getQueryParam('id');
         $studentdata=Student::findByStudentId($id);
         $studentdata=array_shift($studentdata);
+       
         $strarr = explode ("backend", $_SERVER['REQUEST_URI']);  
-        $imageurl = 'http://'.$_SERVER['HTTP_HOST'].$strarr[0].'frontend/web/uploads/profile_images/'.$studentdata['user_ref_id'].'/'.$studentdata['user_image'];
+//echo '../frontend/web/uploads/profile_images/'.$studentdata['user_ref_id'].'/'.$studentdata['user_image'];exit;
+       if (!file_exists('../../frontend/web/uploads/profile_images/'.$studentdata['user_ref_id'].'/'.$studentdata['user_image'])) {
+         $imageurl = '<img style="width:120px; height:130px" src="frontend/web/images/avatar.png" />';
+            }else{
+            $imageurl = "http://".$_SERVER['HTTP_HOST'].$strarr[0]."frontend/web/uploads/profile_images/".$studentdata['user_ref_id']."/".$studentdata['user_image'];
+           }
          $pdf_content=$this->renderPartial('viewpdf', [
             'studentdata' => $studentdata,
             'imageurl' => $imageurl
         ]);
+        //print_r($pdf_content);exit;
         $mpdf = new \mPDF();
         $mpdf->WriteHTML($pdf_content);
         $fileName = str_replace(" ", "_", $studentdata['name']) . '.pdf';
@@ -565,6 +615,24 @@ class AdminController extends \common\controllers\CommonController
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }
     }
-	
+
+    public function actionReports(){
+        try{
+            return $this->render("reports");
+        } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
+    
+    public function actionGetReportDetails(){
+        try{
+            $category = (Yii::$app->getRequest()->getQueryParam('category')) ? Yii::$app->getRequest()->getQueryParam('category') : '';
+            $report = '';
+            $report = User::getReportDetails($category);
+            return $report;
+        } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
     
 }

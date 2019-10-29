@@ -50,6 +50,7 @@ class LoginForm extends Model
            // ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword', 'on'=>'loginpage'],
+            ['username', 'isvalidate', 'on'=>'loginpage'],
             ['password', 'validatePassword', 'on'=>'loginpopup'],
 			['password', 'validatePassword', 'on'=>'withCaptcha'],
 			['password', 'validatelimit', 'on'=>'limitExceed'],
@@ -122,10 +123,24 @@ public function ajaxcodeVerify($attribute) {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || $user->status!=1 || !$user->validatePassword($this->password)) {
+            if($user && $user->is_verified!=1){
+                $this->addError($attribute, 'You are not a verified user');
+            }else{
 			if($user){
 			$this->addLoginAttempt($user->id);
-			}
+            }
+        }
             $this->addError($attribute, 'Incorrect username or password');
+            }
+        }
+    }
+
+    public function isvalidate($attribute, $params)
+    {
+        if (!$this->hasErrors()) {
+            $user = $this->getUser();
+            if (!$user || $user->is_verified!=1) {
+            $this->addError($attribute, 'You are not verified');
             }
         }
     }

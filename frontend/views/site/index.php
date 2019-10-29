@@ -39,22 +39,28 @@
 
                     <div class="row">
                     
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-3 col-md-4">
                         <a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">
-                            <h1 class="project-count"><i class="fa fa-user-graduate" id="fa-icons" style="color: #f74f4e;"></i></h1>
+                            <h1 class="project-count"><i class="fa fa-user-graduate" id="fa-icons" style="color: #8dd22e;"></i></h1>
                             <p>STUDENTS</p>
                             </a>
                         </div>
                         
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-3 col-md-4">
                         <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">
                             <h1 class="project-count"><i class="fa fa-chalkboard-teacher" id="fa-icons" style="color: DodgerBlue;"></i></h1>
-                            <p>PROFESSORS</p>
+                            <p>LECTURERS</p>
                         </a>
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <div class="col-lg-3 col-md-4">
+                        <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../exam-officers-login">
+                            <h1 class="project-count"><i class="fa fa-edit" id="fa-icons" style="color: #deb3a1;"></i></h1>
+                            <p>EXAM OFFICERS</p>
+                        </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
                         <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../backend/web/site/login">
-                            <h1 class="project-count"><i class="fa fa-user-tie" id="fa-icons" style="color: #008B8B;"></i></h1>
+                            <h1 class="project-count"><i class="fa fa-user-tie" id="fa-icons" style="color: #dae354;"></i></h1>
                             <p>ADMINISTRATORS</p>
                         </a>
                         </div>

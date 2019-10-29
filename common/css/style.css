@@ -400,7 +400,7 @@ ul.dropdown-menu.notificons.notifdata.communique {
         Navbar Styles
    ==========================================================*/
 .navbar {
-    padding-top: 12px;
+    padding-top: 5px;
     padding-bottom: 0px;
 
     color: #333;
@@ -413,7 +413,7 @@ ul.dropdown-menu.notificons.notifdata.communique {
     background: -webkit-linear-gradient(left, rgba(81, 225, 177, 1) 0%, rgba(79, 148, 250, 1) 100%);
     background: -o-linear-gradient(left, rgba(81, 225, 177, 1) 0%, rgba(79, 148, 250, 1) 100%);
     background: -ms-linear-gradient(left, rgba(81, 225, 177, 1) 0%, rgba(79, 148, 250, 1) 100%);
-    background: linear-gradient(to right, rgba(81, 225, 177, 1) 0%, rgba(79, 148, 250, 1) 100%);
+    background: linear-gradient(to right, #c179b3 0%, #383288 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#51e1b1', endColorstr='#4f94fa', GradientType=1);
 
 }
@@ -436,10 +436,14 @@ ul.dropdown-menu.notificons.notifdata.communique {
     /*    padding-bottom: 100px;*/
     color: #fff;
     padding-top: 110px;
-    background: #51e1b0 ;
+    /*background: #51e1b0 ;
     background:  -webkit-gradient(linear, right top, left top, from(#4f93fa), to(#51e1b0));
-    background:  linear-gradient(to left, #4f93fa, #51e1b0);
+    background:  linear-gradient(to left, #383288, #c179b3);
+    background-repeat: no-repeat;*/
+	background-image: url(home-page-img.jpg);
     background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
     top: 0;
 /*    height: 100vh;*/
     min-height: 510px;
@@ -609,17 +613,27 @@ button.no-style:hover {
 }
 
 .project-count {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
     font-family: century gothic;
     margin-top: 80px;
+	
+}
+.project-count i{
+	color: #8dd22e;
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+	width: 80px;
+    height: 80px;
 }
 
 .count p {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
+	font-weight: bold;
 }
 
 /*css*/
@@ -699,7 +713,7 @@ section#contact {
 }
 
 .bg_footer {
-    background: #370617;
+    background: #6c1951;
 }
 
 .footer-logo p {
@@ -1315,7 +1329,7 @@ ul.list-inline.list-social i.fa.fa-facebook {
 }
 
 nav#mainNav .navbar-nav > li {
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
 
 nav#mainNav .navbar-nav > li > a {

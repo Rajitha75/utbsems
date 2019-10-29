@@ -19,16 +19,15 @@ class CreateStudentForm extends \yii\db\ActiveRecord
     public $raceother;
     public $religion;
     public $religionother;
-    public $typeofentryother;
+    //public $typeofentryother;
     public $sponsor_type;
-    public $sponsor_type_other;
+    //public $sponsor_type_other;
     public $gender;
     public $martial_status;
     public $dob;
     public $place_of_birth;
     public $telephone_mobile;
     public $tele_home;
-    public $emailother;
     public $lastschoolname;
     public $type_of_entry;
     public $specialneeds;
@@ -69,6 +68,20 @@ class CreateStudentForm extends \yii\db\ActiveRecord
     public $previous_programme_name;
     public $previous_intake_no;
     public $previous_utb_email;
+    public $type_of_programme;
+    public $school;
+    public $employer_name;
+    public $employer_address;
+    public $employer_address2;
+    public $employer_address3;
+    public $employer_postal_code;
+    public $position_held;
+    public $employment_mode;
+    public $emp_from_month;
+    public $emp_from_year;
+    public $emp_to_month;
+    public $emp_to_year;
+
    
     /**
      * @inheritdoc

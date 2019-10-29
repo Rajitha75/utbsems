@@ -1,8 +1,9 @@
 <?php
 namespace frontend\models;
-
+use common\models\User;
 use yii\base\Model;
 use Yii;
+use yii\db\Query;
 
 /**
  * Signup form
@@ -14,6 +15,7 @@ class SignupForm extends \yii\db\ActiveRecord
     public $user_role_ref_id;
     public $confirmpassword;
     public $username, $status, $user_image;
+    public $userid;
 
     /**
      * @inheritdoc
@@ -26,7 +28,7 @@ class SignupForm extends \yii\db\ActiveRecord
     {
         $scenarios = parent::scenarios();
         $scenarios['signuppopup'] = ['email'];
-        $scenarios['signuppage'] = ['email', 'password', 'confirmpassword'];
+        $scenarios['signuppage'] = ['email'];
         return $scenarios;
     }
     
@@ -41,11 +43,8 @@ class SignupForm extends \yii\db\ActiveRecord
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.','on'=>'signuppage'],
             //['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.','on'=>'signuppopup'],
 
-            ['password', 'required','on'=>'signuppage'],
-            ['password', 'string', 'min' => 6,'on'=>'signuppage'],
+             ['password', 'string', 'min' => 6,'on'=>'signuppage'],
             
-            ['confirmpassword', 'required','on'=>'signuppage'],
-            //['confirmpassword', 'compare', 'compareAttribute'=>'password', 'message'=>"Passwords don't match",'on'=>'signuppage' ],
                
             [['user_role_ref_id'], 'safe'],
         ];
@@ -76,9 +75,20 @@ class SignupForm extends \yii\db\ActiveRecord
             $user->username = addslashes($this->username);
             $user->email = addslashes($this->email);
         $user->user_role_ref_id = $this->user_role_ref_id;
-        $user->setPassword($this->password);
+        $user->setPassword('UtBSEms2019#!');
         $user->generateAuthKey();
         $user->status = 1;
         return $user->save(false) ? $user : null;
+    }
+
+    public function savepassword()
+    {
+       // echo $this->password;exit;
+        $user =  User::find()->where(['id' => $this->userid])->one();
+        $this->password_hash = $this->password;   
+        $user->setPassword($this->password_hash);
+        $user->generateAuthKey();
+    $user->is_verified = 1;
+    return $user->save(false) ? $user : null;
     }
 }

@@ -1,5 +1,5 @@
-<?php
 
+<?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
@@ -7,10 +7,19 @@ use yii\jui\DatePicker;
 use yii\bootstrap\Alert;
 use common\models\Storage;
 use yii\helpers\Url;
-
 $storagemodel = new Storage();
 ?>
-
+<style>
+    label.error{
+		color: #ff0000;
+		font-weight: normal;
+	}
+	
+	.ui-datepicker-trigger{
+		float: right;
+		margin-top: -30px;
+	}
+</style>
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));
 $range = range($fromyear, $fromyear+40);
@@ -48,14 +57,12 @@ $userformmodel->status_of_student = isset($studentdata['status_of_student']) ? (
 $userformmodel->intake = isset($studentdata['intake']) ? ($studentdata['intake']) : ''; 
 $userformmodel->previous_intake_no = isset($studentdata['previous_intake_no']) ? ($studentdata['previous_intake_no']) : ''; 
 $userformmodel->mode = isset($studentdata['mode']) ? ($studentdata['mode']) : ''; 
-
 if(isset($studentdata['martial_status'])){
 	$userformmodel->martial_status = $studentdata['martial_status']; 
 	}
 if(isset($dateofbirth))$userformmodel->dob = $dateofbirth; 
 if(isset($dateofregistration))$userformmodel->date_of_registration = $dateofregistration; 
 if(isset($dateofleaving))$userformmodel->date_of_leaving = $dateofleaving; 
-
 $this->title = 'Update Student';
 echo "<h1 class='box-title'>$this->title </h1>"; ?>
 <div class="login_page" style="padding-top:2%;">
@@ -77,7 +84,6 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	<div class="col-xs-8 col-sm-6">
 	<fieldset>
     <legend>Personal Information:</legend>
-	<?php echo $form->field($userformmodel, 'studentid')->hiddenInput(['autocomplete' => 'off','value'=>isset(Yii::$app->user->id) ? Yii::$app->user->id : ''])->label(false);?>
 	
 	<?php echo $form->field($userformmodel, 'name')->textInput(['value' => (isset($studentdata['name'])? $studentdata['name'] : ''), 'autocomplete' => 'off' ])->label('Name <span class="mandatory">*</span>');?>
 
@@ -106,7 +112,6 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	<?php echo $form->field($userformmodel,'gender')->radioList(['Male' => 'Male', 'Female' => 'Female'])->label('Gender <span class="mandatory">*</span>'); ?>
 
 	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>');
-
     echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
 			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
                         'options' => ['class' => 'form-control'],            
@@ -300,18 +305,20 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 <?php echo $form->field($userformmodel, 'previous_utb_email')->textInput(['value' => (isset($studentdata['previous_utb_email'])? $studentdata['previous_utb_email'] : ''), 'autocomplete' => 'off'])->label('Previous UTB Email');?>
 
 
+	<?php echo $form->field($userformmodel, 'studentid')->hiddenInput(['autocomplete' => 'off','value'=>isset(Yii::$app->user->id) ? Yii::$app->user->id : ''])->label(false);?>
 	</fieldset>
 	
  </div>
  
  </div>
-					</div>
- <div class="row text-center">
+  <div class="row text-center">
          <div class="form-group">
  <?= Html::submitButton('Submit', ['class' => 'btn btn-primary usersignup']) ?>
  </div>
         
         </div>
+					</div>
+
 		<?php ActiveForm::end(); ?>
  
 <script>
@@ -325,37 +332,31 @@ $(document).ready(function(){
 	var religionother = $('#createstudentform-religion').val();
 	var typeofentryother = $('#createstudentform-type_of_entry').val();
 	var sponsortypeother = $('#createstudentform-sponsor_type').val();
-
 	if(studentother && studentother=='Other'){
 		$('.field-createstudentform-nationalityother').show();
 	}else{
 		$('.field-createstudentform-nationalityother').hide();
 	}
-
 	if(raceother && raceother=='Other'){
 		$('.field-createstudentform-raceother').show();
 	}else{
 			$('.field-createstudentform-raceother').hide();
 	}
-
 	if(religionother && religionother=='Other'){
 		$('.field-createstudentform-religionother').show();
 	}else{
 			$('.field-createstudentform-religionother').hide();
 	}
-
 	if(typeofentryother && typeofentryother=='Other'){
 		$('.field-createstudentform-typeofentryother').show();
 	}else{
 			$('.field-createstudentform-typeofentryother').hide();
 	}
-
 	if(sponsortypeother && sponsortypeother=='Other'){
 		$('.field-createstudentform-sponsor_type_other').show();
 	}else{
 			$('.field-createstudentform-sponsor_type_other').hide();
 	}
-
 	$('#createstudentform-nationality').change(function(){
 		if($(this).val() == 'Other'){
 			$('.field-createstudentform-nationalityother').show();
@@ -377,7 +378,6 @@ $(document).ready(function(){
 			$('.field-createstudentform-religionother').hide();
 		}
 	})
-
 	$('#createstudentform-type_of_entry').change(function(){
 		if($(this).val() == 'Other'){
 			$('.field-createstudentform-typeofentryother').show();
@@ -385,7 +385,6 @@ $(document).ready(function(){
 			$('.field-createstudentform-typeofentryother').hide();
 		}
 	})
-
 	$('#createstudentform-sponsor_type').change(function(){
 		if($(this).val() == 'Other'){
 			$('.field-createstudentform-sponsor_type_other').show();
@@ -394,7 +393,6 @@ $(document).ready(function(){
 		}
 	})
 })
-
 $("#usercreateform").validate({
             rules: {
                 "CreateStudentForm[name]": {
@@ -624,4 +622,3 @@ $("#usercreateform").validate({
 			}
 			});
 </script>
-	
