@@ -735,6 +735,7 @@ Yii::$app->cache->flush();
 				$student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
 				$student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
 				$student->age = isset($postvariable['age']) ? $postvariable['age'] : '';
+				$student->is_submit = isset($postvariable['is_submit']) ? $postvariable['is_submit'] : '';
                 $student->user_image = isset($postvariable['user_image']) ? $postvariable['user_image'] : '';
                 $storagemodel = new \common\models\Storage();
 				$userid = $student->user_ref_id;
@@ -751,7 +752,11 @@ Yii::$app->cache->flush();
                     $user->user_image = $studentimage;
                 if($user->save(false)){}
                 }
-                Yii::$app->session->setFlash('studentupdatesuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Profile Updated successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+		if($postvariable['is_submit'] == 'submit'){
+			Yii::$app->session->setFlash('studentupdatesuccesssubmit', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Profile Updated successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+		}else if($postvariable['is_submit'] == 'save'){
+			Yii::$app->session->setFlash('studentupdatesuccesssave', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Profile Saved successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+		}
                 return $this->redirect(Yii::$app->getUrlManager()->getBaseUrl() . '/../../student-profile');
             }
         }else{     

@@ -103,6 +103,7 @@ class CreateStudentForm extends \yii\db\ActiveRecord
     public $emp_to_year;
 	public $title;
 	public $retype_password;
+	public $is_submit;
    
     /**
      * @inheritdoc

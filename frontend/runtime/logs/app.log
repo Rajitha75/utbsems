@@ -42643,3 +42643,2632 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1581618310.446
     'REQUEST_TIME' => 1581618310
 ]
+2020-02-13 23:08:05 [::1][-][0n5bp4j5gag0mh4fh1fvoduma7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:08:05 [::1][-][0n5bp4j5gag0mh4fh1fvoduma7][info][application] $_COOKIE = [
+    'PHPSESSID' => '0n5bp4j5gag0mh4fh1fvoduma7'
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=0n5bp4j5gag0mh4fh1fvoduma7; _csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '9414'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615485.371
+    'REQUEST_TIME' => 1581615485
+]
+2020-02-13 23:10:26 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:10:26 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581616827
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '9438'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615626.771
+    'REQUEST_TIME' => 1581615626
+]
+2020-02-13 23:14:24 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'' in C:\wamp64\www\utbsems\frontend\views\site\student-edit-profile.php:131
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#2 C:\wamp64\www\utbsems\frontend\controllers\SiteController.php(763): yii\base\Controller->render()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): frontend\controllers\SiteController->actionStudentEditProfile()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#9 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#10 {main}
+2020-02-13 23:14:23 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617063
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6055'
+    'REDIRECT_URL' => '/utbsems/student-edit-profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/student-edit-profile'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PATH_INFO' => '/student-edit-profile'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\student-edit-profile'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php/student-edit-profile'
+    'REQUEST_TIME_FLOAT' => 1581615863.861
+    'REQUEST_TIME' => 1581615863
+]
+2020-02-13 23:14:38 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:14:38 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617078
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6070'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615878.012
+    'REQUEST_TIME' => 1581615878
+]
+2020-02-13 23:14:45 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:14:44 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617085
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6083'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615884.872
+    'REQUEST_TIME' => 1581615884
+]
+2020-02-13 23:16:07 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:16:06 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617167
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6150'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615966.89
+    'REQUEST_TIME' => 1581615966
+]
+2020-02-13 23:16:08 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:16:08 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617168
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6158'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615968.657
+    'REQUEST_TIME' => 1581615968
+]
+2020-02-13 23:16:13 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:16:13 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617173
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6172'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581615973.146
+    'REQUEST_TIME' => 1581615973
+]
+2020-02-13 23:21:01 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:21:01 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617461
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6406'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616261.237
+    'REQUEST_TIME' => 1581616261
+]
+2020-02-13 23:21:03 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:21:03 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617463
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6412'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616263.435
+    'REQUEST_TIME' => 1581616263
+]
+2020-02-13 23:21:08 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:21:08 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617469
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6427'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616268.851
+    'REQUEST_TIME' => 1581616268
+]
+2020-02-13 23:22:28 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:22:28 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617548
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6500'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616348.065
+    'REQUEST_TIME' => 1581616348
+]
+2020-02-13 23:22:30 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:22:30 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617550
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6493'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616350.049
+    'REQUEST_TIME' => 1581616350
+]
+2020-02-13 23:23:51 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:23:50 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617631
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6577'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616430.842
+    'REQUEST_TIME' => 1581616430
+]
+2020-02-13 23:23:52 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:23:52 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617632
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6587'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616432.721
+    'REQUEST_TIME' => 1581616432
+]
+2020-02-13 23:27:38 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:27:38 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581617858
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6626'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616658.225
+    'REQUEST_TIME' => 1581616658
+]
+2020-02-13 23:30:16 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:30:16 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618016
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6672'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581616816.053
+    'REQUEST_TIME' => 1581616816
+]
+2020-02-13 23:33:59 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:33:59 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618239
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6861'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617039.73
+    'REQUEST_TIME' => 1581617039
+]
+2020-02-13 23:39:19 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:39:19 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618559
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6932'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617359.194
+    'REQUEST_TIME' => 1581617359
+]
+2020-02-13 23:39:26 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:39:26 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618566
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6957'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617366.712
+    'REQUEST_TIME' => 1581617366
+]
+2020-02-13 23:39:28 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:39:28 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618568
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6956'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617368.547
+    'REQUEST_TIME' => 1581617368
+]
+2020-02-13 23:39:30 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:39:30 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618570
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6968'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617370.235
+    'REQUEST_TIME' => 1581617370
+]
+2020-02-13 23:39:38 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:39:38 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618578
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6981'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617377.983
+    'REQUEST_TIME' => 1581617377
+]
+2020-02-13 23:39:44 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:39:44 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618584
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '6997'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617384.067
+    'REQUEST_TIME' => 1581617384
+]
+2020-02-13 23:40:16 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:40:15 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618616
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7036'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617415.899
+    'REQUEST_TIME' => 1581617415
+]
+2020-02-13 23:40:17 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:40:17 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618617
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7042'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617417.59
+    'REQUEST_TIME' => 1581617417
+]
+2020-02-13 23:41:47 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:41:47 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618707
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7134'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617507.173
+    'REQUEST_TIME' => 1581617507
+]
+2020-02-13 23:41:48 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:41:48 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618708
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7127'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617508.791
+    'REQUEST_TIME' => 1581617508
+]
+2020-02-13 23:44:43 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:44:43 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618883
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7298'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617683.539
+    'REQUEST_TIME' => 1581617683
+]
+2020-02-13 23:44:45 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:44:45 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618885
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7303'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617685.101
+    'REQUEST_TIME' => 1581617685
+]
+2020-02-13 23:45:04 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/jquery.min.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/jquery.min.m...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:45:03 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618904
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7330'
+    'REDIRECT_URL' => '/utbsems/frontend/web/js/jquery.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/js/jquery.min.map'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617703.944
+    'REQUEST_TIME' => 1581617703
+]
+2020-02-13 23:45:35 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:45:35 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618935
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7369'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617735.035
+    'REQUEST_TIME' => 1581617735
+]
+2020-02-13 23:46:00 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:46:00 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618960
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7380'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617760.228
+    'REQUEST_TIME' => 1581617760
+]
+2020-02-13 23:46:02 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "frontend/student-profile".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('frontend/studen...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:46:01 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618962
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7380'
+    'REDIRECT_URL' => '/utbsems/frontend/student-profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/student-profile'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PATH_INFO' => '/frontend/student-profile'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\frontend\\student-profile'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php/frontend/student-profile'
+    'REQUEST_TIME_FLOAT' => 1581617761.908
+    'REQUEST_TIME' => 1581617761
+]
+2020-02-13 23:46:19 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:46:19 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581618979
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7405'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581617779.664
+    'REQUEST_TIME' => 1581617779
+]
+2020-02-13 23:51:31 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:51:31 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'studentupdatesuccesssave' => -1
+    ]
+    '__id' => 7
+    '__expire' => 1581619291
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+    'studentupdatesuccesssave' => '<div class=\"update-created\"> <div class=\"header-flash-msg\" style=\"text-align: center; padding: 20px 10px;\"><span class=\"lnr lnr-checkmark-circle\"></span></div><div class=\"success-msg\">Success!</div><div class=\"head-text\">Profile Saved successfully! </div><div class=\"flash-content\">&nbsp;</div><div class=\"button-sucess\"><input type=\"button\" class=\"button-ok\" data-dismiss=\"alert\" aria-hidden=\"true\" value=\"OK\"></div></div>'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7478'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581618091.204
+    'REQUEST_TIME' => 1581618091
+]
+2020-02-13 23:53:06 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-02-13 23:53:06 [::1][7][ik2eb5qfhbvrqf3d0id7q3e9e1][info][application] $_COOKIE = [
+    '_csrf' => '1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH\";}'
+    'PHPSESSID' => 'ik2eb5qfhbvrqf3d0id7q3e9e1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+    '__expire' => 1581619386
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'student@gmail.com'
+    'userRole' => 2
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1ad7dc0573f2bc967ceb1b7077ff53c7ec05f3a0f3355989a855c7d9ca39b1cba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqA8fbqm_HIfeFoV91TCtDi5BfsMtfOH%22%3B%7D; PHPSESSID=ik2eb5qfhbvrqf3d0id7q3e9e1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files (x86)\\DevDesktop\\tools;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '7494'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1581618186.272
+    'REQUEST_TIME' => 1581618186
+]

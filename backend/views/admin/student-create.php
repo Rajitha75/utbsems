@@ -33,6 +33,26 @@ $storagemodel = new Storage();
     right: 72px;
     margin-top: -29px;
 }
+.icnoformat {
+  width: 100%;
+  height:100px;
+  margin-right: 10px;
+  float: left;
+}
+.field-createstudentform-ic_no_format{
+width: 18%;
+    z-index: 9999;
+    }
+   
+  .field-createstudentform-ic_no {
+    width: 52%;
+    margin-left: 50px !important;
+    margin-top: 22px !important;
+    }
+.field-createstudentform-ic_no_format, .field-createstudentform-ic_no {
+  float: left;
+  margin-right: 5px;
+}
 </style>
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));
@@ -124,11 +144,12 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	<?php echo $form->field($userformmodel, 'nationality')->dropDownList([ 'Malay' => 'Malay', 'Chinese' => 'Chinese', 'Indian' => 'Indian', 'Other' => 'Other'],['prompt' => 'Select Nationality'])->label('Nationality <span class="mandatory">*</span>'); ?>
 	
 	<?php echo $form->field($userformmodel, 'nationalityother')->textInput(['value' => (isset($studentdata['nationalityother'])? $studentdata['nationalityother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-
-	<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label(false);?>
 	
-	<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
-
+	<div class="icnoformat">
+	<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
+	
+	<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label(false);?>
+	</div>
 	<?php echo $form->field($userformmodel, 'ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select IC Color'])->label('IC Color <span class="mandatory">*</span>');?>
 
 	<?php echo $form->field($userformmodel, 'passportno')->textInput(['value' => (isset($studentdata['passportno'])? $studentdata['passportno'] : ''), 'autocomplete' => 'off' ])->label('Passport No <span class="mandatory">*</span>');?>

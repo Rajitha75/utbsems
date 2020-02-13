@@ -18,7 +18,7 @@ use yii\bootstrap\Alert;
 use common\models\Storage;
 use yii\db\Query;
 $storagemodel = new \common\models\Storage();
-if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccess')) ) {
+if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit')) ) {
    // echo Alert::widget(['options' => ['class' => 'alert-success front-noti', 'id' => 'flashmodal', 'style' => 'z-index: 999999'], 'body' => $flash]);
 }
 ?>
@@ -160,12 +160,15 @@ position: absolute;
 
 
 </style>
-<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccess') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified')) ) { 
+<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified')) ) { 
     if(Yii::$app->session->getFlash('signupsuccess')){
     $flashmsg = 'You are registered successfully! Please follow the steps in your email to verify your account'; 
     }
-    if(Yii::$app->session->getFlash('studentupdatesuccess')){
+    if(Yii::$app->session->getFlash('studentupdatesuccesssubmit')){
         $flashmsg = 'Profile Updated successfully! '; 
+        }
+	if(Yii::$app->session->getFlash('studentupdatesuccesssave')){
+        $flashmsg = 'Profile Saved successfully! '; 
         }
         if(Yii::$app->session->getFlash('studentdetails')){
             $flashmsg = 'Thank you for creating an account at UTBSEMS. </br>Thank you for your interest to study in UTB.</br>You may now login and submit online application '; 

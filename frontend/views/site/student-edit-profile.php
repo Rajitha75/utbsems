@@ -27,7 +27,27 @@ $storagemodel = new Storage();
     margin-left: 50px;
     width: 82%;
     margin-bottom: 10px;
-	}ma
+	}
+.icnoformat {
+  width: 100%;
+  height:100px;
+  margin-right: 10px;
+  float: left;
+}
+.field-createstudentform-ic_no_format{
+width: 18%;
+    z-index: 9999;
+    }
+   
+  .field-createstudentform-ic_no {
+    width: 52%;
+    margin-left: 0px !important;
+    margin-top: 28px !important;
+    }
+.field-createstudentform-ic_no_format, .field-createstudentform-ic_no {
+  float: left;
+  margin-right: 5px;
+}
 </style>
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));
@@ -118,10 +138,11 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	
 	<?php echo $form->field($userformmodel, 'nationalityother')->textInput(['value' => (isset($studentdata['nationalityother'])? $studentdata['nationalityother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
 
-	<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label(false);?>
+	<div class="icnoformat">
+	<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
 	
-	<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
-
+	<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label(false);?>
+	</div>
 	<?php echo $form->field($userformmodel, 'ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select IC Color'])->label('IC Color <span class="mandatory">*</span>');?>
 
 	<?php echo $form->field($userformmodel, 'passportno')->textInput(['value' => (isset($studentdata['passportno'])? $studentdata['passportno'] : ''), 'autocomplete' => 'off' ])->label('Passport No <span class="mandatory">*</span>');?>
@@ -392,14 +413,17 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		<?php echo $form->field($userformmodel, 'mailing_district')->textInput(['value' => (isset($studentdata['mailing_district'])? $studentdata['mailing_district'] : ''), 'autocomplete' => 'off' ])->label('District/State');?>
 
 		<?php echo $form->field($userformmodel, 'mailing_postal_code')->textInput(['value' => (isset($studentdata['mailing_postal_code'])? $studentdata['mailing_postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
-
+		
+		<?php echo $form->field($userformmodel, 'is_submit')->hiddenInput()->label(false);?>
 	</fieldset>
  </div>
  
  </div>
   <div class="row text-center">
          <div class="form-group">
- <?= Html::submitButton('Submit', ['class' => 'btn btn-primary usersignup']) ?>
+ <?= Html::submitButton('Save', ['class' => 'btn btn-primary usersignup_save']) ?>
+ <?= Html::submitButton('Submit', ['class' => 'btn btn-primary usersignup_submit']) ?>
+ <?= Html::submitButton('Cancel', ['class' => 'btn btn-primary usersignup_cancel']) ?>
  </div>
         
         </div>
@@ -409,10 +433,10 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
  
 <script>
 $(document).ready(function(){
-	var mailing_permanent = <?php echo (isset($studentdata['mailing_permanent']) && $studentdata['mailing_permanent'] == 1) ? true : false ?>;
+	var mailing_permanent = <?php echo (isset($studentdata['mailing_permanent']) && $studentdata['mailing_permanent'] == 1) ? 1 : 0 ?>;
 	$('#createstudentform-mailing_permanent').prop('checked', mailing_permanent);
 	
-	var bank_terms = <?php echo (isset($studentdata['bank_terms']) && $studentdata['bank_terms'] == 1) ? true : false ?>;
+	var bank_terms = <?php echo (isset($studentdata['bank_terms']) && $studentdata['bank_terms'] == 1) ? 1 : 0 ?>;
 	$('#createstudentform-bank_terms').prop('checked', bank_terms);
 	
 	if(mailing_permanent == 1){
@@ -667,6 +691,25 @@ $(document).ready(function(){
 		}
 	})
 })
+$('.usersignup_save').click(function(){
+	$('#createstudentform-is_submit').val('save');
+if($("#usercreateform").valid()){
+}else{
+	return false;
+}
+});
+$('.usersignup_submit').click(function(){
+	$('#createstudentform-is_submit').val('submit');
+if($("#usercreateform").valid()){
+}else{
+	return false;
+}
+});
+$('.usersignup_cancel').click(function(){
+	window.location.href = "<?php echo Yii::getAlias('@web').'../../../student-profile' ?>";
+	//alert("<?php echo Yii::getAlias('@web').'../../student-profile' ?>");
+	return false;
+});
 $("#usercreateform").validate({
             rules: {
                 "CreateStudentForm[name]": {

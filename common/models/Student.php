@@ -83,7 +83,7 @@ class Student extends \yii\db\ActiveRecord
 		 $uQuery = (new Query())->select(['s.id','name','rollno','rumpun','nationality','gender','user_ref_id','status','utb_email_address','u.email','entry','ic_no','passportno'])
         ->from('student AS s')
         ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id');
-		
+		$uQuery->where(['is_submit' => 'submit']);
         if(!empty($studentname) || !empty($programme_name) || !empty($rollno) || !empty($rumpun) || !empty($nationality) || !empty($studenticno) || !empty($studenticcolor) || !empty($passportno) || !empty($race) || !empty($religion) || !empty($gender) || !empty($martialstatus) || !empty($mobile) || !empty($telehome) || !empty($typeofentry) || !empty($address) || !empty($bankname) || !empty($accountno) || !empty($fathername) || !empty($fathericno) || !empty($mothername) || !empty($mothericno) || !empty($sponsortype) || !empty($programme_name) || !empty($entry) || !empty($intake) || !empty($mode) || !empty($utbemail) || !empty($dateofregistration) || !empty($dateofleaving) || !empty($age) || !empty($highest_qualification) || !empty($lastschoolname) || !empty($state_address) || !empty($type_of_residential) || !empty($type_of_programme) || !empty($bank_account_name)) {
             /*if(!empty($name))   $uQuery->andWhere(['LIKE' , 'name', $name])->orWhere(['LIKE' , 'ic_no', $name])->orWhere(['LIKE' , 'passportno', $name]);
             if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);*/
