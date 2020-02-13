@@ -19,13 +19,20 @@ echo "<h1 class='box-title'>$this->title </h1>";
     .fancybox-inner { width: 100% !important; }
 </style>
 <div class="user-view participation-border fl-left">
-
-<?php if (!file_exists('../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
 <div class="profileimage">
-<img style="width:120px; height:130px"src="<?php echo '../../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />
-</div>
-<a class="btn btn-success" href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-edit-profile">Edit Profile</a>
+<?php //print_r($studentdetails);exit;
+
+ if (!file_exists('../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
+<img style="width:120px; height:130px"src="<?php echo '../../../frontend/web/images/avatar.png'; ?>" />
+
+<?php }else{ ?>
+
+    <img style="width:120px; height:130px"src="<?php echo '../../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />
+
 <?php } ?>
+</div>
+<a class="btn btn-success" href="<?php echo Yii::$app->request->BaseUrl; ?>/admin/student-update?id=<?php echo $studentdetails['id']; ?>">Edit Profile</a>
+
 <h1 class="box-title" style="background-color:#31539c;"><?php echo "Personal Information"; ?></h1>
 <?php //print_r($studentdetails); exit;
         echo DetailView::widget([

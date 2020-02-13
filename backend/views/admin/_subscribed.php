@@ -160,7 +160,7 @@ $dateformat = Yii::getAlias('@phpdatepickerformat');
         </div>
         <div class="col-sm-2 btn-sbrt">
             <div class="col-sm-6 col-xs-12 searchBtn">
-                <?php echo Html::submitButton('<i class="icon-magnifier"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearchSubscribed']) ?>
+                <?php echo Html::submitButton('<i class="fa fa-search"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearchSubscribed']) ?>
                 <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/admin/subscribed-users" id="searchUrl">
             </div>
             <div class="col-sm-6 col-xs-12 searchBtn" style="padding:0;">

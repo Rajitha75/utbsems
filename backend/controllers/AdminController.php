@@ -260,6 +260,7 @@ class AdminController extends \common\controllers\CommonController
 				$student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
 				$student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
 				$student->age = isset($postvariable['age']) ? $postvariable['age'] : '';
+				$student->status_of_student = isset($postvariable['status_of_student']) ? $postvariable['status_of_student'] : '';
                 $student->user_image = isset($postvariable['user_image']) ? $postvariable['user_image'] : '';
                     if ($user = $signup->signup()) {
                     Yii::$app->cache->flush();
@@ -351,6 +352,7 @@ class AdminController extends \common\controllers\CommonController
                     $student->typeofresidentialother = '';
                 }
                 $student->gender = isset($postvariable['gender']) ? $postvariable['gender'] : '';
+		$student->status_of_student = isset($postvariable['status_of_student']) ? $postvariable['status_of_student'] : '';
                 $student->martial_status = isset($postvariable['martial_status']) ? $postvariable['martial_status'] : '';
                 $student->dob = isset($postvariable['dob']) ? $postvariable['dob'] : '';
                 $student->specialneeds = isset($postvariable['specialneeds']) ? $postvariable['specialneeds'] : '';

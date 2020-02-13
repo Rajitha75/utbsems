@@ -739,6 +739,7 @@ Yii::$app->cache->flush();
                 $storagemodel = new \common\models\Storage();
 				$userid = $student->user_ref_id;
             $storagemodel->user_image = \yii\web\UploadedFile::getInstance($userformmodel, 'user_image');
+	    //print_r($storagemodel);exit;
             if(count($storagemodel->user_image)>0){
                 $studentimage = $student->user_image = $storagemodel->user_image->name;
                 if ($storagemodel->upload($userid)) {

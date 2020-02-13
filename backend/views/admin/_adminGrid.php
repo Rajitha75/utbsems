@@ -118,7 +118,7 @@ echo "<div class='participation-border fl-left all-userlst'>";
         </div>
         <div class="col-sm-2 btn-sbrt ad-lst">
             <div class="col-sm-6 col-xs-12 searchBtn">
-                <?php echo Html::submitButton('<i class="icon-magnifier"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
+                <?php echo Html::submitButton('<i class="fa fa-search"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
                 <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/admin/admin_list" id="searchUrl">
             </div>
             <div class="col-sm-6 col-xs-12 searchBtn" style="padding:0;">

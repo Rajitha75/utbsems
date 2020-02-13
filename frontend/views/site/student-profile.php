@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 <div class="editprofile-sec">
     <div class="profileimage">
-    <?php if (!file_exists('frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
+    <?php if (!file_exists('../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
 <img style="width:120px; height:130px"src="<?php echo 'frontend/web/images/avatar.png'; ?>" />
 <?php }else{ ?>
     <img style="width:120px; height:130px"src="<?php echo 'frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />

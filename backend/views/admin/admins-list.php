@@ -60,7 +60,7 @@ echo "<div class='participation-border fl-left all-userlst'>";
             <?php echo $form->field($model, 'adminname')->textInput(array('placeholder' => 'Admin Name'), ['class' => 'form-control']) ?>
         </div>
         <div class="searchBtn">
-                <?php echo Html::submitButton('<i class="icon-magnifier"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
+                <?php echo Html::submitButton('<i class="fa fa-search"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
                 <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/admin/admins-list" id="searchUrl">
             </div>
             <div class="searchBtn" style="padding:0;">
