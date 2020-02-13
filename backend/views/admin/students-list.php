@@ -167,24 +167,35 @@ echo "<div class='participation-border fl-left all-userlst'>";
 	<?php echo $form->field($model, 'gender')->dropDownList([ 'Male' => 'Male', 'Female' => 'Female'],['prompt' => 'Gender'])->label(false); ?>
 	
     <?php echo $form->field($model, 'martial_status')->dropDownList([ 'Married' => 'Married', 'Single' => 'Single'],['prompt' => 'Martial Status'])->label(false); ?>
+	
+	<?php echo $form->field($model, 'age')->textInput(array('placeholder' => 'Age'),['autocomplete' => 'off'])->label(false);?>
     
 		<?php echo $form->field($model, 'telephone_mobile')->textInput(array('placeholder' => 'Telephone No. (Mobile)'),['autocomplete' => 'off'])->label(false);?>
 
 		<?php echo $form->field($model, 'tele_home')->textInput(array('placeholder' => 'Telephone No. (Home)'),['autocomplete' => 'off'])->label(false);?>
 	
-		<?php echo $form->field($model, 'email')->textInput(array('placeholder' => 'Email'),['autocomplete' => 'off'])->label(false);?>
+		<?php //echo $form->field($model, 'email')->textInput(array('placeholder' => 'Email'),['autocomplete' => 'off'])->label(false);?>
+		
+		<?php echo $form->field($model, 'lastschoolname')->textInput(array('placeholder' => 'Name of Last School Attended'),['autocomplete' => 'off'])->label(false);?>
+		
+		<?php echo $form->field($model, 'highest_qualification')->textInput(array('placeholder' => 'Highest Qualification Obtained'),['autocomplete' => 'off'])->label(false);?>
 		
 		<?php echo $form->field($model, 'type_of_entry')->textInput(array('placeholder' => 'Type of Entry'),['autocomplete' => 'off'])->label(false); ?>
 		
 		<?php echo $form->field($model, 'address')->textInput(array('placeholder' => 'Postal Address'))->label(false); ?>
-
-		<?php echo $form->field($model, 'bank_name')->dropDownList([ 'BAIDURI' => 'BAIDURI', 'BIBD' => 'BIBD', 'STANDARD CHARTERED BANK' => 'STANDARD CHARTERED BANK', 'TAIB' => 'TAIB'],['prompt' => 'Bank Name'])->label(false); ?>
-
-		<?php echo $form->field($model, 'account_no')->textInput(array('placeholder' => 'Bank Account No'),['autocomplete' => 'off'])->label(false);?>
 		
 		</div>
 	<div class="col-xs-4 col-sm-3">
+	
+		<?php echo $form->field($model, 'state_address')->textInput(array('placeholder' => 'District'),['autocomplete' => 'off' ])->label(false); ?>
+		
+		<?php echo $form->field($model, 'type_of_residential')->textInput(array('placeholder' => 'Type of Residential'),['autocomplete' => 'off' ])->label(false); ?>
 
+		<?php echo $form->field($model, 'bank_name')->dropDownList([ 'BAIDURI' => 'BAIDURI', 'BIBD' => 'BIBD', 'STANDARD CHARTERED BANK' => 'STANDARD CHARTERED BANK', 'TAIB' => 'TAIB'],['prompt' => 'Bank Name'])->label(false); ?>
+		
+		<?php echo $form->field($model, 'bank_account_name')->textInput(array('placeholder' => 'Bank Account Name'),['autocomplete' => 'off'])->label(false);?>
+		
+		<?php echo $form->field($model, 'account_no')->textInput(array('placeholder' => 'Bank Account No'),['autocomplete' => 'off'])->label(false);?>
 	
 		<?php echo $form->field($model, 'father_name')->textInput(array('placeholder' => 'Father/Guardian Name'),['autocomplete' => 'off'])->label(false);?>
 
@@ -194,7 +205,14 @@ echo "<div class='participation-border fl-left all-userlst'>";
 
 		<?php echo $form->field($model, 'mothericno')->textInput(array('placeholder' => 'Mother IC No '),['autocomplete' => 'off'])->label(false);?>
 
-		<?php echo $form->field($model, 'sponsor_type')->textInput(array('placeholder' => 'Sponsor Type'),['autocomplete' => 'off' ])->label(false); ?>
+		
+
+</div>
+    <div class="col-xs-4 col-sm-3">
+	
+<?php echo $form->field($model, 'sponsor_type')->textInput(array('placeholder' => 'Sponsor Type'),['autocomplete' => 'off' ])->label(false); ?>
+		
+		<?php echo $form->field($model, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy PhD' => 'Doctor of Philosophy PhD'], ['prompt' => 'Type of Programme'])->label(false);?>
 	
 		<?php echo $form->field($model, 'programme_name')
 		->dropDownList(['Bachelor of Business in Applied Economics and Finance' => 'Bachelor of Business in Applied Economics and Finance',
@@ -237,18 +255,15 @@ echo "<div class='participation-border fl-left all-userlst'>";
 		<?php echo $form->field($model, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year'], ['prompt' => 'Entry'])->label(false);?>
 
 		
-		<?php echo $form->field($model, 'status_of_student')->dropDownList(['Current Student' => 'Current Student', 'Withdrawn' => 'Withdrawn'], ['prompt' => 'Status of Student'])->label(false);?>
+		<?php //echo $form->field($model, 'status_of_student')->dropDownList(['Current Student' => 'Current Student', 'Withdrawn' => 'Withdrawn'], ['prompt' => 'Status of Student'])->label(false);?>
 
 <?php echo $form->field($model, 'intake')->dropDownList($years,['prompt' => 'Intake No'])->label(false);?>
-
-</div>
-    <div class="col-xs-4 col-sm-3">
 
 <?php echo $form->field($model, 'mode')->dropDownList(['Full Time' => 'Full Time', 'Part Time'=> 'Part Time'],['prompt' => 'Mode'])->label(false);?>
 
 <?php echo $form->field($model, 'utb_email_address')->textInput(array('placeholder' => 'UTB Email Address'),['autocomplete' => 'off'])->label(false);?>
 
-<?php echo $form->field($model, 'degree_classification')->textInput(array('placeholder' => 'Degree Classification'),['autocomplete' => 'off'])->label(false);?>
+<?php //echo $form->field($model, 'degree_classification')->textInput(array('placeholder' => 'Degree Classification'),['autocomplete' => 'off'])->label(false);?>
 
 <?php 
 echo $form->field($model, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
@@ -286,13 +301,13 @@ echo $form->field($model, 'date_of_leaving')->widget(\yii\jui\DatePicker::classn
 				],
 ])->textInput(array('placeholder' => 'Date of Leaving'),['readonly' => true])->label(false); ?>
 
-<?php echo $form->field($model, 'previous_roll_no')->textInput(array('placeholder' => 'Previous Roll No'),['autocomplete' => 'off'])->label(false);?>
+<?php //echo $form->field($model, 'previous_roll_no')->textInput(array('placeholder' => 'Previous Roll No'),['autocomplete' => 'off'])->label(false);?>
 
-<?php echo $form->field($model, 'previous_programme_name')->textInput(array('placeholder' => 'Previous Programmme Name'),['autocomplete' => 'off'])->label(false);?>
+<?php //echo $form->field($model, 'previous_programme_name')->textInput(array('placeholder' => 'Previous Programmme Name'),['autocomplete' => 'off'])->label(false);?>
 
-<?php echo $form->field($model, 'previous_intake_no')->dropDownList($years,['prompt' => 'Previous Intake No'])->label(false);?>
+<?php //echo $form->field($model, 'previous_intake_no')->dropDownList($years,['prompt' => 'Previous Intake No'])->label(false);?>
 
-<?php echo $form->field($model, 'previous_utb_email')->textInput(array('placeholder' => 'Previous UTB Email'),['autocomplete' => 'off'])->label(false);?>		
+<?php //echo $form->field($model, 'previous_utb_email')->textInput(array('placeholder' => 'Previous UTB Email'),['autocomplete' => 'off'])->label(false);?>		
 
 	
  </div>
@@ -398,7 +413,7 @@ echo GridView::widget([
                 }
             ],
             ['class' => 'yii\grid\ActionColumn',
-                            'header'=> 'View | Edit' ,
+                            'header'=> 'View | Edit | Delete | Download' ,
                             //'options' => ['width' => '85'],
                             'headerOptions' => ['style' => 'width:142px'],
                             'template'=>'{view}{update}{delete}{creatempdf}',
@@ -431,7 +446,7 @@ echo GridView::widget([
                                                     'class' => 'ajaxDelete', 
                                                     'delete-url' => $url, 
                                                     'pjax-container' => 'pjax-list',
-                                                    'data-confirm'=>'Are you sure you want to delete this User?',
+                                                    'data-confirm'=>'Are you sure you want to undo delete this User?',
                                                 ]);        
                                             }
                                           },
@@ -546,7 +561,7 @@ $(document).ready(function(){
             var martialstatus = $('#student-martial_status').val();
             var mobile = $('#student-telephone_mobile').val();
             var telehome = $('#student-tele_home').val();
-            var email = $('#student-email').val();
+            //var email = $('#student-email').val();
             var typeofentry = $('#student-type_of_entry').val();
             var address = $('#student-address').val();
             var bankname = $('#student-bank_name').val();
@@ -559,19 +574,26 @@ $(document).ready(function(){
             var sponsortype = $('#student-sponsor_type').val();
             var programme_name = $('#student-programme_name').val();
             var entry = $('#student-entry').val();
-            var status = $('#student-status_of_student').val();
+            //var status = $('#student-status_of_student').val();
             var intake = $('#student-intake').val();
 
             var mode = $('#student-mode').val();
             var utbemail = $('#student-utb_email_address').val();
-            var degree = $('#student-degree_classification').val();
+            //var degree = $('#student-degree_classification').val();
             var dateofregistration = $('#student-date_of_registration').val();
             var dateofleaving = $('#student-date_of_leaving').val();
-            var prevrollno = $('#student-previous_roll_no').val();
-            var prevprogname = $('#student-previous_programme_name').val();
-            var previntakeno = $('#student-previous_intake_no').val();
-            var prevutbemail = $('#student-previous_utb_email').val();
-                var pjaxReloadURL = searchUrl + '?name=' + name+ '&rollno=' + rollno+ '&rumpun=' + rumpun+ '&nationality=' + nationality+ '&studenticno=' + studenticno+ '&studenticcolor=' + studenticcolor+ '&passportno=' + passportno+ '&race=' + race+ '&religion=' + religion+ '&gender=' + gender+ '&martialstatus=' + martialstatus+ '&mobile=' + mobile+ '&telehome=' + telehome+ '&email=' + email+ '&typeofentry=' + typeofentry+ '&address=' + address+ '&bankname=' + bankname+ '&accountno=' + accountno+ '&fathername=' + fathername+ '&fathericno=' + fathericno+ '&mothername=' + mothername+ '&mothericno=' + mothericno+ '&sponsortype=' + sponsortype+ '&programme_name=' + programme_name+ '&entry=' + entry+ '&status=' + status+ '&intake=' + intake+ '&mode=' + mode+ '&utbemail=' + utbemail+ '&degree=' + degree+ '&dateofregistration=' + dateofregistration+ '&dateofleaving=' + dateofleaving+ '&prevrollno=' + prevrollno+ '&prevprogname=' + prevprogname+ '&previntakeno=' + previntakeno+ '&prevutbemail=' + prevutbemail;
+            //var prevrollno = $('#student-previous_roll_no').val();
+            //var prevprogname = $('#student-previous_programme_name').val();
+            //var previntakeno = $('#student-previous_intake_no').val();
+            //var prevutbemail = $('#student-previous_utb_email').val();
+			var age = $('#student-age').val();
+            var highest_qualification = $('#student-highest_qualification').val();
+            var lastschoolname = $('#student-lastschoolname').val();
+            var state_address = $('#student-state_address').val();
+            var type_of_residential = $('#student-type_of_residential').val();
+            var type_of_programme = $('#student-type_of_programme').val();
+			var bank_account_name = $('#student-bank_account_name').val();
+                var pjaxReloadURL = searchUrl + '?name=' + name+ '&rollno=' + rollno+ '&rumpun=' + rumpun+ '&nationality=' + nationality+ '&studenticno=' + studenticno+ '&studenticcolor=' + studenticcolor+ '&passportno=' + passportno+ '&race=' + race+ '&religion=' + religion+ '&gender=' + gender+ '&martialstatus=' + martialstatus+ '&mobile=' + mobile+ '&telehome=' + telehome+ '&typeofentry=' + typeofentry+ '&address=' + address+ '&bankname=' + bankname+ '&accountno=' + accountno+ '&fathername=' + fathername+ '&fathericno=' + fathericno+ '&mothername=' + mothername+ '&mothericno=' + mothericno+ '&sponsortype=' + sponsortype+ '&programme_name=' + programme_name+ '&entry=' + entry+ '&intake=' + intake+ '&mode=' + mode+ '&utbemail=' + utbemail+ '&dateofregistration=' + dateofregistration+ '&dateofleaving=' + dateofleaving + '&age=' + age + '&highest_qualification=' + highest_qualification + '&lastschoolname=' + lastschoolname + '&state_address=' + state_address + '&type_of_residential=' + type_of_residential + '&type_of_programme=' + type_of_programme + '&bank_account_name=' + bank_account_name;
                 $.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer), async: false});
                 location.reload();
            

@@ -250,12 +250,12 @@ class SiteController extends \common\controllers\CommonController {
     }
 
     public function actionStudentLogin($username = '') {
-		try{
+		//try{
             if(!Yii::$app->user->id){
             $model = new \common\models\LoginForm();
             $model->scenario = 'loginpage';
             
-
+Yii::$app->cache->flush();
             $captcha = false;
             if(Yii::$app->request->post()) {
                 if(!empty(Yii::$app->request->post('LoginForm'))) {
@@ -285,8 +285,7 @@ class SiteController extends \common\controllers\CommonController {
                     return $this->redirect(Yii::$app->getUrlManager()->getBaseUrl() . '/../../');
                 }
 				}
-            }
-            
+            }            
             if (Yii::$app->request->post() && $model->validate()) {
                 $userData = User::find()->where(['username' => addslashes($username)])->one();
                if ($model->login()) {
@@ -304,9 +303,9 @@ class SiteController extends \common\controllers\CommonController {
         }else{
             return $this->redirect(Yii::$app->getUrlManager()->getBaseUrl() . '/../../');
         }
-		} catch (\Exception $e) {
-            \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }
+		//} catch (\Exception $e) {
+          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        //}
     }
 
 
@@ -467,11 +466,13 @@ class SiteController extends \common\controllers\CommonController {
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $signup->email = $postvariable['email'];
                 $signup->username = $postvariable['email'];
+				$signup->password = $postvariable['password'];
                 $signup->user_role_ref_id = 2;
+				$signup->status = 2;
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
 				
-                $student->name = isset($postvariable['name']) ? $postvariable['name'] : '';
-                $student->rollno = isset($postvariable['rollno']) ? $postvariable['rollno'] : '';
+                $student->ic_no = isset($postvariable['ic_no']) ? $postvariable['ic_no'] : '';
+                $student->passportno = isset($postvariable['passportno']) ? $postvariable['passportno'] : '';
                 $student->email = isset($postvariable['email']) ? $postvariable['email'] : '';
                     if ($user = $signup->signup()) {
                     Yii::$app->cache->flush();
@@ -596,13 +597,16 @@ class SiteController extends \common\controllers\CommonController {
     }
 
     public function actionStudentEditProfile(){
-        
+        Yii::$app->cache->flush();
         //print_r($studentdata[0]['name']); exit;
             $userformmodel = new \common\models\CreateStudentForm();
             $countries = User::countrieslist();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
+			
                 $student = Student::find()->where(['user_ref_id'=>$postvariable['studentid']])->one();
+				
+				$student->title = isset($postvariable['title']) ? $postvariable['title'] : '';
                 $student->name = isset($postvariable['name']) ? $postvariable['name'] : '';
                 $student->rollno = isset($postvariable['rollno']) ? $postvariable['rollno'] : '';
                 $student->rumpun = isset($postvariable['rumpun']) ? $postvariable['rumpun'] : '';
@@ -611,6 +615,14 @@ class SiteController extends \common\controllers\CommonController {
                     $student->nationalityother = isset($postvariable['nationalityother']) ? $postvariable['nationalityother'] : '';
                 }else{
                     $student->nationalityother = '';
+                }
+				 $student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
+                if($postvariable['countrycode'] == 'Brunei'){
+                    $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
+					$student->district = '';
+                }else{
+					$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
+                    $student->state = '';
                 }
                 $student->passportno = isset($postvariable['passportno']) ? $postvariable['passportno'] : '';
                 $student->race = isset($postvariable['race']) ? $postvariable['race'] : '';
@@ -625,12 +637,24 @@ class SiteController extends \common\controllers\CommonController {
                 }else{
                     $student->religionother = '';
                 }
+				$student->highest_qualification = isset($postvariable['highest_qualification']) ? $postvariable['highest_qualification'] : '';
+                if($postvariable['highest_qualification'] == 'Other'){
+                    $student->highestqualificationother = isset($postvariable['highestqualificationother']) ? $postvariable['highestqualificationother'] : '';
+                }else{
+                    $student->highestqualificationother = '';
+                }
                 $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
-                /*if($postvariable['type_of_entry'] == 'Other'){
+                if($postvariable['type_of_entry'] == 'Other'){
                     $student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
                 }else{
                     $student->typeofentryother = '';
-                }*/
+                }
+				$student->type_of_residential = isset($postvariable['type_of_residential']) ? $postvariable['type_of_residential'] : '';
+                if($postvariable['type_of_residential'] == 'Other'){
+                    $student->typeofresidentialother = isset($postvariable['typeofresidentialother']) ? $postvariable['typeofresidentialother'] : '';
+                }else{
+                    $student->typeofresidentialother = '';
+                }
                 $student->gender = isset($postvariable['gender']) ? $postvariable['gender'] : '';
                 $student->martial_status = isset($postvariable['martial_status']) ? $postvariable['martial_status'] : '';
                 $student->dob = isset($postvariable['dob']) ? $postvariable['dob'] : '';
@@ -639,6 +663,7 @@ class SiteController extends \common\controllers\CommonController {
                 $student->telephone_mobile = isset($postvariable['telephone_mobile']) ? $postvariable['telephone_mobile'] : '';
                 $student->tele_home = isset($postvariable['tele_home']) ? $postvariable['tele_home'] : '';
                 $student->email = isset($postvariable['email']) ? $postvariable['email'] : '';
+				$student->emailother = isset($postvariable['emailother']) ? $postvariable['emailother'] : '';
                 $student->lastschoolname = isset($postvariable['lastschoolname']) ? $postvariable['lastschoolname'] : '';
                 $student->father_name = isset($postvariable['father_name']) ? $postvariable['father_name'] : '';
                 $student->fathericno = isset($postvariable['fathericno']) ? $postvariable['fathericno'] : '';
@@ -649,13 +674,38 @@ class SiteController extends \common\controllers\CommonController {
                 $student->address = isset($postvariable['address']) ? $postvariable['address'] : '';
                 $student->address2 = isset($postvariable['address2']) ? $postvariable['address2'] : '';
                 $student->address3 = isset($postvariable['address3']) ? $postvariable['address3'] : '';
+				$student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
+                $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
+				$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
                 $student->postal_code = isset($postvariable['postal_code']) ? $postvariable['postal_code'] : '';
+				$student->mailing_address = isset($postvariable['mailing_address']) ? $postvariable['mailing_address'] : '';
+                $student->mailing_address2 = isset($postvariable['mailing_address2']) ? $postvariable['mailing_address2'] : '';
+                $student->mailing_address3 = isset($postvariable['mailing_address3']) ? $postvariable['mailing_address3'] : '';
+				$student->mailing_countrycode = isset($postvariable['mailing_countrycode']) ? $postvariable['mailing_countrycode'] : '';
+                $student->mailing_state = isset($postvariable['mailing_state']) ? $postvariable['mailing_state'] : '';
+				$student->mailing_district = isset($postvariable['mailing_district']) ? $postvariable['mailing_district'] : '';
+                $student->mailing_postal_code = isset($postvariable['mailing_postal_code']) ? $postvariable['mailing_postal_code'] : '';
+				$student->mailing_permanent = isset($postvariable['mailing_permanent']) ? $postvariable['mailing_permanent'] : '';
+				$student->bank_terms = isset($postvariable['bank_terms']) ? $postvariable['bank_terms'] : '';
                 $student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
+				$student->date_of_registration = isset($postvariable['date_of_registration']) ? $postvariable['date_of_registration'] : '';
+				if($postvariable['bank_name'] == 'Other'){
+                    $student->bank_name_other = isset($postvariable['bank_name_other']) ? $postvariable['bank_name_other'] : '';
+                }else{
+                    $student->bank_name_other = '';
+                }
+				$student->bank_account_name = isset($postvariable['bank_account_name']) ? $postvariable['bank_account_name'] : '';
                 $student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
                 $student->sponsor_type = isset($postvariable['sponsor_type']) ? $postvariable['sponsor_type'] : '';
-                //$student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+				if($postvariable['sponsor_type'] == 'Other'){
+                    $student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+                }else{
+                    $student->sponsor_type_other = '';
+                }
+                $student->type_of_programme = isset($postvariable['type_of_programme']) ? $postvariable['type_of_programme'] : '';
+                $student->school = isset($postvariable['school']) ? $postvariable['school'] : '';
 
-                $student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
+                /*$student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
                 $student->employer_address = isset($postvariable['employer_address']) ? $postvariable['employer_address'] : '';
                 $student->employer_address2 = isset($postvariable['employer_address2']) ? $postvariable['employer_address2'] : '';
                 $student->employer_address3 = isset($postvariable['employer_address3']) ? $postvariable['employer_address3'] : '';
@@ -665,11 +715,12 @@ class SiteController extends \common\controllers\CommonController {
                 $student->emp_from_month = isset($postvariable['emp_from_month']) ? $postvariable['emp_from_month'] : '';
                 $student->emp_from_year = isset($postvariable['emp_from_year']) ? $postvariable['emp_from_year'] : '';
                 $student->emp_to_month = isset($postvariable['emp_to_month']) ? $postvariable['emp_to_month'] : '';
-                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';
+                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';*/
 
                 $student->programme_name = isset($postvariable['programme_name']) ? $postvariable['programme_name'] : '';
                 $student->intake = isset($postvariable['intake']) ? $postvariable['intake'] : '';
                 $student->entry = isset($postvariable['entry']) ? $postvariable['entry'] : '';
+				$student->ic_no_format = isset($postvariable['ic_no_format']) ? $postvariable['ic_no_format'] : '';
                 $student->ic_no = isset($postvariable['ic_no']) ? $postvariable['ic_no'] : '';
                 $student->ic_color = isset($postvariable['ic_color']) ? $postvariable['ic_color'] : '';
                 $student->gaurdian_relation = isset($postvariable['gaurdian_relation']) ? $postvariable['gaurdian_relation'] : '';
@@ -680,6 +731,10 @@ class SiteController extends \common\controllers\CommonController {
                 $student->remarks = isset($postvariable['remarks']) ? $postvariable['remarks'] : '';
                 $student->telphone_work = isset($postvariable['telphone_work']) ? $postvariable['telphone_work'] : '';
                 $student->mother_ic_color = isset($postvariable['mother_ic_color']) ? $postvariable['mother_ic_color'] : '';
+				$student->mode = isset($postvariable['mode']) ? $postvariable['mode'] : '';
+				$student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
+				$student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
+				$student->age = isset($postvariable['age']) ? $postvariable['age'] : '';
                 $student->user_image = isset($postvariable['user_image']) ? $postvariable['user_image'] : '';
                 $storagemodel = new \common\models\Storage();
 				$userid = $student->user_ref_id;

@@ -9,7 +9,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Student Register';
+$this->title = 'Create an Account';
 $this->params['breadcrumbs'][] = $this->title;
 /*
 if(($flash = Yii::$app->session->getFlash('password_changed')) || ($flash = Yii::$app->session->getFlash('forgotpassword'))){
@@ -22,7 +22,7 @@ if(($flash = Yii::$app->session->getFlash('mailnotconfirmed')) || ($flash = Yii:
 
 ?>
 <style>
-#emailerr, #rollnoerr{
+#emailerr, #icnoerr{
 	color: #ff0000;
 	margin-left: 40px;
     position: relative;
@@ -95,20 +95,27 @@ label.error{
         	<h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
 		</div>
         	<div class="panel-body">
-            <p class="login-page-cont">Please fill out the following fields to login</p>
+            <p class="login-page-cont">Please fill out the following fields to register</p>
 			<?php $form = ActiveForm::begin(['id' => 'register-student-form',
                 'method' => 'post',
 				'action' => 'student-register'
 				]); ?>
                 
-                <?php echo $form->field($userformmodel, 'name')->textInput(['autocomplete' => 'off'])->label('Name <span class="mandatory">*</span>');?>
+                <?php echo $form->field($userformmodel, 'ic_no')->textInput(['autocomplete' => 'off', 'placeholder' => 'Brunei IC Number'])->label(false);?>
 
-	<?php echo $form->field($userformmodel, 'rollno')->textInput(['autocomplete' => 'off'])->label('Roll No <span class="mandatory">*</span>');?>
-	<div id='rollnoerr' style="display:none">Roll no already exists</div>
+	<?php echo $form->field($userformmodel, 'passportno')->textInput(['autocomplete' => 'off', 'placeholder' => 'Passport No'])->label(false);?>
+	<div id='icnoerr' style="display:none">Please enter passport number if you do not have Brunei IC</div>
 	
-	<?php echo $form->field($userformmodel, 'email')->textInput(['autocomplete' => 'off'])->label('Email <span class="mandatory">*</span>');?>
+	<?php echo $form->field($userformmodel, 'email')->textInput(['autocomplete' => 'off', 'placeholder' => 'Email'])->label(false);?>
 	<div id='emailerr' style="display:none">Email id already exists</div>
+	
+	<?php echo $form->field($userformmodel, 'password')->textInput(['autocomplete' => 'off', 'placeholder' => 'Password'])->passwordInput(['placeholder' => 'Password'])->label(false);?>
+	
+	<?php echo $form->field($userformmodel, 'retype_password')->textInput(['autocomplete' => 'off', 'placeholder' => 'Retype Password'])->passwordInput(['placeholder' => 'Retype Password'])->label(false);?>
 					
+				<div class="login-page-cont">
+                    <?= Html::a('I already have an account', Yii::$app->request->BaseUrl . '/../../login') ?>.
+                </div>
                 <div class="button-container1">
                     <?= Html::submitButton('Register', ['class' => 'btn btn-primary lg-pgbtn', 'id' => 'loginpagebtn', 'name' => 'login-button']) ?>
                 </div>
@@ -123,30 +130,28 @@ label.error{
 <script>
 $(document).ready(function() {
 var validateemailurl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/site/validate-email';
-var validaterollnourl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/site/validate-rollno';
 	$('#loginpagebtn').click(function(e){
 		var emailval = $('#createstudentform-email').val();
 		var rollnoval = $('#createstudentform-rollno').val();
 		e.preventDefault();
 		$('#emailerr').hide();
 		$('#rollnoerr').hide();
+		$('#icnoerr').hide();
+		var icno = $('#createstudentform-ic_no').val();
+		var passportno = $('#createstudentform-passportno').val();
+		if((!icno || icno == '') && (!passportno || passportno == '')){
+			$('#icnoerr').show();
+		}
 		if(emailval && emailval != ''){
+			$('#emailerr').hide();
 	 $.ajax({
                     url: validateemailurl,
                     type: "post",
                     data: {email:emailval},
                     success: function (data) {
 						if(data == 'false'){
+							$('#emailerr').text('Email id already exists');
 							$('#emailerr').show();
-							return false;
-						}else{
-							$.ajax({
-                    url: validaterollnourl,
-                    type: "post",
-                    data: {rollno:rollnoval},
-                    success: function (data) {
-						if(data == 'false'){
-							$('#rollnoerr').show();
 							return false;
 						}else{
 							$("#register-student-form").submit();
@@ -154,35 +159,48 @@ var validaterollnourl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/site/vali
                         
                     }
                 });
-						}
-                        
-                    }
-                });
 				
 	 
+	}else{
+		$('#emailerr').text('Please enter email address');
+		$('#emailerr').show();
 	}
 	});
 $("#register-student-form").validate({
             rules: {
-                "CreateStudentForm[name]": {
+               /* "CreateStudentForm[name]": {
                     required: true,
 				},
 				"CreateStudentForm[rollno]": {
                     required: true,
-				},
+				},*/
 				"CreateStudentForm[email]": {
                     required: true,
-				}
+					email:true
+				},
+				"CreateStudentForm[password]": {
+					required: true,
+				},
+				"CreateStudentForm[confirmpassword]": {
+					equalTo: "#createstudentform-password"
+				},
 			},
             messages: {
-                "CreateStudentForm[name]": {
+               /* "CreateStudentForm[name]": {
                     required: "Name cannot be blank",
 				},
 				"CreateStudentForm[rollno]": {
                     required: "Roll No is required",
-				},
+				},*/
 				"CreateStudentForm[email]": {
-                    required: "Please enter Email"
+                    required: "Please enter Email",
+					email:"Please enter valid email address"
+				},
+				"CreateStudentForm[password]": {
+                    required: "Please enter Password"
+				},
+				"CreateStudentForm[confirmpassword]": {
+                    required: "Passwords do not match"
 				}
 			},
 			});

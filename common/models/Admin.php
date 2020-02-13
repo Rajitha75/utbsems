@@ -59,8 +59,9 @@ class Admin extends \yii\db\ActiveRecord
 
   public static function getAdminsList($name)
     {
-		 $uQuery = (new Query())->select(['id','name','email','gender','mobile'])
-        ->from('admin AS a');
+		 $uQuery = (new Query())->select(['a.id','name','a.email','gender','mobile','status','user_ref_id'])
+        ->from('admin AS a')
+		->join('LEFT JOIN', 'user AS u', 'u.id = a.user_ref_id');
 		
         if(!empty($name)) {
             if(!empty($name))   $uQuery->andWhere(['LIKE' , 'name', $name]);

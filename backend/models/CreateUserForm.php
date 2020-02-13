@@ -68,7 +68,7 @@ class CreateUserForm extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-     
+     [['age'], 'safe'],
 			
         ];
     }

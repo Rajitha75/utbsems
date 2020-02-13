@@ -114,14 +114,104 @@ echo GridView::widget([
                     return $model['mobile'] ? stripslashes($model['mobile']) : 'Not Assigned';
                 }
             ],
+			['class' => 'yii\grid\ActionColumn',
+                            'header'=> 'Delete' ,
+                            //'options' => ['width' => '85'],
+                            'headerOptions' => ['style' => 'width:142px'],
+                            'template'=>'{delete}',
+                            'buttons'=>[
+                                        'delete'=>function ($url, $model) { 
+                                            if(@$model['status'] == 1){    
+                                            return HTML::a('<span class="glyphicon glyphicon-trash"></span>',$url,[
+                                                'title' => Yii::t('yii', 'delete'),
+                                                'aria-label'=>"Delete",
+                                                'class' => 'ajaxDelete', 
+                                                'delete-url' => $url, 
+                                                'pjax-container' => 'pjax-list',
+                                                'data-confirm'=>'Are you sure you want to delete this Admin?',
+                                            ]);                               
+                                            }else if(@$model['status'] == 2){
+                                                return HTML::a('<span class="glyphicon glyphicon-repeat"></span>',$url,[
+                                                    'title' => Yii::t('yii', 'undo'),
+                                                    'aria-label'=>"Delete",
+                                                    'class' => 'ajaxDelete', 
+                                                    'delete-url' => $url, 
+                                                    'pjax-container' => 'pjax-list',
+                                                    'data-confirm'=>'Are you sure you want to undo delete this Admin?',
+                                                ]);        
+                                            }
+                                          }
+                                      ],
+                            'urlCreator' => function ($action, $model, $key, $index) {
+                                if($action === 'delete'){
+                                    return Url::toRoute(['admin-delete', 'id' => $model['user_ref_id'], 'status' => $model['status']]);
+                                }
+                            } 
+                        ],
     ],
 ]);
 \yii\widgets\Pjax::end();
+?>
+
+<div id="dataConfirmModal" class="confirm-box" style="display:none;">
+    <h3 id="dataConfirmLabel" >Please Confirm</h3>   
+    <div style="text-align:right;margin-top:10px;">
+        <input class="dataConfirmCancel btn btn-secondary" onclick="$('#dataConfirmModal').css('display','none');" type="button" value="Cancel">
+        <input class="dataConfirmOK btn btn-primary" onclick="updateStatus()" type="button" value="Ok">
+    </div>
+</div>
+
+	<input type="hidden" value="" id="updateUrl">
+<input type="hidden" value="" id="ajaxContainer">
+<?php
+$this->registerJs(" $(document).on('ready pjax:success', function () {  var deleteUrl; 
+  $('.ajaxDelete').on('click', function (e) {
+    e.preventDefault();
+    deleteUrl     = $(this).attr('delete-url');
+    $('#updateUrl').val(deleteUrl);
+    var pjaxContainer = $(this).attr('pjax-container');
+    $('#ajaxContainer').val(pjaxContainer);
+    
+    $('#dataConfirmLabel').text($(this).attr('data-confirm'));
+    $('#dataConfirmModal').css('display','block');
+   
+    return false;
+ 
+});
+    $(document).on('pjax:timeout', function(event) {
+      // Prevent default timeout redirection behavior
+      event.preventDefault()
+    });
+}); 
+
+");
 ?>
 </div>
 
 
 <script>
+ function updateStatus(){
+    var deleteUrl = $('#updateUrl').val();
+    var pjaxContainer = $('#ajaxContainer').val();
+     $.ajax({
+     url:   deleteUrl,
+     type: 'post',
+     success: function(data){        
+       if(data){ 
+           $('#dataConfirmModal').css('display','none');
+           $.pjax.reload({container: '#' + $.trim(pjaxContainer)});
+           $('.notifyDiv').slideDown('slow',function () {
+               $(this).delay(2000).fadeOut(1000);
+           });           
+       }
+     },
+     error: function(xhr, status, error) {
+        // alert('There was an error with your request.' + xhr.responseText);
+     }
+     }); 
+     return false;
+ }   
+
 $(document).ready(function(){
 	var name = "<?php echo !empty(Yii::$app->getRequest()->getQueryParam('name')) ? Yii::$app->getRequest()->getQueryParam('name') : '' ?>";
 	$('#admin-adminname').val(name);

@@ -74,6 +74,7 @@ class AdminController extends \common\controllers\CommonController
                 $signup->email = $postvariable['email'];
                 $signup->username = $postvariable['email'];
                 $signup->user_role_ref_id = 1;
+				$signup->status = 2;
                 $postvariable=Yii::$app->request->post('CreateAdminForm');
 				
                 $admin->name = $postvariable['name'];
@@ -130,26 +131,64 @@ class AdminController extends \common\controllers\CommonController
                 $signup->user_role_ref_id = 2;
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
 				 
+				$student->title = isset($postvariable['title']) ? $postvariable['title'] : '';
                 $student->name = isset($postvariable['name']) ? $postvariable['name'] : '';
                 $student->rollno = isset($postvariable['rollno']) ? $postvariable['rollno'] : '';
                 $student->rumpun = isset($postvariable['rumpun']) ? $postvariable['rumpun'] : '';
                 $student->nationality = isset($postvariable['nationality']) ? $postvariable['nationality'] : '';
-                $student->nationalityother = isset($postvariable['nationalityother']) ? $postvariable['nationalityother'] : '';
+                if($postvariable['nationality'] == 'Other'){
+                    $student->nationalityother = isset($postvariable['nationalityother']) ? $postvariable['nationalityother'] : '';
+                }else{
+                    $student->nationalityother = '';
+                }
+				 $student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
+                if($postvariable['countrycode'] == 'Brunei'){
+                    $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
+					$student->district = '';
+                }else{
+					$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
+                    $student->state = '';
+                }
                 $student->passportno = isset($postvariable['passportno']) ? $postvariable['passportno'] : '';
                 $student->race = isset($postvariable['race']) ? $postvariable['race'] : '';
-                $student->raceother = isset($postvariable['raceother']) ? $postvariable['raceother'] : '';
+                if($postvariable['race'] == 'Other'){
+                    $student->raceother = isset($postvariable['raceother']) ? $postvariable['raceother'] : '';
+                }else{
+                    $student->raceother = '';
+                }
                 $student->religion = isset($postvariable['religion']) ? $postvariable['religion'] : '';
-                $student->religionother = isset($postvariable['religionother']) ? $postvariable['religionother'] : '';
+                if($postvariable['religion'] == 'Other'){
+                    $student->religionother = isset($postvariable['religionother']) ? $postvariable['religionother'] : '';
+                }else{
+                    $student->religionother = '';
+                }
+				$student->highest_qualification = isset($postvariable['highest_qualification']) ? $postvariable['highest_qualification'] : '';
+                if($postvariable['highest_qualification'] == 'Other'){
+                    $student->highestqualificationother = isset($postvariable['highestqualificationother']) ? $postvariable['highestqualificationother'] : '';
+                }else{
+                    $student->highestqualificationother = '';
+                }
+                $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
+                if($postvariable['type_of_entry'] == 'Other'){
+                    $student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
+                }else{
+                    $student->typeofentryother = '';
+                }
+				$student->type_of_residential = isset($postvariable['type_of_residential']) ? $postvariable['type_of_residential'] : '';
+                if($postvariable['type_of_residential'] == 'Other'){
+                    $student->typeofresidentialother = isset($postvariable['typeofresidentialother']) ? $postvariable['typeofresidentialother'] : '';
+                }else{
+                    $student->typeofresidentialother = '';
+                }
                 $student->gender = isset($postvariable['gender']) ? $postvariable['gender'] : '';
                 $student->martial_status = isset($postvariable['martial_status']) ? $postvariable['martial_status'] : '';
                 $student->dob = isset($postvariable['dob']) ? $postvariable['dob'] : '';
                 $student->specialneeds = isset($postvariable['specialneeds']) ? $postvariable['specialneeds'] : '';
-                $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
-                //$student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
                 $student->place_of_birth = isset($postvariable['place_of_birth']) ? $postvariable['place_of_birth'] : '';
                 $student->telephone_mobile = isset($postvariable['telephone_mobile']) ? $postvariable['telephone_mobile'] : '';
                 $student->tele_home = isset($postvariable['tele_home']) ? $postvariable['tele_home'] : '';
                 $student->email = isset($postvariable['email']) ? $postvariable['email'] : '';
+				$student->emailother = isset($postvariable['emailother']) ? $postvariable['emailother'] : '';
                 $student->lastschoolname = isset($postvariable['lastschoolname']) ? $postvariable['lastschoolname'] : '';
                 $student->father_name = isset($postvariable['father_name']) ? $postvariable['father_name'] : '';
                 $student->fathericno = isset($postvariable['fathericno']) ? $postvariable['fathericno'] : '';
@@ -160,13 +199,38 @@ class AdminController extends \common\controllers\CommonController
                 $student->address = isset($postvariable['address']) ? $postvariable['address'] : '';
                 $student->address2 = isset($postvariable['address2']) ? $postvariable['address2'] : '';
                 $student->address3 = isset($postvariable['address3']) ? $postvariable['address3'] : '';
+				$student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
+                $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
+				$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
                 $student->postal_code = isset($postvariable['postal_code']) ? $postvariable['postal_code'] : '';
+				$student->mailing_address = isset($postvariable['mailing_address']) ? $postvariable['mailing_address'] : '';
+                $student->mailing_address2 = isset($postvariable['mailing_address2']) ? $postvariable['mailing_address2'] : '';
+                $student->mailing_address3 = isset($postvariable['mailing_address3']) ? $postvariable['mailing_address3'] : '';
+				$student->mailing_countrycode = isset($postvariable['mailing_countrycode']) ? $postvariable['mailing_countrycode'] : '';
+                $student->mailing_state = isset($postvariable['mailing_state']) ? $postvariable['mailing_state'] : '';
+				$student->mailing_district = isset($postvariable['mailing_district']) ? $postvariable['mailing_district'] : '';
+                $student->mailing_postal_code = isset($postvariable['mailing_postal_code']) ? $postvariable['mailing_postal_code'] : '';
+				$student->mailing_permanent = isset($postvariable['mailing_permanent']) ? $postvariable['mailing_permanent'] : '';
+				$student->bank_terms = isset($postvariable['bank_terms']) ? $postvariable['bank_terms'] : '';
                 $student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
+				$student->date_of_registration = isset($postvariable['date_of_registration']) ? $postvariable['date_of_registration'] : '';
+				if($postvariable['bank_name'] == 'Other'){
+                    $student->bank_name_other = isset($postvariable['bank_name_other']) ? $postvariable['bank_name_other'] : '';
+                }else{
+                    $student->bank_name_other = '';
+                }
+				$student->bank_account_name = isset($postvariable['bank_account_name']) ? $postvariable['bank_account_name'] : '';
                 $student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
                 $student->sponsor_type = isset($postvariable['sponsor_type']) ? $postvariable['sponsor_type'] : '';
-                //$student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+				if($postvariable['sponsor_type'] == 'Other'){
+                    $student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+                }else{
+                    $student->sponsor_type_other = '';
+                }
+                $student->type_of_programme = isset($postvariable['type_of_programme']) ? $postvariable['type_of_programme'] : '';
+                $student->school = isset($postvariable['school']) ? $postvariable['school'] : '';
 
-                $student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
+                /*$student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
                 $student->employer_address = isset($postvariable['employer_address']) ? $postvariable['employer_address'] : '';
                 $student->employer_address2 = isset($postvariable['employer_address2']) ? $postvariable['employer_address2'] : '';
                 $student->employer_address3 = isset($postvariable['employer_address3']) ? $postvariable['employer_address3'] : '';
@@ -176,11 +240,12 @@ class AdminController extends \common\controllers\CommonController
                 $student->emp_from_month = isset($postvariable['emp_from_month']) ? $postvariable['emp_from_month'] : '';
                 $student->emp_from_year = isset($postvariable['emp_from_year']) ? $postvariable['emp_from_year'] : '';
                 $student->emp_to_month = isset($postvariable['emp_to_month']) ? $postvariable['emp_to_month'] : '';
-                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';
+                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';*/
 
                 $student->programme_name = isset($postvariable['programme_name']) ? $postvariable['programme_name'] : '';
                 $student->intake = isset($postvariable['intake']) ? $postvariable['intake'] : '';
                 $student->entry = isset($postvariable['entry']) ? $postvariable['entry'] : '';
+				$student->ic_no_format = isset($postvariable['ic_no_format']) ? $postvariable['ic_no_format'] : '';
                 $student->ic_no = isset($postvariable['ic_no']) ? $postvariable['ic_no'] : '';
                 $student->ic_color = isset($postvariable['ic_color']) ? $postvariable['ic_color'] : '';
                 $student->gaurdian_relation = isset($postvariable['gaurdian_relation']) ? $postvariable['gaurdian_relation'] : '';
@@ -191,18 +256,11 @@ class AdminController extends \common\controllers\CommonController
                 $student->remarks = isset($postvariable['remarks']) ? $postvariable['remarks'] : '';
                 $student->telphone_work = isset($postvariable['telphone_work']) ? $postvariable['telphone_work'] : '';
                 $student->mother_ic_color = isset($postvariable['mother_ic_color']) ? $postvariable['mother_ic_color'] : '';
-                $student->status_of_student = isset($postvariable['status_of_student']) ? $postvariable['status_of_student'] : '';
-                $student->status_remarks = isset($postvariable['status_remarks']) ? $postvariable['status_remarks'] : '';
-                $student->mode = isset($postvariable['mode']) ? $postvariable['mode'] : '';
-                $student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
-                $student->degree_classification = isset($postvariable['degree_classification']) ? $postvariable['degree_classification'] : '';
-                $student->date_of_registration = isset($postvariable['date_of_registration']) ? $postvariable['date_of_registration'] : '';
-                $student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
-                $student->previous_roll_no = isset($postvariable['previous_roll_no']) ? $postvariable['previous_roll_no'] : '';
-                $student->previous_programme_name = isset($postvariable['previous_programme_name']) ? $postvariable['previous_programme_name'] : '';
-                $student->previous_intake_no = isset($postvariable['previous_intake_no']) ? $postvariable['previous_intake_no'] : '';
-                $student->previous_utb_email = isset($postvariable['previous_utb_email']) ? $postvariable['previous_utb_email'] : '';
-
+				$student->mode = isset($postvariable['mode']) ? $postvariable['mode'] : '';
+				$student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
+				$student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
+				$student->age = isset($postvariable['age']) ? $postvariable['age'] : '';
+                $student->user_image = isset($postvariable['user_image']) ? $postvariable['user_image'] : '';
                     if ($user = $signup->signup()) {
                     Yii::$app->cache->flush();
                     $userid = Yii::$app->db->getLastInsertID();
@@ -236,13 +294,14 @@ class AdminController extends \common\controllers\CommonController
     }
 
     public function actionStudentUpdate(){
+      Yii::$app->cache->flush();
         //print_r($studentdata[0]['name']); exit;
             $userformmodel = new \common\models\CreateStudentForm();
             $countries = User::countrieslist();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $student = Student::find()->where(['id'=>$postvariable['studentid']])->one();
-                Yii::$app->cache->flush();
+				$student->title = isset($postvariable['title']) ? $postvariable['title'] : '';
                 $student->name = isset($postvariable['name']) ? $postvariable['name'] : '';
                 $student->rollno = isset($postvariable['rollno']) ? $postvariable['rollno'] : '';
                 $student->rumpun = isset($postvariable['rumpun']) ? $postvariable['rumpun'] : '';
@@ -251,6 +310,14 @@ class AdminController extends \common\controllers\CommonController
                     $student->nationalityother = isset($postvariable['nationalityother']) ? $postvariable['nationalityother'] : '';
                 }else{
                     $student->nationalityother = '';
+                }
+				 $student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
+                if($postvariable['countrycode'] == 'Brunei'){
+                    $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
+					$student->district = '';
+                }else{
+					$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
+                    $student->state = '';
                 }
                 $student->passportno = isset($postvariable['passportno']) ? $postvariable['passportno'] : '';
                 $student->race = isset($postvariable['race']) ? $postvariable['race'] : '';
@@ -265,14 +332,24 @@ class AdminController extends \common\controllers\CommonController
                 }else{
                     $student->religionother = '';
                 }
-
+				$student->highest_qualification = isset($postvariable['highest_qualification']) ? $postvariable['highest_qualification'] : '';
+                if($postvariable['highest_qualification'] == 'Other'){
+                    $student->highestqualificationother = isset($postvariable['highestqualificationother']) ? $postvariable['highestqualificationother'] : '';
+                }else{
+                    $student->highestqualificationother = '';
+                }
                 $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
-                /*if($postvariable['type_of_entry'] == 'Other'){
+                if($postvariable['type_of_entry'] == 'Other'){
                     $student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
                 }else{
                     $student->typeofentryother = '';
-                }*/
-                
+                }
+				$student->type_of_residential = isset($postvariable['type_of_residential']) ? $postvariable['type_of_residential'] : '';
+                if($postvariable['type_of_residential'] == 'Other'){
+                    $student->typeofresidentialother = isset($postvariable['typeofresidentialother']) ? $postvariable['typeofresidentialother'] : '';
+                }else{
+                    $student->typeofresidentialother = '';
+                }
                 $student->gender = isset($postvariable['gender']) ? $postvariable['gender'] : '';
                 $student->martial_status = isset($postvariable['martial_status']) ? $postvariable['martial_status'] : '';
                 $student->dob = isset($postvariable['dob']) ? $postvariable['dob'] : '';
@@ -281,6 +358,7 @@ class AdminController extends \common\controllers\CommonController
                 $student->telephone_mobile = isset($postvariable['telephone_mobile']) ? $postvariable['telephone_mobile'] : '';
                 $student->tele_home = isset($postvariable['tele_home']) ? $postvariable['tele_home'] : '';
                 $student->email = isset($postvariable['email']) ? $postvariable['email'] : '';
+				$student->emailother = isset($postvariable['emailother']) ? $postvariable['emailother'] : '';
                 $student->lastschoolname = isset($postvariable['lastschoolname']) ? $postvariable['lastschoolname'] : '';
                 $student->father_name = isset($postvariable['father_name']) ? $postvariable['father_name'] : '';
                 $student->fathericno = isset($postvariable['fathericno']) ? $postvariable['fathericno'] : '';
@@ -291,13 +369,38 @@ class AdminController extends \common\controllers\CommonController
                 $student->address = isset($postvariable['address']) ? $postvariable['address'] : '';
                 $student->address2 = isset($postvariable['address2']) ? $postvariable['address2'] : '';
                 $student->address3 = isset($postvariable['address3']) ? $postvariable['address3'] : '';
+				$student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
+                $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
+				$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
                 $student->postal_code = isset($postvariable['postal_code']) ? $postvariable['postal_code'] : '';
+				$student->mailing_address = isset($postvariable['mailing_address']) ? $postvariable['mailing_address'] : '';
+                $student->mailing_address2 = isset($postvariable['mailing_address2']) ? $postvariable['mailing_address2'] : '';
+                $student->mailing_address3 = isset($postvariable['mailing_address3']) ? $postvariable['mailing_address3'] : '';
+				$student->mailing_countrycode = isset($postvariable['mailing_countrycode']) ? $postvariable['mailing_countrycode'] : '';
+                $student->mailing_state = isset($postvariable['mailing_state']) ? $postvariable['mailing_state'] : '';
+				$student->mailing_district = isset($postvariable['mailing_district']) ? $postvariable['mailing_district'] : '';
+                $student->mailing_postal_code = isset($postvariable['mailing_postal_code']) ? $postvariable['mailing_postal_code'] : '';
+				$student->mailing_permanent = isset($postvariable['mailing_permanent']) ? $postvariable['mailing_permanent'] : '';
+				$student->bank_terms = isset($postvariable['bank_terms']) ? $postvariable['bank_terms'] : '';
                 $student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
+				$student->date_of_registration = isset($postvariable['date_of_registration']) ? $postvariable['date_of_registration'] : '';
+				if($postvariable['bank_name'] == 'Other'){
+                    $student->bank_name_other = isset($postvariable['bank_name_other']) ? $postvariable['bank_name_other'] : '';
+                }else{
+                    $student->bank_name_other = '';
+                }
+				$student->bank_account_name = isset($postvariable['bank_account_name']) ? $postvariable['bank_account_name'] : '';
                 $student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
                 $student->sponsor_type = isset($postvariable['sponsor_type']) ? $postvariable['sponsor_type'] : '';
-                //$student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+				if($postvariable['sponsor_type'] == 'Other'){
+                    $student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
+                }else{
+                    $student->sponsor_type_other = '';
+                }
+                $student->type_of_programme = isset($postvariable['type_of_programme']) ? $postvariable['type_of_programme'] : '';
+                $student->school = isset($postvariable['school']) ? $postvariable['school'] : '';
 
-                $student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
+                /*$student->employer_name = isset($postvariable['employer_name']) ? $postvariable['employer_name'] : '';
                 $student->employer_address = isset($postvariable['employer_address']) ? $postvariable['employer_address'] : '';
                 $student->employer_address2 = isset($postvariable['employer_address2']) ? $postvariable['employer_address2'] : '';
                 $student->employer_address3 = isset($postvariable['employer_address3']) ? $postvariable['employer_address3'] : '';
@@ -307,13 +410,12 @@ class AdminController extends \common\controllers\CommonController
                 $student->emp_from_month = isset($postvariable['emp_from_month']) ? $postvariable['emp_from_month'] : '';
                 $student->emp_from_year = isset($postvariable['emp_from_year']) ? $postvariable['emp_from_year'] : '';
                 $student->emp_to_month = isset($postvariable['emp_to_month']) ? $postvariable['emp_to_month'] : '';
-                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';
-
-                
+                $student->emp_to_year = isset($postvariable['emp_to_year']) ? $postvariable['emp_to_year'] : '';*/
 
                 $student->programme_name = isset($postvariable['programme_name']) ? $postvariable['programme_name'] : '';
                 $student->intake = isset($postvariable['intake']) ? $postvariable['intake'] : '';
                 $student->entry = isset($postvariable['entry']) ? $postvariable['entry'] : '';
+				$student->ic_no_format = isset($postvariable['ic_no_format']) ? $postvariable['ic_no_format'] : '';
                 $student->ic_no = isset($postvariable['ic_no']) ? $postvariable['ic_no'] : '';
                 $student->ic_color = isset($postvariable['ic_color']) ? $postvariable['ic_color'] : '';
                 $student->gaurdian_relation = isset($postvariable['gaurdian_relation']) ? $postvariable['gaurdian_relation'] : '';
@@ -324,37 +426,26 @@ class AdminController extends \common\controllers\CommonController
                 $student->remarks = isset($postvariable['remarks']) ? $postvariable['remarks'] : '';
                 $student->telphone_work = isset($postvariable['telphone_work']) ? $postvariable['telphone_work'] : '';
                 $student->mother_ic_color = isset($postvariable['mother_ic_color']) ? $postvariable['mother_ic_color'] : '';
-                
-                $student->status_of_student = isset($postvariable['status_of_student']) ? $postvariable['status_of_student'] : '';
-                $student->status_remarks = isset($postvariable['status_remarks']) ? $postvariable['status_remarks'] : '';
-                $student->mode = isset($postvariable['mode']) ? $postvariable['mode'] : '';
-                $student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
-                $student->degree_classification = isset($postvariable['degree_classification']) ? $postvariable['degree_classification'] : '';
-                $student->date_of_registration = isset($postvariable['date_of_registration']) ? $postvariable['date_of_registration'] : '';
-                $student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
-                $student->previous_roll_no = isset($postvariable['previous_roll_no']) ? $postvariable['previous_roll_no'] : '';
-                $student->previous_programme_name = isset($postvariable['previous_programme_name']) ? $postvariable['previous_programme_name'] : '';
-                $student->previous_intake_no = isset($postvariable['previous_intake_no']) ? $postvariable['previous_intake_no'] : '';
-                $student->previous_utb_email = isset($postvariable['previous_utb_email']) ? $postvariable['previous_utb_email'] : '';
-
+				$student->mode = isset($postvariable['mode']) ? $postvariable['mode'] : '';
+				$student->utb_email_address = isset($postvariable['utb_email_address']) ? $postvariable['utb_email_address'] : '';
+				$student->date_of_leaving = isset($postvariable['date_of_leaving']) ? $postvariable['date_of_leaving'] : '';
+				$student->age = isset($postvariable['age']) ? $postvariable['age'] : '';
+                $student->user_image = isset($postvariable['user_image']) ? $postvariable['user_image'] : '';
                 $storagemodel = new \common\models\Storage();
-				
-                $storagemodel->user_image = \yii\web\UploadedFile::getInstance($userformmodel, 'user_image');
-                
+				$userid = $student->user_ref_id;
+            $storagemodel->user_image = \yii\web\UploadedFile::getInstance($userformmodel, 'user_image');
+            if(count($storagemodel->user_image)>0){
+                $studentimage = $student->user_image = $storagemodel->user_image->name;
+                if ($storagemodel->upload($userid)) {
+                }
+				}
+            if($student->save(false)){
                 if(count($storagemodel->user_image)>0){
-                    unlink('../../frontend/web/uploads/profile_images/' . $student->user_ref_id.'/'.$student->user_image);
-                    $studentimage = $student->user_image = $storagemodel->user_image->name;
-                    if ($storagemodel->upload($student->user_ref_id)) {
-                    }
-                    }
-                if($student->save(false))
-                {
-                    if(count($storagemodel->user_image)>0){
                     $user = User::find()->where(['id'=>$student->user_ref_id])->one();
                     $user->user_image = $studentimage;
                 if($user->save(false)){}
                 }
-                    
+                
                 Yii::$app->session->setFlash('studentupdatesuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Student Updated successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
                 return $this->redirect(['students-list']);
             }
@@ -370,7 +461,8 @@ class AdminController extends \common\controllers\CommonController
     }
 
     public function actionStudentsList(){
-		try{
+		//try{
+			Yii::$app->cache->flush();
         $student = new Student();
         $cond = $where = '';
         $studentname = Yii::$app->getRequest()->getQueryParam('name') ? Yii::$app->getRequest()->getQueryParam('name') : "";
@@ -388,7 +480,7 @@ class AdminController extends \common\controllers\CommonController
         $martialstatus = Yii::$app->getRequest()->getQueryParam('martialstatus') ? Yii::$app->getRequest()->getQueryParam('martialstatus') : "";
         $mobile = Yii::$app->getRequest()->getQueryParam('mobile') ? Yii::$app->getRequest()->getQueryParam('mobile') : "";
         $telehome = Yii::$app->getRequest()->getQueryParam('telehome') ? Yii::$app->getRequest()->getQueryParam('telehome') : "";
-        $email = Yii::$app->getRequest()->getQueryParam('email') ? Yii::$app->getRequest()->getQueryParam('email') : "";
+        //$email = Yii::$app->getRequest()->getQueryParam('email') ? Yii::$app->getRequest()->getQueryParam('email') : "";
         $typeofentry = Yii::$app->getRequest()->getQueryParam('typeofentry') ? Yii::$app->getRequest()->getQueryParam('typeofentry') : "";
         $address = Yii::$app->getRequest()->getQueryParam('address') ? Yii::$app->getRequest()->getQueryParam('address') : "";
         $bankname = Yii::$app->getRequest()->getQueryParam('bankname') ? Yii::$app->getRequest()->getQueryParam('bankname') : "";
@@ -400,20 +492,27 @@ class AdminController extends \common\controllers\CommonController
         $sponsortype = Yii::$app->getRequest()->getQueryParam('sponsortype') ? Yii::$app->getRequest()->getQueryParam('sponsortype') : "";
         $progname = Yii::$app->getRequest()->getQueryParam('progname') ? Yii::$app->getRequest()->getQueryParam('progname') : "";
         $entry = Yii::$app->getRequest()->getQueryParam('entry') ? Yii::$app->getRequest()->getQueryParam('entry') : "";
-        $status = Yii::$app->getRequest()->getQueryParam('status') ? Yii::$app->getRequest()->getQueryParam('status') : "";
+        //$status = Yii::$app->getRequest()->getQueryParam('status') ? Yii::$app->getRequest()->getQueryParam('status') : "";
         $intake = Yii::$app->getRequest()->getQueryParam('intake') ? Yii::$app->getRequest()->getQueryParam('intake') : "";
         $mode = Yii::$app->getRequest()->getQueryParam('mode') ? Yii::$app->getRequest()->getQueryParam('mode') : "";
         $utbemail = Yii::$app->getRequest()->getQueryParam('utbemail') ? Yii::$app->getRequest()->getQueryParam('utbemail') : "";
-        $degree = Yii::$app->getRequest()->getQueryParam('degree') ? Yii::$app->getRequest()->getQueryParam('degree') : "";
+        //$degree = Yii::$app->getRequest()->getQueryParam('degree') ? Yii::$app->getRequest()->getQueryParam('degree') : "";
         $dateofregistration = Yii::$app->getRequest()->getQueryParam('dateofregistration') ? Yii::$app->getRequest()->getQueryParam('dateofregistration') : "";
         $dateofleaving = Yii::$app->getRequest()->getQueryParam('dateofleaving') ? Yii::$app->getRequest()->getQueryParam('dateofleaving') : "";
-        $prevrollno = Yii::$app->getRequest()->getQueryParam('prevrollno') ? Yii::$app->getRequest()->getQueryParam('prevrollno') : "";
-        $prevprogname = Yii::$app->getRequest()->getQueryParam('prevprogname') ? Yii::$app->getRequest()->getQueryParam('prevprogname') : "";
-        $previntakeno = Yii::$app->getRequest()->getQueryParam('previntakeno') ? Yii::$app->getRequest()->getQueryParam('previntakeno') : "";
-        $prevutbemail = Yii::$app->getRequest()->getQueryParam('prevutbemail') ? Yii::$app->getRequest()->getQueryParam('prevutbemail') : "";
+        //$prevrollno = Yii::$app->getRequest()->getQueryParam('prevrollno') ? Yii::$app->getRequest()->getQueryParam('prevrollno') : "";
+        //$prevprogname = Yii::$app->getRequest()->getQueryParam('prevprogname') ? Yii::$app->getRequest()->getQueryParam('prevprogname') : "";
+        //$previntakeno = Yii::$app->getRequest()->getQueryParam('previntakeno') ? Yii::$app->getRequest()->getQueryParam('previntakeno') : "";
+        //$prevutbemail = Yii::$app->getRequest()->getQueryParam('prevutbemail') ? Yii::$app->getRequest()->getQueryParam('prevutbemail') : "";
+		$age = Yii::$app->getRequest()->getQueryParam('age') ? Yii::$app->getRequest()->getQueryParam('age') : "";
+        $highest_qualification = Yii::$app->getRequest()->getQueryParam('highest_qualification') ? Yii::$app->getRequest()->getQueryParam('highest_qualification') : "";
+        $lastschoolname = Yii::$app->getRequest()->getQueryParam('lastschoolname') ? Yii::$app->getRequest()->getQueryParam('lastschoolname') : "";
+        $state_address = Yii::$app->getRequest()->getQueryParam('state_address') ? Yii::$app->getRequest()->getQueryParam('state_address') : "";
+		 $type_of_residential = Yii::$app->getRequest()->getQueryParam('type_of_residential') ? Yii::$app->getRequest()->getQueryParam('type_of_residential') : "";
+        $type_of_programme = Yii::$app->getRequest()->getQueryParam('type_of_programme') ? Yii::$app->getRequest()->getQueryParam('type_of_programme') : "";
+        $bank_account_name = Yii::$app->getRequest()->getQueryParam('bank_account_name') ? Yii::$app->getRequest()->getQueryParam('bank_account_name') : "";
 
 
-        $uQuery=Student::getStudentsList($studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $email, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $status, $intake, $mode, $utbemail, $degree, $dateofregistration, $dateofleaving, $prevrollno, $prevprogname, $previntakeno, $prevutbemail);
+        $uQuery=Student::getStudentsList($studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name);
 		$query = $uQuery;		
 		$count = $uQuery->count();
         return $this->render('students-list',[
@@ -421,9 +520,9 @@ class AdminController extends \common\controllers\CommonController
             'query'=>$query,
             'count'=>$count
         ]);
-		} catch (\Exception $e) {
-            \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }
+		//} catch (\Exception $e) {
+          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        //}
     }
 
     public function actionStudentView($id){
@@ -531,17 +630,17 @@ class AdminController extends \common\controllers\CommonController
                         $student->telphone_work = isset($postvariable['Telephone No. (Work)']) ? $postvariable['Telephone No. (Work)'] : '';
                         $student->mother_ic_color = isset($postvariable['Mother IC Color']) ? $postvariable['Mother IC Color'] : '';
                         
-                $student->status_of_student = isset($postvariable['Status of Student']) ? $postvariable['Status of Student'] : '';
-                $student->status_remarks = isset($postvariable['Status Remarks']) ? $postvariable['Status Remarks'] : '';
+                //$student->status_of_student = isset($postvariable['Status of Student']) ? $postvariable['Status of Student'] : '';
+                //$student->status_remarks = isset($postvariable['Status Remarks']) ? $postvariable['Status Remarks'] : '';
                 $student->mode = isset($postvariable['Mode']) ? $postvariable['Mode'] : '';
                 $student->utb_email_address = isset($postvariable['UTB Email Address']) ? $postvariable['UTB Email Address'] : '';
-                $student->degree_classification = isset($postvariable['Degree Classification']) ? $postvariable['Degree Classification'] : '';
+                //$student->degree_classification = isset($postvariable['Degree Classification']) ? $postvariable['Degree Classification'] : '';
                 $student->date_of_registration = isset($postvariable['Date of Registration']) ? str_replace('/', '-', $postvariable['Date of Registration']) : '';
                 $student->date_of_leaving = isset($postvariable['Date of Leaving']) ? str_replace('/', '-',$postvariable['date_of_leaving']) : '';
-                $student->previous_roll_no = isset($postvariable['Previous Roll No']) ? $postvariable['Previous Roll No'] : '';
-                $student->previous_programme_name = isset($postvariable['Previous Programme Name']) ? $postvariable['Previous Programme Name'] : '';
-                $student->previous_intake_no = isset($postvariable['Previous Intake No']) ? $postvariable['Previous Intake No'] : '';
-                $student->previous_utb_email = isset($postvariable['Previous UTB Email']) ? $postvariable['Previous UTB Email'] : '';
+                //$student->previous_roll_no = isset($postvariable['Previous Roll No']) ? $postvariable['Previous Roll No'] : '';
+                //$student->previous_programme_name = isset($postvariable['Previous Programme Name']) ? $postvariable['Previous Programme Name'] : '';
+                //$student->previous_intake_no = isset($postvariable['Previous Intake No']) ? $postvariable['Previous Intake No'] : '';
+                //$student->previous_utb_email = isset($postvariable['Previous UTB Email']) ? $postvariable['Previous UTB Email'] : '';
         
                             if ($user = $signup->signup()){
                                 
@@ -581,7 +680,23 @@ class AdminController extends \common\controllers\CommonController
             $user->status = 1;
         }
         $user->save(false);
-		return $this->redirect(['students-list']);
+		return $this->redirect(['admins-list']);
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
+	
+	public function actionAdminDelete($id)
+    {
+		try{
+        $user = User::find()->where(['id' => Yii::$app->request->get('id')])->one();
+        if(Yii::$app->request->get('status') == 1){
+            $user->status = 2;
+        }else if(Yii::$app->request->get('status') == 2){
+            $user->status = 1;
+        }
+        $user->save(false);
+		return $this->redirect(['admins-list']);
 		} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }
