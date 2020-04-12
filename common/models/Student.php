@@ -62,34 +62,41 @@ class Student extends \yii\db\ActiveRecord
      */
 
     public static function findByUserId($userid){
-        $data = (new Query())->select('s.*, u.user_image')
+        $data = (new Query())->select('s.*, u.user_image, p.programme_name as programmename')
                 ->from('student AS s')
                 ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id')
+				->join('LEFT JOIN', 'programme AS p', 'p.id = s.programme_name')
                 ->where(['user_ref_id' => $userid])->all();
         return $data;
     }
 
     public static function findByStudentId($userid){
-        $data = (new Query())->select('s.*, u.user_image')
+        $data = (new Query())->select('s.*, u.user_image, p.programme_name as programmename')
                 ->from('student AS s')
                 ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id')
+				->join('LEFT JOIN', 'programme AS p', 'p.id = s.programme_name')
                 ->where(['s.id' => $userid])->all();
         return $data;
     }
 
-  public static function getStudentsList($studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name)
+  public static function getStudentsList($role,$studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name)
     {
        
 		 $uQuery = (new Query())->select(['s.id','name','rollno','rumpun','nationality','gender','user_ref_id','status','utb_email_address','u.email','entry','ic_no','passportno'])
         ->from('student AS s')
         ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id');
+	
+	if($role == 4){
+		$uQuery->join('LEFT JOIN', 'module_to_programme AS mp', 'mp.programme_id = s.programme_name')
+			->join('LEFT JOIN', 'lecturer_to_module AS lm', 'lm.module_id = mp.module_id');
+	}
 		$uQuery->where(['is_submit' => 'submit']);
-        if(!empty($studentname) || !empty($programme_name) || !empty($rollno) || !empty($rumpun) || !empty($nationality) || !empty($studenticno) || !empty($studenticcolor) || !empty($passportno) || !empty($race) || !empty($religion) || !empty($gender) || !empty($martialstatus) || !empty($mobile) || !empty($telehome) || !empty($typeofentry) || !empty($address) || !empty($bankname) || !empty($accountno) || !empty($fathername) || !empty($fathericno) || !empty($mothername) || !empty($mothericno) || !empty($sponsortype) || !empty($programme_name) || !empty($entry) || !empty($intake) || !empty($mode) || !empty($utbemail) || !empty($dateofregistration) || !empty($dateofleaving) || !empty($age) || !empty($highest_qualification) || !empty($lastschoolname) || !empty($state_address) || !empty($type_of_residential) || !empty($type_of_programme) || !empty($bank_account_name)) {
+        if(!empty($studentname) || !empty($progname) || !empty($rollno) || !empty($rumpun) || !empty($nationality) || !empty($studenticno) || !empty($studenticcolor) || !empty($passportno) || !empty($race) || !empty($religion) || !empty($gender) || !empty($martialstatus) || !empty($mobile) || !empty($telehome) || !empty($typeofentry) || !empty($address) || !empty($bankname) || !empty($accountno) || !empty($fathername) || !empty($fathericno) || !empty($mothername) || !empty($mothericno) || !empty($sponsortype) || !empty($programme_name) || !empty($entry) || !empty($intake) || !empty($mode) || !empty($utbemail) || !empty($dateofregistration) || !empty($dateofleaving) || !empty($age) || !empty($highest_qualification) || !empty($lastschoolname) || !empty($state_address) || !empty($type_of_residential) || !empty($type_of_programme) || !empty($bank_account_name)) {
             /*if(!empty($name))   $uQuery->andWhere(['LIKE' , 'name', $name])->orWhere(['LIKE' , 'ic_no', $name])->orWhere(['LIKE' , 'passportno', $name]);
             if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);*/
 
             if(!empty($studentname))   $uQuery->andWhere(['LIKE' , 'name', $studentname]);
-            if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);
+            //if(!empty($programme_name))   $uQuery->andWhere(['programme_name' => $postvariable['programme_name']]);
             if(!empty($rollno))   $uQuery->andWhere(['LIKE' , 'rollno', $rollno]);
             if(!empty($rumpun))   $uQuery->andWhere(['LIKE' , 'rumpun', $rumpun]);
             if(!empty($nationality))   $uQuery->andWhere('s.nationality LIKE "%'.$nationality.'%" OR nationalityother LIKE "%'.$nationality.'%"');
@@ -114,7 +121,7 @@ class Student extends \yii\db\ActiveRecord
             if(!empty($mothername))   $uQuery->andWhere(['LIKE' , 'mother_name', $mothername]);
             if(!empty($mothericno))   $uQuery->andWhere(['LIKE' , 'mothericno', $mothericno]);
             if(!empty($sponsortype))   $uQuery->andWhere('s.sponsor_type LIKE "%'.$sponsortype.'%"');
-            if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);
+            if(!empty($progname))   $uQuery->andWhere(['programme_name' => $progname]);
             if(!empty($entry))   $uQuery->andWhere(['entry' => $entry]);
             //if(!empty($status))   $uQuery->andWhere(['status_of_student' => $status]);
             if(!empty($intake))   $uQuery->andWhere(['intake' => $intake]);
@@ -136,6 +143,9 @@ class Student extends \yii\db\ActiveRecord
 			if(!empty($type_of_programme))   $uQuery->andWhere(['LIKE' , 'type_of_programme', $type_of_programme]);
 			if(!empty($bank_account_name))   $uQuery->andWhere(['LIKE' , 'bank_account_name', $bank_account_name]);
         }
+	if($role == 4){
+		$uQuery->andWhere(['lecturer_id' => Yii::$app->user->id])->groupBy(['s.id']);
+	}
         $sort = Yii::$app->getRequest()->getQueryParam('sort') ? Yii::$app->getRequest()->getQueryParam('sort') : "";
         if (empty($sort))
             $uQuery->orderBy(['name'=>SORT_DESC]);
@@ -153,6 +163,16 @@ class Student extends \yii\db\ActiveRecord
         $data = (new Query())->select('*')
         ->from('student')->where(['user_ref_id' => $id])->all();
         return $data;
+    }
+	
+	public static function getStudentsByLecturer($moduleid,$userid){
+	    $uQuery = (new Query())->select(['s.id as studentid','name as studentname'])
+        ->from('module_to_programme AS mp')
+        ->join('INNER JOIN', 'student AS s', 's.programme_name = mp.programme_id')
+		->where(['mp.module_id' => $moduleid])
+		->orderBy(['name'=>SORT_DESC])->distinct()->all();
+    //print_r($uQuery);exit;
+		return $uQuery;
     }
 	
 	public function attributeLabels()

@@ -37,6 +37,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\jui\DatePicker;
+use yii\helpers\ArrayHelper;
 
     $this->title = 'Students List';
 
@@ -61,44 +62,7 @@ echo "<div class='participation-border fl-left all-userlst'>";
             <?php echo $form->field($model, 'studentname')->textInput(array('placeholder' => 'Student Name / IC No / Passport No'), ['class' => 'form-control']) ?>
         </div>
         <div class="col-sm-2 col-xs-12 p-left0 ad-lst">
-        <?php echo $form->field($model, 'programme_name')
-		->dropDownList(['Bachelor of Business in Applied Economics and Finance' => 'Bachelor of Business in Applied Economics and Finance',
-		'Bachelor of Business in Accounting and Information Systems' => 'Bachelor of Business in Accounting and Information Systems',
-		'Bachelor of Business in Business Information System' => 'Bachelor of Business in Business Information System',
-		'Bachelor of Business in Business Information System(Part Time)' => 'Bachelor of Business in Business Information System(Part Time)',
-		'Bachelor of Business in Finance and Risk Management' => 'Bachelor of Business in Finance and Risk Management',
-		'Bachelor of Business in Marketing and Information Systems' => 'Bachelor of Business in Marketing and Information Systems',
-		'Bachelor of Business in Technology Management' => 'Bachelor of Business in Technology Management',
-		'Master in Management and Technology' => 'Master in Management and Technology',
-		'Bachelor of Science in Computing with Data Analytic' => 'Bachelor of Science in Computing with Data Analytic',
-		'Bachelor of Science in Creative Multimedia' => 'Bachelor of Science in Creative Multimedia',
-		'Bachelor of Science in Computer Network and Security' => 'Bachelor of Science in Computer Network and Security',
-		'Bachelor of Science in Computing' => 'Bachelor of Science in Computing',
-		'Bachelor of Science in Digital Media' => 'Bachelor of Science in Digital Media',
-		'Bachelor of Science in Internet Computing' => 'Bachelor of Science in Internet Computing',
-		'Master in Computer Information System' =>  'Master in Computer Information System',
-		'Bachelor of Science in Applied Mathematics and Economics' => 'Bachelor of Science in Applied Mathematics and Economics',
-		'Bachelor of Science in Food Science and Technology' => 'Bachelor of Science in Food Science and Technology',
-		'Bachelor of Science in Architecture' => 'Bachelor of Science in Architecture',
-		'Bachelor of Science in Product Design' => 'Bachelor of Science in Product Design',
-		'Bachelor of Engineering in Civil Engineering' => 'Bachelor of Engineering in Civil Engineering',
-		'Bachelor of Engineering in Chemical Engineering' => 'Bachelor of Engineering in Chemical Engineering',
-		'Bachelor of Engineering in Civil and Structural Engineering' => 'Bachelor of Engineering in Civil and Structural Engineering',
-		'Bachelor of Engineering in Electrical and Electronics' => 'Bachelor of Engineering in Electrical and Electronics',
-		'Bachelor of Engineering in Mechatronic Engineering' => 'Bachelor of Engineering in Mechatronic Engineering',
-		'Bachelor of Engineering in Mechanical Engineering' => 'Bachelor of Engineering in Mechanical Engineering',
-		'Bachelor of Engineering in Petroleum Engineering' => 'Bachelor of Engineering in Petroleum Engineering',
-		'Master of Science in Mechanical Engineering' => 'Master of Science in Mechanical Engineering',
-		'Master in Water Resources and Environmental Engineering' => 'Master in Water Resources and Environmental Engineering',
-		'Bachelor of Business in Business Information Management' => 'Bachelor of Business in Business Information Management',
-		'Bachelor of Business in Business Information Management (Part Time)' => 'Bachelor of Business in Business Information Management (Part Time)',
-		'Master in Management and Technology (Part Time)' => 'Master in Management and Technology (Part Time)',
-		'Bachelor of Science in Internet Computing (Part Time)' => 'Bachelor of Science in Internet Computing (Part Time)',
-		'Master in Information Security' => 'Master in Information Security',
-		'Bachelor of Science in Computer and Information Security' => 'Bachelor of Science in Computer and Information Security',
-		'Master in Information Security (Part Time)' => 'Master in Information Security (Part Time)',
-		'Master of Science in Electrical and Electronic Engineering' => 'Master of Science in Electrical and Electronic Engineering'],['prompt' => 'Select Programme Name'])->label('Programme Name ');?>
-
+        <?php echo $form->field($model, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label('Programme'); ?>
         </div>
        
         <div class="searchBtn">
@@ -214,44 +178,8 @@ echo "<div class='participation-border fl-left all-userlst'>";
 		
 		<?php echo $form->field($model, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy PhD' => 'Doctor of Philosophy PhD'], ['prompt' => 'Type of Programme'])->label(false);?>
 	
-		<?php echo $form->field($model, 'programme_name')
-		->dropDownList(['Bachelor of Business in Applied Economics and Finance' => 'Bachelor of Business in Applied Economics and Finance',
-		'Bachelor of Business in Accounting and Information Systems' => 'Bachelor of Business in Accounting and Information Systems',
-		'Bachelor of Business in Business Information System' => 'Bachelor of Business in Business Information System',
-		'Bachelor of Business in Business Information System(Part Time)' => 'Bachelor of Business in Business Information System(Part Time)',
-		'Bachelor of Business in Finance and Risk Management' => 'Bachelor of Business in Finance and Risk Management',
-		'Bachelor of Business in Marketing and Information Systems' => 'Bachelor of Business in Marketing and Information Systems',
-		'Bachelor of Business in Technology Management' => 'Bachelor of Business in Technology Management',
-		'Master in Management and Technology' => 'Master in Management and Technology',
-		'Bachelor of Science in Computing with Data Analytic' => 'Bachelor of Science in Computing with Data Analytic',
-		'Bachelor of Science in Creative Multimedia' => 'Bachelor of Science in Creative Multimedia',
-		'Bachelor of Science in Computer Network and Security' => 'Bachelor of Science in Computer Network and Security',
-		'Bachelor of Science in Computing' => 'Bachelor of Science in Computing',
-		'Bachelor of Science in Digital Media' => 'Bachelor of Science in Digital Media',
-		'Bachelor of Science in Internet Computing' => 'Bachelor of Science in Internet Computing',
-		'Master in Computer Information System' =>  'Master in Computer Information System',
-		'Bachelor of Science in Applied Mathematics and Economics' => 'Bachelor of Science in Applied Mathematics and Economics',
-		'Bachelor of Science in Food Science and Technology' => 'Bachelor of Science in Food Science and Technology',
-		'Bachelor of Science in Architecture' => 'Bachelor of Science in Architecture',
-		'Bachelor of Science in Product Design' => 'Bachelor of Science in Product Design',
-		'Bachelor of Engineering in Civil Engineering' => 'Bachelor of Engineering in Civil Engineering',
-		'Bachelor of Engineering in Chemical Engineering' => 'Bachelor of Engineering in Chemical Engineering',
-		'Bachelor of Engineering in Civil and Structural Engineering' => 'Bachelor of Engineering in Civil and Structural Engineering',
-		'Bachelor of Engineering in Electrical and Electronics' => 'Bachelor of Engineering in Electrical and Electronics',
-		'Bachelor of Engineering in Mechatronic Engineering' => 'Bachelor of Engineering in Mechatronic Engineering',
-		'Bachelor of Engineering in Mechanical Engineering' => 'Bachelor of Engineering in Mechanical Engineering',
-		'Bachelor of Engineering in Petroleum Engineering' => 'Bachelor of Engineering in Petroleum Engineering',
-		'Master of Science in Mechanical Engineering' => 'Master of Science in Mechanical Engineering',
-		'Master in Water Resources and Environmental Engineering' => 'Master in Water Resources and Environmental Engineering',
-		'Bachelor of Business in Business Information Management' => 'Bachelor of Business in Business Information Management',
-		'Bachelor of Business in Business Information Management (Part Time)' => 'Bachelor of Business in Business Information Management (Part Time)',
-		'Master in Management and Technology (Part Time)' => 'Master in Management and Technology (Part Time)',
-		'Bachelor of Science in Internet Computing (Part Time)' => 'Bachelor of Science in Internet Computing (Part Time)',
-		'Master in Information Security' => 'Master in Information Security',
-		'Bachelor of Science in Computer and Information Security' => 'Bachelor of Science in Computer and Information Security',
-		'Master in Information Security (Part Time)' => 'Master in Information Security (Part Time)',
-		'Master of Science in Electrical and Electronic Engineering' => 'Master of Science in Electrical and Electronic Engineering'],['prompt' => 'Programme Name'])->label(false);?>
-
+		<?php echo $form->field($model, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label(false); ?>
+		
 		<?php echo $form->field($model, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year'], ['prompt' => 'Entry'])->label(false);?>
 
 		
@@ -437,7 +365,7 @@ echo GridView::widget([
                                                 'class' => 'ajaxDelete', 
                                                 'delete-url' => $url, 
                                                 'pjax-container' => 'pjax-list',
-                                                'data-confirm'=>'Are you sure you want to delete this User?',
+                                                'data-confirm'=>'Are you sure you want to delete this Student?',
                                             ]);                               
                                             }else if(@$model['status'] == 2){
                                                 return HTML::a('<span class="glyphicon glyphicon-repeat"></span>',$url,[
@@ -446,7 +374,7 @@ echo GridView::widget([
                                                     'class' => 'ajaxDelete', 
                                                     'delete-url' => $url, 
                                                     'pjax-container' => 'pjax-list',
-                                                    'data-confirm'=>'Are you sure you want to undo delete this User?',
+                                                    'data-confirm'=>'Are you sure you want to undo delete this Student?',
                                                 ]);        
                                             }
                                           },
@@ -466,7 +394,7 @@ echo GridView::widget([
                                 if ($action === 'update') {
                                     return Url::toRoute(['student-update', 'id' => $model['id']]);
                                 }else if($action === 'delete'){
-                                    return Url::toRoute(['delete', 'id' => $model['user_ref_id'], 'status' => $model['status']]);
+                                    return Url::toRoute(['student-delete', 'id' => $model['user_ref_id'], 'status' => $model['status']]);
                                 }else if ($action === 'creatempdf') {
 
                                     return Url::toRoute(['creatempdf', 'id' => $model['id']]);

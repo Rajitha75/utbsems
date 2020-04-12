@@ -5,7 +5,9 @@ namespace backend\controllers;
 use Yii;
 use common\models\User;
 use common\models\Student;
+use common\models\Programme;
 use common\models\Admin;
+use common\models\ExamOfficer;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -62,7 +64,33 @@ class AdminController extends \common\controllers\CommonController
      * @return mixed
      */
 
-
+	public function actionValidateEmail(){
+		 try{
+		  $userdata = User::validateEmail($_POST['email']);
+		  
+		  if($userdata > 0){
+			  echo 'false'; exit;
+		  }else{
+			  echo 'true'; exit;
+		  }
+		  } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+	 }
+	 
+	 public function actionValidateRollno(){
+		 try{
+		  $userdata = User::validateRollno($_POST['rollno']);
+		  if($userdata > 0){
+			  echo 'false'; exit;
+		  }else{
+			  echo 'true'; exit;
+		  }
+		  } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+	 }
+	 
     public function actionAdminCreate()
     {
             $userformmodel = new \common\models\CreateAdminForm();
@@ -114,6 +142,101 @@ class AdminController extends \common\controllers\CommonController
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }
     }
+	
+	public function actionCreateExamOfficer()
+    {
+            $examofficerformmodel = new \common\models\CreateExamOfficerForm();
+            $signup = new \frontend\models\SignupForm();
+            $examofficer = new ExamOfficer();
+            if($examofficerformmodel->load(Yii::$app->request->post())){
+                $postvariable=Yii::$app->request->post('CreateExamOfficerForm');
+                $signup->password = $postvariable['password'];
+                $signup->email = $postvariable['email'];
+                $signup->username = $postvariable['email'];
+				$signup->is_admin = isset($postvariable['is_admin']) ? $postvariable['is_admin'] : '';
+                $signup->user_role_ref_id = 3;
+				$signup->status = 1;
+				
+                $examofficer->name = $postvariable['name'];
+                $examofficer->email = $postvariable['email'];
+
+                    if ($user = $signup->signup()) {
+                    Yii::$app->cache->flush();
+                    $userid = Yii::$app->db->getLastInsertID();
+                    $examofficer->user_ref_id = $userid;
+                     $examofficer->save(false);
+				/*---------------------------------------------------------*/
+                Yii::$app->session->setFlash('examofficercreatesuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Admin Created successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+                        return $this->redirect(['exam-officers-list']);
+                    }
+            }
+            return $this->render('create-exam-officer',[
+                'userformmodel'=>$examofficerformmodel,
+                    ]);
+    }
+	
+	public function actionUpdateExamOfficer()
+    {
+	    //try{
+	    Yii::$app->cache->flush();
+	    $userformmodel = new \common\models\CreateExamOfficerForm();
+            if($userformmodel->load(Yii::$app->request->post())){
+                $postvariable=Yii::$app->request->post('CreateExamOfficerForm');
+				$examofficer = ExamOfficer::find()->where(['user_ref_id'=>$postvariable['examofficerid']])->one();
+				$user = User::find()->where(['id'=>$examofficer['user_ref_id']])->one();
+		        $user->is_admin = isset($postvariable['is_admin']) ? $postvariable['is_admin'] : '';
+				$user->save(false)   ;
+				$examofficer->name = isset($postvariable['name']) ? $postvariable['name'] : '';
+                     $examofficer->save(false)   ;
+                        Yii::$app->session->setFlash('examofficerupdate', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Exam Officer Updated Successfully </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
+                        return $this->redirect(['exam-officers-list']);
+                  }else{
+					$examofficerdata=ExamOfficer::getExamOfficerDataByUserRefId(Yii::$app->request->get('id'));
+					$userdata = User::find()->where(['id'=>$examofficerdata[0]['user_ref_id']])->one();
+				  }
+		  
+	return $this->render('update-exam-officer',[
+		'examofficerdata'=>$examofficerdata[0],
+		'userformmodel'=>$userformmodel,
+		'isadmin'=>$userdata['is_admin']
+	    ]);    
+	  //  } catch (\Exception $e) {
+            //\common\controllers\CommonController::exceptionMessage($e->getMessage());
+       // }
+    }
+	
+	public function actionExamOfficerDelete($id)
+    {
+		try{
+        $user = User::find()->where(['id' => Yii::$app->request->get('id')])->one();
+        if(Yii::$app->request->get('status') == 1){
+            $user->status = 2;
+        }else if(Yii::$app->request->get('status') == 2){
+            $user->status = 1;
+        }
+        $user->save(false);
+		return $this->redirect(['exam-officers-list']);
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
+
+    public function actionExamOfficersList(){
+    //try{
+	    $examofficer = new ExamOfficer();
+	  $uQuery=ExamOfficer::getExamOfficersList();
+		$query = $uQuery;		
+		$count = $uQuery->count();
+           return $this->render('exam-officers-list',[
+            'model'=>$examofficer,
+            'query'=>$query,
+            'count'=>$count
+                ]);
+        //} catch (\Exception $e) {
+          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        //}
+	
+    }
     
     public function actionStudentCreate()
     {
@@ -121,6 +244,7 @@ class AdminController extends \common\controllers\CommonController
             $signup = new \frontend\models\SignupForm();
             $countries = User::countrieslist();
             $student = new Student;
+			$programme = Programme::getAllProgrammes();
             if($userformmodel->load(Yii::$app->request->post())){
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
                //print_r($postvariable['nationalityother']);exit;
@@ -129,6 +253,7 @@ class AdminController extends \common\controllers\CommonController
                 $signup->email = $postvariable['email'];
                 $signup->username = $postvariable['email'];
                 $signup->user_role_ref_id = 2;
+				$signup->is_verified = 1;
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
 				 
 				$student->title = isset($postvariable['title']) ? $postvariable['title'] : '';
@@ -262,6 +387,7 @@ class AdminController extends \common\controllers\CommonController
 				$student->age = isset($postvariable['age']) ? $postvariable['age'] : '';
 				$student->status_of_student = isset($postvariable['status_of_student']) ? $postvariable['status_of_student'] : '';
                 $student->user_image = isset($postvariable['user_image']) ? $postvariable['user_image'] : '';
+				$student->is_submit = 'submit';
                     if ($user = $signup->signup()) {
                     Yii::$app->cache->flush();
                     $userid = Yii::$app->db->getLastInsertID();
@@ -290,7 +416,8 @@ class AdminController extends \common\controllers\CommonController
             }
             return $this->render('student-create',[
                 'userformmodel'=>$userformmodel,
-                'countries'=>$countries
+                'countries'=>$countries,
+				'programme'=>$programme
                     ]);
     }
 
@@ -299,6 +426,7 @@ class AdminController extends \common\controllers\CommonController
         //print_r($studentdata[0]['name']); exit;
             $userformmodel = new \common\models\CreateStudentForm();
             $countries = User::countrieslist();
+			$programme = Programme::getAllProgrammes();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $student = Student::find()->where(['id'=>$postvariable['studentid']])->one();
@@ -457,7 +585,8 @@ class AdminController extends \common\controllers\CommonController
         return $this->render('student-update',[
             'userformmodel'=>$userformmodel,
             'studentdata'=>$studentdata[0],
-            'countries'=>$countries
+            'countries'=>$countries,
+			'programme'=>$programme
                 ]);
         }
     }
@@ -466,10 +595,10 @@ class AdminController extends \common\controllers\CommonController
 		//try{
 			Yii::$app->cache->flush();
         $student = new Student();
+		$programme = Programme::getAllProgrammes();
         $cond = $where = '';
         $studentname = Yii::$app->getRequest()->getQueryParam('name') ? Yii::$app->getRequest()->getQueryParam('name') : "";
-        $programme_name = Yii::$app->getRequest()->getQueryParam('programme_name') ? Yii::$app->getRequest()->getQueryParam('programme_name') : "";
-            
+        $progname = Yii::$app->getRequest()->getQueryParam('programme_name') ? Yii::$app->getRequest()->getQueryParam('programme_name') : "";
         $rollno = Yii::$app->getRequest()->getQueryParam('rollno') ? Yii::$app->getRequest()->getQueryParam('rollno') : "";
         $rumpun = Yii::$app->getRequest()->getQueryParam('rumpun') ? Yii::$app->getRequest()->getQueryParam('rumpun') : "";
         $nationality = Yii::$app->getRequest()->getQueryParam('nationality') ? Yii::$app->getRequest()->getQueryParam('nationality') : "";
@@ -492,7 +621,6 @@ class AdminController extends \common\controllers\CommonController
         $mothername = Yii::$app->getRequest()->getQueryParam('mothername') ? Yii::$app->getRequest()->getQueryParam('mothername') : "";
         $mothericno = Yii::$app->getRequest()->getQueryParam('mothericno') ? Yii::$app->getRequest()->getQueryParam('mothericno') : "";
         $sponsortype = Yii::$app->getRequest()->getQueryParam('sponsortype') ? Yii::$app->getRequest()->getQueryParam('sponsortype') : "";
-        $progname = Yii::$app->getRequest()->getQueryParam('progname') ? Yii::$app->getRequest()->getQueryParam('progname') : "";
         $entry = Yii::$app->getRequest()->getQueryParam('entry') ? Yii::$app->getRequest()->getQueryParam('entry') : "";
         //$status = Yii::$app->getRequest()->getQueryParam('status') ? Yii::$app->getRequest()->getQueryParam('status') : "";
         $intake = Yii::$app->getRequest()->getQueryParam('intake') ? Yii::$app->getRequest()->getQueryParam('intake') : "";
@@ -520,7 +648,8 @@ class AdminController extends \common\controllers\CommonController
         return $this->render('students-list',[
             'model'=>$student,
             'query'=>$query,
-            'count'=>$count
+            'count'=>$count,
+			'programme'=>$programme
         ]);
 		//} catch (\Exception $e) {
           //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
@@ -670,6 +799,24 @@ class AdminController extends \common\controllers\CommonController
                 $key .= $keys[array_rand($keys)];
         }
         return $key;
+    }
+	
+	public function actionStudentDelete($id)
+    {
+		try{
+        $user = User::find()->where(['id' => Yii::$app->request->get('id')])->one();
+        if(Yii::$app->request->get('status') == 1){
+            $user->status = 2;
+			Yii::$app->session->setFlash('studentdelete', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Student Deleted successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+        }else if(Yii::$app->request->get('status') == 2){
+            $user->status = 1;
+			Yii::$app->session->setFlash('studentundodelete', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Student Delete Undo Success! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+        }
+        $user->save(false);
+		return $this->redirect(['students-list']);
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
 
     public function actionDelete($id)

@@ -1,4 +1,12 @@
-        <!-- BEGIN CONTAINER -->
+<style>
+.page-sidebar .page-sidebar-menu>li.start>a{border-top-color:#3d4957 !important;}
+
+
+.navbar-collapse {float:left}
+.page-sidebar-wrapper{margin-top: 40px;}
+</style>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<!-- BEGIN CONTAINER -->
 <!--        <div class="page-container">-->
             <!-- BEGIN SIDEBAR -->
             <div class="page-sidebar-wrapper">
@@ -15,111 +23,252 @@
                     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
                     <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 40px">
                         <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-                        <li class="sidebar-toggler-wrapper hide">
+                        <li class="sidebar-toggler-wrapper">
                             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                             <div class="sidebar-toggler"> </div>
                             <!-- END SIDEBAR TOGGLER BUTTON -->
                         </li>
-                        <!--<li class="nav-item start ">
-                            <a href="<?php //echo Yii::$app->request->BaseUrl; ?>/site/dashboard" class="nav-link nav-toggle">
-                                <i class="icon-bar-chart"></i>
-                                <span class="title">Dashboard</span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start ">
-                                    <a href="index.html" class="nav-link ">
-                                        <i class="icon-bar-chart"></i>
-                                        <span class="title">Dashboard 1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start ">
-                                    <a href="dashboard_2.html" class="nav-link ">
-                                        <i class="icon-bulb"></i>
-                                        <span class="title">Dashboard 2</span>
-                                        <span class="badge badge-success">1</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start ">
-                                    <a href="dashboard_3.html" class="nav-link ">
-                                        <i class="icon-graph"></i>
-                                        <span class="title">Dashboard 3</span>
-                                        <span class="badge badge-danger">5</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+                        <?php if((Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3) && (Yii::$app->session['isEaAdmin'] && Yii::$app->session['isEaAdmin'] == 1)){ ?>
                         <li class="nav-item">
-                            <a href="<?php //echo Yii::$app->urlManager->createAbsoluteUrl("site/user-profile");?>" class="nav-link nav-toggle">
-                                <i class="icon-user"></i>
-                                <span class="title">My Profile</span>
-                            </a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../search-projects" class="nav-link nav-toggle">
-                                <i class="icon-bar-chart"></i>
-                                <span class="title">Explore Projects</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link nav-toggle">
-                                <i class="icon-docs"></i>
-                                <span class="title">Projects</span>
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-user" style="margin-top: 5px;"></i>
+                                <span class="title">Exam Officer</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../projects");?>" class="nav-link nav-toggle">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../create-exam-officer");?>" class="nav-link nav-toggle">
+                                        <i class="icon-user"></i>
+                                        <span class="title">Create Exam Officer</span>
+                                    </a>
+                                </li>
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../exam-officers-list");?>" class="nav-link nav-toggle">
                                         <i class="icon-list"></i>
-                                        <span class="title">All Projects</span>
+                                        <span class="title">Exam Officers List</span>
                                     </a>
                                 </li>
-                                <li class="nav-item  ">
-                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../create-project");?>" class="nav-link nav-toggle">
-                                        <i class="icon-note"></i>
-                                        <span class="title">Create Project</span>
-                                    </a>
-                                </li>
-								<?php if(Yii::$app->session['userType'] && (Yii::$app->session['userType'] == 3 || Yii::$app->session['userType'] == 10)){ ?>
-                                <!--<li class="nav-item  ">
-                                    <a href="<?php //echo Yii::$app->urlManager->createAbsoluteUrl("../../private-project-requests");?>" class="nav-link nav-toggle">
-                                        <i class="icon-lock-open"></i>
-                                        <span class="title">Private Project Approval</span>
-                                    </a>
-                                </li>-->
-								<?php } ?>
-                            </ul>                           
+				</ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../inbox");?>" class="nav-link nav-toggle">
-                                <i class="icon-envelope-letter"></i>
-                                <span class="title">Inbox</span>
-                                <!--<span class="arrow"></span>-->
+						<?php } if((Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3) && (Yii::$app->session['isEaAdmin'] && Yii::$app->session['isEaAdmin'] == 1)){ ?>
+						 <li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-user" style="margin-top: 5px;"></i>
+                                <span class="title">Lecturer</span>
+                                <span class="arrow"></span>
                             </a>
-                            <!--<ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="<?php //echo Yii::$app->urlManager->createAbsoluteUrl("../../compose-mail");?>" class="nav-link nav-toggle">
-                                        <i class="icon-envelope-open"></i>
-                                        <span class="title">Compose new mail</span>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../create-lecturer");?>" class="nav-link nav-toggle">
+                                        <i class="icon-user"></i>
+                                        <span class="title">Create Lecturer</span>
                                     </a>
                                 </li>
-                                <li class="nav-item  ">
-                                    <a href="<?php //echo Yii::$app->urlManager->createAbsoluteUrl("../../inbox");?>" class="nav-link nav-toggle">
-                                        <i class="icon-envelope-open"></i>
-                                        <span class="title">Inbox</span>
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../lecturers-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Lecturers List</span>
                                     </a>
                                 </li>
-                                <li class="nav-item  ">
-                                    <a href="<?php //echo Yii::$app->urlManager->createAbsoluteUrl("../../sent");?>" class="nav-link nav-toggle">
-                                        <i class="icon-paper-plane"></i>
-                                        <span class="title">Sent</span>
-                                    </a>
-                                </li>
-                            </ul>-->
+				</ul>
                         </li>
+						<?php } if((Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3) && (Yii::$app->session['isEaAdmin'] && Yii::$app->session['isEaAdmin'] == 1)){ ?>
+						 <li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-user" style="margin-top: 5px;"></i>
+                                <span class="title">Student</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../create-student");?>" class="nav-link nav-toggle">
+                                        <i class="icon-user"></i>
+                                        <span class="title">Create Student</span>
+                                    </a>
+                                </li>
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../students-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Students List</span>
+                                    </a>
+                                </li>
+								
+				<li class="nav-item  ">
+					<a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../all-students-marks");?>" class="nav-link nav-toggle">
+						<i class="icon-list"></i>
+						<span class="title">Students Marks</span>
+					</a>
+				</li>
+				</ul>
+                        </li>
+						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 4){ ?>
+						 <li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-user" style="margin-top: 5px;"></i>
+                                <span class="title">Student</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../students-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Students List</span>
+                                    </a>
+                                </li>
+				<li class="nav-item  ">
+					<a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../all-students-marks");?>" class="nav-link nav-toggle">
+						<i class="icon-list"></i>
+						<span class="title">Students Marks</span>
+					</a>
+				</li>
+
+				</ul>
+                        </li>
+						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>
+			 <li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-plus-sign-alt" style="margin-top: 5px;"></i>
+                                <span class="title">Faculty</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-faculty");?>" class="nav-link nav-toggle">
+                                        <i class="icon-plus-sign-alt"></i>
+                                        <span class="title">Add Faculty</span>
+                                    </a>
+                                </li>
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../faculty-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Faculty List</span>
+                                    </a>
+                                </li>
+				</ul>
+                        </li>
+						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>
+						<li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-plus-sign-alt" style="margin-top: 5px;"></i>
+                                <span class="title">Programme</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-programme");?>" class="nav-link nav-toggle">
+                                        <i class="icon-plus-sign-alt"></i>
+                                        <span class="title">Add Programme</span>
+                                    </a>
+                                </li>
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../programmes-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Programmes List</span>
+                                    </a>
+                                </li>
+				</ul>
+                        </li>
+						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>
+						<li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-plus-sign-alt" style="margin-top: 5px;"></i>
+                                <span class="title">Module</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-module");?>" class="nav-link nav-toggle">
+                                        <i class="icon-plus-sign-alt"></i>
+                                        <span class="title">Add Module</span>
+                                    </a>
+                                </li>
+								
+							 <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../modules-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Modules List</span>
+                                    </a>
+                                </li>
+				</ul>
+                        </li>
+						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>	
+						<li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-external-link" style="margin-top: 5px;"></i>
+                                <span class="title">Assign</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-programme-to-faculty");?>" class="nav-link nav-toggle">
+                                        <i class="icon-external-link"></i>
+                                        <span class="title">Programme to Faculty</span>
+                                    </a>
+                                </li>
+								
+							<li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../programme-to-faculty-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Programme to Faculty List</span>
+                                    </a>
+                                </li>
+								
+							 <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-module-to-programme");?>" class="nav-link nav-toggle">
+                                        <i class="icon-external-link"></i>
+                                        <span class="title">Module to Programme</span>
+                                    </a>
+                                </li>
+								
+								<li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../module-to-programme-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Module to Programme List</span>
+                                    </a>
+                                </li>
+								
+								<li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-lecturer-to-module");?>" class="nav-link nav-toggle">
+                                        <i class="icon-external-link"></i>
+                                        <span class="title">Lecturer to Module</span>
+                                    </a>
+                                </li>
+								
+								<li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../lecturer-to-module-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-list"></i>
+                                        <span class="title">Lecturer to Module List</span>
+                                    </a>
+                                </li>
+				</ul>
+                        </li>
+						
+						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 4){ ?>	
+						<li class="nav-item">
+			 <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-external-link" style="margin-top: 5px;"></i>
+                                <span class="title">Marks</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../add-marks");?>" class="nav-link nav-toggle">
+                                        <i class="icon-external-link"></i>
+                                        <span class="title">Add / Edit Marks</span>
+                                    </a>
+                                </li>
+								
+							
+				</ul>
+                        </li>
+						<?php } ?>
                     </ul>
                     <!-- END SIDEBAR MENU -->
                     <!-- END SIDEBAR MENU -->
                 </div>
                 <!-- END SIDEBAR -->
             </div>
+            
             <!-- END SIDEBAR -->
+
+        

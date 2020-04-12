@@ -50,7 +50,7 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$ap
                     <li><a class="myprofile" href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-profile">My profile </a> </li>
                      <?php }else{ ?>
                     <li><a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">Student Login</a></li>
-                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">Lecturers Login</a> </li>                   
+                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../lecturer-login">Lecturers Login</a> </li>                   
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../exam-officers-login">Exam Officers Login</a> </li>                   
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../backend/web/site/login">Administrator Login</a> </li>
                     <?php } ?>  
@@ -160,12 +160,48 @@ position: absolute;
 
 
 </style>
-<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified')) ) { 
-    if(Yii::$app->session->getFlash('signupsuccess')){
+<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified') || $flash = Yii::$app->session->getFlash('examofficerupdate') || $flash = Yii::$app->session->getFlash('examofficercreate') || $flash = Yii::$app->session->getFlash('examofficerdelete') || $flash = Yii::$app->session->getFlash('examofficerundodelete') || $flash = Yii::$app->session->getFlash('lecturerdelete') || $flash = Yii::$app->session->getFlash('lecturerundodelete') || $flash = Yii::$app->session->getFlash('lecturerupdate') || $flash = Yii::$app->session->getFlash('lecturercreate') || $flash = Yii::$app->session->getFlash('studentcreated') || $flash = Yii::$app->session->getFlash('studentupdatesuccess') || $flash = Yii::$app->session->getFlash('studentdelete') || $flash = Yii::$app->session->getFlash('studentundodelete')) ) { 
+    if(Yii::$app->session->getFlash('studentdelete')){
+    $flashmsg = 'Student Deleted successfully!'; 
+    }
+	if(Yii::$app->session->getFlash('studentundodelete')){
+    $flashmsg = 'Student Delete Undo Success!'; 
+    }
+	if(Yii::$app->session->getFlash('signupsuccess')){
     $flashmsg = 'You are registered successfully! Please follow the steps in your email to verify your account'; 
+    }
+	if(Yii::$app->session->getFlash('studentcreated')){
+    $flashmsg = 'Student created successfully'; 
+    }
+	if(Yii::$app->session->getFlash('studentupdatesuccess')){
+    $flashmsg = 'Student updated successfully'; 
+    }
+    if(Yii::$app->session->getFlash('examofficercreate')){
+    $flashmsg = 'Exam officer created successfully'; 
+    }
+    if(Yii::$app->session->getFlash('examofficerupdate')){
+    $flashmsg = 'Exam officer updated successfully'; 
     }
     if(Yii::$app->session->getFlash('studentupdatesuccesssubmit')){
         $flashmsg = 'Profile Updated successfully! '; 
+        }
+		if(Yii::$app->session->getFlash('examofficerdelete')){
+    $flashmsg = 'Exam officer Deleted successfully'; 
+    }
+    if(Yii::$app->session->getFlash('examofficerundodelete')){
+        $flashmsg = 'Exam officer Delete Undo Success! '; 
+        }
+		if(Yii::$app->session->getFlash('lecturercreate')){
+    $flashmsg = 'Lecturer created successfully'; 
+    }
+    if(Yii::$app->session->getFlash('lecturerupdate')){
+    $flashmsg = 'Lecturer updated successfully'; 
+    }
+	if(Yii::$app->session->getFlash('lecturerdelete')){
+    $flashmsg = 'Lecturer Deleted successfully'; 
+    }
+    if(Yii::$app->session->getFlash('lecturerundodelete')){
+        $flashmsg = 'Lecturer Delete Undo Success! '; 
         }
 	if(Yii::$app->session->getFlash('studentupdatesuccesssave')){
         $flashmsg = 'Profile Saved successfully! '; 

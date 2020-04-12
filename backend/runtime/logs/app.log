@@ -43973,3 +43973,790 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1581617079.475
     'REQUEST_TIME' => 1581617079
 ]
+2020-04-06 13:45:47 [::1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare backend\controllers\AdminController::actionAdminsList()' in C:\wamp64\www\utbsems\backend\controllers\AdminController.php:150
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#6 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#7 {main}
+2020-04-06 13:45:46 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6\";}'
+    'PHPSESSID' => '445m2r004rv03fhm52ceh2vss1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6%22%3B%7D; PHPSESSID=445m2r004rv03fhm52ceh2vss1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1181'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/admin-create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/admin-create'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586160946.577
+    'REQUEST_TIME' => 1586160946
+]
+2020-04-06 13:46:09 [::1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'Cannot redeclare backend\controllers\AdminController::actionAdminsList()' in C:\wamp64\www\utbsems\backend\controllers\AdminController.php:150
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(562): ::spl_autoload_call()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(562): ::class_exists()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#6 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#7 {main}
+2020-04-06 13:46:08 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6\";}'
+    'PHPSESSID' => '445m2r004rv03fhm52ceh2vss1'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6%22%3B%7D; PHPSESSID=445m2r004rv03fhm52ceh2vss1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1182'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/admin-create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/admin-create'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586160968.646
+    'REQUEST_TIME' => 1586160968
+]
+2020-04-06 13:46:54 [::1][1][50bds2teo8sualpcm90hpl6qf2][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\ExamOfficer' not found' in C:\wamp64\www\utbsems\backend\controllers\AdminController.php:122
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#6 {main}
+2020-04-06 13:46:53 [::1][1][50bds2teo8sualpcm90hpl6qf2][info][application] $_COOKIE = [
+    '_csrf' => '27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6\";}'
+    'PHPSESSID' => '50bds2teo8sualpcm90hpl6qf2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586162213
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6%22%3B%7D; PHPSESSID=50bds2teo8sualpcm90hpl6qf2'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1192'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/create-exam-officer'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/create-exam-officer'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586161013.669
+    'REQUEST_TIME' => 1586161013
+]
+2020-04-06 13:47:30 [::1][1][50bds2teo8sualpcm90hpl6qf2][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: userformmodel' in C:\wamp64\www\utbsems\backend\views\admin\create-exam-officer.php:66
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(148): yii\base\Controller->render()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionCreateExamOfficer()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#11 {main}
+2020-04-06 13:47:30 [::1][1][50bds2teo8sualpcm90hpl6qf2][info][application] $_COOKIE = [
+    '_csrf' => '27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6\";}'
+    'PHPSESSID' => '50bds2teo8sualpcm90hpl6qf2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586162250
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6%22%3B%7D; PHPSESSID=50bds2teo8sualpcm90hpl6qf2'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1194'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/create-exam-officer'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/create-exam-officer'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586161050.222
+    'REQUEST_TIME' => 1586161050
+]
+2020-04-06 14:03:29 [::1][1][50bds2teo8sualpcm90hpl6qf2][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: common\models\ExamOfficer::is_admin' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\BaseActiveRecord.php(272): yii\base\Component->__set('is_admin', '0')
+#1 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(160): yii\db\BaseActiveRecord->__set('is_admin', '0')
+#2 [internal function]: backend\controllers\AdminController->actionCreateExamOfficer()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create-exam-off...', Array)
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/create-ex...', Array)
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#9 {main}
+2020-04-06 14:03:29 [::1][1][50bds2teo8sualpcm90hpl6qf2][info][application] $_POST = [
+    '_csrf' => 'Z1RqWFVOUmowHh49Ah46AxYzIwAwCSAODCEsFwx3Cz5eYAkpNiEXXA=='
+    'CreateExamOfficerForm' => [
+        'name' => 'exam officer 2'
+        'email' => 'examofficer2@gmail.com'
+        'is_admin' => '0'
+        'password' => 'test@123'
+        'retype_password' => 'test@123'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6\";}'
+    'PHPSESSID' => '50bds2teo8sualpcm90hpl6qf2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586163209
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '835'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryw7uTmYeOIw4Iwkwe'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/create-exam-officer'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6%22%3B%7D; PHPSESSID=50bds2teo8sualpcm90hpl6qf2'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1229'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/create-exam-officer'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/create-exam-officer'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586162009.125
+    'REQUEST_TIME' => 1586162009
+]
+2020-04-06 14:04:47 [::1][1][50bds2teo8sualpcm90hpl6qf2][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1364 Field 'is_admin' doesn't have a default value' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php:844
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(844): PDOStatement->execute()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(451): yii\db\Command->execute()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\BaseActiveRecord.php(598): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\wamp64\www\utbsems\frontend\models\SignupForm.php(81): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(162): frontend\models\SignupForm->signup()
+#7 [internal function]: backend\controllers\AdminController->actionCreateExamOfficer()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000]: General error: 1364 Field 'is_admin' doesn't have a default value
+The SQL being executed was: INSERT INTO `user` (`username`, `email`, `user_role_ref_id`, `password_hash`, `auth_key`, `status`, `created_at`, `updated_at`) VALUES ('examofficer2@gmail.com', 'examofficer2@gmail.com', 3, '$2y$13$MYD1OS7fVBJz0BhoaxuI7uPXf1Hj98lgJATzoOVI5Gfzfw2IpRUcW', 'R8BxnOFfrKCIlSIClfoppd-rIFZngoAH', 1, 1586162086, 1586162086)' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(854): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `us...')
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(451): yii\db\Command->execute()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('<span class="st...', '[<span class="s...')
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal('<span class="ke...')
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\BaseActiveRecord.php(598): yii\db\ActiveRecord->insert('<span class="ke...', '<span class="ke...')
+#5 C:\wamp64\www\utbsems\frontend\models\SignupForm.php(81): yii\db\BaseActiveRecord->save('<span class="ke...')
+#6 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(162): frontend\models\SignupForm->signup()
+#7 [internal function]: backend\controllers\AdminController->actionCreateExamOfficer()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#11 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'is_admin' doesn't have a default value
+)
+
+2020-04-06 14:04:45 [::1][1][50bds2teo8sualpcm90hpl6qf2][info][application] $_POST = [
+    '_csrf' => 'Z1RqWFVOUmowHh49Ah46AxYzIwAwCSAODCEsFwx3Cz5eYAkpNiEXXA=='
+    'CreateExamOfficerForm' => [
+        'name' => 'exam officer 2'
+        'email' => 'examofficer2@gmail.com'
+        'is_admin' => '0'
+        'password' => 'test@123'
+        'retype_password' => 'test@123'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6\";}'
+    'PHPSESSID' => '50bds2teo8sualpcm90hpl6qf2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586163285
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '835'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryw7uTmYeOIw4Iwkwe'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/create-exam-officer'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=27d239cd539f5f124bfdecb3c1476ea3db2024ffdf9701c2994a1587aa57cc53a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WJteWPhiqgIXeGrdkuFOY9YT94cqcoE6%22%3B%7D; PHPSESSID=50bds2teo8sualpcm90hpl6qf2'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1241'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/create-exam-officer'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/create-exam-officer'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586162085.587
+    'REQUEST_TIME' => 1586162085
+]
+2020-04-06 13:13:58 [::1][1][50bds2teo8sualpcm90hpl6qf2][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: is_admin' in C:\wamp64\www\utbsems\backend\views\admin\update-exam-officer.php:64
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(200): yii\base\Controller->render()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionUpdateExamOfficer()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#11 {main}
+2020-04-06 13:13:58 [::1][1][50bds2teo8sualpcm90hpl6qf2][info][application] $_GET = [
+    'id' => '50'
+]
+
+$_COOKIE = [
+    '_csrf' => 'cc15fb4fb126dbd3a9231da80e977e7d60514eda8417ec7653dd553b24b4d4c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Oiukiup06zkqT5RyFodNb9ZrpVPsL3Iv\";}'
+    'PHPSESSID' => '50bds2teo8sualpcm90hpl6qf2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586160238
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/exam-officers-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=cc15fb4fb126dbd3a9231da80e977e7d60514eda8417ec7653dd553b24b4d4c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Oiukiup06zkqT5RyFodNb9ZrpVPsL3Iv%22%3B%7D; PHPSESSID=50bds2teo8sualpcm90hpl6qf2'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1283'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/update-exam-officer'
+    'REDIRECT_QUERY_STRING' => 'id=50'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=50'
+    'REQUEST_URI' => '/utbsems/backend/web/admin/update-exam-officer?id=50'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586159038.463
+    'REQUEST_TIME' => 1586159038
+]
+2020-04-06 13:18:24 [::1][1][50bds2teo8sualpcm90hpl6qf2][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 0' in C:\wamp64\www\utbsems\backend\controllers\AdminController.php:183
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#6 {main}
+2020-04-06 13:18:24 [::1][1][50bds2teo8sualpcm90hpl6qf2][info][application] $_POST = [
+    '_csrf' => 'bzY3QklNWG8gX0IpIDgoX1lMXDMdeAoWKVlTDCt0Ah0fYGcxBX4RGQ=='
+    'CreateExamOfficerForm' => [
+        'examofficerid' => '50'
+        'name' => 'exam officer 2'
+        'email' => 'examofficer2@gmail.com'
+        'is_admin' => '0'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'cc15fb4fb126dbd3a9231da80e977e7d60514eda8417ec7653dd553b24b4d4c1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Oiukiup06zkqT5RyFodNb9ZrpVPsL3Iv\";}'
+    'PHPSESSID' => '50bds2teo8sualpcm90hpl6qf2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586160504
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '701'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarySsgBUposNVjPmp8k'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/update-exam-officer?id=50'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=cc15fb4fb126dbd3a9231da80e977e7d60514eda8417ec7653dd553b24b4d4c1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Oiukiup06zkqT5RyFodNb9ZrpVPsL3Iv%22%3B%7D; PHPSESSID=50bds2teo8sualpcm90hpl6qf2'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1296'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/update-exam-officer'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/update-exam-officer'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586159304.632
+    'REQUEST_TIME' => 1586159304
+]
+2020-04-06 13:41:56 [::1][1][lborfqhkbubs8jmprq4i452s17][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\Programme' not found' in C:\wamp64\www\utbsems\backend\controllers\AdminController.php:597
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#6 {main}
+2020-04-06 13:41:56 [::1][1][lborfqhkbubs8jmprq4i452s17][info][application] $_COOKIE = [
+    '_csrf' => '1a7c0908164e89b54416828026e2a2228408f829117afecd90bc1721ca7684a9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wh1zCQzwcbYvMWD2tgXa7dGO8v-sDXq1\";}'
+    'PHPSESSID' => 'lborfqhkbubs8jmprq4i452s17'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586161916
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1a7c0908164e89b54416828026e2a2228408f829117afecd90bc1721ca7684a9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wh1zCQzwcbYvMWD2tgXa7dGO8v-sDXq1%22%3B%7D; PHPSESSID=lborfqhkbubs8jmprq4i452s17'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '3756'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/students-list'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/students-list'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586160716.286
+    'REQUEST_TIME' => 1586160716
+]
+2020-04-06 13:42:39 [::1][1][lborfqhkbubs8jmprq4i452s17][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'ArrayHelper' not found' in C:\wamp64\www\utbsems\backend\views\admin\students-list.php:64
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(655): yii\base\Controller->render()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionStudentsList()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#11 {main}
+2020-04-06 13:42:38 [::1][1][lborfqhkbubs8jmprq4i452s17][info][application] $_COOKIE = [
+    '_csrf' => '1a7c0908164e89b54416828026e2a2228408f829117afecd90bc1721ca7684a9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wh1zCQzwcbYvMWD2tgXa7dGO8v-sDXq1\";}'
+    'PHPSESSID' => 'lborfqhkbubs8jmprq4i452s17'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1586161958
+    '__auth_last_update' => 1572303712
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1a7c0908164e89b54416828026e2a2228408f829117afecd90bc1721ca7684a9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wh1zCQzwcbYvMWD2tgXa7dGO8v-sDXq1%22%3B%7D; PHPSESSID=lborfqhkbubs8jmprq4i452s17'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '3767'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/students-list'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/students-list'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1586160758.737
+    'REQUEST_TIME' => 1586160758
+]

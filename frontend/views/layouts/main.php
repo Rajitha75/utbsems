@@ -129,15 +129,15 @@ $bundle
             require_once("_header.php");
             
 			?>
-     <?= $content ?>
-<!--    <div class="wrap home-toggle">
+   <div class="wrap home-toggle">
 
         <div class="page-container">
-            <?php //require_once ('_content.php');?>
+            <?php require_once ('_content.php');?>
 
            
+     <?= $content ?>
         </div>
-        </div>-->
+        </div>
 
         <?php
            if(Yii::$app->controller->action->id != 'dynamic-new') { 

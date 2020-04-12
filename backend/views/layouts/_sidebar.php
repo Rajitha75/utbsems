@@ -27,7 +27,7 @@
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-user" style="margin-top: 5px;"></i>
-                                <span class="title">Users</span>
+                                <span class="title">Student</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
@@ -43,7 +43,16 @@
                                         <span class="title">Students List</span>
                                     </a>
                                 </li>
-                                
+                            </ul>                           
+                        </li>
+						
+						<li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-user" style="margin-top: 5px;"></i>
+                                <span class="title">Admin</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">                                
                                 <li class="nav-item  ">
                                     <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/admin-create");?>" class="nav-link nav-toggle">
                                         <i class="icon-user"></i>
@@ -56,8 +65,27 @@
                                         <span class="title">Admin Users</span>
                                     </a>
                                 </li>
-                                
-                                
+                            </ul>                           
+                        </li>
+						<li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-user" style="margin-top: 5px;"></i>
+                                <span class="title">Exam Officer</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">                                
+                                <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/create-exam-officer");?>" class="nav-link nav-toggle">
+                                        <i class="icon-user"></i>
+                                        <span class="title">Create Exam Officer</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/exam-officers-list");?>" class="nav-link nav-toggle">
+                                        <i class="icon-th-list"></i>
+                                        <span class="title">Exam Officers List</span>
+                                    </a>
+                                </li>
                             </ul>                           
                         </li>
                         <li class="nav-item">

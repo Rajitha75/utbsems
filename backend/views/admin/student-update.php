@@ -288,45 +288,8 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		
 		<?php echo $form->field($userformmodel, 'school')->dropDownList(['School of Business' => 'School of Business', 'School of Computing and Informatics' => 'School of Computing and Informatics', 'School of Applied Sciences and Mathematics' => 'School of Applied Sciences and Mathematics', 'School of Design' => 'School of Design', 'Faculty of Engineering' => 'Faculty of Engineering'], ['prompt' => 'Select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>');?>
 	
-		<?php echo $form->field($userformmodel, 'programme_name')
-		->dropDownList(['Bachelor of Business in Applied Economics and Finance' => 'Bachelor of Business in Applied Economics and Finance',
-		'Bachelor of Business in Accounting and Information Systems' => 'Bachelor of Business in Accounting and Information Systems',
-		'Bachelor of Business in Business Information System' => 'Bachelor of Business in Business Information System',
-		'Bachelor of Business in Business Information System(Part Time)' => 'Bachelor of Business in Business Information System(Part Time)',
-		'Bachelor of Business in Finance and Risk Management' => 'Bachelor of Business in Finance and Risk Management',
-		'Government Scholarship' => 'Government Scholarship',
-		'Bachelor of Business in Marketing and Information Systems' => 'Bachelor of Business in Marketing and Information Systems',
-		'Bachelor of Business in Technology Management' => 'Bachelor of Business in Technology Management',
-		'Master in Management and Technology' => 'Master in Management and Technology',
-		'Bachelor of Science in Computing with Data Analytic' => 'Bachelor of Science in Computing with Data Analytic',
-		'Bachelor of Science in Creative Multimedia' => 'Bachelor of Science in Creative Multimedia',
-		'Bachelor of Science in Computer Network and Security' => 'Bachelor of Science in Computer Network and Security',
-		'Bachelor of Science in Computing' => 'Bachelor of Science in Computing',
-		'Bachelor of Science in Digital Media' => 'Bachelor of Science in Digital Media',
-		'Bachelor of Science in Internet Computing' => 'Bachelor of Science in Internet Computing',
-		'Master in Computer Information System' =>  'Master in Computer Information System',
-		'Bachelor of Science in Applied Mathematics and Economics' => 'Bachelor of Science in Applied Mathematics and Economics',
-		'Bachelor of Science in Food Science and Technology' => 'Bachelor of Science in Food Science and Technology',
-		'Bachelor of Science in Architecture' => 'Bachelor of Science in Architecture',
-		'Bachelor of Science in Product Design' => 'Bachelor of Science in Product Design',
-		'Bachelor of Engineering in Civil Engineering' => 'Bachelor of Engineering in Civil Engineering',
-		'Bachelor of Engineering in Chemical Engineering' => 'Bachelor of Engineering in Chemical Engineering',
-		'Bachelor of Engineering in Civil and Structural Engineering' => 'Bachelor of Engineering in Civil and Structural Engineering',
-		'Bachelor of Engineering in Electrical and Electronics' => 'Bachelor of Engineering in Electrical and Electronics',
-		'Bachelor of Engineering in Mechatronic Engineering' => 'Bachelor of Engineering in Mechatronic Engineering',
-		'Bachelor of Engineering in Mechanical Engineering' => 'Bachelor of Engineering in Mechanical Engineering',
-		'Bachelor of Engineering in Petroleum Engineering' => 'Bachelor of Engineering in Petroleum Engineering',
-		'Master of Science in Mechanical Engineering' => 'Master of Science in Mechanical Engineering',
-		'Master in Water Resources and Environmental Engineering' => 'Master in Water Resources and Environmental Engineering',
-		'Bachelor of Business in Business Information Management' => 'Bachelor of Business in Business Information Management',
-		'Bachelor of Business in Business Information Management (Part Time)' => 'Bachelor of Business in Business Information Management (Part Time)',
-		'Master in Management and Technology (Part Time)' => 'Master in Management and Technology (Part Time)',
-		'Bachelor of Science in Internet Computing (Part Time)' => 'Bachelor of Science in Internet Computing (Part Time)',
-		'Master in Information Security' => 'Master in Information Security',
-		'Bachelor of Science in Computer and Information Security' => 'Bachelor of Science in Computer and Information Security',
-		'Master in Information Security (Part Time)' => 'Master in Information Security (Part Time)',
-		'Master of Science in Electrical and Electronic Engineering' => 'Master of Science in Electrical and Electronic Engineering'],['prompt' => 'Select Programme Name'])->label('Programme Name <span class="mandatory">*</span>');?>
-
+		<?php echo $form->field($userformmodel, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label('Programme'); ?>
+		
 		<?php echo $form->field($userformmodel, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year'], ['prompt' => 'Select Entry'])->label('Entry <span class="mandatory">*</span>');?>
 
 		<?php echo $form->field($userformmodel, 'status_of_student')->dropDownList(['Current Student' => 'Current Student', 'Withdrawn' => 'Withdrawn'], ['prompt' => 'Select Status of Student'])->label('Status of Student <span class="mandatory">*</span>');?>

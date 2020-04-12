@@ -75,6 +75,8 @@ class SignupForm extends \yii\db\ActiveRecord
             $user->username = addslashes($this->username);
             $user->email = addslashes($this->email);
         $user->user_role_ref_id = $this->user_role_ref_id;
+		$user->is_admin = isset($this->is_admin) ? $this->is_admin : 0;
+		$user->is_verified = isset($this->is_verified) ? $this->is_verified : 0;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         $user->status = 1;

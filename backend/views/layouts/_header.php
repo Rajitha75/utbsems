@@ -18,7 +18,7 @@ use yii\bootstrap\Alert;
 use common\models\Storage;
 use yii\db\Query;
 $storagemodel = new \common\models\Storage();
-if (($flash = Yii::$app->session->getFlash('signupsuccess')) || ($flash = Yii::$app->session->getFlash('admincreatesuccess')) || ($flash = Yii::$app->session->getFlash('studentupdatesuccess')) ) {
+if (($flash = Yii::$app->session->getFlash('studentdelete')) || ($flash = Yii::$app->session->getFlash('studentundodelete')) || ($flash = Yii::$app->session->getFlash('signupsuccess')) || ($flash = Yii::$app->session->getFlash('admincreatesuccess')) || ($flash = Yii::$app->session->getFlash('studentupdatesuccess')) ) {
     echo Alert::widget(['options' => ['class' => 'alert-success front-noti', 'id' => 'flashmodal', 'style' => 'z-index: 999999'], 'body' => $flash]);
 }
 ?>
