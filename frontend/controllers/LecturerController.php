@@ -360,7 +360,7 @@ Yii::$app->cache->flush();
 			
 			
 			for($i=0;$i<count($postvariable['studentid']);$i++){
-			$previd = $postvariable['previd'][$i];
+			$previd = isset($postvariable['previd'][$i]) ? $postvariable['previd'][$i] : '';
 			if($previd != ''){
 				$studentmarksmodule = AddStudentMarks::find()->where(['id' => $previd])->one();
 			}else{

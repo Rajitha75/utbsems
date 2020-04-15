@@ -102,7 +102,7 @@ class AddStudentMarksTemporary extends \yii\db\ActiveRecord
 			
 			
 		}
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->groupBy(['sm.id'])->all();
 		return $uQuery;
     }
 	

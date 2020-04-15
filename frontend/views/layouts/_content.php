@@ -1,8 +1,13 @@
 <?php require_once('_sidebar.php');?>  
+<style>
+.nomargin{
+	margin-left:0px !important;
+}
+</style>
 <!-- BEGIN CONTENT -->
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
-                <div class="page-content">
+                <div class="page-content <?php echo (!Yii::$app->user->id) ? 'nomargin' : ''; ?>">
                     <!-- BEGIN PAGE HEADER-->
                     <!-- BEGIN THEME PANEL -->
                     <div class="theme-panel hidden-xs hidden-sm">

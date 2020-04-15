@@ -36,7 +36,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 			'options' => ['enctype' => 'multipart/form-data'],
 			]); ?>
 	<div class="col-xs-8 col-sm-6">
-	<?php echo $form->field($marksformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semister'])->label('Semister');?>
+	<?php echo $form->field($marksformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semister'])->label('Semester');?>
 	<div class="semistererr" style="display:none">Please select a Semester</div>
 	
 	<div id="moduleslist"></div>
@@ -310,12 +310,12 @@ $('#addmarksform').on('change','#addstudentmarksform-module_id', function(){
 								uhtml += '<td>'+studentsdata[i]['studentname']+'</td>';
 								uhtml += '<td>'+studentsdata[i]['rollno']+'</td>';
 								uhtml += '<td>'+studentsdata[i]['ic_no']+'</td>';
-								uhtml += '<td><input type="text" name="AddStudentMarksForm[ew_marks][]" index='+i+' value="" class="sewmarks ewmrks_'+i+'"/>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[ew_marks][]" autocomplete="off"  index='+i+' value="" class="sewmarks ewmrks_'+i+'"/>';
 								uhtml += '<div style="display:none;" class="ew_error ew_num_error_'+i+'">Please enter only digits</div>';
 								uhtml += '<div style="display:none;" class="ew_error ew_max_error_'+i+'">Marks should not exceed 100</div>';
 								uhtml += '<input type="hidden" name="AddStudentMarksForm[studentid][]" value="'+studentsdata[i]['studentid']+'"/></td>';
-								uhtml += '<td><input type="text" name="AddStudentMarksForm[cw_marks][]" index='+i+' value=""  class="scwmarks cwmrks_'+i+'"/>';
-								uhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd]" value="" autocomplete="off">';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[cw_marks][]" autocomplete="off"  index='+i+' value=""  class="scwmarks cwmrks_'+i+'"/>';
+								uhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd][]" value="" autocomplete="off">';
 								uhtml += '<div style="display:none;" class="cw_error cw_num_error_'+i+'">Please enter only digits</div>';
 								uhtml += '<div style="display:none;" class="cw_error cw_max_error_'+i+'">Marks should not exceed 100</div></td>';
 								uhtml += '</tr>';
@@ -328,11 +328,11 @@ $('#addmarksform').on('change','#addstudentmarksform-module_id', function(){
 								uhtml += '<td>'+studentsdata[i]['studentname']+'</td>';
 								uhtml += '<td>'+studentsdata[i]['rollno']+'</td>';
 								uhtml += '<td>'+studentsdata[i]['ic_no']+'</td>';
-								uhtml += '<td><input type="text" name="AddStudentMarksForm[ew_marks][]" index='+i+' value="'+marksdata[j]['ew_marks']+'" class="sewmarks ewmrks_'+i+'"/>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[ew_marks][]" index='+i+' autocomplete="off" value="'+marksdata[j]['ew_marks']+'" class="sewmarks ewmrks_'+i+'"/>';
 								uhtml += '<div style="display:none;" class="ew_error ew_num_error_'+i+'">Please enter only digits</div>';
 								uhtml += '<div style="display:none;" class="ew_error ew_max_error_'+i+'">Marks should not exceed 100</div>';
 								uhtml += '<input type="hidden" name="AddStudentMarksForm[studentid][]" value="'+studentsdata[i]['studentid']+'"/></td>';
-								uhtml += '<td><input type="text" name="AddStudentMarksForm[cw_marks][]" index='+i+' value="'+marksdata[j]['cw_marks']+'"  class="scwmarks cwmrks_'+i+'"/>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[cw_marks][]" index='+i+' autocomplete="off" value="'+marksdata[j]['cw_marks']+'"  class="scwmarks cwmrks_'+i+'"/>';
 								uhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd][]" value="'+marksdata[j]['id']+'" autocomplete="off">';
 								uhtml += '<div style="display:none;" class="cw_error cw_num_error_'+i+'">Please enter only digits</div>';
 								uhtml += '<div style="display:none;" class="cw_error cw_max_error_'+i+'">Marks should not exceed 100</div></td>';

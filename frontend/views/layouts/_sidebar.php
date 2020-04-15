@@ -4,6 +4,9 @@
 
 .navbar-collapse {float:left}
 .page-sidebar-wrapper{margin-top: 40px;}
+.nodisplay{
+	display: none !important;
+}
 </style>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <!-- BEGIN CONTAINER -->
@@ -23,7 +26,7 @@
                     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
                     <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 40px">
                         <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-                        <li class="sidebar-toggler-wrapper">
+                        <li class="sidebar-toggler-wrapper <?php echo (!Yii::$app->user->id) ? 'nodisplay' : ''; ?>">
                             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                             <div class="sidebar-toggler"> </div>
                             <!-- END SIDEBAR TOGGLER BUTTON -->

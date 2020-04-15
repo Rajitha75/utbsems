@@ -52,7 +52,7 @@ $(document).ready(function(){
                 'attributes' => [
                     [
                         'attribute' => 'Name',
-                        'value' => stripslashes($studentdetails['name']),
+                        'value' => stripslashes($studentdetails['title']).' '.stripslashes($studentdetails['name']),
                     ], 
                     [
                         'attribute'=>'Roll No',
@@ -73,7 +73,7 @@ $(document).ready(function(){
                     ],
                     [
                         'attribute'=>'IC No',
-                        'value' => stripslashes($studentdetails['ic_no']),
+                        'value' => stripslashes($studentdetails['ic_no_format']).' - '.stripslashes($studentdetails['ic_no']),
                     ],
                     [
                         'attribute'=>'IC Color',
@@ -126,6 +126,14 @@ $(document).ready(function(){
                     [
                         'attribute'=>'Email',       
                         'value' => stripslashes($studentdetails['email']),
+                    ],
+		    [
+                        'attribute'=>'Highest Qualification',       
+                        'value' => stripslashes($studentdetails['highest_qualification']),
+                    ],
+                    [
+                        'attribute'=>'Highest Qualification (Other)',       
+                        'value' => ($studentdetails['highest_qualification'] == 'Other') ? stripslashes($studentdetails['highestqualificationother']) : 'NA',
                     ],
                     [
                         'attribute'=>'Name of Last School Attended',       
@@ -215,8 +223,16 @@ $(document).ready(function(){
         'model' => $studentdetails,
         'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
         'attributes' => [
+		    [
+                        'attribute'=>'Type of Residential',       
+                        'value' => stripslashes($studentdetails['type_of_residential']),
+                    ],
+		    [
+                        'attribute'=>'Type of Residential (Other)',       
+                        'value' => ($studentdetails['type_of_residential'] == 'Other') ? stripslashes($studentdetails['typeofresidentialother']) : 'NA',
+                    ],
                     [
-                        'attribute'=>'Postal Address',       
+                        'attribute'=>'Address Line 1',       
                         'value' => stripslashes($studentdetails['address']),
                     ],
                     [
@@ -226,6 +242,10 @@ $(document).ready(function(){
                     [
                         'attribute'=>'Address Line 3',       
                         'value' => stripslashes($studentdetails['address3']),
+                    ],
+		    [
+                        'attribute'=>'Country',       
+                        'value' => stripslashes($studentdetails['countrycode']),
                     ],
                     [
                         'attribute'=>'Postal Code',       
@@ -242,6 +262,10 @@ $(document).ready(function(){
                     [
                         'attribute'=>'Bank Name',       
                         'value' => stripslashes($studentdetails['bank_name']),
+                    ],
+		    [
+                        'attribute'=>'Bank Account Name',       
+                        'value' => stripslashes($studentdetails['bank_account_name']),
                     ],
                     [
                         'attribute'=>'Bank Account No',       
@@ -263,9 +287,17 @@ $(document).ready(function(){
                             'attribute'=>'Sponsor Type (Other)',       
                             'value' => ($studentdetails['sponsor_type'] == 'Other') ? stripslashes($studentdetails['sponsor_type_other']) : 'NA',
                         ],*/
+			[
+                        'attribute'=>'Type of Programme',       
+                        'value' => stripslashes($studentdetails['type_of_programme']),
+                    ],
                     [
                         'attribute'=>'Programme Name',       
                         'value' => stripslashes($studentdetails['programmename']),
+                    ],
+		    [
+                        'attribute'=>'School/Faculty',       
+                        'value' => stripslashes($studentdetails['school']),
                     ],
                     [
                         'attribute'=>'Entry',       
@@ -276,16 +308,8 @@ $(document).ready(function(){
                         'value' => stripslashes($studentdetails['status_of_student']),
                     ],
                     [
-                        'attribute'=>'Status Remarks',       
-                        'value' => stripslashes($studentdetails['status_remarks']),
-                    ],
-                    [
-                        'attribute'=>'Intake',       
+                        'attribute'=>'Intake No',       
                         'value' => stripslashes($studentdetails['intake']),
-                    ],
-                    [
-                        'attribute'=>'Entry',       
-                        'value' => stripslashes($studentdetails['entry']),
                     ],
                     [
                         'attribute'=>'Mode',       
@@ -296,32 +320,12 @@ $(document).ready(function(){
                         'value' => stripslashes($studentdetails['utb_email_address']),
                     ],
                     [
-                        'attribute'=>'Degree Classification',       
-                        'value' => stripslashes($studentdetails['degree_classification']),
-                    ],
-                    [
                         'attribute'=>'Date of Registration',       
                         'value' => stripslashes($studentdetails['date_of_registration']),
                     ],
                     [
                         'attribute'=>'Date of Leaving',       
                         'value' => stripslashes($studentdetails['date_of_leaving']),
-                    ],
-                    [
-                        'attribute'=>'Previous Roll No',       
-                        'value' => stripslashes($studentdetails['previous_roll_no']),
-                    ],
-                    [
-                        'attribute'=>'Previous Programme Name',       
-                        'value' => stripslashes($studentdetails['previous_programme_name']),
-                    ],
-                    [
-                        'attribute'=>'Previous Intake No',       
-                        'value' => stripslashes($studentdetails['previous_intake_no']),
-                    ],
-                    [
-                        'attribute'=>'Previous UTB Email',       
-                        'value' => stripslashes($studentdetails['previous_utb_email']),
                     ],
 
                 ],

@@ -182,19 +182,32 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 	}
 	
 	public static function getStudentSemWiseMarks($year, $studentid){
+		if($year == 1){
+		    $sem1 = 1;
+		    $sem2 = 2;
+		    }else if($year == 2){
+			    $sem1 = 3;
+			    $sem2 = 4;
+		    }else if($year == 3){
+			    $sem1 = 5;
+			    $sem2 = 6;
+		    }else if($year == 4){
+			    $sem1 = 7;
+			    $sem2 = 8;
+		    }
 		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, ew_percentage,cw_percentage')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
 		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
 		->where(1);
-		if($year == 1){
-		$uQuery->andWhere('sm.semister = 1 or sm.semister = 2');
+		if($year){
+		$uQuery->andWhere(['sm.semister' => $sem1])->orWhere(['sm.semister' => $sem2]);
 		}
 		if($studentid){
 		$uQuery->andWhere(['sm.student_id' => $studentid]);
 		}
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->groupBy(['sm.id'])->all();
 		return $uQuery;
 	}
     /**
