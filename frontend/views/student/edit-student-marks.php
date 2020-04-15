@@ -90,6 +90,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
 <table class="studentinfo">
 <tr><td class="sinfotd">Name :</td><td><?php echo isset($studentmarks[0]['studentname'])? $studentmarks[0]['studentname'] : '' ?></td></tr>
 <tr><td class="sinfotd">IC No :</td><td><?php echo isset($studentmarks[0]['ic_no'])? $studentmarks[0]['ic_no'] : '' ?></td></tr>
+<tr><td class="sinfotd">Roll No :</td><td><?php echo isset($studentmarks[0]['rollno'])? $studentmarks[0]['rollno'] : '' ?></td></tr>
 </table>
  <?php if(count($studentmarks)>0){//print_r($prevdata);exit; 
  $form = ActiveForm::begin([

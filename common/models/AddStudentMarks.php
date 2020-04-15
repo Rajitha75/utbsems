@@ -219,7 +219,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 			    $sem1 = 7;
 			    $sem2 = 8;
 		    }
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, ew_percentage,cw_percentage, p.programme_name, f.faculty_name')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.rollno, ew_percentage,cw_percentage, p.programme_name, f.faculty_name')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
