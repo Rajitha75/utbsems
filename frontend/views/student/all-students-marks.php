@@ -12,6 +12,13 @@ use yii\helpers\Url;
 $storagemodel = new Storage();
 ?>
 <style>
+.nodata{
+font-weight: bold;
+    font-size: 16px;
+    color: #6b3bd5;
+	padding-left:20px;
+	margin-bottom:20px;
+}
     label.error{
 		color: #ff0000;
 		font-weight: normal;
@@ -90,6 +97,7 @@ td, th {
 <?php
 $this->title = 'Student Marks';
 echo "<h1 class='box-title'>$this->title </h1>";  ?>
+<?php if(count($studentmarks1)>0 || count($studentmarks2)>0 || count($studentmarks3)>0 || count($studentmarks4)>0) { ?>
 <div class="downloadall">
 <?php $vurl = Url::toRoute(['../../view-all-marks-pdf']); ?>
 <?php if(count($studentmarks1)>0){
@@ -165,7 +173,8 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['ic_no'] = $studentmarks1[$i]['ic_no'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['rollno'] = $studentmarks1[$i]['rollno'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['student_id'] = $studentmarks1[$i]['student_id'];
-
+	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['semister'] = $studentmarks1[$i]['semister'];
+	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['mid'] = $studentmarks1[$i]['id'];
 }
 }//echo '<pre>';print_r($smarks1);exit;
 //echo $smarks1[1][1][56]['grade']; exit; ?>
@@ -221,7 +230,8 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['ic_no'] = $studentmarks2[$i]['ic_no'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['rollno'] = $studentmarks2[$i]['rollno'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['student_id'] = $studentmarks2[$i]['student_id'];
-
+	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['semister'] = $studentmarks2[$i]['semister'];
+	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['mid'] = $studentmarks2[$i]['id'];
 }
 }//echo '<pre>';print_r($moduleArrayid34);exit;
 //echo $smarks2[1][1][56]['grade']; exit; ?>
@@ -277,6 +287,8 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['ic_no'] = $studentmarks3[$i]['ic_no'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['rollno'] = $studentmarks3[$i]['rollno'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['student_id'] = $studentmarks3[$i]['student_id'];
+	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['semister'] = $studentmarks3[$i]['semister'];
+	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['mid'] = $studentmarks3[$i]['id'];
 }
  }//echo '<pre>';print_r($moduleArrayid56);exit;
 //echo $smarks3[1][1][56]['grade']; exit; ?>
@@ -332,6 +344,8 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['ic_no'] = $studentmarks4[$i]['ic_no'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['rollno'] = $studentmarks4[$i]['rollno'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['student_id'] = $studentmarks4[$i]['student_id'];
+	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['semister'] = $studentmarks4[$i]['semister'];
+	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['mid'] = $studentmarks4[$i]['id'];
 }
  }//echo '<pre>';print_r($smarks4);exit;
 //echo $smarks4[1][1][56]['grade']; exit; ?>
@@ -357,21 +371,21 @@ if(count($studentArray1)>0) { ?>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td class="yr" colspan="<?php echo (count($moduleArrayid12)*4)+1; ?>">Year 1</td>
+  <td class="yr" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleArrayid12)*4)+count($moduleidArray12)+1 : (count($moduleArrayid12)*4)+1; ?>">Year 1</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray1)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray1)*4)+1; ?>">Semester 1</td><?php } ?>
-  <?php if(count($moduleidArray2)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray2)*4)+1; ?>">Semester 2</td><?php } ?>
+  <?php if(count($moduleidArray1)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray1)*4)+count($moduleidArray1)+1 : (count($moduleidArray1)*4); ?>">Semester 1</td><?php } ?>
+  <?php if(count($moduleidArray2)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray2)*4)+count($moduleidArray2)+1 : (count($moduleidArray2)*4); ?>">Semester 2</td><?php } ?>
   </tr>
    <tr class="mybg">
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
    <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid12);$i++){ ?>
-  <td colspan="4" align="center"><?php echo $moduleArrayid12[$i]; ?></td>
+  <td colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? 5 : 4; ?>" align="center"><?php echo $moduleArrayid12[$i]; ?></td>
    <?php } ?>
    <?php if(Yii::$app->session['userRole'] == 3){ ?>
    <td rowspan="3">Edit</td>
@@ -382,7 +396,8 @@ if(count($studentArray1)>0) { ?>
   <td>CW</td>
 <td>EW</td>
 <td>Total</td>
-<td>Grade</td>
+<td rowspan="2">Grade</td>
+<?php if(Yii::$app->session['userRole'] == 3) { ?><td rowspan="2">Remarks</td><?php } ?>
    <?php } ?>
   </tr>
 
@@ -399,7 +414,6 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ew_percentage'].'%'; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['cw_percentage'].'%'; ?></td>
 		<td><?php echo '100%'; ?></td>
-		<td><?php echo '' ?></td>
 			<?php $m=$m+1; }
 		array_push($arr1, $semisterArray1[$j].$moduleidArray12[$i].$studentArray1[$k]);		?>
 		<?php } } } ?>
@@ -409,7 +423,7 @@ if(count($studentArray1)>0) { ?>
 
   <?php  $arr1 = []; for($k=0;$k<count($studentArray1);$k++){ ?>
   <tr>
-	<?php $m=0;
+	<?php $m=0; 
 		for($i=0;$i<count($moduleArrayid12);$i++){
 		for($j=0;$j<count($semisterArray1);$j++){
 		//print_r($smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]);exit;
@@ -423,7 +437,8 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['cw_total_percentage']; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['total_percentage']; ?></td>
-			<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['grade']; ?></td>
+		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['grade']; ?></td>
+		<?php if(Yii::$app->session['userRole'] == 3) { ?><td><span class="glyphicon glyphicon-edit sremarks" mid = "<?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['mid']; ?>" title="Remarks"></span></td><?php } ?>
 			<?php if($m==(count($moduleidArray1)+count($moduleidArray2))-1  && Yii::$app->session['userRole'] == 3) { ?>
 			<td><?php
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 1, 'id' => $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['student_id']]);
@@ -447,21 +462,21 @@ if(count($studentArray1)>0) { ?>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td class="yr" colspan="<?php echo (count($moduleArrayid34)*4)+1; ?>">Year 2</td>
+  <td class="yr" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleArrayid34)*4)+count($moduleidArray34)+1 : (count($moduleArrayid34)*4)+1; ?>">Year 2</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray3)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray3)*4)+1; ?>">Semester 3</td><?php } ?>
-  <?php if(count($moduleidArray4)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray4)*4)+1; ?>">Semester 4</td><?php } ?>
+  <?php if(count($moduleidArray3)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray3)*4)+count($moduleidArray3)+1 : (count($moduleidArray3)*4)+1; ?>">Semester 3</td><?php } ?>
+  <?php if(count($moduleidArray4)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray4)*4)+count($moduleidArray4)+1 : (count($moduleidArray4)*4)+1; ?>">Semester 4</td><?php } ?>
   </tr>
    <tr class="mybg">
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
    <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid34);$i++){ ?>
-  <td colspan="4" align="center"><?php echo $moduleArrayid34[$i]; ?></td>
+  <td colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? 5 : 4; ?>" align="center"><?php echo $moduleArrayid34[$i]; ?></td>
    <?php } ?>
    <?php if(Yii::$app->session['userRole'] == 3){ ?>
    <td rowspan="3">Edit</td>
@@ -472,7 +487,8 @@ if(count($studentArray1)>0) { ?>
   <td>CW</td>
 <td>EW</td>
 <td>Total</td>
-<td>Grade</td>
+<td rowspan="2">Grade</td>
+<?php if(Yii::$app->session['userRole'] == 3) { ?><td rowspan="2">Remarks</td><?php } ?>
    <?php } ?>
   </tr>
 
@@ -489,7 +505,6 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['ew_percentage'].'%'; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['cw_percentage'].'%'; ?></td>
 		<td><?php echo '100%'; ?></td>
-		<td><?php echo '' ?></td>
 			<?php $m=$m+1; }
 		array_push($arr1, $semisterArray2[$j].$moduleidArray34[$i].$studentArray2[$k]);		?>
 		<?php } } } ?>
@@ -514,6 +529,7 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['cw_total_percentage']; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['total_percentage']; ?></td>
 			<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['grade']; ?></td>
+			<?php if(Yii::$app->session['userRole'] == 3) { ?><td><span class="glyphicon glyphicon-edit sremarks" mid = "<?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['mid']; ?>"  title="Remarks"></span></td><?php } ?>
 			<?php if($m==(count($moduleidArray3)+count($moduleidArray4))-1  && Yii::$app->session['userRole'] == 3) { ?>
 			<td><?php
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 2, 'id' => $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['student_id']]);
@@ -540,21 +556,21 @@ if(count($studentArray1)>0) { ?>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td class="yr" colspan="<?php echo (count($moduleArrayid56)*4)+1; ?>">Year 3</td>
+  <td class="yr" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleArrayid56)*4)+count($moduleidArray56)+1 : (count($moduleArrayid56)*4)+1; ?>">Year 3</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray5)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray5)*4)+1; ?>">Semester 5</td><?php } ?>
-  <?php if(count($moduleidArray6)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray6)*4)+1; ?>">Semester 6</td><?php } ?>
+  <?php if(count($moduleidArray5)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray5)*4)+count($moduleidArray5)+1 : (count($moduleidArray5)*4)+1; ?>">Semester 5</td><?php } ?>
+  <?php if(count($moduleidArray6)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray6)*4)+count($moduleidArray6)+1 : (count($moduleidArray6)*4)+1; ?>">Semester 6</td><?php } ?>
   </tr>
    <tr class="mybg">
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
    <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid56);$i++){ ?>
-  <td colspan="4" align="center"><?php echo $moduleArrayid56[$i]; ?></td>
+  <td colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? 5 : 4; ?>" align="center"><?php echo $moduleArrayid56[$i]; ?></td>
    <?php } ?>
    <?php if(Yii::$app->session['userRole'] == 3){ ?>
    <td rowspan="3">Edit</td>
@@ -566,6 +582,7 @@ if(count($studentArray1)>0) { ?>
 <td>EW</td>
 <td>Total</td>
 <td rowspan="2">Grade</td>
+<?php if(Yii::$app->session['userRole'] == 3) { ?><td rowspan="2">Remarks</td><?php } ?>
    <?php } ?>
   </tr>
 
@@ -606,6 +623,7 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['cw_total_percentage']; ?></td>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['total_percentage']; ?></td>
 			<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['grade']; ?></td>
+			<?php if(Yii::$app->session['userRole'] == 3) { ?><td><span class="glyphicon glyphicon-edit sremarks" mid = "<?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['mid']; ?>" title="Remarks"></span></td><?php } ?>
 			<?php if($m==(count($moduleidArray5)+count($moduleidArray6))-1  && Yii::$app->session['userRole'] == 3) { ?>
 			<td><?php
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 3, 'id' => $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['student_id']]);
@@ -629,21 +647,21 @@ if(count($studentArray1)>0) { ?>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td class="yr" colspan="<?php echo (count($moduleArrayid78)*4)+1; ?>">Year 4</td>
+  <td class="yr" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleArrayid78)*4)+count($moduleidArray78)+1 : (count($moduleArrayid78)*4)+1; ?>">Year 4</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray7)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray7)*4)+1; ?>">Semester 7</td><?php } ?>
-  <?php if(count($moduleidArray8)>0) { ?><td class="sem" colspan="<?php echo (count($moduleidArray8)*4)+1; ?>">Semester 8</td><?php } ?>
+  <?php if(count($moduleidArray7)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray7)*4)+count($moduleidArray7)+1 : (count($moduleidArray7)*4)+1; ?>">Semester 7</td><?php } ?>
+  <?php if(count($moduleidArray8)>0) { ?><td class="sem" colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? (count($moduleidArray8)*4)+count($moduleidArray8)+1 : (count($moduleidArray8)*4)+1; ?>">Semester 8</td><?php } ?>
   </tr>
    <tr class="mybg">
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
    <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid78);$i++){ ?>
-  <td colspan="4" align="center"><?php echo $moduleArrayid78[$i]; ?></td>
+  <td colspan="<?php echo (Yii::$app->session['userRole'] == 3) ? 5 : 4; ?>" align="center"><?php echo $moduleArrayid78[$i]; ?></td>
    <?php } ?>
    <?php if(Yii::$app->session['userRole'] == 3){ ?>
    <td rowspan="3">Edit</td>
@@ -654,7 +672,8 @@ if(count($studentArray1)>0) { ?>
   <td>CW</td>
 <td>EW</td>
 <td>Total</td>
-<td>Grade</td>
+<td rowspan="2">Grade</td>
+<?php if(Yii::$app->session['userRole'] == 3) { ?><td rowspan="2">Remarks</td><?php } ?>
    <?php } ?>
   </tr>
 
@@ -671,7 +690,6 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['ew_percentage'].'%'; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['cw_percentage'].'%'; ?></td>
 		<td><?php echo '100%'; ?></td>
-		<td><?php echo '' ?></td>
 			<?php $m=$m+1; }
 		array_push($arr1, $semisterArray4[$j].$moduleidArray78[$i].$studentArray4[$k]);		?>
 		<?php } } } ?>
@@ -696,6 +714,7 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['cw_total_percentage']; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['total_percentage']; ?></td>
 			<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['grade']; ?></td>
+			<?php if(Yii::$app->session['userRole'] == 3) { ?><td><span class="glyphicon glyphicon-edit sremarks" mid = "<?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['mid']; ?>" title="Remarks"></span></td><?php } ?>
 			<?php if($m==(count($moduleidArray7)+count($moduleidArray8))-1  && Yii::$app->session['userRole'] == 3) { ?>
 			<td><?php
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 4, 'id' => $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['student_id']]);
@@ -715,3 +734,77 @@ if(count($studentArray1)>0) { ?>
 </div>
 
 </div></div>
+<?php } else {
+	echo '<div class="nodata">No Results</div>';
+}?>
+<div id="dataConfirmModal" class="confirm-box" style="display:none; width:30%">
+    <h3 id="dataConfirmLabel" >Remarks</h3>   
+    <div style="text-align:right;margin-top:10px;">
+		<div class="form-group field-remarks">
+		<textarea id="student-remarks" class="form-control" name="student_remarks" rows="2" autocomplete="off" placeholder="Add Your Remarks Here ..."></textarea>
+		<input type="hidden" class="mid" name="remarks_mid" />
+		<div class="help-block"></div>
+		</div>
+        <input class="dataConfirmCancel btn btn-secondary" onclick="$('#dataConfirmModal').css('display','none');" type="button" value="Cancel">
+        <input class="dataConfirmOK btn btn-primary" onclick="remarks()" type="button" value="Submit">
+    </div>
+</div>
+
+<div id="manualfeedback" style="display:none" ><div id="forceflashmodal" class="alert-success front-noti alert fade in" style="z-index: 999999">
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+
+<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text"><?php echo 'Remarks Submitted Successfully'; ?></div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>
+
+</div></div>
+<script>
+$(document).ready(function(){
+	$('.sremarks').click(function(){
+		var mid = $(this).attr('mid');
+		$('#student-remarks').val('');
+		$('#dataConfirmModal .mid').val(mid);
+		//alert(studentid);alert(moduleid);alert(semister);
+		var pjaxContainer = $(this).attr('pjax-container');
+		$('#ajaxContainer').val(pjaxContainer);
+		var getremarks = "<?php echo Yii::$app->request->BaseUrl; ?>/student/get-student-remarks";
+		$.ajax({
+                url: getremarks,
+                type: 'get',
+                data: {'mid': mid},
+                success: function (data) {
+					if(data){
+						$('#dataConfirmModal #student-remarks').val(data);
+					}
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error with your request.' + xhr.responseText);
+                }
+            });
+		$('#dataConfirmLabel').text($(this).attr('data-confirm'));
+		$('#dataConfirmModal').css('display','block');
+	   
+		return false;
+	});
+	
+});
+
+	function remarks(){
+		var mid = $('#dataConfirmModal .mid').val();
+		var remarks = $('#dataConfirmModal #student-remarks').val();
+		var submitremarks = "<?php echo Yii::$app->request->BaseUrl; ?>/student/student-remarks";
+		if(mid && remarks && remarks!=''){
+		$.ajax({
+                url: submitremarks,
+                type: 'post',
+                data: {'mid': mid, 'remarks':remarks},
+                success: function (data) {
+                    $('#dataConfirmModal').css('display','none');
+					$('#dataConfirmModal #student-remarks').val('');
+					$('#manualfeedback').show();
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error with your request.' + xhr.responseText);
+                }
+            });
+		}
+	}
+</script>

@@ -10,6 +10,15 @@ use yii\helpers\Url;
 
 $storagemodel = new Storage();
 ?>
+<style>
+.studentprocess{
+font-weight: bold;
+    font-size: 16px;
+    color: #6b3bd5;
+	padding-left:20px;
+	margin-bottom:20px;
+}
+</style>
 
 <?php 
 $this->title = 'Import Students';
@@ -25,6 +34,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 			'id' => 'studentexcelupload',
 			'options' => ['enctype' => 'multipart/form-data'],
 			]); ?>
+			<div class="studentprocess">Uploading Students is in process. Please Wait</div>
 	<div class="col-xs-8 col-sm-6">
 	<?php echo $form->field($importformmodel, 'importfile')->fileInput(['class' => ''])->label('Upload File'); ?>
 		<div class="row text-center">
@@ -39,7 +49,14 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		<?php ActiveForm::end(); ?>
  
 <script>
-
+$(document).ready(function(){
+$('.studentprocess').hide();
+$('.usersignup').click(function(){
+	$('.studentprocess').show();
+	setTimeout(function(){
+	$(".usersignup").attr("disabled", true);
+	}, 1000);
+});
 $("#studentexcelupload").validate({
             rules: {
                 "ImportFileForm[importfile]": {
@@ -54,5 +71,6 @@ $("#studentexcelupload").validate({
 				},
 			}
 			});
+	});
 </script>
 	

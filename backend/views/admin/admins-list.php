@@ -22,6 +22,14 @@
     @media (max-width: 770px){
         ul.pagination{ display:flex;}
     }
+	.page-content .searchBtn .btn {
+    padding: 6px !important;
+}
+
+.page-content .searchBtn {
+    float: left;
+    margin: 0px 5px 0 0;
+}
 </style>
 <?php
 /* @var $this yii\web\View */

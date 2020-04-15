@@ -21,6 +21,14 @@
 	button.btn.btn-link.logout-btn {
     padding-top: 20px !important;
 }
+.page-content .searchBtn .btn {
+    padding: 6px !important;
+}
+
+.page-content .searchBtn {
+    float: left;
+    margin: 24px 5px 0 0;
+}
 </style>
 <?php
 /* @var $this yii\web\View */

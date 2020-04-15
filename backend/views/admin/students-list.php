@@ -27,6 +27,14 @@
         top:10%;
         left:22%
     }
+	.page-content .searchBtn .btn {
+    padding: 6px !important;
+}
+
+.page-content .searchBtn {
+    float: left;
+    margin: 0px 5px 0 0;
+}
 </style>
 <?php
 /* @var $this yii\web\View */
@@ -86,6 +94,14 @@ echo "<div class='participation-border fl-left all-userlst'>";
     <div style="text-align:right;margin-top:10px;">
         <input class="dataConfirmCancel btn btn-secondary" onclick="$('#dataConfirmModal').css('display','none');" type="button" value="Cancel">
         <input class="dataConfirmOK btn btn-primary" onclick="updateStatus()" type="button" value="Ok">
+    </div>
+</div>
+
+<div id="dataConfirmModalVerify" class="confirm-box" style="display:none;">
+    <h3 id="dataConfirmLabelVerify" >Please Confirm</h3>   
+    <div style="text-align:right;margin-top:10px;">
+        <input class="dataConfirmCancel btn btn-secondary" onclick="$('#dataConfirmModalVerify').css('display','none');" type="button" value="Cancel">
+        <input class="dataConfirmOK btn btn-primary" onclick="updateStatusVerify()" type="button" value="Ok">
     </div>
 </div>
 
@@ -276,6 +292,29 @@ echo $form->field($model, 'date_of_leaving')->widget(\yii\jui\DatePicker::classn
      }); 
      return false;
  }   
+ 
+ function updateStatusVerify(){
+    var deleteUrl = $('#updateVerifyUrl').val();
+    var pjaxContainer = $('#ajaxVerifyContainer').val();
+     $.ajax({
+     url:   deleteUrl,
+     type: 'post',
+     success: function(data){        
+	 console.log(data)
+       if(data){ 
+           $('#dataConfirmModalVerify').css('display','none');
+           $.pjax.reload({container: '#' + $.trim(pjaxContainer)});
+           $('.notifyDiv').slideDown('slow',function () {
+               $(this).delay(2000).fadeOut(1000);
+           });           
+       }
+     },
+     error: function(xhr, status, error) {
+        // alert('There was an error with your request.' + xhr.responseText);
+     }
+     }); 
+     return false;
+ }   
 </script>
 <?php
 \yii\widgets\Pjax::begin([
@@ -295,56 +334,56 @@ echo GridView::widget([
                             'attribute' => 'name',
 							 'options' => ['width' => '180'],
                             'value' => function ($model) {   
-                                return $model['name'] ? stripslashes($model['name']) : 'Not Assigned';
+                                return $model['name'] ? stripslashes($model['name']) : '-';
                             }
                         ],
             [
                 'attribute' => 'rollno',
                 'label' => 'Roll No',
                 'value' => function($model) {
-                    return $model['rollno'] ? stripslashes($model['rollno']) : 'Not Assigned';
+                    return $model['rollno'] ? stripslashes($model['rollno']) : '-';
                 }
             ],		
             [
-                'attribute' => 'utb_email_address',
+                'attribute' => 'email',
                 'label' => 'Student Email',
                 'value' => function($model) {
-                    return $model['utb_email_address'] ? stripslashes($model['utb_email_address']) : 'Not Assigned';
+                    return $model['email'] ? stripslashes($model['email']) : '-';
                 }
             ],
             [
                 'attribute' => 'entry',
                 'label' => 'Entry',
                 'value' => function($model) {
-                    return $model['entry'] ? stripslashes($model['entry']) : 'Not Assigned';
+                    return $model['entry'] ? stripslashes($model['entry']) : '-';
                 }
             ],
             [
                 'attribute' => 'ic_no',
                 'label' => 'IC No',
                 'value' => function($model) {
-                    return $model['ic_no'] ? stripslashes($model['ic_no']) : 'Not Assigned';
+                    return $model['ic_no'] ? stripslashes($model['ic_no']) : '-';
                 }
             ],
             [
                 'attribute' => 'passportno',
                 'label' => 'Passport No',
                 'value' => function($model) {
-                    return $model['passportno'] ? stripslashes($model['passportno']) : 'Not Assigned';
+                    return $model['passportno'] ? stripslashes($model['passportno']) : '-';
                 }
             ],
             [
-                'attribute' => 'email',
-                'label' => 'Email (other)',
+                'attribute' => 'utb_email_address',
+                'label' => 'UTB Email',
                 'value' => function($model) {
-                    return $model['email'] ? stripslashes($model['email']) : 'Not Assigned';
+                    return $model['utb_email_address'] ? stripslashes($model['utb_email_address']) : '-';
                 }
             ],
             ['class' => 'yii\grid\ActionColumn',
-                            'header'=> 'View | Edit | Delete | Download' ,
+                            'header'=> 'View | Edit | Delete | Download | Verify' ,
                             //'options' => ['width' => '85'],
                             'headerOptions' => ['style' => 'width:142px'],
-                            'template'=>'{view}{update}{delete}{creatempdf}',
+                            'template'=>'{view}{update}{delete}{creatempdf}{verify}',
                             'buttons'=>[
                                         'update' => function ($url, $model) {
 										  return Html::a('<span class="glyphicon glyphicon-pencil" title="Edit"></span>', $url, [
@@ -388,7 +427,28 @@ echo GridView::widget([
               
                
               
-                                          }
+                                          },
+										  'verify'=>function ($url, $model) { 
+                                            if(@$model['is_verified'] == 1){    
+                                            return HTML::a('<span class="glyphicon glyphicon-ok"></span>',$url,[
+                                                'title' => Yii::t('yii', 'verify'),
+                                                'aria-label'=>"Verify",
+                                                'class' => 'ajaxVerify', 
+                                                'verify-url' => $url, 
+                                                'pjax-container' => 'pjax-list',
+                                                'data-confirm'=>'Are you sure you want to Verify this Student?',
+                                            ]);                               
+                                            }else if(@$model['is_verified'] == 0){
+                                                return HTML::a('<span class="glyphicon glyphicon-remove"></span>',$url,[
+                                                    'title' => Yii::t('yii', 'undo'),
+                                                    'aria-label'=>"Verify",
+                                                    'class' => 'ajaxVerify', 
+                                                    'verify-url' => $url, 
+                                                    'pjax-container' => 'pjax-list',
+                                                    'data-confirm'=>'Are you sure you want to undo Verify this Student?',
+                                                ]);        
+                                            }
+                                          },
                                       ],
                             'urlCreator' => function ($action, $model, $key, $index) {
                                 if ($action === 'update') {
@@ -399,7 +459,9 @@ echo GridView::widget([
 
                                     return Url::toRoute(['creatempdf', 'id' => $model['id']]);
             
-                                    }else {
+                                    }else if($action === 'verify'){
+                                    return Url::toRoute(['student-verify', 'id' => $model['user_ref_id'], 'is_verified' => $model['is_verified']]);
+                                }else {
                                     return Url::toRoute(['student-view', 'id' => $model['id']]);
                                 }
                             } 
@@ -410,6 +472,9 @@ echo GridView::widget([
 ?>
 	<input type="hidden" value="" id="updateUrl">
 <input type="hidden" value="" id="ajaxContainer">
+
+	<input type="hidden" value="" id="updateVerifyUrl">
+<input type="hidden" value="" id="ajaxVerifyContainer">
 <?php
 $this->registerJs(" $(document).on('ready pjax:success', function () {  var deleteUrl; 
   $('.ajaxDelete').on('click', function (e) {
@@ -421,6 +486,20 @@ $this->registerJs(" $(document).on('ready pjax:success', function () {  var dele
     
     $('#dataConfirmLabel').text($(this).attr('data-confirm'));
     $('#dataConfirmModal').css('display','block');
+   
+    return false;
+ 
+});
+
+  $('.ajaxVerify').on('click', function (e) {
+    e.preventDefault();
+    verifyUrl     = $(this).attr('verify-url');
+    $('#updateVerifyUrl').val(verifyUrl);
+    var pjaxContainer = $(this).attr('pjax-container');
+    $('#ajaxVerifyContainer').val(pjaxContainer);
+    
+    $('#dataConfirmLabelVerify').text($(this).attr('data-confirm'));
+    $('#dataConfirmModalVerify').css('display','block');
    
     return false;
  

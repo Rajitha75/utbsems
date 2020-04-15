@@ -47,9 +47,9 @@ echo "<h1 class='box-title'>$this->title </h1>";
 	
 	<?php echo $form->field($userformmodel, 'name')->textInput(['autocomplete' => 'off'])->label('Name <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'password')->textInput(['autocomplete' => 'off'])->label('Passowrd <span class="mandatory">*</span>');?>
+	<?php echo $form->field($userformmodel, 'password')->passwordInput(['autocomplete' => 'off'])->label('Passowrd <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'confirmpassword')->textInput(['autocomplete' => 'off'])->label('Confirm Password <span class="mandatory">*</span>');?>
+	<?php echo $form->field($userformmodel, 'confirmpassword')->passwordInput(['autocomplete' => 'off'])->label('Confirm Password <span class="mandatory">*</span>');?>
 
 	<?php echo $form->field($userformmodel, 'email')->textInput(['autocomplete' => 'off'])->label('Email <span class="mandatory">*</span>');?>
 	

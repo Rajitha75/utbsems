@@ -130,9 +130,9 @@
 			
 			<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 2){?>
 			 <li class="nav-item">
-			 <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../student-marks");?>" class="nav-link nav-toggle">
+			 <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../student-result");?>" class="nav-link nav-toggle">
                                 <i class="icon-list" style="margin-top: 5px;"></i>
-                                <span class="title">Marks</span>
+                                <span class="title">Result</span>
                             </a>
                         </li>
 			<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>

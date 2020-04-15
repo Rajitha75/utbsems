@@ -63,6 +63,14 @@ width: 18%;
   float: left;
   margin-right: 5px;
 }
+.page-content .searchBtn .btn {
+    padding: 6px !important;
+}
+
+.page-content .searchBtn {
+    float: left;
+    margin: 24px 5px 0 0;
+}
 </style>
 <?php 
 $this->title = 'Exam Officers List';

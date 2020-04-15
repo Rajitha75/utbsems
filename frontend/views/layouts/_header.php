@@ -168,7 +168,7 @@ position: absolute;
     $flashmsg = 'Student Delete Undo Success!'; 
     }
 	if(Yii::$app->session->getFlash('signupsuccess')){
-    $flashmsg = 'You are registered successfully! Please follow the steps in your email to verify your account'; 
+    $flashmsg = 'You are registered successfully!'; 
     }
 	if(Yii::$app->session->getFlash('studentcreated')){
     $flashmsg = 'Student created successfully'; 

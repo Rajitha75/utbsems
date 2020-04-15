@@ -55,7 +55,7 @@
                              <div class="imagediv">
 							<img class="homeimage" src="frontend/images/student.png">
 							</div>
-                            <p>LECTURERS</p>
+                            <p>STUDENTS</p>
                         </a>
                         </div>
 

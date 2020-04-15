@@ -266,7 +266,7 @@ Yii::$app->cache->flush();
                 //return 'false'; 
             }
                         Yii::$app->session->setFlash('signupsuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">You are registered successfully! Please follow the steps in your email to verify your account </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+                        return $this->redirect(['/../../']);
                     }
             }
             return $this->render('student-register',[
@@ -278,57 +278,6 @@ Yii::$app->cache->flush();
     }
 
 
-    public function actionStudentDetails()
-    {
-     try{   
-        $userid = Yii::$app->getRequest()->getQueryParam('id') ? Yii::$app->getRequest()->getQueryParam('id') : "";
-        $student = new Student();
-        $student = Student::findByUserId($userid);
-		$user = User::findIdentity($userid);
-        if($userid && $userid!= '' && $userid != null && count($student) <= 0){
-            echo 'You are not authorized to this page';exit;
-        }
-            $userformmodel = new \common\models\CreateStudentForm();
-            $signup = new \frontend\models\SignupForm();
-            $student = new Student();
-           // print_r(Yii::$app->request->post());exit;
-            if($userformmodel->load(Yii::$app->request->post())){
-                $postvariable=Yii::$app->request->post('CreateStudentForm');
-                $userid = $postvariable['userid'];
-                $signup->password = $postvariable['password'];
-                $signup->userid = $userid;
-                $postvariable=Yii::$app->request->post('CreateStudentForm');
-				
-                $student->type_of_programme = isset($postvariable['type_of_programme']) ? $postvariable['type_of_programme'] : '';
-                $student->school = isset($postvariable['school']) ? $postvariable['school'] : '';
-                if ($user = $signup->savepassword()) {
-                    $userid = Yii::$app->db->getLastInsertID();
-                    $student->user_ref_id = $userid;
-                   
-				if($student->save(false)){
-						
-						            
-                        Yii::$app->session->setFlash('studentdetails', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Thank you for creating an account at UTBSEMS. </div><div class="flash-content">Thank you for your interest to study in UTB.</div><div class="head-text">You may now login and submit online application.</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
-                    }
-                    }
-            }else{
-				if($user['is_verified'] == 1){
-					Yii::$app->session->setFlash('studentdetailsverified', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Your email is already verified. </div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
-					
-				}else{
-            return $this->render('student-details',[
-                'userformmodel'=>$userformmodel,
-                'userid'=>$userid
-                    ]);
-				}
-            }
-           } catch (\Exception $e) {
-            \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }
-    }
-	
 
     /**
      * Displays contact page.

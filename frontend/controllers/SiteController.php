@@ -122,12 +122,15 @@ class SiteController extends \common\controllers\CommonController {
 		try{
             $this->view->title ='UTBSEMS - Home';
 			if(Yii::$app->user->id){
+				$users = User::find()->where(['id' => Yii::$app->user->id])->one();
 				if(Yii::$app->session['userRole'] == 2){
 					return $this->redirect('student-profile');
 				}else if(Yii::$app->session['userRole'] == 3){
 					return $this->redirect('exam-officers-list');
 				}else if(Yii::$app->session['userRole'] == 4){
 					return $this->redirect('students-list');
+				}else if(Yii::$app->session['userRole'] == 1 || $users['superadmin'] == 1){
+					return $this->redirect('backend/web/');
 				}
 			}else{
 				return $this->render('index');
@@ -552,7 +555,7 @@ Yii::$app->cache->flush();
                 //return 'false'; 
             }
                         Yii::$app->session->setFlash('signupsuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">You are registered successfully! Please follow the steps in your email to verify your account </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+                        return $this->redirect(['/../../']);
                     }
             }
             return $this->render('student-register',[
@@ -595,13 +598,13 @@ Yii::$app->cache->flush();
 						
 						            
                         Yii::$app->session->setFlash('studentdetails', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Thank you for creating an account at UTBSEMS. </div><div class="flash-content">Thank you for your interest to study in UTB.</div><div class="head-text">You may now login and submit online application.</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+                        return $this->redirect(['/../../']);
                     }
                     }
             }else{
 				if($user['is_verified'] == 1){
 					Yii::$app->session->setFlash('studentdetailsverified', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Your email is already verified. </div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+                        return $this->redirect(['/../../']);
 					
 				}else{
             return $this->render('student-details',[

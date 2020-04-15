@@ -38,6 +38,7 @@ return [
 		'lecturer-view'=>'lecturer/lecturer-view',
 		'create-student'=>'student/create-student',
 		'student-marks'=>'student/student-marks',
+		'student-result'=>'student/student-result',
 		'all-students-marks'=>'student/all-students-marks',
 		'edit-student-marks'=>'student/edit-student-marks',
 		'update-student'=>'student/update-student',

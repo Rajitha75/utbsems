@@ -6,6 +6,7 @@ use Yii;
 use common\models\User;
 use common\models\Student;
 use common\models\Programme;
+use common\models\Faculty;
 use common\models\Admin;
 use common\models\ExamOfficer;
 use yii\data\ActiveDataProvider;
@@ -246,6 +247,7 @@ class AdminController extends \common\controllers\CommonController
             $signup = new \frontend\models\SignupForm();
             $countries = User::countrieslist();
             $student = new Student;
+			$faculty = Faculty::getAllFaculty();
 			$programme = Programme::getAllProgrammes();
             if($userformmodel->load(Yii::$app->request->post())){
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
@@ -419,7 +421,8 @@ class AdminController extends \common\controllers\CommonController
             return $this->render('student-create',[
                 'userformmodel'=>$userformmodel,
                 'countries'=>$countries,
-				'programme'=>$programme
+				'programme'=>$programme,
+				'faculty'=>$faculty
                     ]);
     }
 
@@ -429,6 +432,7 @@ class AdminController extends \common\controllers\CommonController
             $userformmodel = new \common\models\CreateStudentForm();
             $countries = User::countrieslist();
 			$programme = Programme::getAllProgrammes();
+			$faculty = Faculty::getAllFaculty();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $student = Student::find()->where(['id'=>$postvariable['studentid']])->one();
@@ -588,13 +592,14 @@ class AdminController extends \common\controllers\CommonController
             'userformmodel'=>$userformmodel,
             'studentdata'=>$studentdata[0],
             'countries'=>$countries,
-			'programme'=>$programme
+			'programme'=>$programme,
+			'faculty'=>$faculty
                 ]);
         }
     }
 
     public function actionStudentsList(){
-		try{
+		//try{
 			Yii::$app->cache->flush();
         $student = new Student();
 		$programme = Programme::getAllProgrammes();
@@ -644,7 +649,7 @@ class AdminController extends \common\controllers\CommonController
         $bank_account_name = Yii::$app->getRequest()->getQueryParam('bank_account_name') ? Yii::$app->getRequest()->getQueryParam('bank_account_name') : "";
 
 
-        $uQuery=Student::getStudentsList(false,$studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name);
+        $uQuery=Student::getStudentsListAdmin(false,$studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name);
 		$query = $uQuery;		
 		$count = $uQuery->count();
         return $this->render('students-list',[
@@ -653,9 +658,9 @@ class AdminController extends \common\controllers\CommonController
             'count'=>$count,
 			'programme'=>$programme
         ]);
-		} catch (\Exception $e) {
+		/*} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }
+        }*/
     }
 
     public function actionStudentView($id){
@@ -703,7 +708,7 @@ class AdminController extends \common\controllers\CommonController
                         $signup->username = $studentdetails['Email'];
                         $signup->is_verified = 1;
 						
-						
+						$student->is_submit = 'submit';
                         $student->title = isset($studentdetails['Title']) ? $studentdetails['Title'] : '';
                         $student->name = isset($studentdetails['Name']) ? $studentdetails['Name'] : '';
                         $student->rollno = isset($studentdetails['Roll No']) ? $studentdetails['Roll No'] : '';
@@ -720,7 +725,11 @@ class AdminController extends \common\controllers\CommonController
                         $student->religionother = isset($postvariable['Religion (other)']) ? $postvariable['Religion (other)'] : '';
                         $student->gender = isset($studentdetails['Gender']) ? $studentdetails['Gender'] : '';
                         $student->martial_status = isset($studentdetails['Martial Status']) ? $studentdetails['Martial Status'] : '';
-                        $student->dob = isset($studentdetails['Date of Birth']) ? str_replace('/', '-',$studentdetails['Date of Birth']) : '';
+                        $userDob = isset($studentdetails['Date of Birth']) ? str_replace('/', '-',$studentdetails['Date of Birth']) : '';
+						$userDob = explode('-',$userDob);
+						$age = (date("md",date("U",mktime(0,0,0,$userDob[0],$userDob[1],$userDob[2]))) > date('md') ? ((date("Y") - $userDob[2]) - 1) : (date("Y") - $userDob[2])) ;
+						$student->dob = $userDob;
+						$student->age = $age;
 						$student->place_of_birth = isset($studentdetails['Place of Birth']) ? $studentdetails['Place of Birth'] : '';
 						$student->telephone_mobile = isset($studentdetails['Telephone No(Mobile)']) ? $studentdetails['Telephone No(Mobile)'] : '';
                         $student->tele_home = isset($studentdetails['Telephone No (Home)']) ? $studentdetails['Telephone No (Home)'] : '';
@@ -762,8 +771,22 @@ class AdminController extends \common\controllers\CommonController
 						$student->sponsor_type = isset($studentdetails['Sponsor Type']) ? $studentdetails['Sponsor Type'] : '';
 						$student->sponsor_type_other = isset($studentdetails['Sponsor Type (other)']) ? $studentdetails['Sponsor Type (other)'] : '';
 						$student->type_of_programme = isset($studentdetails['Type of Programme']) ? $studentdetails['Type of Programme'] : '';
-						$student->school = isset($studentdetails['School/Faculty']) ? $studentdetails['School/Faculty'] : '';
-                        $student->programme_name = isset($studentdetails['Programme Name']) ? $studentdetails['Programme Name'] : '';
+						$school = isset($studentdetails['School/Faculty']) ? $studentdetails['School/Faculty'] : '';
+						$schoolname = Faculty::find()->where('lower(faculty_name) = "'.strtolower($school).'"')->one();
+						if(count($schoolname)>0){
+							$school_name = $schoolname['id'];
+						}else{
+							$school_name = '';
+						}
+						$student->school = $school_name;
+                        $programme_name = isset($studentdetails['Programme Name']) ? $studentdetails['Programme Name'] : '';
+						$progname = Programme::find()->where('lower(programme_name) = "'.strtolower($programme_name).'"')->one();
+						if(count($progname)>0){
+							$progrmname = $progname['id'];
+						}else{
+							$progrmname = '';
+						}
+						$student->programme_name = $progrmname;
                         $student->entry = isset($studentdetails['Entry']) ? $studentdetails['Entry'] : '';
                         $student->status_of_student = isset($studentdetails['Status of Student']) ? $studentdetails['Status of Student'] : '';
                         $student->intake = isset($studentdetails['Intake']) ? $studentdetails['Intake'] : '';
@@ -814,6 +837,26 @@ class AdminController extends \common\controllers\CommonController
             $user->status = 1;
 			Yii::$app->session->setFlash('studentundodelete', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Student Delete Undo Success! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
         }
+        $user->save(false);
+		return $this->redirect(['students-list']);
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
+	
+	public function actionStudentVerify($id)
+    {
+		try{
+        $user = User::find()->where(['id' => Yii::$app->request->get('id')])->one();
+		//echo Yii::$app->request->get('is_verified');exit;
+        if(Yii::$app->request->get('is_verified') == 1){
+            $user->is_verified = 0;
+			Yii::$app->session->setFlash('studentverified', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Student Verification Undo Success! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+        }else if(Yii::$app->request->get('is_verified') == 0){
+            $user->is_verified = 1;
+			Yii::$app->session->setFlash('studentundoverify', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Student Verified successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
+        }
+		//print_r($user);exit;
         $user->save(false);
 		return $this->redirect(['students-list']);
 		} catch (\Exception $e) {

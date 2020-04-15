@@ -111,6 +111,10 @@ $(document).ready(function(){
                         'attribute'=>'Date of Birth',       
                         'value' => stripslashes($studentdetails['dob']),
                     ],
+					[
+                        'attribute'=>'Age',       
+                        'value' => stripslashes($studentdetails['age']),
+                    ],
                     [
                         'attribute'=>'Place of Birth',       
                         'value' => stripslashes($studentdetails['place_of_birth']),
@@ -297,7 +301,7 @@ $(document).ready(function(){
                     ],
 		    [
                         'attribute'=>'School/Faculty',       
-                        'value' => stripslashes($studentdetails['school']),
+                        'value' => stripslashes($studentdetails['faculty_name']),
                     ],
                     [
                         'attribute'=>'Entry',       

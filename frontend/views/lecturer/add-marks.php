@@ -36,7 +36,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 			'options' => ['enctype' => 'multipart/form-data'],
 			]); ?>
 	<div class="col-xs-8 col-sm-6">
-	<?php echo $form->field($marksformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semister'])->label('Semester');?>
+	<?php echo $form->field($marksformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semester'])->label('Semester');?>
 	<div class="semistererr" style="display:none">Please select a Semester</div>
 	
 	<div id="moduleslist"></div>

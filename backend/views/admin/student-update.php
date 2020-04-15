@@ -136,7 +136,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	
 	<?php echo $form->field($userformmodel, 'nationalityother')->textInput(['value' => (isset($studentdata['nationalityother'])? $studentdata['nationalityother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
 
-	<div class="icnoformat">
+	<div class="icnoformat" style="height: 90px;">
 	<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
 	
 	<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label(false);?>
@@ -284,7 +284,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		
 		<?php echo $form->field($userformmodel, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy PhD' => 'Doctor of Philosophy PhD'], ['prompt' => 'Select Type of Programme'])->label('Type of Programme <span class="mandatory">*</span>');?>
 		
-		<?php echo $form->field($userformmodel, 'school')->dropDownList(['School of Business' => 'School of Business', 'School of Computing and Informatics' => 'School of Computing and Informatics', 'School of Applied Sciences and Mathematics' => 'School of Applied Sciences and Mathematics', 'School of Design' => 'School of Design', 'Faculty of Engineering' => 'Faculty of Engineering'], ['prompt' => 'Select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>');?>
+		<?php echo $form->field($userformmodel, 'school')->dropDownList(ArrayHelper::map($faculty,'id','faculty_name'),['prompt'=>'Please select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>'); ?>
 	
 		<?php echo $form->field($userformmodel, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label('Programme'); ?>
 		

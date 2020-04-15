@@ -114,7 +114,7 @@ label.error{
 	<?php echo $form->field($userformmodel, 'retype_password')->textInput(['autocomplete' => 'off', 'placeholder' => 'Retype Password'])->passwordInput(['placeholder' => 'Retype Password'])->label(false);?>
 					
 				<div class="login-page-cont">
-                    <?= Html::a('I already have an account', Yii::$app->request->BaseUrl . '/../../login') ?>.
+                    <?= Html::a('I already have an account', Yii::$app->request->BaseUrl . '/../../student-login') ?>.
                 </div>
                 <div class="button-container1">
                     <?= Html::submitButton('Register', ['class' => 'btn btn-primary lg-pgbtn', 'id' => 'loginpagebtn', 'name' => 'login-button']) ?>

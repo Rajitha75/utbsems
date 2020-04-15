@@ -12,6 +12,13 @@ use yii\helpers\Url;
 $storagemodel = new Storage();
 ?>
 <style>
+.nodata{
+font-weight: bold;
+    font-size: 16px;
+    color: #6b3bd5;
+	padding-left:20px;
+	margin-bottom:20px;
+}
    table, td, th {
     border: 1px solid #756c6c;
 	font-size: 14px;
@@ -86,7 +93,7 @@ text-align: center;
 <?php 
 $this->title = 'Student Marks';
 echo "<h1 class='box-title'>$this->title </h1>"; ?>
-
+<?php if(count($studentmarks1)>0 || count($studentmarks2)>0 || count($studentmarks3)>0 || count($studentmarks4)>0) { ?>
 <div class="login_page" style="padding-top:2%;">
 <div class="site-login container">
  <div class="row">
@@ -120,8 +127,9 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	$facultyname = $studentmarks4[0]['faculty_name'];
 } ?>
 
-
+<?php if(isset($studentname) && $studentname!=''){?>
  <div class='yr' style="padding:6px; font-size:18px"><?php echo $studentname; ?></div></br>
+ <?php } ?>
  <?php if(isset($ic_no) && $ic_no != '') { ?>
  <div class="programme-title">IC No. : <?php echo $ic_no;  ?></div>
  <?php } ?>
@@ -220,12 +228,12 @@ if($studentmarks2[$i]['semister'] == 4){
 <td class="sem" colspan="<?php echo $sem4*4 ?>">Semester 4</td>
 <?php } ?>
 </tr>
-<tr data-key="0">
+<tr data-key="0" class="mybg">
 <?php for($i=0; $i<count($studentmarks2); $i++) { ?>
 <td colspan="4"><?php echo $studentmarks2[$i]['moduleid'] ?></td>
 <?php } ?>
 </tr>
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks2); $i++) { ?>
 <td>CW</td>
 <td>EW</td>
@@ -235,7 +243,7 @@ if($studentmarks2[$i]['semister'] == 4){
 </tr>
 
 
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks2); $i++) { ?>
 <td><?php echo $studentmarks2[$i]['ew_percentage'].'%'; ?></td>
 <td><?php echo $studentmarks2[$i]['cw_percentage'].'%'; ?></td>
@@ -280,12 +288,12 @@ if($studentmarks3[$i]['semister'] == 6){
 <td class="sem" colspan="<?php echo $sem6*4 ?>">Semester 6</td>
 <?php } ?>
 </tr>
-<tr data-key="0">
+<tr data-key="0" class="mybg">
 <?php for($i=0; $i<count($studentmarks3); $i++) { ?>
 <td colspan="4"><?php echo $studentmarks3[$i]['moduleid'] ?></td>
 <?php } ?>
 </tr>
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks3); $i++) { ?>
 <td>CW</td>
 <td>EW</td>
@@ -295,7 +303,7 @@ if($studentmarks3[$i]['semister'] == 6){
 </tr>
 
 
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks3); $i++) { ?>
 <td><?php echo $studentmarks3[$i]['ew_percentage'].'%'; ?></td>
 <td><?php echo $studentmarks3[$i]['cw_percentage'].'%'; ?></td>
@@ -338,12 +346,12 @@ if($studentmarks4[$i]['semister'] == 8){
 <td class="sem" colspan="<?php echo $sem8*4 ?>">Semester 8</td>
 <?php } ?>
 </tr>
-<tr data-key="0">
+<tr data-key="0" class="mybg">
 <?php for($i=0; $i<count($studentmarks4); $i++) { ?>
 <td colspan="4"><?php echo $studentmarks4[$i]['moduleid'] ?></td>
 <?php } ?>
 </tr>
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks4); $i++) { ?>
 <td>CW</td>
 <td>EW</td>
@@ -353,7 +361,7 @@ if($studentmarks4[$i]['semister'] == 8){
 </tr>
 
 
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks4); $i++) { ?>
 <td><?php echo $studentmarks4[$i]['ew_percentage'].'%'; ?></td>
 <td><?php echo $studentmarks4[$i]['cw_percentage'].'%'; ?></td>
@@ -375,3 +383,6 @@ if($studentmarks4[$i]['semister'] == 8){
 </div>
 <?php } ?>
 </div></div>
+<?php } else {
+	echo '<div class="nodata">No Results</div>';
+}?>

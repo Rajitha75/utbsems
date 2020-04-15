@@ -14,6 +14,7 @@ use common\models\User;
 use common\models\Programme;
 use common\models\AddStudentMarks;
 use common\models\AddStudentMarksTemporary;
+use common\models\Faculty;
 
 date_default_timezone_set('Asia/Kolkata');
 /**
@@ -185,12 +186,13 @@ Yii::$app->cache->flush();
             $signup = new \frontend\models\SignupForm();
             $student = new Student();
             if($userformmodel->load(Yii::$app->request->post())){
+				
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $signup->email = $postvariable['email'];
                 $signup->username = $postvariable['email'];
 				$signup->password = $postvariable['password'];
                 $signup->user_role_ref_id = 2;
-				$signup->status = 2;
+				$signup->status = 1;
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
 				
                 $student->ic_no = isset($postvariable['ic_no']) ? $postvariable['ic_no'] : '';
@@ -202,7 +204,7 @@ Yii::$app->cache->flush();
                     $student->user_ref_id = $userid;
                      $student->save(false)   ;
 					 
-	$emailbody= '<table width="650" border="0" align="center" cellpadding="0" cellspacing="0"><tbody><tr>';
+	/*$emailbody= '<table width="650" border="0" align="center" cellpadding="0" cellspacing="0"><tbody><tr>';
     $emailbody .= '<td><div style="background-color:#dea1bd;height:120px;display:inline-block;width:100%;border-bottom:5px solid #629817;border-top-left-radius:10px;border-top-right-radius:10px"><img src="'.SITE_URL. yii::getAlias('@web').'/images/homepage/utb-logo.png" alt="" align="center" style="padding:20px 20px;width:260px;" class="CToWUd">
 	</div></td>
 	  </tr>
@@ -229,6 +231,7 @@ Yii::$app->cache->flush();
                 ->setSubject('Thank you for registering with UTBSEMS')
                 ->setHtmlBody($emailbody)
                 ->send();
+				echo 'ssd'; exit;
             if($mail) {
                 //$message = "Mail sent from RestAPI".PHP_EOL."____Record - Email: " . $to_email . "____Communication ID: " . $communique_id . ' --- Date: '.date('Y-m-d H:i:s') .  PHP_EOL;
                 //file_put_contents("/var/www/html/equippp/frontend/web/mail_log.txt", $message. PHP_EOL, FILE_APPEND | LOCK_EX);
@@ -236,14 +239,16 @@ Yii::$app->cache->flush();
                 unset($mail);
                 //return 'true';
             } else {
-                //$message = "Mail failed from RestAPI".PHP_EOL."____Record - Email: " . $to_email . "____Communication ID: " . $communique_id . ' --- Date: '.date('Y-m-d H:i:s') .  PHP_EOL;
+                $message = "Mail failed from RestAPI".PHP_EOL."____Record - Email: " . $to_email . "____Communication ID: " . $communique_id . ' --- Date: '.date('Y-m-d H:i:s') .  PHP_EOL;
+				print_r($message);exit;
                 //file_put_contents("/var/www/html/equippp/frontend/web/mail_log.txt", $message. PHP_EOL, FILE_APPEND | LOCK_EX);
                 $mail = '';
                 unset($mail);
                 //return 'false'; 
-            }
-                        Yii::$app->session->setFlash('signupsuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">You are registered successfully! Please follow the steps in your email to verify your account </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+            }*/
+			
+                        Yii::$app->session->setFlash('signupsuccess', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">You are registered successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
+                        return $this->redirect(['/../../']);
                     }
             }
             return $this->render('student-register',[
@@ -262,6 +267,9 @@ Yii::$app->cache->flush();
         $student = new Student();
         $student = Student::findByUserId($userid);
 		$user = User::findIdentity($userid);
+		$countries = User::countrieslist();
+			$programme = Programme::getAllProgrammes();
+			$faculty = Faculty::getAllFaculty();
         if($userid && $userid!= '' && $userid != null && count($student) <= 0){
             echo 'You are not authorized to this page';exit;
         }
@@ -286,18 +294,21 @@ Yii::$app->cache->flush();
 						
 						            
                         Yii::$app->session->setFlash('studentdetails', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Thank you for creating an account at UTBSEMS. </div><div class="flash-content">Thank you for your interest to study in UTB.</div><div class="head-text">You may now login and submit online application.</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+                        return $this->redirect(['/../../']);
                     }
                     }
             }else{
 				if($user['is_verified'] == 1){
 					Yii::$app->session->setFlash('studentdetailsverified', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Your email is already verified. </div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>');
-                        return $this->redirect(['/']);
+                        return $this->redirect(['/../../']);
 					
 				}else{
             return $this->render('student-details',[
                 'userformmodel'=>$userformmodel,
-                'userid'=>$userid
+                'userid'=>$userid,
+				'countries'=>$countries,
+				'programme'=>$programme,
+				'faculty'=>$faculty
                     ]);
 				}
             }
@@ -330,6 +341,7 @@ Yii::$app->cache->flush();
             $userformmodel = new \common\models\CreateStudentForm();
             $countries = User::countrieslist();
 			$programme = Programme::getAllProgrammes();
+			$faculty = Faculty::getAllFaculty();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
 			
@@ -494,7 +506,8 @@ Yii::$app->cache->flush();
             'userformmodel'=>$userformmodel,
             'studentdata'=>$studentdata[0],
             'countries'=>$countries,
-			'programme'=>$programme
+			'programme'=>$programme,
+			'faculty'=>$faculty
                 ]);
         }
 	} catch (\Exception $e) {
@@ -509,6 +522,7 @@ Yii::$app->cache->flush();
             $countries = User::countrieslist();
             $student = new Student;
 			$programme = Programme::getAllProgrammes();
+			$faculty = Faculty::getAllFaculty();
             if($userformmodel->load(Yii::$app->request->post())){
                 $postvariable=Yii::$app->request->post('CreateStudentForm');
                //print_r($postvariable['nationalityother']);exit;
@@ -681,7 +695,8 @@ Yii::$app->cache->flush();
             return $this->render('create-student',[
                 'userformmodel'=>$userformmodel,
                 'countries'=>$countries,
-				'programme'=>$programme
+				'programme'=>$programme,
+				'faculty'=>$faculty
                     ]);
     }
 
@@ -691,6 +706,7 @@ Yii::$app->cache->flush();
             $userformmodel = new \common\models\CreateStudentForm();
             $countries = User::countrieslist();
 			$programme = Programme::getAllProgrammes();
+			$faculty = Faculty::getAllFaculty();
         if($userformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('CreateStudentForm');
                 $student = Student::find()->where(['id'=>$postvariable['studentid']])->one();
@@ -850,7 +866,8 @@ Yii::$app->cache->flush();
             'userformmodel'=>$userformmodel,
             'studentdata'=>$studentdata[0],
             'countries'=>$countries,
-			'programme'=>$programme
+			'programme'=>$programme,
+			'faculty'=>$faculty
                 ]);
         }
     }
@@ -1113,6 +1130,32 @@ Yii::$app->cache->flush();
 			}
 		}
 		
+		public function actionStudentResult(){
+			
+	    try{
+		    if(Yii::$app->session['userRole'] == 2){
+			$sid = Yii::$app->user->id;
+			$student = Student::find()->where(['user_ref_id' => $sid])->one();
+			$studentid = $student['id'];
+		    }else{
+			$studentid = Yii::$app->request->get('id');
+		    }
+			$studentmarks = [];
+			$studentmarksquery1 = AddStudentMarks::getStudentFirstYearMarks($studentid);
+			$studentmarksquery2 = AddStudentMarks::getStudentSecondYearMarks($studentid);
+			$studentmarksquery3 = AddStudentMarks::getStudentThirdYearMarks($studentid);
+			$studentmarksquery4 = AddStudentMarks::getStudentFourthYearMarks($studentid);
+			return $this->render('student-result',[
+				'studentmarks1'=>$studentmarksquery1,
+				'studentmarks2'=>$studentmarksquery2,
+				'studentmarks3'=>$studentmarksquery3,
+				'studentmarks4'=>$studentmarksquery4
+			]);
+			} catch (\Exception $e) {
+				\common\controllers\CommonController::exceptionMessage($e->getMessage());
+			}
+		}
+		
 	public function actionAllStudentsMarks(){
 			
 	    try{
@@ -1361,6 +1404,28 @@ Yii::$app->cache->flush();
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());
 			}
 		}
+		
+		public function actionGetStudentRemarks(){
+		 try{
+			  $mid = Yii::$app->getRequest()->getQueryParam('mid') ? Yii::$app->getRequest()->getQueryParam('mid') : "";
+			  $studentmarks = AddStudentMarks::find()->where(['id' => $mid])->one();
+			  $remarks = isset($studentmarks['remarks']) ? $studentmarks['remarks'] : '';
+			  return $remarks;
+			  } catch (\Exception $e) {
+				\common\controllers\CommonController::exceptionMessage($e->getMessage());
+			}
+		 }
 	
-     
+		 public function actionStudentRemarks(){
+			 try{
+			  $mid = $_POST['mid'];
+			  $remarks = $_POST['remarks'];
+			  $studentmarks = AddStudentMarks::find()->where(['id' => $mid])->one();
+			  $studentmarks->remarks = $remarks;
+			  $studentmarks->save();
+			  return true;
+			  } catch (\Exception $e) {
+				\common\controllers\CommonController::exceptionMessage($e->getMessage());
+			}
+		 }
 }

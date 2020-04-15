@@ -284,7 +284,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		
 		<?php echo $form->field($userformmodel, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy PhD' => 'Doctor of Philosophy PhD'], ['prompt' => 'Select Type of Programme'])->label('Type of Programme <span class="mandatory">*</span>');?>
 		
-		<?php echo $form->field($userformmodel, 'school')->dropDownList(['School of Business' => 'School of Business', 'School of Computing and Informatics' => 'School of Computing and Informatics', 'School of Applied Sciences and Mathematics' => 'School of Applied Sciences and Mathematics', 'School of Design' => 'School of Design', 'Faculty of Engineering' => 'Faculty of Engineering'], ['prompt' => 'Select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>');?>
+		<?php echo $form->field($userformmodel, 'school')->dropDownList(ArrayHelper::map($faculty,'id','faculty_name'),['prompt'=>'Please select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>'); ?>
 	
 		<?php echo $form->field($userformmodel, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label('Programme'); ?>
 
@@ -374,7 +374,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		<?php echo $form->field($userformmodel, 'mailing_postal_code')->textInput(['value' => (isset($studentdata['mailing_postal_code'])? $studentdata['mailing_postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
 
 		<?php echo $form->field($userformmodel, 'bank_terms')->checkbox(['label'=>'I agree to the terms'])->label(false) ?>
-		<span class="bankterms">I declare that all the particulars and information provided in this application are true to my best knowledge and belief.</span>
+		</br><span class="bankterms">I declare that all the particulars and information provided in this form are true to my best knowledge and belief.</span>
 		
 	</fieldset>
  </div>
