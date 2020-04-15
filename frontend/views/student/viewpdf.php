@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>PDF</title>
+<title>STUDENT DATA</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link type="text/css" href="<?php echo Yii::getAlias('@web'); ?>/themes/metronic/assets/global/css/bootstrap.min.css" rel="stylesheet"  media="print" media="screen"/>

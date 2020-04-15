@@ -78,10 +78,7 @@ td, th {
 	float:left; 
 } 
 
-.year_1 table{ 
-	margin-bottom:30px;
-}
-.year_2 table{ 
+.year_1 table,.year_2 table,.year_3 table,.year_4 table{ 
 	margin-bottom:30px;
 }
 </style>
@@ -95,8 +92,20 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
         <div class="panel panel-default">
        
         	<div class="panel-body">
-
- 
+<?php if(count($studentmarks1)>0){
+	$studentname = $studentmarks1[0]['studentname'];
+	$ic_no = $studentmarks1[0]['ic_no'];
+}else if(count($studentmarks2)>0){
+	$studentname = $studentmarks2[0]['studentname'];
+	$ic_no = $studentmarks2[0]['ic_no'];
+}else if(count($studentmarks3)>0){
+	$studentname = $studentmarks3[0]['studentname'];
+	$ic_no = $studentmarks3[0]['ic_no'];
+}else if(count($studentmarks4)>0){
+	$studentname = $studentmarks4[0]['studentname'];
+	$ic_no = $studentmarks4[0]['ic_no'];
+} ?>
+ <h1 class='box-title'><?php echo 'Student Name: '.$studentname; ?></h1></br>
 <div id="pjax-list" data-pjax-container=""><div id="w0" class="grid-view">
 <div class="year_1_2">
 <?php if(count($studentmarks1)>0) { ?>
@@ -148,8 +157,8 @@ if($studentmarks1[$i]['semister'] == 2){
 
 <tr>
 <?php for($i=0; $i<count($studentmarks1); $i++) { ?>
-<td><?php echo $studentmarks1[$i]['ew_marks']; ?></td>
-<td><?php echo $studentmarks1[$i]['cw_marks']; ?></td>
+<td><?php echo $studentmarks1[$i]['ew_total_percentage']; ?></td>
+<td><?php echo $studentmarks1[$i]['cw_total_percentage']; ?></td>
 <td><?php echo $studentmarks1[$i]['total_percentage']; ?></td>
 <td><?php echo $studentmarks1[$i]['grade'] ?></td>
 <?php } ?>
@@ -206,8 +215,8 @@ if($studentmarks2[$i]['semister'] == 4){
 
 <tr>
 <?php for($i=0; $i<count($studentmarks2); $i++) { ?>
-<td><?php echo $studentmarks2[$i]['ew_marks']; ?></td>
-<td><?php echo $studentmarks2[$i]['cw_marks']; ?></td>
+<td><?php echo $studentmarks2[$i]['ew_total_percentage']; ?></td>
+<td><?php echo $studentmarks2[$i]['cw_total_percentage']; ?></td>
 <td><?php echo $studentmarks2[$i]['total_percentage']; ?></td>
 <td><?php echo $studentmarks2[$i]['grade'] ?></td>
 <?php } ?>
@@ -266,8 +275,8 @@ if($studentmarks3[$i]['semister'] == 6){
 
 <tr>
 <?php for($i=0; $i<count($studentmarks3); $i++) { ?>
-<td><?php echo $studentmarks3[$i]['ew_marks']; ?></td>
-<td><?php echo $studentmarks3[$i]['cw_marks']; ?></td>
+<td><?php echo $studentmarks3[$i]['ew_total_percentage']; ?></td>
+<td><?php echo $studentmarks3[$i]['cw_total_percentage']; ?></td>
 <td><?php echo $studentmarks3[$i]['total_percentage']; ?></td>
 <td><?php echo $studentmarks3[$i]['grade'] ?></td>
 <?php } ?>
@@ -324,8 +333,8 @@ if($studentmarks4[$i]['semister'] == 8){
 
 <tr>
 <?php for($i=0; $i<count($studentmarks4); $i++) { ?>
-<td><?php echo $studentmarks4[$i]['ew_marks']; ?></td>
-<td><?php echo $studentmarks4[$i]['cw_marks']; ?></td>
+<td><?php echo $studentmarks4[$i]['ew_total_percentage']; ?></td>
+<td><?php echo $studentmarks4[$i]['cw_total_percentage']; ?></td>
 <td><?php echo $studentmarks4[$i]['total_percentage']; ?></td>
 <td><?php echo $studentmarks4[$i]['grade'] ?></td>
 <?php } ?>

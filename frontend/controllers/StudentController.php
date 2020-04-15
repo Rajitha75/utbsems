@@ -883,6 +883,75 @@ Yii::$app->cache->flush();
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }
     }
+    
+    public function actionCreateMarksmpdf()
+    {
+		//try{
+		if(Yii::$app->session['userRole'] == 2){
+			$sid = Yii::$app->user->id;
+			$student = Student::find()->where(['user_ref_id' => $sid])->one();
+			$studentid = $student['id'];
+			$studentname = $student['name'];
+		    }else{
+			$studentid = Yii::$app->request->get('id');
+			$student = Student::find()->where(['id' => $studentid])->one();
+			$studentname = $student['name'];
+		    }
+			$studentmarks = [];
+			$studentmarksquery1 = AddStudentMarks::getStudentFirstYearMarks($studentid);
+			$studentmarksquery2 = AddStudentMarks::getStudentSecondYearMarks($studentid);
+			$studentmarksquery3 = AddStudentMarks::getStudentThirdYearMarks($studentid);
+			$studentmarksquery4 = AddStudentMarks::getStudentFourthYearMarks($studentid);	
+			 $pdf_content=$this->renderPartial('viewmarkspdf', [
+				'studentmarks1'=>$studentmarksquery1,
+				'studentmarks2'=>$studentmarksquery2,
+				'studentmarks3'=>$studentmarksquery3,
+				'studentmarks4'=>$studentmarksquery4
+			]);
+        //print_r($pdf_content);exit;
+        $mpdf = new \mPDF();
+        $mpdf->WriteHTML($pdf_content);
+        $fileName = str_replace(" ", "_", $studentname) . '.pdf';
+        $mpdf->Output($fileName, 'I');
+        exit;
+		/*} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }*/
+    }
+    
+    public function actionViewAllMarksPdf()
+    {
+		//try{
+		$studentmarks = [];
+			$role = Yii::$app->session['userRole'];
+			if($role == 3){
+			$studentmarksquery1 = AddStudentMarks::getStudentFirstYearMarks(false);
+			$studentmarksquery2 = AddStudentMarks::getStudentSecondYearMarks(false);
+			$studentmarksquery3 = AddStudentMarks::getStudentThirdYearMarks(false);
+			$studentmarksquery4 = AddStudentMarks::getStudentFourthYearMarks(false);
+			}
+			if($role == 4){
+			$studentmarksquery1 = AddStudentMarks::getStudentFirstYearMarksLecturer(Yii::$app->user->id,false);
+			$studentmarksquery2 = AddStudentMarks::getStudentSecondYearMarksLecturer(Yii::$app->user->id,false);
+			$studentmarksquery3 = AddStudentMarks::getStudentThirdYearMarksLecturer(Yii::$app->user->id,false);
+			$studentmarksquery4 = AddStudentMarks::getStudentFourthYearMarksLecturer(Yii::$app->user->id,false);
+			}
+			 $pdf_content=$this->renderPartial('view-all-marks-pdf', [
+				'studentmarks1'=>$studentmarksquery1,
+				'studentmarks2'=>$studentmarksquery2,
+				'studentmarks3'=>$studentmarksquery3,
+				'studentmarks4'=>$studentmarksquery4
+			]);
+        //print_r($pdf_content);exit;
+        $mpdf = new \mPDF();
+        $mpdf->WriteHTML($pdf_content);
+        $fileName = 'Students Marks' . '.pdf';
+        $mpdf->Output($fileName, 'I');
+        exit;
+		/*} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }*/
+    }
 	
 	public function actionStudentDelete($id)
     {

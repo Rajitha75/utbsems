@@ -47,7 +47,7 @@ if (($flash = Yii::$app->session->getFlash('studentdelete')) || ($flash = Yii::$
                 <ul class="nav navbar-nav menu_header">
                 <?php if(!Yii::$app->user->id){ ?>
                    <li><a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">Student Login</a></li>
-                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">Professors Login</a> </li>    
+                    <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../lecturer-login">Lecturer Login</a> </li>    
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../exam-officers-login">Exam Officers Login</a> </li>                                  
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../backend/web/site/login">Administrator Login</a> </li>
                 <?php } if(Yii::$app->user->id){ ?>

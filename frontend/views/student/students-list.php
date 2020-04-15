@@ -410,21 +410,33 @@ echo GridView::widget([
                             } 
                         ],
 					['class' => 'yii\grid\ActionColumn',
-                            'header'=> 'Marks' ,
+                            'header'=> 'Marks | Download' ,
                             //'options' => ['width' => '85'],
                             'headerOptions' => ['style' => 'width:142px'],
-                            'template'=>'{marks}',
+                            'template'=>'{marks}{createmarksmpdf}',
                             'buttons'=>[
                                         'marks' => function ($url, $model) {
 										  return Html::a('<span class="glyphicon glyphicon-list-alt" title="Marks"></span>', $url, [
                                                   'title' => Yii::t('yii', 'marks'),'data-pjax' => 0
                                           ]); 
-                                        }
+                                        },
+					'createmarksmpdf'=>function($url,$model) {
+
+                                            return Html::a('<span class="glyphicon glyphicon-download-alt" title="Download"></span>', $url, [
+              
+                                                    'title' => Yii::t('yii', 'Download'), 'data-pjax' => 0, 'target' => '_blank'
+              
+                                            ]); 
+					}					    
                                       ],
                             'urlCreator' => function ($action, $model, $key, $index) {
                                 if ($action === 'marks') {
                                     return Url::toRoute(['../../student-marks', 'id' => $model['id']]);
-                                }
+                                }else if ($action === 'createmarksmpdf') {
+
+                                    return Url::toRoute(['create-marksmpdf', 'id' => $model['id']]);
+            
+                                    }
                             } 
                         ],
     ],
