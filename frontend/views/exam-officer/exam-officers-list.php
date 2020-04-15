@@ -78,11 +78,12 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
        
         <div class="searchBtn">
                 <?php echo Html::submitButton('<i class="fa fa-search"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
-                <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/../../students-list" id="searchUrl">
+                <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/../../exam-officers-list" id="searchUrl">
             </div>
             <div class="searchBtn" style="padding:0;">
                 <?php echo Html::submitButton('<i class="fa fa-repeat"> </i>', ['class' => 'btn btn-success res-bnt', 'id' => 'btnReset']) ?>
             </div>
+			<?php ActiveForm::end(); ?>
 
  <div class="row">
         <div class="col-xs-12 col-sm-12">
@@ -199,6 +200,60 @@ $this->registerJs(" $(document).on('ready pjax:success', function () {  var dele
 ");
                 ?>
 <script>
+$(document).ready(function(){
+var name = "<?php echo !empty(Yii::$app->getRequest()->getQueryParam('name')) ? Yii::$app->getRequest()->getQueryParam('name') : '' ?>";
+var email = "<?php echo !empty(Yii::$app->getRequest()->getQueryParam('email')) ? Yii::$app->getRequest()->getQueryParam('email') : '' ?>";
+	$('#examofficer-name').val(name);
+    $('#examofficer-email').val(email);
+$('#btnSearch').on('click', function (e) {
+            var searchUrl = $('#searchUrl').val();
+            var pjaxContainer = 'pjax-list';
+            var name = $('#examofficer-name').val();
+            var email = $('#examofficer-email').val();
+                var pjaxReloadURL = searchUrl + '?name=' + name+ '&email=' + email;
+
+            $.ajax({
+                url: searchUrl,
+                type: 'get',
+                data: {'name': name, 'email': email},
+                success: function (data) {
+                    if (data) {
+                        //$.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer, )});
+                        $.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer), async: false});
+                        return false;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error with your request.' + xhr.responseText);
+                }
+            });
+            return false;
+        });
+		
+$('#btnReset').on('click', function (e) {
+            var searchUrl = $('#searchUrl').val();
+            var pjaxContainer = 'pjax-list';
+                var pjaxReloadURL = searchUrl;
+
+            $.ajax({
+                url: searchUrl,
+                type: 'get',
+                success: function (data) {
+                    if (data) {
+                        $('#examofficer-name').val('');
+                        $('#examofficer-email').val('');
+                        //$.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer, )});
+                        $.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer), async: false});
+                        return false;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error with your request.' + xhr.responseText);
+                }
+            });
+            return false;
+        });
+		  });
  function updateStatus(){
     var deleteUrl = $('#updateUrl').val();
     var pjaxContainer = $('#ajaxContainer').val();

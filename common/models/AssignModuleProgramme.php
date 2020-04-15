@@ -19,7 +19,10 @@ use Yii;
  */
 class AssignModuleProgramme extends \yii\db\ActiveRecord
 {
-	
+
+public $programme_name;
+public $module_name;
+public $semester;	
    // public $password_reset_token;
     /**
      * @inheritdoc
@@ -35,13 +38,19 @@ class AssignModuleProgramme extends \yii\db\ActiveRecord
         return $data;
     }
 	
-	public static function getAllRecords(){
-        $data = (new Query())->select(['pf.id', 'pf.programme_id', 'pf.module_id', 'programme_name', 'module_name', 'semister'])
+	public static function getAllRecords($programme_name,$module_name,$semester){
+        $uQuery = (new Query())->select(['pf.id', 'pf.programme_id', 'pf.module_id', 'programme_name', 'module_name', 'semister'])
         ->from('module_to_programme AS pf')
 		->join('LEFT JOIN', 'programme AS p', 'p.id = pf.programme_id')
 		->join('LEFT JOIN', 'modules AS f', 'f.id = pf.module_id')
-		->orderBy(['pf.id'=>SORT_ASC]);
-        return $data;
+		->where(1);
+		if(!empty($programme_name) || !empty($module_name) || !empty($semester)){
+			if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);
+			if(!empty($module_name))   $uQuery->andWhere(['LIKE' , 'module_name', $module_name]);
+			if(!empty($semester))   $uQuery->andWhere(['LIKE' , 'semister', $semester]);
+		}
+		$uQuery->orderBy(['pf.id'=>SORT_ASC]);
+        return $uQuery;
     }
 	
 	

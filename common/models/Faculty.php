@@ -35,10 +35,15 @@ class Faculty extends \yii\db\ActiveRecord
         return $data;
     }
 	
-	public static function getAllFacultyList(){
-        $data = (new Query())->select('*')
-        ->from('faculty')->orderBy(['faculty_name'=>SORT_ASC]);
-        return $data;
+	public static function getAllFacultyList($faculty_name){
+        $uQuery = (new Query())->select('*')
+        ->from('faculty')
+		->where(1);
+		if(!empty($faculty_name)){
+			if(!empty($faculty_name))   $uQuery->andWhere(['LIKE' , 'faculty_name', $faculty_name]);
+		}
+		$uQuery->orderBy(['faculty_name'=>SORT_ASC]);
+        return $uQuery;
     }
 	
 	public static function getFacultyIfExists($faculty_name){

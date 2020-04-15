@@ -86,8 +86,20 @@ if(Yii::$app->session->getFlash('programmeexists')){
 
 </div></div>
 <?php } ?>
-<div class="login_page" style="padding-top:2%;">
-<div class="site-login container">
+<?php $form = ActiveForm::begin(); ?>
+        <div class="col-sm-2 col-xs-12 p-left0 ad-lst">
+            <?php echo $form->field($model, 'programme_name')->textInput(array('placeholder' => 'Programme Name'), ['class' => 'form-control']) ?>
+        </div>
+       
+        <div class="searchBtn">
+                <?php echo Html::submitButton('<i class="fa fa-search"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
+                <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/../../programmes-list" id="searchUrl">
+            </div>
+            <div class="searchBtn" style="padding:0;">
+                <?php echo Html::submitButton('<i class="fa fa-repeat"> </i>', ['class' => 'btn btn-success res-bnt', 'id' => 'btnReset']) ?>
+            </div>
+			<?php ActiveForm::end(); ?>
+
  <div class="row">
         <div class="col-xs-12 col-sm-12">
         <div class="panel panel-default">
@@ -169,6 +181,10 @@ echo GridView::widget([
 ]);
 \yii\widgets\Pjax::end();
 ?>
+</div>
+</div>
+</div>
+</div>
 <div id="dataConfirmModal" class="confirm-box" style="display:none;">
     <h3 id="dataConfirmLabel" >Please Confirm</h3>   
     <div style="text-align:right;margin-top:10px;">
@@ -202,6 +218,56 @@ $this->registerJs(" $(document).on('ready pjax:success', function () {  var dele
 ");
                 ?>
 <script>
+$(document).ready(function(){
+var programme_name = "<?php echo !empty(Yii::$app->getRequest()->getQueryParam('programme_name')) ? Yii::$app->getRequest()->getQueryParam('programme_name') : '' ?>";
+	$('#programme-programme_name').val(programme_name);
+$('#btnSearch').on('click', function (e) {
+            var searchUrl = $('#searchUrl').val();
+            var pjaxContainer = 'pjax-list';
+            var programme_name = $('#programme-programme_name').val();
+                var pjaxReloadURL = searchUrl + '?programme_name=' + programme_name;
+
+            $.ajax({
+                url: searchUrl,
+                type: 'get',
+                data: {'programme_name': programme_name},
+                success: function (data) {
+                    if (data) {
+                        //$.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer, )});
+                        $.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer), async: false});
+                        return false;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error with your request.' + xhr.responseText);
+                }
+            });
+            return false;
+        });
+		
+$('#btnReset').on('click', function (e) {
+            var searchUrl = $('#searchUrl').val();
+            var pjaxContainer = 'pjax-list';
+                var pjaxReloadURL = searchUrl;
+
+            $.ajax({
+                url: searchUrl,
+                type: 'get',
+                success: function (data) {
+                    if (data) {
+                        $('#programme-programme_name').val('');
+                        //$.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer, )});
+                        $.pjax.reload({url: pjaxReloadURL, container: '#' + $.trim(pjaxContainer), async: false});
+                        return false;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('There was an error with your request.' + xhr.responseText);
+                }
+            });
+            return false;
+        });
+		  });
  function updateStatus(){
     var deleteUrl = $('#updateUrl').val();
     var pjaxContainer = $('#ajaxContainer').val();

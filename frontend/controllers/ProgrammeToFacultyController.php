@@ -87,7 +87,7 @@ class ProgrammeToFacultyController extends \common\controllers\CommonController 
      */
 	public function actionAddProgrammeToFaculty()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $programmefacultyformmodel = new \common\models\CreateProgrammeToFacultyForm();
 		$faculty = Faculty::getAllFaculty();
@@ -112,14 +112,14 @@ class ProgrammeToFacultyController extends \common\controllers\CommonController 
 				'faculty'=>$faculty,
 				'programme'=>$programme
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateProgrammeToFaculty()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $programmefacultyformmodel = new \common\models\CreateProgrammeToFacultyForm();
 		$faculty = Faculty::getAllFaculty();
@@ -146,9 +146,9 @@ class ProgrammeToFacultyController extends \common\controllers\CommonController 
 				'programme'=>$programme,
 				'data'=>$assignprogrammefaculty
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 				
 	public function actionProgrammeToFacultyList()
@@ -156,7 +156,9 @@ class ProgrammeToFacultyController extends \common\controllers\CommonController 
 	    try{
 	    Yii::$app->cache->flush();
 		$model = new AssignProgrammeFaculty();
-            $uQuery = AssignProgrammeFaculty::getAllRecords();
+		$programme_name = Yii::$app->getRequest()->getQueryParam('programme_name') ? Yii::$app->getRequest()->getQueryParam('programme_name') : "";
+		$faculty_name = Yii::$app->getRequest()->getQueryParam('faculty_name') ? Yii::$app->getRequest()->getQueryParam('faculty_name') : "";
+            $uQuery = AssignProgrammeFaculty::getAllRecords($faculty_name,$programme_name);
 				$query = $uQuery;		
 				$count = $uQuery->count();
 				return $this->render('programme-to-faculty-list',[

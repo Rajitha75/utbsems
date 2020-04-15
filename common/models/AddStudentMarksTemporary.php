@@ -51,7 +51,7 @@ class AddStudentMarksTemporary extends \yii\db\ActiveRecord
 		if($stage){
 			$uQuery->andWhere(['stage' => $stage]);
 		}
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->orderBy(['semister'=>SORT_ASC])->all();
     //print_r($uQuery);exit;
 		return $uQuery;
     }
@@ -102,7 +102,7 @@ class AddStudentMarksTemporary extends \yii\db\ActiveRecord
 			
 			
 		}
-		$uQuery = $uQuery->groupBy(['sm.id'])->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->groupBy(['sm.id'])->all();
 		return $uQuery;
     }
 	

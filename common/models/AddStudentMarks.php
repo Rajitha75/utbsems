@@ -57,7 +57,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		->join('LEFT JOIN', 'programme_to_faculty AS pf', 'pf.programme_id = s.programme_name')
 		->join('LEFT JOIN', 'faculty AS f', 'f.id = pf.faculty_id')
 		->andWhere('sm.semister = 1 or sm.semister = 2');
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->all();
 		return $uQuery;
 	}
 	
@@ -75,7 +75,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		->join('LEFT JOIN', 'programme_to_faculty AS pf', 'pf.programme_id = s.programme_name')
 		->join('LEFT JOIN', 'faculty AS f', 'f.id = pf.faculty_id')
 		->andWhere('sm.semister = 3 or sm.semister = 4');
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->all();
 		return $uQuery;
 	}
 	
@@ -93,7 +93,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		->join('LEFT JOIN', 'programme_to_faculty AS pf', 'pf.programme_id = s.programme_name')
 		->join('LEFT JOIN', 'faculty AS f', 'f.id = pf.faculty_id')
 		->andWhere('sm.semister = 5 or sm.semister = 6');
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->all();
 		return $uQuery;
 	}
 	
@@ -111,7 +111,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		->join('LEFT JOIN', 'programme_to_faculty AS pf', 'pf.programme_id = s.programme_name')
 		->join('LEFT JOIN', 'faculty AS f', 'f.id = pf.faculty_id')
 		->andWhere('sm.semister = 7 or sm.semister = 8');
-		$uQuery = $uQuery->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->all();
 		return $uQuery;
 	}
 	
@@ -133,7 +133,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		if($studentid){
 		$uQuery->andWhere(['sm.student_id' => $studentid]);
 		}
-		$uQuery = $uQuery->groupBy(['semister','moduleid','student_id'])->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->groupBy(['semister','moduleid','student_id'])->all();
 		return $uQuery;
 	}
 	
@@ -155,7 +155,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		if($studentid){
 		$uQuery->andWhere(['sm.student_id' => $studentid]);
 		}
-		$uQuery = $uQuery->groupBy(['semister','moduleid','student_id'])->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->groupBy(['semister','moduleid','student_id'])->all();
 		return $uQuery;
 	}
 	
@@ -177,7 +177,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		if($studentid){
 		$uQuery->andWhere(['sm.student_id' => $studentid]);
 		}
-		$uQuery = $uQuery->groupBy(['semister','moduleid','student_id'])->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->groupBy(['semister','moduleid','student_id'])->all();
 		return $uQuery;
 		$uQuery = $uQuery->all();
 		return $uQuery;
@@ -201,7 +201,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		if($studentid){
 		$uQuery->andWhere(['sm.student_id' => $studentid]);
 		}
-		$uQuery = $uQuery->groupBy(['semister','moduleid','student_id'])->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->groupBy(['semister','moduleid','student_id'])->all();
 		return $uQuery;
 	}
 	
@@ -234,7 +234,7 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		if($studentid){
 		$uQuery->andWhere(['sm.student_id' => $studentid]);
 		}
-		$uQuery = $uQuery->groupBy(['sm.id'])->all();
+		$uQuery = $uQuery->orderBy(['sm.semister'=>SORT_ASC])->groupBy(['sm.id'])->all();
 		return $uQuery;
 	}
     /**

@@ -44,6 +44,7 @@ return [
 		'students-list'=>'student/students-list',
 		'student-view'=>'student/student-view',
 		'view-all-marks-pdf'=>'student/view-all-marks-pdf',
+		'view-edit-student-marks-pdf'=>'student/view-edit-student-marks-pdf',
 		'add-faculty'=>'faculty/add-faculty',
 		'update-faculty'=>'faculty/update-faculty',
 		'faculty-list'=>'faculty/faculty-list',

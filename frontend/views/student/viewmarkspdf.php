@@ -15,7 +15,7 @@ $storagemodel = new Storage();
 <html>
 <head>
 <meta charset="utf-8">
-<title>STUDENT MARKS</title>
+<title>STUDENT STAGE WISE MARKS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link type="text/css" href="<?php echo Yii::getAlias('@web'); ?>/themes/metronic/assets/global/css/bootstrap.min.css" rel="stylesheet"  media="print" media="screen"/>
@@ -27,77 +27,79 @@ $storagemodel = new Storage();
 <script src="<?php echo Yii::getAlias('@web'); ?>/themes/metronic/assets/global/scripts/bootstrap.js" type="text/javascript" media="print" media="screen"></script>
 
 <style>
-    label.error{
-		color: #ff0000;
-		font-weight: normal;
-	}
-	
-	.ui-datepicker-trigger{
-		float: right;
-		margin-top: -30px;
-	}
-	
-	.bankterms{
-		margin-top: -16px;
-    display: block;
-    font-size: 12px;
-    margin-left: 50px;
-    width: 82%;
-    margin-bottom: 10px;
-	}
-	img.ui-datepicker-trigger {
-    position: absolute;
-    right: 72px;
-    margin-top: -29px;
-}
-.icnoformat {
-  width: 100%;
-  height:100px;
-  margin-right: 10px;
-  float: left;
-}
-.field-createstudentform-ic_no_format{
-width: 18%;
-    z-index: 9999;
-    }
-   
-  .field-createstudentform-ic_no {
-    width: 52%;
-    margin-left: 50px !important;
-    margin-top: 22px !important;
-    }
-.field-createstudentform-ic_no_format, .field-createstudentform-ic_no {
-  float: left;
-  margin-right: 5px;
-}
-table, td, th {
-    border: 1px solid black;
+   table, td, th {
+    border: 1px solid #756c6c;
 	font-size: 14px;
+	padding:4px;
+	/*background:#f1ecec*/
 }
-td, th {
-	padding: 4px;
+
+.tablecontent{
+	margin-bottom:30px;
+	margin-right:30px;
+	float:left;
+
 }
-.year_1 { 
-	float:left; 
-	margin-right: 30px;
-} 
-.year_2{ 
-	float:left; 
-} 
 
-.year_3 { 
-	float:left; 
-	margin-right: 30px;
-} 
-.year_4{ 
-	float:left; 
-} 
+.tdheading{
+	font-weight:bold;
+}
 
-.year_1 table,.year_2 table,.year_3 table,.year_4 table{ 
+.studentinfo{
+	width:90%;
+	margin-bottom:30px;
+	/*background:#e33066 ;*/
+}
+
+.sinfotd{
+	width:10%;
+	font-weight:bold;
+}
+
+table.studentinfo{
+	border:0;
+}
+
+.year_1 table,.year_2 table,.year_3 table,.year_4 table{
 	margin-bottom:30px;
 }
+
+.merr,.prev_merr,.prev2_merr,.prev3_merr {
+	display:none;
+}
+
+.management{
+	width:90%;
+	margin-bottom:30px;
+}
+.levelhead{
+	width:20%;
+}
+.leveltitle{
+	width:80%;
+}
+.submithide{
+	display:none;
+}
+.submitshow{
+	display:block;
+}
+.studentinfo td {
+  border: none;
+}
+.yr {
+    background: #4a5789;
+    color: #fff !important;
+    text-align: center;
+}
+.sem {
+  background: #8194ac;
+color: #fff !important;
+text-align: center;
+}
+
 .tit{
-	background:#e7505a !important;
+	background:#00224c !important;
 	padding: 10px !important;
     color: #fff !important;
     font-size: 18px !important;
@@ -108,6 +110,8 @@ td, th {
 <body>
 <?php 
 $this->title = 'Student Marks';?>
+<div class="tit"><?php echo $this->title; ?></div>
+
 <div class="login_page" style="padding-top:2%;">
 <div class="site-login container">
  <div class="row">
@@ -142,29 +146,30 @@ $this->title = 'Student Marks';?>
 } ?>
 
 
- <div class="tit"><?php echo 'Student Name: '.$studentname; ?></div></br>
+ <div class='yr' style="padding:6px; font-size:18px"><?php echo $studentname; ?></div></br>
  <?php if(isset($ic_no) && $ic_no != '') { ?>
- <div class="">IC No. : <?php echo $ic_no;  ?></div>
+ <div class="programme-title">IC No. : <?php echo $ic_no;  ?></div>
  <?php } ?>
  <?php if(isset($rollno) && $rollno != '') { ?>
- <div class="">Roll No :  <?php echo $rollno; ?></div>
+ <div class="faculty-title">Roll No :  <?php echo $rollno; ?></div>
  <?php } ?>
  
  <?php if(isset($programmename) && $programmename != '') { ?>
- <div class="">Programme Name : <?php echo $programmename;  ?></div>
+ <div class="programme-title">Programme Name : <?php echo $programmename;  ?></div>
  <?php } ?>
  <?php if(isset($facultyname) && $facultyname != '') { ?>
- <div class="">Faculty Name :  <?php echo $facultyname; ?></div>
+ <div class="faculty-title">Faculty Name :  <?php echo $facultyname; ?></div>
  <?php } ?>
- 
+ <div style="margin-bottom:30px;"></div>
 <div id="pjax-list" data-pjax-container=""><div id="w0" class="grid-view">
+
 <div class="year_1_2">
 <?php if(count($studentmarks1)>0) { ?>
 <div class="year_1">
 <table><thead>
 </thead>
 <tbody>
-<tr><td colspan="<?php echo count($studentmarks1)*4 ?>">Year 1</td></tr>
+<tr><td class="yr" colspan="<?php echo count($studentmarks1)*4 ?>">Year 1</td></tr>
 <?php $sem1 = 0; $sem2 = 0; for($i=0; $i<count($studentmarks1); $i++) { 
 if($studentmarks1[$i]['semister'] == 1){
 	$sem1 = $sem1+1;
@@ -176,18 +181,18 @@ if($studentmarks1[$i]['semister'] == 2){
 <?php } ?>
 <tr>
 <?php if($sem1 > 0) { ?>
-<td colspan="<?php echo $sem1*4 ?>">Semester 1</td>
+<td class="sem" colspan="<?php echo $sem1*4 ?>">Semester 1</td>
 <?php } ?>
 <?php if($sem2 > 0) { ?>
-<td colspan="<?php echo $sem2*4 ?>">Semester 2</td>
+<td class="sem" colspan="<?php echo $sem2*4 ?>">Semester 2</td>
 <?php } ?>
 </tr>
-<tr data-key="0">
+<tr data-key="0" class="mybg">
 <?php for($i=0; $i<count($studentmarks1); $i++) { ?>
 <td colspan="4"><?php echo $studentmarks1[$i]['moduleid'] ?></td>
 <?php } ?>
 </tr>
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks1); $i++) { ?>
 <td>CW</td>
 <td>EW</td>
@@ -197,7 +202,7 @@ if($studentmarks1[$i]['semister'] == 2){
 </tr>
 
 
-<tr>
+<tr class="mybg">
 <?php for($i=0; $i<count($studentmarks1); $i++) { ?>
 <td><?php echo $studentmarks1[$i]['ew_percentage'].'%'; ?></td>
 <td><?php echo $studentmarks1[$i]['cw_percentage'].'%'; ?></td>
@@ -222,7 +227,7 @@ if($studentmarks1[$i]['semister'] == 2){
 <table><thead>
 </thead>
 <tbody>
-<tr><td colspan="<?php echo count($studentmarks2)*4 ?>">Year 2</td></tr>
+<tr><td class="yr" colspan="<?php echo count($studentmarks2)*4 ?>">Year 2</td></tr>
 <?php $sem3 = 0; $sem4 = 0; for($i=0; $i<count($studentmarks2); $i++) { 
 if($studentmarks2[$i]['semister'] == 3){
 	$sem3 = $sem3+1;
@@ -234,10 +239,10 @@ if($studentmarks2[$i]['semister'] == 4){
 <?php } ?>
 <tr>
 <?php if($sem3 > 0) { ?>
-<td colspan="<?php echo $sem3*4 ?>">Semester 3</td>
+<td class="sem" colspan="<?php echo $sem3*4 ?>">Semester 3</td>
 <?php } ?>
 <?php if($sem4 > 0) { ?>
-<td colspan="<?php echo $sem4*4 ?>">Semester 4</td>
+<td class="sem" colspan="<?php echo $sem4*4 ?>">Semester 4</td>
 <?php } ?>
 </tr>
 <tr data-key="0">
@@ -282,7 +287,7 @@ if($studentmarks2[$i]['semister'] == 4){
 <table><thead>
 </thead>
 <tbody>
-<tr><td colspan="<?php echo count($studentmarks3)*4 ?>">Year 3</td></tr>
+<tr><td class="yr" colspan="<?php echo count($studentmarks3)*4 ?>">Year 3</td></tr>
 <?php $sem5 = 0; $sem6 = 0; for($i=0; $i<count($studentmarks3); $i++) { 
 if($studentmarks3[$i]['semister'] == 5){
 	$sem5 = $sem5+1;
@@ -294,10 +299,10 @@ if($studentmarks3[$i]['semister'] == 6){
 <?php } ?>
 <tr>
 <?php if($sem5 > 0) { ?>
-<td colspan="<?php echo $sem5*4 ?>">Semester 5</td>
+<td class="sem" colspan="<?php echo $sem5*4 ?>">Semester 5</td>
 <?php } ?>
 <?php if($sem6 > 0) { ?>
-<td colspan="<?php echo $sem6*4 ?>">Semester 6</td>
+<td class="sem" colspan="<?php echo $sem6*4 ?>">Semester 6</td>
 <?php } ?>
 </tr>
 <tr data-key="0">
@@ -340,7 +345,7 @@ if($studentmarks3[$i]['semister'] == 6){
 <table><thead>
 </thead>
 <tbody>
-<tr><td colspan="<?php echo count($studentmarks4)*4 ?>">Year 4</td></tr>
+<tr><td class="yr" colspan="<?php echo count($studentmarks4)*4 ?>">Year 4</td></tr>
 <?php $sem7 = 0; $sem8 = 0; for($i=0; $i<count($studentmarks4); $i++) { 
 if($studentmarks4[$i]['semister'] == 7){
 	$sem7 = $sem7+1;
@@ -352,10 +357,10 @@ if($studentmarks4[$i]['semister'] == 8){
 <?php } ?>
 <tr>
 <?php if($sem7 > 0) { ?>
-<td colspan="<?php echo $sem7*4 ?>">Semester 7</td>
+<td class="sem" colspan="<?php echo $sem7*4 ?>">Semester 7</td>
 <?php } ?>
 <?php if($sem8 > 0) { ?>
-<td colspan="<?php echo $sem8*4 ?>">Semester 8</td>
+<td class="sem" colspan="<?php echo $sem8*4 ?>">Semester 8</td>
 <?php } ?>
 </tr>
 <tr data-key="0">
@@ -395,5 +400,6 @@ if($studentmarks4[$i]['semister'] == 8){
 </div>
 <?php } ?>
 </div></div>
-</body>
+	</body>
 </html>
+		

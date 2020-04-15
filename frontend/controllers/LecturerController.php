@@ -116,7 +116,7 @@ class LecturerController extends \common\controllers\CommonController {
 	 }
 	 
 	  public function actionLecturerLogin($username = '') {
-		//try{
+		try{
             if(!Yii::$app->user->id){
             $model = new \common\models\LoginForm();
             $model->scenario = 'loginpage';
@@ -169,9 +169,9 @@ Yii::$app->cache->flush();
         }else{
             return $this->redirect(Yii::$app->getUrlManager()->getBaseUrl() . '/../../');
         }
-		/*} catch (\Exception $e) {
+		} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
     }
 	
 	public function actionLecturerDashboard()
@@ -187,7 +187,7 @@ Yii::$app->cache->flush();
 	 
     public function actionCreateLecturer()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $userformmodel = new \common\models\CreateLecturerForm();
             $signup = new \frontend\models\SignupForm();
@@ -254,14 +254,14 @@ Yii::$app->cache->flush();
 	return $this->render('create-lecturer',[
 		'userformmodel'=>$userformmodel
 	    ]);    
-	   // } catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+	    } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
     
     public function actionUpdateLecturer()
     {
-	    //try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $userformmodel = new \common\models\CreateLecturerForm();
 	    $lecturerdata=Lecturer::getLecturersDataByUserRefId(Yii::$app->request->get('id'));
@@ -280,17 +280,19 @@ Yii::$app->cache->flush();
 		'lecturerdata'=>$lecturerdata[0],
 		'userformmodel'=>$userformmodel
 	    ]);    
-	  //  } catch (\Exception $e) {
-            //\common\controllers\CommonController::exceptionMessage($e->getMessage());
-       // }
+	    } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
     
     
     
     public function actionLecturersList(){
-    //try{
+    try{
 	    $lecturer = new Lecturer();
-	  $uQuery=Lecturer::getLecturersListRecords();
+		$name = Yii::$app->getRequest()->getQueryParam('name') ? Yii::$app->getRequest()->getQueryParam('name') : "";
+		$email = Yii::$app->getRequest()->getQueryParam('email') ? Yii::$app->getRequest()->getQueryParam('email') : "";
+	  $uQuery=Lecturer::getLecturersListRecords($name,$email);
 		$query = $uQuery;		
 		$count = $uQuery->count();
            return $this->render('lecturers-list',[
@@ -298,9 +300,9 @@ Yii::$app->cache->flush();
             'query'=>$query,
             'count'=>$count
                 ]);
-        //} catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+        } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
 	
     }
     
@@ -336,7 +338,7 @@ Yii::$app->cache->flush();
     }
 	
 	public function actionAddMarks(){
-	   // try{
+	    try{
         Yii::$app->cache->flush();
         //print_r($studentdata[0]['name']); exit;
             $marksformmodel = new \common\models\AddStudentMarksForm();
@@ -423,21 +425,21 @@ Yii::$app->cache->flush();
 			return $this->render('add-marks',[
 				'marksformmodel'=>$marksformmodel
 					]);
-		/*} catch (\Exception $e) {
+		} catch (\Exception $e) {
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());
-			}*/
+			}
 		}
 		
 		public function actionGetModulesByLecturerSemister(){
 			
-	    //try{
+	    try{
 			$semister = Yii::$app->request->get('semister');
 			$userid = Yii::$app->request->get('userid');
 			$modules = Module::getModulesByLecturer($semister,$userid);
 			return json_encode($modules);
-			/*} catch (\Exception $e) {
+			} catch (\Exception $e) {
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());
-			}*/
+			}
 		}
 		
 		public function actionGetStudentsByLecturer(){

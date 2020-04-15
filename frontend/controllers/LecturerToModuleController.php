@@ -89,7 +89,7 @@ class LecturerToModuleController extends \common\controllers\CommonController {
 	   
 	    public function actionAddLecturerToModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $lecturermoduleformmodel = new \common\models\CreateLecturerToModuleForm();
 		$modules = Module::getAllModuleList();
@@ -115,14 +115,14 @@ class LecturerToModuleController extends \common\controllers\CommonController {
 				'modules'=>$modules,
 				'lecturer'=>$lecturer
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateLecturerToModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $lecturermoduleformmodel = new \common\models\CreateLecturerToModuleForm();
 		$modules = Module::getAllModuleList();
@@ -149,9 +149,9 @@ class LecturerToModuleController extends \common\controllers\CommonController {
 				'lecturer'=>$lecturer,
 				'data'=>$assignlecturermodule
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 				
 	public function actionLecturerToModuleList()
@@ -159,7 +159,9 @@ class LecturerToModuleController extends \common\controllers\CommonController {
 	    try{
 	    Yii::$app->cache->flush();
 		$model = new AssignLecturerModule();
-            $uQuery = AssignLecturerModule::getAllRecords();
+		$lecturer_name = Yii::$app->getRequest()->getQueryParam('lecturer_name') ? Yii::$app->getRequest()->getQueryParam('lecturer_name') : "";
+		$module_name = Yii::$app->getRequest()->getQueryParam('module_name') ? Yii::$app->getRequest()->getQueryParam('module_name') : "";
+            $uQuery = AssignLecturerModule::getAllRecords($lecturer_name,$module_name);
 				$query = $uQuery;		
 				$count = $uQuery->count();
 				return $this->render('lecturer-to-module-list',[

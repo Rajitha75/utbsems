@@ -88,7 +88,7 @@ class ModuleToProgrammeController extends \common\controllers\CommonController {
     
 	   public function actionAddModuleToProgramme()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleprogrammeformmodel = new \common\models\CreateModuleToProgrammeForm();
 		$modules = Module::getAllModuleList();
@@ -115,14 +115,14 @@ class ModuleToProgrammeController extends \common\controllers\CommonController {
 				'modules'=>$modules,
 				'programme'=>$programme
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateModuleToProgramme()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleprogrammeformmodel = new \common\models\CreateModuleToProgrammeForm();
 		$modules = Module::getAllModuleList();
@@ -150,9 +150,9 @@ class ModuleToProgrammeController extends \common\controllers\CommonController {
 				'programme'=>$programme,
 				'data'=>$assignmoduleprogramme
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 				
 	public function actionModuleToProgrammeList()
@@ -160,7 +160,10 @@ class ModuleToProgrammeController extends \common\controllers\CommonController {
 	    try{
 	    Yii::$app->cache->flush();
 		$model = new AssignModuleProgramme();
-            $uQuery = AssignModuleProgramme::getAllRecords();
+		$programme_name = Yii::$app->getRequest()->getQueryParam('programme_name') ? Yii::$app->getRequest()->getQueryParam('programme_name') : "";
+		$module_name = Yii::$app->getRequest()->getQueryParam('module_name') ? Yii::$app->getRequest()->getQueryParam('module_name') : "";
+		$semester = Yii::$app->getRequest()->getQueryParam('semester') ? Yii::$app->getRequest()->getQueryParam('semester') : "";
+            $uQuery = AssignModuleProgramme::getAllRecords($programme_name,$module_name,$semester);
 				$query = $uQuery;		
 				$count = $uQuery->count();
 				return $this->render('module-to-programme-list',[
@@ -168,7 +171,7 @@ class ModuleToProgrammeController extends \common\controllers\CommonController {
 					'query'=>$query,
 					'count'=>$count
 				]);   
-	    } catch (\Exception $e) {
+	   } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }
 	   }

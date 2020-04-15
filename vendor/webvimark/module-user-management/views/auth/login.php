@@ -16,8 +16,8 @@ body{background:#fff !important;box-shadow:none !important;height:100% !importan
 .container {width: 100%;padding: 0 3%;}
 .page-header-fixed .page-container{position:relative;height:100%;}
 #w0-collapse ul#w1, #w0-collapse ul#w2, #w0-collapse ul#w1 li:first-child{margin:0;}
-.login_page .site-login1 .panel-heading{background-color: #e33066 !important;padding: 20px 10px;color: #fff;text-transform: uppercase;text-align: center;border: none !important;}
-.login_page .site-login1 .button-container1 button{padding: 5px 45px !important;background: #ef5350 !important;border: 1px solid #ef5350;font-size: 20px;font-weight: 600;border-radius: 10px !important;color: #fff !important;}
+.login_page .site-login1 .panel-heading{background-color: #8194ac !important;padding: 20px 10px;color: #fff;text-transform: uppercase;text-align: center;border: none !important;}
+.login_page .site-login1 .button-container1 button{padding: 5px 45px !important;background: #36c6d3 !important;border: 1px solid #36c6d3;font-size: 20px;font-weight: 600;border-radius: 10px !important;color: #fff !important;}
 footer{position:fixed;bottom:0;}
 .login_page .site-login1 .button-container1 .lg-pgbtn1:hover{color:#ffa500 !important;}
 .refresh_captcha {

@@ -48,7 +48,7 @@ html.intro-over, html.intro-over body {
     height: 100%;
 }
 .login_page .site-login .panel-heading {
-    background-color: #e33066 !important;
+    background-color: #8194ac !important;
     padding: 20px 10px;
     color: #fff;
     text-transform: uppercase;

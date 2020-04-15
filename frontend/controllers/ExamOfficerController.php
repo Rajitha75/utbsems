@@ -608,7 +608,7 @@ Yii::$app->cache->flush();
     
     public function actionUpdateExamOfficer()
     {
-	    //try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $userformmodel = new \common\models\CreateExamOfficerForm();
 	    
@@ -630,17 +630,19 @@ Yii::$app->cache->flush();
 		'userformmodel'=>$userformmodel,
 		'isadmin'=>$userdata['is_admin']
 	    ]);    
-	  //  } catch (\Exception $e) {
-            //\common\controllers\CommonController::exceptionMessage($e->getMessage());
-       // }
+	    } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
     
     
     
     public function actionExamOfficersList(){
-    //try{
+    try{
 	    $examofficer = new ExamOfficer();
-	  $uQuery=ExamOfficer::getExamOfficersList();
+		$name = Yii::$app->getRequest()->getQueryParam('name') ? Yii::$app->getRequest()->getQueryParam('name') : "";
+		$email = Yii::$app->getRequest()->getQueryParam('email') ? Yii::$app->getRequest()->getQueryParam('email') : "";
+	  $uQuery=ExamOfficer::getExamOfficersList($name,$email);
 		$query = $uQuery;		
 		$count = $uQuery->count();
            return $this->render('exam-officers-list',[
@@ -648,9 +650,9 @@ Yii::$app->cache->flush();
             'query'=>$query,
             'count'=>$count
                 ]);
-        //} catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+        } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
 	
     }
     
@@ -688,7 +690,7 @@ Yii::$app->cache->flush();
 	
     public function actionCreateLecturer()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $userformmodel = new \common\models\CreateLecturerForm();
             $signup = new \frontend\models\SignupForm();
@@ -754,14 +756,14 @@ Yii::$app->cache->flush();
 	return $this->render('create-lecturer',[
 		'userformmodel'=>$userformmodel
 	    ]);    
-	   // } catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+	    } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
     
     public function actionUpdateLecturer()
     {
-	    //try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $userformmodel = new \common\models\CreateLecturerForm();
 	    $lecturerdata=Lecturer::getLecturersDataByUserRefId(Yii::$app->request->get('id'));
@@ -780,15 +782,15 @@ Yii::$app->cache->flush();
 		'lecturerdata'=>$lecturerdata[0],
 		'userformmodel'=>$userformmodel
 	    ]);    
-	  //  } catch (\Exception $e) {
-            //\common\controllers\CommonController::exceptionMessage($e->getMessage());
-       // }
+	    } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
     
     
     
     public function actionLecturersList(){
-    //try{
+    try{
 	    $lecturer = new Lecturer();
 	  $uQuery=Lecturer::getLecturersListRecords();
 		$query = $uQuery;		
@@ -798,9 +800,9 @@ Yii::$app->cache->flush();
             'query'=>$query,
             'count'=>$count
                 ]);
-        //} catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+        } catch (\Exception $e) {
+           \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
 	
     }
     
@@ -920,7 +922,7 @@ Yii::$app->cache->flush();
 	
 	public function actionAddProgramme()
     {
-	  //  try{
+	    try{
 	    Yii::$app->cache->flush();
 		$faculty = Faculty::getAllFaculty();
 	    $programmeformmodel = new \common\models\CreateProgrammeForm();
@@ -941,9 +943,9 @@ Yii::$app->cache->flush();
 				'programmeformmodel'=>$programmeformmodel,
 				'faculty'=>$faculty
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateProgramme()
@@ -1010,53 +1012,9 @@ Yii::$app->cache->flush();
         }
 	   }
 	   
-	   public function actionAddModuldsde()
-    {
-	   // try{
-	    Yii::$app->cache->flush();
-	    $moduleformmodel = new \common\models\CreateModuleForm();
-		$modulenames=Module::getModuleNames();
-		$programmes=Programme::getAllProgrammes();
-            $module = new Module();
-			$moduleprogramme = new ModuleProgramme();
-            if($moduleformmodel->load(Yii::$app->request->post())){
-				$postvariable=Yii::$app->request->post('CreateModuleForm');
-				if($postvariable['module_name'] && $postvariable['module_name'] != ''){
-				$modules=Module::getModuleIfExists($postvariable['module_name'], $postvariable['module_id']);
-					if(count($modules)>0){
-						$moduleid = $modules[0]['id'];
-					}else{
-						$module->module_name = ucwords($postvariable['module_name']);
-						$module->status = 1;
-						$module->save(false);
-						$moduleid = Yii::$app->db->getLastInsertID();
-						}
-				}else if($postvariable['module_id'] && $postvariable['module_id'] != ''){
-					$moduleid = $postvariable['module_id'];
-				}
-				
-				$ifmodprogexists=ModuleProgramme::checkModuleProgrammeExists($postvariable['programme_id'],$moduleid, $postvariable['semister']);
-				if($ifmodprogexists == 0){
-				$moduleprogramme->programme_id = $postvariable['programme_id'];
-				$moduleprogramme->semister = $postvariable['semister'];
-				$moduleprogramme->module_id = $moduleid;
-				$moduleprogramme->save(false);
-				}
-			}
-			//print_r($programmes); exit;
-			return $this->render('add-module',[
-				'moduleformmodel'=>$moduleformmodel,
-				'programmes'=>$programmes,
-				'modules'=>$modulenames
-			]);    
-	    /*} catch (\Exception $e) {
-            \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
-	   }
-	   
 	   public function actionAddModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleformmodel = new \common\models\CreateModuleForm();
             $module = new Module();
@@ -1075,14 +1033,14 @@ Yii::$app->cache->flush();
 			return $this->render('add-module',[
 				'moduleformmodel'=>$moduleformmodel
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleformmodel = new \common\models\CreateModuleForm();
 			$moduleid = Yii::$app->request->get('id');
@@ -1103,9 +1061,9 @@ Yii::$app->cache->flush();
 				'moduleformmodel'=>$moduleformmodel,
 				'moduledata'=>$moduledata
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionModulesList()
@@ -1144,7 +1102,7 @@ Yii::$app->cache->flush();
 	
 	public function actionAddProgrammeToFaculty()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $programmefacultyformmodel = new \common\models\CreateProgrammeToFacultyForm();
 		$faculty = Faculty::getAllFaculty();
@@ -1166,14 +1124,14 @@ Yii::$app->cache->flush();
 				'faculty'=>$faculty,
 				'programme'=>$programme
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateProgrammeToFaculty()
     {
-	   // try{
+	   try{
 	    Yii::$app->cache->flush();
 	    $programmefacultyformmodel = new \common\models\CreateProgrammeToFacultyForm();
 		$faculty = Faculty::getAllFaculty();
@@ -1197,9 +1155,9 @@ Yii::$app->cache->flush();
 				'programme'=>$programme,
 				'data'=>$assignprogrammefaculty
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 				
 	public function actionProgrammeToFacultyList()
@@ -1233,7 +1191,7 @@ Yii::$app->cache->flush();
 	   
 	   public function actionAddModuleToProgramme()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleprogrammeformmodel = new \common\models\CreateModuleToProgrammeForm();
 		$modules = Module::getAllModuleList();
@@ -1256,14 +1214,14 @@ Yii::$app->cache->flush();
 				'modules'=>$modules,
 				'programme'=>$programme
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateModuleToProgramme()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleprogrammeformmodel = new \common\models\CreateModuleToProgrammeForm();
 		$modules = Module::getAllModuleList();
@@ -1287,9 +1245,9 @@ Yii::$app->cache->flush();
 				'programme'=>$programme,
 				'data'=>$assignmoduleprogramme
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 				
 	public function actionModuleToProgrammeList()
@@ -1323,7 +1281,7 @@ Yii::$app->cache->flush();
 	   
 	    public function actionAddLecturerToModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $lecturermoduleformmodel = new \common\models\CreateLecturerToModuleForm();
 		$modules = Module::getAllModuleList();
@@ -1346,14 +1304,14 @@ Yii::$app->cache->flush();
 				'modules'=>$modules,
 				'lecturer'=>$lecturer
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateLecturerToModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $lecturermoduleformmodel = new \common\models\CreateLecturerToModuleForm();
 		$modules = Module::getAllModuleList();
@@ -1377,9 +1335,9 @@ Yii::$app->cache->flush();
 				'lecturer'=>$lecturer,
 				'data'=>$assignlecturermodule
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 				
 	public function actionLecturerToModuleList()

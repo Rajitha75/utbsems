@@ -79,7 +79,7 @@ body{
     margin-top: 15px !important;
 }
 .description .tit{
-	background:#e7505a !important;
+	background:#00224c !important;
 	padding: 10px !important;
     color: #fff !important;
     font-size: 18px !important;

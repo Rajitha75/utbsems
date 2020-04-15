@@ -38,12 +38,16 @@ class Programme extends \yii\db\ActiveRecord
         return $data;
     }
 	
-	public static function getAllProgrammeList(){
-        $data = (new Query())->select(['p.id AS pid', 'p.programme_name', 'p.faculty_id', 'f.id AS fid', 'faculty_name', 'p.status'])
+	public static function getAllProgrammeList($programme_name){
+        $uQuery = (new Query())->select(['p.id AS pid', 'p.programme_name', 'p.faculty_id', 'f.id AS fid', 'faculty_name', 'p.status'])
         ->from('programme AS p')
-		->join('LEFT JOIN', 'faculty AS f', 'f.id = p.faculty_id')
+		->where(1);
+		if(!empty($programme_name)){
+			if(!empty($programme_name))   $uQuery->andWhere(['LIKE' , 'programme_name', $programme_name]);
+		}
+		$uQuery->join('LEFT JOIN', 'faculty AS f', 'f.id = p.faculty_id')
 		->orderBy(['programme_name'=>SORT_ASC]);
-        return $data;
+        return $uQuery;
     }
 	
 	public static function getProgrammeIfExists($programme_name){

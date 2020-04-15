@@ -87,10 +87,15 @@ class Lecturer extends \yii\db\ActiveRecord
 		return $uQuery;
     }
 	
-	public static function getLecturersListRecords(){
+	public static function getLecturersListRecords($name,$email){
 	    $uQuery = (new Query())->select(['l.id','name','gender','user_ref_id','u.email','ic_no','passportno', 'emailother', 'u.status'])
         ->from('lecturers AS l')
-        ->join('LEFT JOIN', 'user AS u', 'u.id = l.user_ref_id');
+		->where(1);
+		if(!empty($name) || !empty($email)){
+			if(!empty($name))   $uQuery->andWhere(['LIKE' , 'name', $name]);
+			if(!empty($email))   $uQuery->andWhere(['LIKE' , 'u.email', $email]);
+		}
+        $uQuery->join('LEFT JOIN', 'user AS u', 'u.id = l.user_ref_id');
 	$uQuery->orderBy(['name'=>SORT_DESC]);
     //print_r($uQuery);exit;
 		return $uQuery;

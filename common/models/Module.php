@@ -63,10 +63,16 @@ class Module extends \yii\db\ActiveRecord
         return $data;
     }
 	
-	public static function getAllModuleListRecords(){
-        $data = (new Query())->select('*')
-        ->from('modules')->orderBy(['module_name'=>SORT_ASC]);
-        return $data;
+	public static function getAllModuleListRecords($module_id,$module_name){
+        $uQuery = (new Query())->select('*')
+        ->from('modules')
+		->where(1);
+		if(!empty($module_id) || !empty($module_name)){
+			if(!empty($module_id))   $uQuery->andWhere(['LIKE' , 'module_id', $module_id]);
+			if(!empty($module_name))   $uQuery->andWhere(['LIKE' , 'module_name', $module_name]);
+		}
+		$uQuery->orderBy(['module_name'=>SORT_ASC]);
+        return $uQuery;
     }
 	
 	public static function getModulesByLecturer($semister,$userid){

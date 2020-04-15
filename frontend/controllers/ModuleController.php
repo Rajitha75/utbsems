@@ -89,7 +89,7 @@ class ModuleController extends \common\controllers\CommonController {
 	   
 	   public function actionAddModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleformmodel = new \common\models\CreateModuleForm();
             $module = new Module();
@@ -111,14 +111,14 @@ class ModuleController extends \common\controllers\CommonController {
 			return $this->render('add-module',[
 				'moduleformmodel'=>$moduleformmodel
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateModule()
     {
-	   // try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $moduleformmodel = new \common\models\CreateModuleForm();
 			$moduleid = Yii::$app->request->get('id');
@@ -147,9 +147,9 @@ class ModuleController extends \common\controllers\CommonController {
 				'moduleformmodel'=>$moduleformmodel,
 				'moduledata'=>$moduledata
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionModulesList()
@@ -157,7 +157,9 @@ class ModuleController extends \common\controllers\CommonController {
 	    try{
 	    Yii::$app->cache->flush();
 		$module = new Module();
-            $uQuery = Module::getAllModuleListRecords();
+		$module_id = Yii::$app->getRequest()->getQueryParam('module_id') ? Yii::$app->getRequest()->getQueryParam('module_id') : "";
+		$module_name = Yii::$app->getRequest()->getQueryParam('module_name') ? Yii::$app->getRequest()->getQueryParam('module_name') : "";
+            $uQuery = Module::getAllModuleListRecords($module_id,$module_name);
 				$query = $uQuery;		
 				$count = $uQuery->count();
 				return $this->render('modules-list',[

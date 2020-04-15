@@ -177,7 +177,7 @@ class AdminController extends \common\controllers\CommonController
 	
 	public function actionUpdateExamOfficer()
     {
-	    //try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $userformmodel = new \common\models\CreateExamOfficerForm();
             if($userformmodel->load(Yii::$app->request->post())){
@@ -200,9 +200,9 @@ class AdminController extends \common\controllers\CommonController
 		'userformmodel'=>$userformmodel,
 		'isadmin'=>$userdata['is_admin']
 	    ]);    
-	  //  } catch (\Exception $e) {
-            //\common\controllers\CommonController::exceptionMessage($e->getMessage());
-       // }
+	    } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
 	
 	public function actionExamOfficerDelete($id)
@@ -222,7 +222,7 @@ class AdminController extends \common\controllers\CommonController
     }
 
     public function actionExamOfficersList(){
-    //try{
+    try{
 	    $examofficer = new ExamOfficer();
 	  $uQuery=ExamOfficer::getExamOfficersList();
 		$query = $uQuery;		
@@ -232,9 +232,9 @@ class AdminController extends \common\controllers\CommonController
             'query'=>$query,
             'count'=>$count
                 ]);
-        //} catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+        } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
 	
     }
     
@@ -592,7 +592,7 @@ class AdminController extends \common\controllers\CommonController
     }
 
     public function actionStudentsList(){
-		//try{
+		try{
 			Yii::$app->cache->flush();
         $student = new Student();
 		$programme = Programme::getAllProgrammes();
@@ -651,9 +651,9 @@ class AdminController extends \common\controllers\CommonController
             'count'=>$count,
 			'programme'=>$programme
         ]);
-		//} catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
 
     public function actionStudentView($id){

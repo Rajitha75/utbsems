@@ -886,7 +886,7 @@ Yii::$app->cache->flush();
     
     public function actionCreateMarksmpdf()
     {
-		//try{
+		try{
 		if(Yii::$app->session['userRole'] == 2){
 			$sid = Yii::$app->user->id;
 			$student = Student::find()->where(['user_ref_id' => $sid])->one();
@@ -914,14 +914,14 @@ Yii::$app->cache->flush();
         $fileName = str_replace(" ", "_", $studentname) . '.pdf';
         $mpdf->Output($fileName, 'I');
         exit;
-		/*} catch (\Exception $e) {
+		} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
     }
     
     public function actionViewAllMarksPdf()
     {
-		//try{
+		try{
 		$studentmarks = [];
 			$role = Yii::$app->session['userRole'];
 			if($role == 3){
@@ -948,9 +948,48 @@ Yii::$app->cache->flush();
         $fileName = 'Students Marks' . '.pdf';
         $mpdf->Output($fileName, 'I');
         exit;
-		/*} catch (\Exception $e) {
+		} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
+    }
+	
+	public function actionViewEditStudentMarksPdf()
+    {
+		try{
+				$year = Yii::$app->getRequest()->getQueryParam('year') ? Yii::$app->getRequest()->getQueryParam('year') : "";
+				$studentid = Yii::$app->getRequest()->getQueryParam('id') ? Yii::$app->getRequest()->getQueryParam('id') : "";
+				$studentmarks = AddStudentMarks::getStudentSemWiseMarks($year, $studentid);
+				$studentprevdata = AddStudentMarksTemporary::getAllExistingStudentsMarks($year, $studentid, 'pa', 'savesubmit');
+				$studentprevdata2 = AddStudentMarksTemporary::getAllExistingStudentsMarks($year, $studentid, 'fs', 'savesubmit');
+				$studentprevdata3 = AddStudentMarksTemporary::getAllExistingStudentsMarks($year, $studentid, 'ueb', 'savesubmit');
+				if($year == 1){
+					$sem1 = 1;$sem2 = 2;
+				}else if($year == 2){
+					$sem1 = 3;$sem2 = 4;
+				}else if($year == 3){
+					$sem1 = 5;$sem2 = 6;
+				}else if($year == 4){
+					$sem1 = 7;$sem2 = 6;
+				}
+			
+			//print_r($studentprevdata2);exit;
+			//try{
+			 $pdf_content=$this->renderPartial('view-edit-student-marks-pdf', [
+				'studentmarks'=>$studentmarks,
+				'studentprevdata'=>$studentprevdata,
+				'studentprevdata2'=>$studentprevdata2,
+				'studentprevdata3'=>$studentprevdata3,
+				'year'=>$year,
+			]);
+        //print_r($pdf_content);exit;
+        $mpdf = new \mPDF();
+        $mpdf->WriteHTML($pdf_content);
+        $fileName = 'Students Stage Wise Marks' . '.pdf';
+        $mpdf->Output($fileName, 'I');
+        exit;
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
 	
 	public function actionStudentDelete($id)
@@ -972,7 +1011,7 @@ Yii::$app->cache->flush();
     }
 
     public function actionStudentsList(){
-		//try{
+		try{
 			Yii::$app->cache->flush();
         $student = new Student();
 		$programme = Programme::getAllProgrammes();
@@ -1031,9 +1070,9 @@ Yii::$app->cache->flush();
             'count'=>$count,
 			'programme'=>$programme
         ]);
-		//} catch (\Exception $e) {
-          //  \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        //}
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
     }
 
     public function actionStudentView($id){
@@ -1050,7 +1089,7 @@ Yii::$app->cache->flush();
 	
 	public function actionStudentMarks(){
 			
-	    //try{
+	    try{
 		    if(Yii::$app->session['userRole'] == 2){
 			$sid = Yii::$app->user->id;
 			$student = Student::find()->where(['user_ref_id' => $sid])->one();
@@ -1069,14 +1108,14 @@ Yii::$app->cache->flush();
 				'studentmarks3'=>$studentmarksquery3,
 				'studentmarks4'=>$studentmarksquery4
 			]);
-			/*} catch (\Exception $e) {
+			} catch (\Exception $e) {
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());
-			}*/
+			}
 		}
 		
 	public function actionAllStudentsMarks(){
 			
-	    //try{
+	    try{
 			$studentmarks = [];
 			$role = Yii::$app->session['userRole'];
 			if($role == 3){
@@ -1097,12 +1136,13 @@ Yii::$app->cache->flush();
 				'studentmarks3'=>$studentmarksquery3,
 				'studentmarks4'=>$studentmarksquery4
 			]);
-			/*} catch (\Exception $e) {
+			} catch (\Exception $e) {
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());
-			}*/
+			}
 		}
 		
 		public function actionEditStudentMarks(){
+			try{
 			Yii::$app->cache->flush();
 			
 			//echo $stage;exit;
@@ -1129,8 +1169,12 @@ Yii::$app->cache->flush();
 					$model->updated_by = Yii::$app->user->id;
 					if($postvariable['prev_is_submit'] == 'submit'){
 						$stg = 'pasubmit';
+						$ssubmit = 'submit';
+						Yii::$app->session->setFlash('editformpasubmitted');
 					}else{
 						$stg = 'pasaved';
+						$ssubmit = 'save';
+						Yii::$app->session->setFlash('editformpasaved');
 					}
 					$model->stage=$stg;
 					$model->save();
@@ -1155,8 +1199,12 @@ Yii::$app->cache->flush();
 					$model->updated_by = Yii::$app->user->id;
 					if($postvariable['is_submit'] == 'submit'){
 						$stg = 'pasubmit';
+						$ssubmit = 'submit';
+						Yii::$app->session->setFlash('editformpasubmitted');
 					}else{
 						$stg = 'pasaved';
+						$ssubmit = 'save';
+						Yii::$app->session->setFlash('editformpasaved');
 					}
 					$model->stage=$stg;
 					$model->save();
@@ -1189,8 +1237,12 @@ Yii::$app->cache->flush();
 					$model->updated_by = Yii::$app->user->id;
 					if($postvariable['prev2_is_submit'] == 'submit'){
 						$stg = 'fssubmit';
+						$ssubmit = 'submit';
+						Yii::$app->session->setFlash('editformfssubmitted');
 					}else{
 						$stg = 'fssaved';
+						$ssubmit = 'save';
+						Yii::$app->session->setFlash('editformfssaved');
 					}
 					$model->stage=$stg;
 					//print_r($model);exit;
@@ -1225,8 +1277,12 @@ Yii::$app->cache->flush();
 					$model->updated_by = Yii::$app->user->id;
 					if($postvariable['prev3_is_submit'] == 'submit'){
 						$stg = 'uebsubmit';
+						$ssubmit = 'submit';
+						Yii::$app->session->setFlash('editformuebsubmitted');
 					}else{
 						$stg = 'uebsaved';
+						$ssubmit = 'save';
+						Yii::$app->session->setFlash('editformuebsaved');
 					}
 					$model->stage=$stg;
 					//print_r($model);exit;
@@ -1249,7 +1305,11 @@ Yii::$app->cache->flush();
 					}*/
 				}
 			}
+			if($ssubmit == 'save'){
+				return $this->redirect('edit-student-marks?year='.$year.'&id='.$studentid);
+			}else{
 				return $this->redirect('all-students-marks');
+			}
 			}else{
 				$year = Yii::$app->getRequest()->getQueryParam('year') ? Yii::$app->getRequest()->getQueryParam('year') : "";
 				$studentid = Yii::$app->getRequest()->getQueryParam('id') ? Yii::$app->getRequest()->getQueryParam('id') : "";
@@ -1276,6 +1336,12 @@ Yii::$app->cache->flush();
 				}
 				if($year == 1){
 					$sem1 = 1;$sem2 = 2;
+				}else if($year == 2){
+					$sem1 = 3;$sem2 = 4;
+				}else if($year == 3){
+					$sem1 = 5;$sem2 = 6;
+				}else if($year == 4){
+					$sem1 = 7;$sem2 = 6;
 				}
 			
 			//print_r($studentprevdata2);exit;
@@ -1287,12 +1353,13 @@ Yii::$app->cache->flush();
 				'studentprevdata2'=>$studentprevdata2,
 				'studentprevdata3'=>$studentprevdata3,
 				'year'=>$year,
+				'studentid'=>$studentid
 				//'fsprevdata'=>$fsprevdata
 				]);
 				}
-			/*} catch (\Exception $e) {
+			} catch (\Exception $e) {
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());
-			}*/
+			}
 		}
 	
      

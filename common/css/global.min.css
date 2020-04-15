@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
 body {
-    overflow-x: hidden
+    overflow-x: hidden;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
 }
 
 .header_hide.modal-open {
@@ -22,7 +26,7 @@ body {
 
 .navbar-collapse{    padding-right: 20px !important;
     padding-top: 11px; float:right;}
-.navbar-collapse ul.menu_header li a{ color:#fff;font-weight: bold;}
+.navbar-collapse ul.menu_header li a{ color:#fff;}
 .navbar-collapse ul.menu_header li.login-sec a.tp-nav-btn{ padding:15px 0 15px 15px;}
 .navbar-collapse ul.menu_header li.login-sec a.tp-nav-btn:hover{ background: transparent;}
 
@@ -1089,12 +1093,12 @@ span.media-ribbon img {
 }
 .list-details .like-sec {
     /*margin-top: -9px;*/
-    
+
     color: #000
 }
 .list-details .like-sec i.prjlike {
     /*background: url(like-icon.png) no-repeat top left;*/
-    
+
     width: 18px;
     height: 24px;
     display: inline-block;
@@ -1630,7 +1634,7 @@ div#twitter_div:hover,
 .icon_fb:hover {
     opacity: .5;
     /*border-bottom:1px solid #000*/
-    
+
     ;
     -webkit-transition: .3s ease all;
     transition: .3s ease all
@@ -1908,7 +1912,7 @@ ul.nitification_lc_app li a {
     color: #0e6bef;
     font-size: 10px;
     text-align: left;
-    
+
 }
 .notce-msg {
     width: 216px !important;
@@ -2650,13 +2654,13 @@ ul.finance-dropdwon li a.prjname2 {
     width: 100%;
     margin-bottom: 11px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 18px;
     color: #fff;
     background: #00224c;
     border: 0;
     text-transform: uppercase;
-    font-weight: 600 !important;
-/*    font-family: 'Titillium Web', sans-serif*/
+    font-weight: 500 !important;
+    font-family: 'Titillium Web', sans-serif
 }
 .create-project .btn-primary {
     background: #ef5350 !important;
@@ -2696,24 +2700,24 @@ ul#project_type-filter {
         width: 100px;
         margin-right: 5px
     }
-    
+
     .list-image img {
         width: 100px;
         height: 85px
     }
-    
+
     .row1 {
         font-size: 13px
     }
-    
+
     .reset-but .view_all_bt {
         float: right
     }
-    
+
     .datepicker-days .table-condensed tfoot {
         display: none
     }
-    
+
     .grap-admin {
         display: none
     }
@@ -2723,40 +2727,40 @@ ul#project_type-filter {
     .form-group {
         margin: 0%
     }
-    
+
     .dashboard-page .portlet.light {
         padding: 5px 10px 10px !important
     }
-    
+
     .portlet.light ul.nav.nav-tabs li {
         margin: 5px 10px
     }
-    
+
     .mt-comments .mt-comment {
         padding: 0;
         padding-bottom: 10px
     }
-    
+
     .mt-comments .mt-comment .mt-comment-img>img {
         width: 40px;
         height: 40px;
         border: 1px solid #ccc
     }
-    
+
     .mt-comments .mt-comment .mt-comment-body {
         padding-left: 10px
     }
-    
+
     .mt-comments .mt-comment .mt-comment-body .mt-comment-info .mt-comment-date {
         font-size: 11px;
         font-style: italic;
         margin-right: 3px
     }
-    
+
     .txtComments {
         min-height: 40px !important
     }
-    
+
     .finance-rang a.btn.btn-outline.dark {
         padding: 0;
         border: medium none;
@@ -2764,16 +2768,16 @@ ul#project_type-filter {
         font-size: 13px;
         margin-top: 12px
     }
-    
+
     #customLegend13 .finance-rang a.btn.btn-outline.dark,
     #customLegend23 .finance-rang a.btn.btn-outline.dark {
         margin-right: 0
     }
-    
+
     .finance-dropdwon li a {
         font-size: 13px
     }
-    
+
     .row.head-bar {
         margin-top: 0
     }
@@ -2784,27 +2788,27 @@ ul#project_type-filter {
         margin-right: 0;
         margin-bottom: 15px
     }
-    
+
     .list-image img {
         width: 100%
     }
-    
+
     .bh-sl-container .bh-sl-loc-list .list-details {
         margin-left: 12px !important
     }
-    
+
     .participate-area a {
         font-size: 14px
     }
-    
+
     .datepicker-days .table-condensed {
         width: 330px
     }
-    
+
     .youtube_error.help-block {
         padding-left: 4px
     }
-    
+
     .note-img {
         font-size: 11px;
         float: right
@@ -2815,19 +2819,19 @@ ul#project_type-filter {
         padding-left: 0;
         padding-right: 6px
     }
-    
+
     ul#project_type-filter {
         padding-right: 0
     }
-    
+
     .select-filters .bh-sl-filters-container {
         padding-left: 15px
     }
-    
+
     .list-image {
         width: 100%
     }
-    
+
     .bh-sl-container .bh-sl-loc-list .list-details {
         margin-left: 0px !important;
         padding: 0 10px
@@ -2837,124 +2841,124 @@ ul#project_type-filter {
     .page-sidebar .page-sidebar-menu {
         padding-top: 50px !important
     }
-    
+
     .page-sidebar .page-sidebar-menu>li,
     .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li {
         display: inline-block
     }
-    
+
     .page-sidebar .page-sidebar-menu>li>a {
         border: 1px solid #555556 !important
     }
-    
+
     .page-sidebar .page-sidebar-menu>li.start>a,
     .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.start>a {
         border: 1px solid #555556 !important
     }
-    
+
     .page-sidebar .page-sidebar-menu>li:last-child>a {
         border: 1px solid #555556 !important
     }
-    
+
     ul.page-sidebar-menu.page-header-fixed li a span.title {
         margin-right: 10px
     }
-    
+
     .page-sidebar .page-sidebar-menu>li .sub-menu {
         position: absolute;
         width: 220px;
         padding-bottom: 10px
     }
-    
+
     [class*=" glyphicon-"] {
         margin-bottom: 5px
     }
-    
+
     .respim {
         padding-right: 20px
     }
-    
+
     .page-sidebar .page-sidebar-menu {
         padding: 0 !important
     }
-    
+
     .page-sidebar {
         margin: 10px 20px
     }
-    
+
     .page-sidebar-wrapper {
         display: inline-flex
     }
-    
+
     .wrap.home-toggle {
         margin-top: 57px
     }
-    
+
     .page-sidebar.navbar-collapse.collapse {
         display: block
     }
-    
+
     .menutoglr {
         display: none !important
     }
-    
+
     .ddd {
         width: auto !important
     }
-    
+
     .crsl-item:last-child {
         display: none
     }
-    
+
     .carousel-content-6 p {
         margin-bottom: 10px
     }
-    
+
     .carousel-content-5 {
         padding-top: 10%
     }
-    
+
     .header_hide .navbar-inverse {
         background-color: rgba(0, 0, 0, .35)
     }
-    
+
     .datepicker-days .table-condensed {
         width: 300px
     }
-    
+
     .page-bar {
         margin-bottom: 0
     }
-    
+
     .portlet-body.tab-lebal-none {
         clear: both;
         display: block;
         float: left;
         width: 100%
     }
-    
+
     .portlet-body td.bbbb {
         padding-top: 10px;
         padding-bottom: 5px
     }
-    
+
     .divCommentsDesc .userImg {
         margin-left: 5px
     }
-    
+
     .row.comment-rowtab div#divComments .col-md-12 {
         min-height: 100px
     }
-    
+
     .fancybox-opened {
         width: 90% !important;
         z-index: 999999 !important
     }
-    
+
     .page-header.navbar .menu-toggler {
         display: none !important
     }
-    
+
     .youtube_error.help-block {
         padding-left: 4px
     }
@@ -2963,21 +2967,21 @@ ul#project_type-filter {
     ul.nav.nav-pills.nav-justified li a {
         font-size: 10px
     }
-    
+
     #causesListing #topCauses .cause {
         background-size: cover
     }
-    
+
     .guess_what_row2 .col-md-offset-1 {
         text-align: center
     }
-    
+
     .flex-line {
         margin-top: 0;
         margin-bottom: 10px;
         margin-right: 25px
     }
-    
+
     .field-projectparticipation-equity_type,
     .custom-calendar,
     .clsDropdown,
@@ -2985,124 +2989,124 @@ ul#project_type-filter {
         margin: 10px auto;
         width: 50%
     }
-    
+
     .custom-calendar .form-group {
         margin: 0 auto !important
     }
-    
+
     .enter-location {
         width: 100%;
         margin-bottom: 12px
     }
-    
+
     .select-filters {
         width: 100%
     }
-    
+
     .bh-sl-container .bh-sl-form-container {
         margin-top: 20px !important
     }
-    
+
     .list-image {
         width: 96%;
         margin-bottom: 15px
     }
-    
+
     .list-image img {
         width: 100%
     }
-    
+
     .list-data {
         width: 100%
     }
-    
+
     .bh-sl-container .bh-sl-loc-list .list-details .list-content {
         padding: 0 !important
     }
-    
+
     .bh-sl-container .bh-sl-loc-list .list-details {
         margin-left: 0 !important;
         padding: 5px 0 5px 10px
     }
-    
+
     .scrtabs-tabs-fixed-container {
         width: 240px !important
     }
-    
+
     .participate-area a {
         font-size: 11px
     }
-    
+
     div#twitter_div,
     .mail-shar,
     .icon_fb {
         margin-right: 4px
     }
-    
+
     .btn-sbrt .searchBtn {
         padding-top: 10px !important
     }
-    
+
     .Projects-Participated-Me {
         width: 100%
     }
-    
+
     .wrap.home-toggle {
         margin-top: 120px !important
     }
-    
+
     .header_hide .wrap.home-toggle {
         margin-top: 0px !important
     }
-    
+
     .user-adminlog {
         margin-top: 30px
     }
-    
+
     .col-md-offset-4 {
         width: 80%;
         text-align: center;
         margin: 0 auto
     }
-    
+
     .drpdwn ul.dropdown-menu {
         margin-top: 19px !important;
         background-color: rgba(0, 0, 0, .8) !important;
         border: rgba(0, 0, 0, .8) solid 0px !important;
         box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important
     }
-    
+
     .ad-lst {
         margin: 10px auto;
         width: 50%
     }
-    
+
     .ad-lst .form-group {
         margin-bottom: 0 !important
     }
-    
+
     .ad-lst.p-left0 {
         padding-left: 15px
     }
-    
+
     .btn-sbrt.ad-lst {
         margin: 0 auto;
         width: 140px
     }
-    
+
     .all-userlst {
         display: block
     }
-    
+
     .all-adminlist {
         display: -webkit-box;
         float: none !important
     }
-    
+
     .fl-left1 {
         display: block
     }
-    
+
     .searchBox1 {
         display: -webkit-box;
         float: none !important
@@ -3112,41 +3116,41 @@ ul#project_type-filter {
     .prj-fiter {
         width: 50%
     }
-    
+
     .prj-fiter1 {
         padding: 0 0 0 19px;
         float: left !important;
         width: 130px
     }
-    
+
     .tab-body-project {
         float: none !important
     }
-    
+
     .colsm11-12 {
         width: 100% !important
     }
-    
+
     .searchBox .btn-sbrt {
         float: left !important;
         width: 18%;
         padding: 10px 0;
         padding-left: 15px
     }
-    
+
     .tr-events {
         position: relative
     }
-    
+
     td.td-eventsrsp {
         display: table-cell !important;
         margin: 0 0 0 0 !important
     }
-    
+
     .mp-cmtbox1 {
         width: 100%
     }
-    
+
     .equit-fullwd .form-group.field-projectparticipation-equity_type {
         width: 100%
     }
@@ -3155,7 +3159,7 @@ ul#project_type-filter {
     .map-commet-btn {
         padding: 6px 8px !important
     }
-    
+
     .cmt-btnsent {
         float: left;
         margin: 7px 0 7px 5px
@@ -3165,109 +3169,109 @@ ul#project_type-filter {
     .bh-sl-filters-container select {
         width: 100%;
     }
-    
+
     .navbar-toggle {
         margin-right: 20px
     }
-    
+
     .top-nav {
         margin-right: 0
     }
-    
+
     .sin-log-menu li {
         margin: 0 1px
     }
-    
+
     .sin-log-menu {
         line-height: normal !important
     }
-    
+
     li.username-drpdwn ul.nav.navbar-nav {
         line-height: normal;
         margin: 0 auto
     }
-    
+
     .guess_what_section_4_2 {
         font-size: 3.5em
     }
-    
+
     .guess_what_section_4_3 {
         font-size: 1.4em;
         margin-left: 9px;
         margin-top: 37px
     }
-    
+
     .slick-slide.slick-cloned {
         margin: 10px
     }
-    
+
     .our_technology_div {
         padding: 1%
     }
-    
+
     .guess_what_row2 img {
         width: 100%
     }
-    
+
     .col-lg-4.col-md-4.col-sm-4.col-xs-12.our_technology_mid.hidden-sm {
         padding: 0 30px
     }
-    
+
     .gb-imgsindex {
         margin: 20px auto !important;
         padding: 20px 0 !important
     }
-    
+
     .sin-log-menu li.username-drpdwn {
         height: 20px
     }
-    
+
     .sin-log-menu li ul li.dropdown.dropdown-user {
         margin: 0 auto;
         height: auto;
         line-height: 30px
     }
-    
+
     .searchBox .btn-sbrt {
         float: left !important;
         width: 40%;
         padding: 10px 0;
         padding-left: 15px
     }
-    
+
     .searchBox .searchBtn {
         width: auto;
         padding-right: 15px !important
     }
-    
+
     .Projects-Participated-Me {
         width: 100%
     }
-    
+
     .subjectcontent {
         width: 100%
     }
-    
+
     .navbar-collapse.in {
         overflow-y: inherit !important
     }
-    
+
     .sin-log-menu .navbar-nav .open .dropdown-menu {
         /* position: absolute*/
     }
-    
+
     .bh-sl-form-container {
         display: none
     }
-    
+
     .bh-sl-container {
         margin-top: 70px
     }
-    
+
     .showdiv {
         display: block
     }
-    
+
     .mobile-filter {
         display: block;
         margin: 14px;
@@ -3279,71 +3283,71 @@ ul#project_type-filter {
         cursor: pointer;
         color: #FFF
     }
-    
+
     #bh-sl-address {
         margin-top: 0
     }
-    
+
     .project-detail-mobile-close {
         display: block
     }
-    
+
     .project-detail-close {
         display: none
     }
-    
+
     .project-detail-black-pane {
         height: auto !important
     }
-    
+
     .pop-tabs .tab-content.mar-btm10 {
         margin-top: 35px
     }
-    
+
     .project-details {
         padding-right: 10px !important
     }
-    
+
     .grid-view {
         overflow-x: scroll
     }
-    
+
     .fancybox-skin .fancybox-inner {
         width: 100% !important
     }
-    
+
     .navbar-toggle {
         margin-top: 16px;
         border-radius: 0;
 /*        background-color: rgb(0, 0, 0)*/
     }
-    
+
     .sin-log-menu .navbar-nav .open .dropdown-menu>li>a {
         padding: 4px 0
     }
-    
+
     .sin-log-menu .dropdown-menu-default {
         left: auto;
         right: 0
     }
-    
+
     .sin-log-menu li.username-drpdwn ul li.dropdown.dropdown-user.open li {
         width: 100%
     }
-    
+
     .sin-log-menu li .nav.pull-right>li>.dropdown-menu {
         /*background-color: rgba(0, 0, 0, .9)!important*/
     }
-    
+
     .navbar-nav .open .dropdown-menu {
         border: none !important
     }
-    
+
     div#home-section-header-4 {
         margin-bottom: 10px;
         margin-top: 10px
     }
-    
+
     .discover {
         position: absolute;
         right: 0;
@@ -3351,7 +3355,7 @@ ul#project_type-filter {
         margin: 10px;
         font-size: 12px
     }
-    
+
     .carousel-content-1 h3,
     .carousel-content-2 h3,
     .carousel-content-3 h3,
@@ -3363,31 +3367,31 @@ ul#project_type-filter {
         margin-top: 25px;
         font-size: 22px
     }
-    
+
     .list-image img {
         height: 130px
     }
-    
+
     .feeds li .col1>.cont>.cont-col2>.desc {
         padding-top: 0
     }
-    
+
     .feeds li .col1>.cont {
         margin-right: 0
     }
-    
+
     .feeds li .col2>.date {
         font-size: 10px
     }
-    
+
     .modal-dialog {
         width: 93% !important
     }
-    
+
     .dashboard-page .page-title small {
         display: none !important
     }
-    
+
     .bh-sl-filters-container ul {
         padding-left: 0;
         padding-right: 15px
@@ -3397,31 +3401,31 @@ ul#project_type-filter {
     .guess_what_section_4_2 {
         font-size: 3em
     }
-    
+
     .guess_what_section_4_3 {
         margin-left: 10px;
         margin-top: 41px;
         font-size: 1.2em
     }
-    
+
     section.sec-one ul.nav.nav-pills.nav-justified {
         display: none
     }
-    
+
     .carousel-content h3 {
         padding-left: 0;
         padding-top: 0
     }
-    
+
     .carousel-content-4 h3 {
         color: #fff
     }
-    
+
     .carousel-content-4 sup {
         top: -21px !important;
         color: #fff
     }
-    
+
     .carousel-content-1 p,
     .carousel-content-2 p,
     .carousel-content-3 p,
@@ -3431,51 +3435,51 @@ ul#project_type-filter {
     .carousel-content p {
         display: none
     }
-    
+
     .header_hide .navbar-inverse {
         position: relative;
         margin-bottom: 0;
         background-color: rgb(34, 34, 34)
     }
-    
+
     .ft-wd100 {
         width: 100%
     }
-    
+
     .ft-wd100 ul li {
         margin-bottom: 15px !important
     }
-    
+
     .row.ft.copy-rihgt-ft div.social,
     .row.ft p.ft-txt {
         text-align: center
     }
-    
+
     .bh-sl-container .bh-sl-form-container {
         margin-top: 5px !important
     }
-    
+
     .bh-sl-container .bh-sl-map {
         height: 150px !important;
         margin-bottom: 10px;
         box-shadow: 0 2px 5px #000;
         margin-top: 3px
     }
-    
+
     .datepicker-days .table-condensed {
         width: 280px
     }
-    
+
     .mobile-no-show {
         display: none !important
     }
-    
+
     .trophy span p,
     .backers span p,
     .days span p {
         display: none
     }
-    
+
     .participation-border {
         padding: 5px
     }
@@ -3971,7 +3975,7 @@ span.username.username-hide-on-mobile.username-suppress ~ span + i.fa.fa-angle-d
     }
     .card .input-container label {
         /*        line-height: 20px;*/
-        
+
         top: -20px !important
     }
     div#w0 .form-group.field-username label.error,
@@ -4164,7 +4168,7 @@ div#pjax-list div#w1 .action-column {
 .tabbable-line.wrapper1 .list1 {
     margin-top: 0 !important;
 }
-.form-group.field-projects-project_desc div#cke_projects-project_desc, 
+.form-group.field-projects-project_desc div#cke_projects-project_desc,
 .form-group.field-projects-project_desc span#cke_projects-project_desc,
 .projects-form.participation-border .form-group.field-projects-need_of_project div#cke_projects-need_of_project {
     width: 62% !important;
@@ -6894,7 +6898,7 @@ section.single-page-header1{height:auto !important;}*/
     .gmnoprint div,
     .gm-style-mtc div {
         /*        height: 30px !important;*/
-        
+
         font-size: 10px !important;
     }
     #allActivate,
@@ -7774,7 +7778,7 @@ span.add-more-icon a i {
     }
 }
 @media(max-width:767px) {
-    .projects-form.participation-border div#myWizard .tab-content .fielddiv img.ui-datepicker-trigger{top:34px;}    
+    .projects-form.participation-border div#myWizard .tab-content .fielddiv img.ui-datepicker-trigger{top:34px;}
     .cnuequippp .username-drpdwn .dropdown-menu {
         margin-bottom: 0px;
         width: 100%;
@@ -10684,7 +10688,7 @@ div#imagesgallerytabs .partanerpagebtn .partners_page img {
     div#imagesgallerytabs .partanerpagebtn .partners_page img {
         height: auto;
         /* object-fit: cover; */
-        
+
         width: 100%;
     }
     .socialpage_blocks .kalamandirlogoblocks img {
@@ -10757,4 +10761,115 @@ div#imagesgallerytabs .partanerpagebtn .partners_page img {
         height: 250px;
         overflow: scroll !important;
     }
+}
+
+/*New CSS*/
+.navbar {
+  background: #3f2e64;
+}
+.navbar .navbar-header .navbar-brand {
+  background: #fff;
+  height: auto;
+  padding: 0 10px !important;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+.navbar #exampleNavComponents {
+  float: right;
+}
+.navbar #exampleNavComponents ul.navbar-nav li a:hover {
+  color: #fff;
+    background-color: #281949;
+}
+.navbar #exampleNavComponents ul.navbar-nav li a:focus {
+  color: #fff;
+}
+.navbar #exampleNavComponents ul.navbar-nav li a.myprofile {
+  margin-top: 1px;
+}
+.form-group {
+  margin: 0;
+  margin-bottom: 15px !important;
+}
+#login-page-form, .login-page-cont  {
+  padding: 0 25px;
+}
+#login-page-form #loginpagebtn {
+  margin: 0 !important;
+}
+.page-content .searchBtn {
+  float: left;
+  margin: 25px 5px 0 0;
+}
+.page-content .searchBtn .btn {
+  padding: 8px !important;
+}
+.page-content .searchBtn #advsearch {
+  padding: 5px 10px !important;
+}
+.logoutform button {
+  font-weight: normal !important;
+  padding: 15px;
+}
+ul.page-sidebar-menu {
+  padding-top: 0 !important;
+}
+ul.page-sidebar-menu .sidebar-toggler {
+  margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+ul.page-sidebar-menu.page-header-fixed li a i,
+ul.page-sidebar-menu.page-header-fixed li a span.title {
+    font-size: 13px;
+}
+#usercreateform fieldset {
+  width: 85%;
+}
+.glyphicon.glyphicon-trash {
+  background: #ff6363 !important;
+  color: #fff !important;
+}
+.programme-title, .faculty-title {
+  font-weight: bold;
+  font-size: 16px;
+      color: #6b3bd5;
+}
+.faculty-title {
+  color: #787878;
+}
+.yr {
+  background: #4a5789;
+    color: #fff !important;
+    text-align: center;
+}
+.sem {
+  background: #8194ac;
+color: #fff !important;
+text-align: center;
+}
+.mybg {
+  background: #edfffd;
+  font-weight: bold;
+}
+.masthead .count .col-md-4 a {
+  background: #fcfcfc;
+    display: block;
+    padding: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+border: 1px solid #ddd;
+}
+.masthead .count .col-md-4 a:hover {
+  background: #fff;
+}
+.masthead {
+  margin: 50px 0;
+}
+.home-image {
+  width: 60%;
+  margin: 0 auto;
+}
+.home-image img {
+  width: 100%;
 }

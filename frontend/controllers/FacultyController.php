@@ -169,7 +169,8 @@ class FacultyController extends \common\controllers\CommonController {
 	    try{
 	    Yii::$app->cache->flush();
 		$faculty = new Faculty();
-            $uQuery = Faculty::getAllFacultyList();
+		$faculty_name = Yii::$app->getRequest()->getQueryParam('faculty_name') ? Yii::$app->getRequest()->getQueryParam('faculty_name') : "";
+            $uQuery = Faculty::getAllFacultyList($faculty_name);
 			$query = $uQuery;		
 		$count = $uQuery->count();
 			return $this->render('faculty-list',[

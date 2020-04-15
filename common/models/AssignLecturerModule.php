@@ -19,6 +19,8 @@ use Yii;
  */
 class AssignLecturerModule extends \yii\db\ActiveRecord
 {
+	public $lecturer_name;
+	public $module_name;
 	
    // public $password_reset_token;
     /**
@@ -35,13 +37,18 @@ class AssignLecturerModule extends \yii\db\ActiveRecord
         return $data;
     }
 	
-	public static function getAllRecords(){
-        $data = (new Query())->select(['pf.id', 'pf.lecturer_id', 'pf.module_id', 'name', 'module_name'])
+	public static function getAllRecords($lecturer_name,$module_name){
+        $uQuery = (new Query())->select(['pf.id', 'pf.lecturer_id', 'pf.module_id', 'name', 'module_name'])
         ->from('lecturer_to_module AS pf')
 		->join('LEFT JOIN', 'lecturers AS p', 'p.user_ref_id = pf.lecturer_id')
 		->join('LEFT JOIN', 'modules AS f', 'f.id = pf.module_id')
-		->orderBy(['pf.id'=>SORT_ASC]);
-        return $data;
+		->where(1);
+		if(!empty($lecturer_name) || !empty($module_name)){
+			if(!empty($lecturer_name))   $uQuery->andWhere(['LIKE' , 'name', $lecturer_name]);
+			if(!empty($module_name))   $uQuery->andWhere(['LIKE' , 'module_name', $module_name]);
+		}
+		$uQuery->orderBy(['pf.id'=>SORT_ASC]);
+        return $uQuery;
     }
 	
 	

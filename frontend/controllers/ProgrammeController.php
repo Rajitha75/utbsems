@@ -95,7 +95,7 @@ class ProgrammeController extends \common\controllers\CommonController {
    
 	public function actionAddProgramme()
     {
-	  //  try{
+	    try{
 	    Yii::$app->cache->flush();
 		//$faculty = Faculty::getAllFaculty();
 	    $programmeformmodel = new \common\models\CreateProgrammeForm();
@@ -118,14 +118,14 @@ class ProgrammeController extends \common\controllers\CommonController {
 				'programmeformmodel'=>$programmeformmodel,
 				//'faculty'=>$faculty
 			]);    
-	    /*} catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionUpdateProgramme()
     {
-	    //try{
+	    try{
 	    Yii::$app->cache->flush();
 	    $programmeformmodel = new \common\models\CreateProgrammeForm();
 			$programmeid = Yii::$app->request->get('id');
@@ -150,9 +150,9 @@ class ProgrammeController extends \common\controllers\CommonController {
 				'programmedata'=>$programmemodel,
 				//'faculty'=>$faculty
 			]);    
-	   /* } catch (\Exception $e) {
+	    } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }*/
+        }
 	   }
 	   
 	   public function actionProgrammeDelete($id)
@@ -178,7 +178,8 @@ class ProgrammeController extends \common\controllers\CommonController {
 	    try{
 	    Yii::$app->cache->flush();
 			$programme = new Programme();
-            $uQuery = Programme::getAllProgrammeList();
+			$programme_name = Yii::$app->getRequest()->getQueryParam('programme_name') ? Yii::$app->getRequest()->getQueryParam('programme_name') : "";
+            $uQuery = Programme::getAllProgrammeList($programme_name);
 				$query = $uQuery;		
 				$count = $uQuery->count();
 				return $this->render('programmes-list',[

@@ -78,11 +78,15 @@ class ExamOfficer extends \yii\db\ActiveRecord
         ];
     }
     
-    public static function getExamOfficersList(){
+    public static function getExamOfficersList($name,$email){
 	    $uQuery = (new Query())->select(['e.id','name','user_ref_id','u.email', 'u.status'])
         ->from('exam_officer AS e')
-        ->join('LEFT JOIN', 'user AS u', 'u.id = e.user_ref_id')
-	->where(['u.status' => 1]);
+		->join('LEFT JOIN', 'user AS u', 'u.id = e.user_ref_id')
+		->where(['u.status' => 1]);
+		if(!empty($name) || !empty($email)){
+			if(!empty($name))   $uQuery->andWhere(['LIKE' , 'name', $name]);
+			if(!empty($email))   $uQuery->andWhere(['LIKE' , 'u.email', $email]);
+		}
 	$uQuery->orderBy(['name'=>SORT_DESC]);
     //print_r($uQuery);exit;
 		return $uQuery;
