@@ -121,7 +121,17 @@ class SiteController extends \common\controllers\CommonController {
     public function actionIndex() {
 		try{
             $this->view->title ='UTBSEMS - Home';
-		    return $this->render('index');
+			if(Yii::$app->user->id){
+				if(Yii::$app->session['userRole'] == 2){
+					return $this->redirect('student-profile');
+				}else if(Yii::$app->session['userRole'] == 3){
+					return $this->redirect('exam-officers-list');
+				}else if(Yii::$app->session['userRole'] == 4){
+					return $this->redirect('students-list');
+				}
+			}else{
+				return $this->render('index');
+			}
 		} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }

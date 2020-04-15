@@ -12,6 +12,17 @@
 		font-weight: 500;
         font-size: 15px;
 	}
+	
+	.homeimage{
+		width:120px;
+		height:120px;
+	}
+	
+	.imagediv{
+		    display: block;
+    padding: 20px;
+    font-weight: bold;
+	}
 
      @media (min-width:1025px){
 	.navbar.compressed .icon li i{
@@ -40,27 +51,35 @@
                     <div class="row">
 
                         <div class="col-lg-3 col-md-4">
-                        <a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">
-                            <h1 class="project-count"><i class="fa fa-user-graduate" id="fa-icons" style="color: #8dd22e;"></i></h1>
-                            <p>STUDENTS</p>
-                            </a>
+                          <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../student-login">
+                             <div class="imagediv">
+							<img class="homeimage" src="frontend/images/student.png">
+							</div>
+                            <p>LECTURERS</p>
+                        </a>
                         </div>
 
                         <div class="col-lg-3 col-md-4">
                         <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">
-                            <h1 class="project-count"><i class="fa fa-chalkboard-teacher" id="fa-icons" style="color: DodgerBlue;"></i></h1>
+                             <div class="imagediv">
+							<img class="homeimage" src="frontend/images/lecturers.png">
+							</div>
                             <p>LECTURERS</p>
                         </a>
                         </div>
                         <div class="col-lg-3 col-md-4">
                         <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../exam-officers-login">
-                            <h1 class="project-count"><i class="fa fa-edit" id="fa-icons" style="color: #deb3a1;"></i></h1>
+                             <div class="imagediv">
+							<img class="homeimage"  src="frontend/images/exam officers.png">
+							</div>
                             <p>EXAM OFFICERS</p>
                         </a>
                         </div>
                         <div class="col-lg-3 col-md-4">
                         <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../backend/web/site/login">
-                            <h1 class="project-count"><i class="fa fa-user-tie" id="fa-icons" style="color: #dae354;"></i></h1>
+                             <div class="imagediv">
+							<img class="homeimage" src="frontend/images/admin.png">
+							</div>
                             <p>ADMINISTRATORS</p>
                         </a>
                         </div>
@@ -70,5 +89,4 @@
         </div>
     </div>
 		<div class="home-image">
-			<img src="frontend/images/banner-image.jpg">
 		</div>

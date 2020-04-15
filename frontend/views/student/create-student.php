@@ -252,8 +252,6 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 
 		<?php echo $form->field($userformmodel, 'account_no')->textInput(['value' => (isset($studentdata['account_no'])? $studentdata['account_no'] : ''), 'autocomplete' => 'off' ])->label('Bank Account No <span class="mandatory">*</span>');?>
 		
-		<?php echo $form->field($userformmodel, 'bank_terms')->checkbox(['label'=>'I agree to the terms'])->label(false) ?>
-		<span class="bankterms">I declare that all the particulars and information provided in this application are true to my best knowledge and belief.</span>
 		</fieldset>
 	<fieldset>
     <legend>Parents Information:</legend>
@@ -383,7 +381,10 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		<?php echo $form->field($userformmodel, 'mailing_district')->textInput(['value' => (isset($studentdata['mailing_district'])? $studentdata['mailing_district'] : ''), 'autocomplete' => 'off' ])->label('District/State');?>
 
 		<?php echo $form->field($userformmodel, 'mailing_postal_code')->textInput(['value' => (isset($studentdata['mailing_postal_code'])? $studentdata['mailing_postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
-
+		
+		<?php echo $form->field($userformmodel, 'bank_terms')->checkbox(['label'=>'I agree to the terms'])->label(false) ?>
+		<span class="bankterms">I declare that all the particulars and information provided in this application are true to my best knowledge and belief.</span>
+		
 	</fieldset>
  </div>
  
