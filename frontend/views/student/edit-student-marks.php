@@ -113,7 +113,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
 	
 	<table>
 	<tr>
-	<td class="tdheading">Semister</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semister '.$studentmarks[$i]['semister'] : '' ?></td>
+	<td class="tdheading">Semester</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semester '.$studentmarks[$i]['semister'] : '' ?></td>
 	</tr>
 	<tr>
 	<td class="tdheading">Module Name</td><td><?php echo isset($studentmarks[$i]['module_name'])? $studentmarks[$i]['module_name'] : '' ?></td>
@@ -226,7 +226,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
 	
 	<table>
 	<tr>
-	<td class="tdheading">Semister</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semister '.$studentmarks[$i]['semister'] : '' ?></td>
+	<td class="tdheading">Semester</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semester '.$studentmarks[$i]['semister'] : '' ?></td>
 	</tr>
 	<tr>
 	<td class="tdheading">Module Name</td><td><?php echo isset($studentmarks[$i]['module_name'])? $studentmarks[$i]['module_name'] : '' ?></td>
@@ -341,7 +341,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
 	
 	<table>
 	<tr>
-	<td class="tdheading">Semister</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semister '.$studentmarks[$i]['semister'] : '' ?></td>
+	<td class="tdheading">Semester</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semester '.$studentmarks[$i]['semister'] : '' ?></td>
 	</tr>
 	<tr>
 	<td class="tdheading">Module Name</td><td><?php echo isset($studentmarks[$i]['module_name'])? $studentmarks[$i]['module_name'] : '' ?></td>
@@ -455,7 +455,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
 	
 	<table>
 	<tr>
-	<td class="tdheading">Semister</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semister '.$studentmarks[$i]['semister'] : '' ?></td>
+	<td class="tdheading">Semester</td><td><?php echo isset($studentmarks[$i]['semister'])? 'Semester '.$studentmarks[$i]['semister'] : '' ?></td>
 	</tr>
 	<tr>
 	<td class="tdheading">Module Name</td><td><?php echo isset($studentmarks[$i]['module_name'])? $studentmarks[$i]['module_name'] : '' ?></td>

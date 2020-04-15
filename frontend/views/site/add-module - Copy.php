@@ -55,7 +55,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	
 	<div class="removenewmodule"><div class="removenew">Remove</div></div>
 		
-		<?php echo $form->field($moduleformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semister'])->label('Semister <span class="mandatory">*</span>');?>
+		<?php echo $form->field($moduleformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semester'])->label('Semester <span class="mandatory">*</span>');?>
 		</div>
  
  </div>

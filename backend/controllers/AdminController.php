@@ -642,7 +642,7 @@ class AdminController extends \common\controllers\CommonController
         $bank_account_name = Yii::$app->getRequest()->getQueryParam('bank_account_name') ? Yii::$app->getRequest()->getQueryParam('bank_account_name') : "";
 
 
-        $uQuery=Student::getStudentsList($studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name);
+        $uQuery=Student::getStudentsList(false,$studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name);
 		$query = $uQuery;		
 		$count = $uQuery->count();
         return $this->render('students-list',[

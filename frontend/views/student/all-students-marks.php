@@ -338,8 +338,8 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray1)>0) { ?><td colspan="<?php echo count($moduleidArray1)*4; ?>">Semister 1</td><?php } ?>
-  <?php if(count($moduleidArray2)>0) { ?><td colspan="<?php echo count($moduleidArray2)*4; ?>">Semister 2</td><?php } ?>
+  <?php if(count($moduleidArray1)>0) { ?><td colspan="<?php echo count($moduleidArray1)*4; ?>">Semester 1</td><?php } ?>
+  <?php if(count($moduleidArray2)>0) { ?><td colspan="<?php echo count($moduleidArray2)*4; ?>">Semester 2</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
@@ -422,8 +422,8 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray3)>0) { ?><td colspan="<?php echo count($moduleidArray3)*4; ?>">Semister 3</td><?php } ?>
-  <?php if(count($moduleidArray4)>0) { ?><td colspan="<?php echo count($moduleidArray4)*4; ?>">Semister 4</td><?php } ?>
+  <?php if(count($moduleidArray3)>0) { ?><td colspan="<?php echo count($moduleidArray3)*4; ?>">Semester 3</td><?php } ?>
+  <?php if(count($moduleidArray4)>0) { ?><td colspan="<?php echo count($moduleidArray4)*4; ?>">Semester 4</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
@@ -509,8 +509,8 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray5)>0) { ?><td colspan="<?php echo count($moduleidArray5)*4; ?>">Semister 5</td><?php } ?>
-  <?php if(count($moduleidArray6)>0) { ?><td colspan="<?php echo count($moduleidArray6)*4; ?>">Semister 6</td><?php } ?>
+  <?php if(count($moduleidArray5)>0) { ?><td colspan="<?php echo count($moduleidArray5)*4; ?>">Semester 5</td><?php } ?>
+  <?php if(count($moduleidArray6)>0) { ?><td colspan="<?php echo count($moduleidArray6)*4; ?>">Semester 6</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
@@ -593,8 +593,8 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray7)>0) { ?><td colspan="<?php echo count($moduleidArray7)*4; ?>">Semister 7</td><?php } ?>
-  <?php if(count($moduleidArray8)>0) { ?><td colspan="<?php echo count($moduleidArray8)*4; ?>">Semister 8</td><?php } ?>
+  <?php if(count($moduleidArray7)>0) { ?><td colspan="<?php echo count($moduleidArray7)*4; ?>">Semester 7</td><?php } ?>
+  <?php if(count($moduleidArray8)>0) { ?><td colspan="<?php echo count($moduleidArray8)*4; ?>">Semester 8</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>

@@ -116,10 +116,10 @@ if($studentmarks1[$i]['semister'] == 2){
 <?php } ?>
 <tr>
 <?php if($sem1 > 0) { ?>
-<td colspan="<?php echo $sem1*4 ?>">Semister 1</td>
+<td colspan="<?php echo $sem1*4 ?>">Semester 1</td>
 <?php } ?>
 <?php if($sem2 > 0) { ?>
-<td colspan="<?php echo $sem2*4 ?>">Semister 2</td>
+<td colspan="<?php echo $sem2*4 ?>">Semester 2</td>
 <?php } ?>
 </tr>
 <tr data-key="0">
@@ -174,10 +174,10 @@ if($studentmarks2[$i]['semister'] == 4){
 <?php } ?>
 <tr>
 <?php if($sem3 > 0) { ?>
-<td colspan="<?php echo $sem3*4 ?>">Semister 3</td>
+<td colspan="<?php echo $sem3*4 ?>">Semester 3</td>
 <?php } ?>
 <?php if($sem4 > 0) { ?>
-<td colspan="<?php echo $sem4*4 ?>">Semister 4</td>
+<td colspan="<?php echo $sem4*4 ?>">Semester 4</td>
 <?php } ?>
 </tr>
 <tr data-key="0">
@@ -234,10 +234,10 @@ if($studentmarks3[$i]['semister'] == 6){
 <?php } ?>
 <tr>
 <?php if($sem5 > 0) { ?>
-<td colspan="<?php echo $sem5*4 ?>">Semister 5</td>
+<td colspan="<?php echo $sem5*4 ?>">Semester 5</td>
 <?php } ?>
 <?php if($sem6 > 0) { ?>
-<td colspan="<?php echo $sem6*4 ?>">Semister 6</td>
+<td colspan="<?php echo $sem6*4 ?>">Semester 6</td>
 <?php } ?>
 </tr>
 <tr data-key="0">
@@ -292,10 +292,10 @@ if($studentmarks4[$i]['semister'] == 8){
 <?php } ?>
 <tr>
 <?php if($sem7 > 0) { ?>
-<td colspan="<?php echo $sem7*4 ?>">Semister 7</td>
+<td colspan="<?php echo $sem7*4 ?>">Semester 7</td>
 <?php } ?>
 <?php if($sem8 > 0) { ?>
-<td colspan="<?php echo $sem8*4 ?>">Semister 8</td>
+<td colspan="<?php echo $sem8*4 ?>">Semester 8</td>
 <?php } ?>
 </tr>
 <tr data-key="0">

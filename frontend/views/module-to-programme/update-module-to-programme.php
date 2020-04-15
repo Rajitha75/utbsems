@@ -37,7 +37,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	
 	<?php echo $form->field($moduleprogrammeformmodel, 'module_id')->dropDownList(ArrayHelper::map($modules,'id','module_name'),['prompt'=>'Please select Module'])->label('Module'); ?>
 	
-	<?php echo $form->field($moduleprogrammeformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semister'])->label('Semister');?>
+	<?php echo $form->field($moduleprogrammeformmodel, 'semister')->dropDownList(['1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8'], ['prompt' => 'Select Semester'])->label('Semester');?>
 		</div>
  
  </div>

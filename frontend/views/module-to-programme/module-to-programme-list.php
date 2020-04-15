@@ -128,7 +128,7 @@ echo GridView::widget([
                         ],
 						[
 							'format' => 'raw',
-                            'attribute' => 'semister',
+                            'attribute' => 'semester',
 							 'options' => ['width' => '180'],
                             'value' => function ($model) {   
                                 return $model['semister'] ? stripslashes($model['semister']) : 'Not Assigned';
