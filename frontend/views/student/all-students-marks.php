@@ -144,7 +144,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['grade'] = $studentmarks1[$i]['grade'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['studentname'] = $studentmarks1[$i]['studentname'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['ic_no'] = $studentmarks1[$i]['ic_no'];
-	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['studentid'] = $studentmarks1[$i]['studentid'];
+	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['student_id'] = $studentmarks1[$i]['student_id'];
 	
 } 
 }//echo '<pre>';print_r($smarks1);exit;
@@ -199,7 +199,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['grade'] = $studentmarks2[$i]['grade'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['studentname'] = $studentmarks2[$i]['studentname'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['ic_no'] = $studentmarks2[$i]['ic_no'];
-	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['studentid'] = $studentmarks2[$i]['studentid'];
+	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['student_id'] = $studentmarks2[$i]['student_id'];
 	
 } 
 }//echo '<pre>';print_r($moduleArrayid34);exit;
@@ -254,7 +254,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['grade'] = $studentmarks3[$i]['grade'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['studentname'] = $studentmarks3[$i]['studentname'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['ic_no'] = $studentmarks3[$i]['ic_no'];
-	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['studentid'] = $studentmarks3[$i]['studentid'];
+	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['student_id'] = $studentmarks3[$i]['student_id'];
 } 
  }//echo '<pre>';print_r($moduleArrayid56);exit;
 //echo $smarks3[1][1][56]['grade']; exit; ?>
@@ -308,7 +308,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['grade'] = $studentmarks4[$i]['grade'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['studentname'] = $studentmarks4[$i]['studentname'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['ic_no'] = $studentmarks4[$i]['ic_no'];
-	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['studentid'] = $studentmarks4[$i]['studentid'];
+	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['student_id'] = $studentmarks4[$i]['student_id'];
 } 
  }//echo '<pre>';print_r($smarks4);exit;
 //echo $smarks4[1][1][56]['grade']; exit; ?>
@@ -397,7 +397,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['grade']; ?></td>
 			<?php if($m==count($semisterArray1)-1) { ?>
 			<td><?php 
-			$url = Url::toRoute(['../../edit-student-marks', 'year' => 1, 'id' => $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['studentid']]);
+			$url = Url::toRoute(['../../edit-student-marks', 'year' => 1, 'id' => $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['student_id']]);
 			?>
 			<a href = "<?php echo $url; ?>">Edit</a>
 			</td>
@@ -481,7 +481,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['grade']; ?></td>
 			<?php if($m==count($semisterArray2)-1) { ?>
 			<td><?php 
-			$url = Url::toRoute(['../../edit-student-marks', 'year' => 2, 'id' => $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['studentid']]);
+			$url = Url::toRoute(['../../edit-student-marks', 'year' => 2, 'id' => $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['student_id']]);
 			?>
 			<a href = "<?php echo $url; ?>">Edit</a>
 			</td>
@@ -568,7 +568,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['grade']; ?></td>
 			<?php if($m==count($semisterArray3)-1) { ?>
 			<td><?php 
-			$url = Url::toRoute(['../../edit-student-marks', 'year' => 3, 'id' => $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['studentid']]);
+			$url = Url::toRoute(['../../edit-student-marks', 'year' => 3, 'id' => $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['student_id']]);
 			?>
 			<a href = "<?php echo $url; ?>">Edit</a>
 			</td>
@@ -652,7 +652,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['grade']; ?></td>
 			<?php if($m==count($semisterArray4)-1) { ?>
 			<td><?php 
-			$url = Url::toRoute(['../../edit-student-marks', 'year' => 4, 'id' => $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['studentid']]);
+			$url = Url::toRoute(['../../edit-student-marks', 'year' => 4, 'id' => $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['student_id']]);
 			?>
 			<a href = "<?php echo $url; ?>">Edit</a>
 			</td>
