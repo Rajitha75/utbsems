@@ -13,6 +13,7 @@ use common\models\Module;
 use common\models\User;
 use common\models\AddStudentMarks;
 use common\models\Student;
+use common\models\AddMarksPercentage;
 
 date_default_timezone_set('Asia/Kolkata');
 /**
@@ -157,7 +158,7 @@ Yii::$app->cache->flush();
                     $deleteattempt = $model->deleteattempts(Yii::$app->user->id);
                     Yii::$app->session['email'] = $userData->email;
                     Yii::$app->session['userRole'] = $userData->user_role_ref_id;
-                    return $this->redirect('lecturer-dashboard');
+                    return $this->redirect('students-list');
                     die;
                 }
             } else {
@@ -340,22 +341,39 @@ Yii::$app->cache->flush();
         //print_r($studentdata[0]['name']); exit;
             $marksformmodel = new \common\models\AddStudentMarksForm();
 			$studentmarksmodule = new AddStudentMarks();
+			//print_r($studentslist);exit;
         if($marksformmodel->load(Yii::$app->request->post())){
             $postvariable=Yii::$app->request->post('AddStudentMarksForm');
-			$previd = $postvariable['previd'];
+	    //print_r($postvariable);exit;
+	    
+	    $markspercentage = AddMarksPercentage::find()->where(['semister' => $postvariable['semister']])->andWhere(['module_id' => $postvariable['module_id']])->one();
+	    if(count($markspercentage)==0){
+		    $markspercentage = new AddMarksPercentage();
+	    }
+	    $markspercentage->semister = $postvariable['semister'];
+	    $markspercentage->module_id = $postvariable['module_id'];
+	    $markspercentage->ew_percentage = $postvariable['ew_percentage'];
+	    $markspercentage->cw_percentage = $postvariable['cw_percentage'];
+	    $markspercentage->created_by = Yii::$app->user->id;
+	    $markspercentage->save();
+	   // print_r($postvariable);exit;
+			
+			
+			for($i=0;$i<count($postvariable['studentid']);$i++){
+			$previd = $postvariable['previd'][$i];
 			if($previd != ''){
 				$studentmarksmodule = AddStudentMarks::find()->where(['id' => $previd])->one();
+			}else{
+				$studentmarksmodule = new AddStudentMarks();
 			}
 			$studentmarksmodule->semister = $postvariable['semister'];
 			$studentmarksmodule->module_id = $postvariable['module_id'];
-			$studentmarksmodule->student_id = $postvariable['student_id'];
-			$studentmarksmodule->ew_percentage = $postvariable['ew_percentage'];
-			$studentmarksmodule->ew_marks = $postvariable['ew_marks'];
-			$studentmarksmodule->cw_percentage = $postvariable['cw_percentage'];
-			$studentmarksmodule->cw_marks = $postvariable['cw_marks'];
+			$studentmarksmodule->student_id = $postvariable['studentid'][$i];
+			$studentmarksmodule->ew_marks = $postvariable['ew_marks'][$i];
+			$studentmarksmodule->cw_marks = $postvariable['cw_marks'][$i];
 			
-			$ew_total_percentage = ($postvariable['ew_marks']/100)*$postvariable['ew_percentage'];
-			$cw_total_percentage = ($postvariable['cw_marks']/100)*$postvariable['cw_percentage'];
+			$ew_total_percentage = ($postvariable['ew_marks'][$i]/100)*$postvariable['ew_percentage'];
+			$cw_total_percentage = ($postvariable['cw_marks'][$i]/100)*$postvariable['cw_percentage'];
 			$total_percentage = $ew_total_percentage+$cw_total_percentage;
 			
 			$studentmarksmodule->ew_total_percentage = $ew_total_percentage;
@@ -399,6 +417,7 @@ Yii::$app->cache->flush();
 			$studentmarksmodule->grade_definition = $grade_definition;
 			$studentmarksmodule->entered_by = Yii::$app->user->id;
 			$studentmarksmodule->save(false);
+			}
 			return $this->redirect('add-marks');
 			}
 			return $this->render('add-marks',[
@@ -426,6 +445,7 @@ Yii::$app->cache->flush();
 	    try{
 			$moduleid = Yii::$app->request->get('moduleid');
 			$userid = Yii::$app->request->get('userid');
+			$semister = Yii::$app->request->get('semister');
 			$students = Student::getStudentsByLecturer($moduleid,$userid);
 			return json_encode($students);
 			} catch (\Exception $e) {
@@ -433,14 +453,26 @@ Yii::$app->cache->flush();
 			}
 		}
 		
-		public function actionGetStudentsMarks(){
+		public function actionGetMarksPercentage(){
+			
+	    try{
+			$moduleid = Yii::$app->request->get('moduleid');
+			$userid = Yii::$app->request->get('userid');
+			$semister = Yii::$app->request->get('semister');
+			$students = Student::getMarksPercentage($moduleid,$semister);
+			return json_encode($students);
+			} catch (\Exception $e) {
+				\common\controllers\CommonController::exceptionMessage($e->getMessage());
+			}
+		}
+		
+		public function actionGetStudentMarks(){
 			
 	    try{
 			$semister = Yii::$app->request->get('semister');
 			$moduleid = Yii::$app->request->get('moduleid');
-			$studentid = Yii::$app->request->get('studentid');
 			$userid = Yii::$app->request->get('userid');
-			$students = AddStudentMarks::getStudentsMarks($semister, $moduleid, $studentid, $userid);
+			$students = AddStudentMarks::getStudentsMarks($semister, $moduleid, $userid);
 			return json_encode($students);
 			} catch (\Exception $e) {
 				\common\controllers\CommonController::exceptionMessage($e->getMessage());

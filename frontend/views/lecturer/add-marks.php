@@ -9,6 +9,15 @@ use common\models\Storage;
 use yii\helpers\Url;
 $storagemodel = new Storage();
 ?>
+<style>
+table, td, th {
+    border: 1px solid #8ea3bf;
+	font-size: 14px;
+}
+td, th {
+    padding: 12px;
+}
+</style>
 <?php 
 $this->title = 'Add / Edit Marks';
 echo "<h1 class='box-title'>$this->title </h1>"; ?>
@@ -32,9 +41,9 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 	
 	<div id="moduleslist"></div>
 	
-	<div id="studentslist"></div>
-	
 	<div id="modulemarks"></div>
+	
+	<div id="studentslist"></div>
 		</div>
  
  </div>
@@ -54,19 +63,12 @@ $(document).ready(function() {
 $("#addmarks").click(function(){
 	$('.semistererr').hide();
 	$('.moduleerr').hide();
-	$('.studenterr').hide();
 	$('.ewpercentageerr').hide();
 	$('.ewpercentageerrnum').hide();
 	$('.ewpercentageerrmax').hide();
-	$('.ewmarkserr').hide();
-	$('.ewmarkserrnum').hide();
-	$('.ewmarkserrmax').hide();
 	$('.cwpercentageerr').hide();
 	$('.cwpercentageerrnum').hide();
 	$('.cwpercentageerrmax').hide();
-	$('.cwmarkserr').hide();
-	$('.cwmarkserrnum').hide();
-	$('.cwmarkserrmax').hide();
 	
 	var semister = $('#addstudentmarksform-semister').val();
 	if(!semister || semister == ''){
@@ -84,15 +86,6 @@ $("#addmarks").click(function(){
 		$('.moduleerr').hide();
 	}
 	
-	var student = $('#addstudentmarksform-student_id').val();
-	if(!student || student == ''){
-		$('.studenterr').show();
-		return false;
-	}else{
-		$('.studenterr').hide();
-	}
-	
-	
 	var ewpercentage = $('#addstudentmarksform-ew_percentage').val();
 	if(ewpercentage == ''){
 			$('.ewpercentageerr').show();
@@ -109,26 +102,6 @@ $("#addmarks").click(function(){
 				}
 			}else{
 				$('.ewpercentageerrnum').show();
-				return false;
-			}
-		}
-			
-	var ewmarks = $('#addstudentmarksform-ew_marks').val();
-	if(ewmarks == ''){
-			$('.ewmarkserr').show();
-			return false;
-		}else{
-			$('.ewmarkserr').hide();
-			if($.isNumeric(ewmarks)){
-				$('.ewmarkserrnum').hide();
-				if(ewmarks > 100){
-					$('.ewmarkserrmax').show();
-					return false;
-				}else{
-					$('.ewmarkserrmax').hide();
-				}
-			}else{
-				$('.ewmarkserrnum').show();
 				return false;
 			}
 		}
@@ -152,26 +125,57 @@ $("#addmarks").click(function(){
 				return false;
 			}
 		}
-			
-	var cwmarks = $('#addstudentmarksform-cw_marks').val();
-	if(cwmarks == ''){
-			$('.cwmarkserr').show();
-			return false;
+		
+		/*var value = $(this).val();
+		var index = $(this).attr("index");
+		if($.isNumeric(value)){
+			$('.ew_num_error_'+index).hide();
+			if(value > 100){
+				$('.ew_max_error_'+index).show();
+			}else{
+				$('.ew_max_error_'+index).hide();
+			}
 		}else{
-			$('.cwmarkserr').hide();
-			if($.isNumeric(cwmarks)){
-				$('.cwmarkserrnum').hide();
-				if(cwmarks > 100){
-					$('.cwmarkserrmax').show();
-					return false;
+			$('.ew_num_error_'+index).show();
+		}*/
+		
+		$("#addmarksform .sewmarks").each(function() {
+			var value = $(this).val();
+			var index = $(this).attr("index");
+			if(value!=''){
+			if($.isNumeric(value)){
+				$('.ew_num_error_'+index).hide();
+				if(value > 100){
+					$('.ew_max_error_'+index).show();
+					event.preventDefault();
 				}else{
-					$('.cwmarkserrmax').hide();
+					$('.ew_max_error_'+index).hide();
 				}
 			}else{
-				$('.cwmarkserrnum').show();
-				return false;
+				$('.ew_num_error_'+index).show();
+					event.preventDefault();
 			}
-		}
+			}
+		});
+		
+		$("#addmarksform .scwmarks").each(function() {
+			var value = $(this).val();
+			var index = $(this).attr("index");
+			if(value!=''){
+			if($.isNumeric(value)){
+				$('.cw_num_error_'+index).hide();
+				if(value > 100){
+					$('.cw_max_error_'+index).show();
+					event.preventDefault();
+				}else{
+					$('.cw_max_error_'+index).hide();
+				}
+			}else{
+				$('.cw_num_error_'+index).show();
+				event.preventDefault();
+			}
+			}
+		});
 })
 
 $('#addstudentmarksform-semister').change(function(){
@@ -180,25 +184,16 @@ $('#addstudentmarksform-semister').change(function(){
 			$('#studentslist').empty();
 			$('#modulemarks').empty();
 			$('.moduleerr').hide();
-			$('.studenterr').hide();
 			$('.ewpercentageerr').hide();
 			$('.ewpercentageerrnum').hide();
 			$('.ewpercentageerrmax').hide();
-			$('.ewmarkserr').hide();
-			$('.ewmarkserrnum').hide();
-			$('.ewmarkserrmax').hide();
 			$('.cwpercentageerr').hide();
 			$('.cwpercentageerrnum').hide();
 			$('.cwpercentageerrmax').hide();
-			$('.cwmarkserr').hide();
-			$('.cwmarkserrnum').hide();
-			$('.cwmarkserrmax').hide();
 			$('#addstudentmarksform-module_id').val('');
 			$('#addstudentmarksform-student_id').val('');
 			$('#addstudentmarksform-ew_percentage').val('');
-			$('#addstudentmarksform-ew_marks').val('');
 			$('#addstudentmarksform-cw_percentage').val('');
-			$('#addstudentmarksform-cw_marks').val('');
 	if(semister == ''){
 			$('.semistererr').show();
 		}else{
@@ -238,158 +233,161 @@ $('#addmarksform').on('change','#addstudentmarksform-module_id', function(){
 	var moduleid = $(this).val();
 			$('#studentslist').empty();
 			$('#modulemarks').empty();
-			$('.studenterr').hide();
 			$('.ewpercentageerr').hide();
 			$('.ewpercentageerrnum').hide();
 			$('.ewpercentageerrmax').hide();
-			$('.ewmarkserr').hide();
-			$('.ewmarkserrnum').hide();
-			$('.ewmarkserrmax').hide();
 			$('.cwpercentageerr').hide();
 			$('.cwpercentageerrnum').hide();
 			$('.cwpercentageerrmax').hide();
-			$('.cwmarkserr').hide();
-			$('.cwmarkserrnum').hide();
-			$('.cwmarkserrmax').hide();
 			$('#addstudentmarksform-student_id').val('');
 			$('#addstudentmarksform-ew_percentage').val('');
-			$('#addstudentmarksform-ew_marks').val('');
 			$('#addstudentmarksform-cw_percentage').val('');
-			$('#addstudentmarksform-cw_marks').val('');
 	if(moduleid == ''){
 			$('.moduleerr').show();
 		}else{
 			$('.moduleerr').hide();
 	var getstuddentsurl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/lecturer/get-students-by-lecturer';
+	var getpercentageurl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/lecturer/get-marks-percentage';
+	var getstudentmarksurl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/lecturer/get-student-marks';
 	var userid = '<?php echo Yii::$app->user->id; ?>';
-	console.log(moduleid);
-	console.log(userid);
-	console.log(getstuddentsurl);
+	var semister = $('#addstudentmarksform-semister').val();
 	var uhtml = '';
 	$.ajax({
                     url: getstuddentsurl,
                     type: "get",
-                    data: {moduleid:moduleid, userid:userid},
-                    success: function (data) {
-						var udata = JSON.parse(data);
-						var uhtml = '';
-								uhtml += '<div class="form-group field-addstudentmarksform-student_id">';
-								uhtml += '<label class="control-label" for="addstudentmarksform-student_id">Students</label>';
-								uhtml += '<select id="addstudentmarksform-student_id" class="form-control valid" name="AddStudentMarksForm[student_id]">';
-								uhtml += '<option value="">Please select Student</option>';
-						for(i=0;i<udata.length;i++){
-							
-								uhtml += '<option value="'+udata[i]['studentid']+'">'+udata[i]['studentname']+'</option>';
-						console.log(udata[i])
-						}
+                    data: {semister:semister, moduleid:moduleid, userid:userid},
+                    success: function (studentsdata) {
+			    var studentsdata = JSON.parse(studentsdata);
+			    console.log(studentsdata);
+			    $.ajax({
+			    url: getpercentageurl,
+			    type: "get",
+			    data: {semister:semister, moduleid:moduleid, userid:userid},
+			    success: function (percentagedata) {
+				    var percentagedata = JSON.parse(percentagedata);
+				    var percentagecount = percentagedata.length;
+				    if(percentagecount == 0){
+					    ew_percentage = '';
+					    cw_percentage = '';
+				    }else{
+					    ew_percentage = percentagedata[0]['ew_percentage'];
+					    cw_percentage = percentagedata[0]['cw_percentage'];
+				    }
+				     $.ajax({
+				    url: getstudentmarksurl,
+				    type: "get",
+				    data: {semister:semister, moduleid:moduleid, userid:userid},
+				    success: function (marksdata) {
+						var marksdata = JSON.parse(marksdata);
+						var marksdatacount = marksdata.length;
+						console.log(marksdata);
+						var mhtml = '';
+						 mhtml += '<div class="form-group field-addstudentmarksform-marks">';
+						 mhtml += '<label class="control-label" for="addstudentmarksform-marks">Exam Weight Percentage</label>';
+						 mhtml += '<input type="text" id="addstudentmarksform-ew_percentage" class="form-control" name="AddStudentMarksForm[ew_percentage]" value="'+ ew_percentage +'" autocomplete="off">';
+						 mhtml += '<div class="ewpercentageerr" style="display:none">Please enter the marks</div>';
+						 mhtml += '<div class="ewpercentageerrnum" style="display:none">Please enter only digits</div>';
+						 mhtml += '<div class="ewpercentageerrmax" style="display:none">Marks should not exceed 100</div>';
+						 mhtml += '</div>';
+						 
+						 mhtml += '<div class="form-group field-addstudentmarksform-marks">';
+						 mhtml += '<label class="control-label" for="addstudentmarksform-marks">Course Work Weight Percentage</label>';
+						 mhtml += '<input type="text" id="addstudentmarksform-cw_percentage" class="form-control" name="AddStudentMarksForm[cw_percentage]" value="'+cw_percentage +'" autocomplete="off">';
+						 mhtml += '<div class="cwpercentageerr" style="display:none">Please enter the marks</div>';
+						 mhtml += '<div class="cwpercentageerrnum" style="display:none">Please enter only digits</div>';
+						 mhtml += '<div class="cwpercentageerrmax" style="display:none">Marks should not exceed 100</div>';
+						 mhtml += '</div>';
+						$('#modulemarks').append(mhtml);
 						
-								uhtml += '</select>';
-								uhtml += '<div class="studenterr" style="display:none">Please select a student</div>';
-								uhtml += '</div>';
+						var uhtml = '';
+						uhtml += '<div class="students-list">';
+						uhtml += '<table>';
+						uhtml += '<tr><td>S.No</td><td>Name</td><td>Roll No</td><td>IC No</td><td>EW Marks</td><td>CW Marks</td></tr>';
+						for(i=0;i<studentsdata.length;i++){
+							if(marksdatacount == 0){
+								uhtml += '<tr>';
+								uhtml += '<td>'+(i+1)+'</td>';
+								uhtml += '<td>'+studentsdata[i]['studentname']+'</td>';
+								uhtml += '<td>'+studentsdata[i]['rollno']+'</td>';
+								uhtml += '<td>'+studentsdata[i]['ic_no']+'</td>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[ew_marks][]" index='+i+' value="" class="sewmarks ewmrks_'+i+'"/>';
+								uhtml += '<div style="display:none;" class="ew_error ew_num_error_'+i+'">Please enter only digits</div>';
+								uhtml += '<div style="display:none;" class="ew_error ew_max_error_'+i+'">Marks should not exceed 100</div>';
+								uhtml += '<input type="hidden" name="AddStudentMarksForm[studentid][]" value="'+studentsdata[i]['studentid']+'"/></td>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[cw_marks][]" index='+i+' value=""  class="scwmarks cwmrks_'+i+'"/>';
+								uhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd]" value="" autocomplete="off">';
+								uhtml += '<div style="display:none;" class="cw_error cw_num_error_'+i+'">Please enter only digits</div>';
+								uhtml += '<div style="display:none;" class="cw_error cw_max_error_'+i+'">Marks should not exceed 100</div></td>';
+								uhtml += '</tr>';
 								
+							}else{
+								for(j=0;j<marksdata.length;j++){
+								if(marksdata[j]['student_id'] == studentsdata[i]['studentid']){
+								uhtml += '<tr>';
+								uhtml += '<td>'+(i+1)+'</td>';
+								uhtml += '<td>'+studentsdata[i]['studentname']+'</td>';
+								uhtml += '<td>'+studentsdata[i]['rollno']+'</td>';
+								uhtml += '<td>'+studentsdata[i]['ic_no']+'</td>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[ew_marks][]" index='+i+' value="'+marksdata[j]['ew_marks']+'" class="sewmarks ewmrks_'+i+'"/>';
+								uhtml += '<div style="display:none;" class="ew_error ew_num_error_'+i+'">Please enter only digits</div>';
+								uhtml += '<div style="display:none;" class="ew_error ew_max_error_'+i+'">Marks should not exceed 100</div>';
+								uhtml += '<input type="hidden" name="AddStudentMarksForm[studentid][]" value="'+studentsdata[i]['studentid']+'"/></td>';
+								uhtml += '<td><input type="text" name="AddStudentMarksForm[cw_marks][]" index='+i+' value="'+marksdata[j]['cw_marks']+'"  class="scwmarks cwmrks_'+i+'"/>';
+								uhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd][]" value="'+marksdata[j]['id']+'" autocomplete="off">';
+								uhtml += '<div style="display:none;" class="cw_error cw_num_error_'+i+'">Please enter only digits</div>';
+								uhtml += '<div style="display:none;" class="cw_error cw_max_error_'+i+'">Marks should not exceed 100</div></td>';
+								uhtml += '</tr>';
+								}
+								}
+							}
+						
+						}
+						uhtml += '</table>';
+						uhtml += '</div>';
+						
 								$('#studentslist').append(uhtml);
                         
                     }
                 });
 		}
+                });
+		}
+                });
+		}
 });
 
-$('#addmarksform').on('change','#addstudentmarksform-student_id', function(){
-			$('#modulemarks').empty();
-			$('.ewpercentageerr').hide();
-			$('.ewpercentageerrnum').hide();
-			$('.ewpercentageerrmax').hide();
-			$('.ewmarkserr').hide();
-			$('.ewmarkserrnum').hide();
-			$('.ewmarkserrmax').hide();
-			$('.cwpercentageerr').hide();
-			$('.cwpercentageerrnum').hide();
-			$('.cwpercentageerrmax').hide();
-			$('.cwmarkserr').hide();
-			$('.cwmarkserrnum').hide();
-			$('.cwmarkserrmax').hide();
-			$('#addstudentmarksform-ew_percentage').val('');
-			$('#addstudentmarksform-ew_marks').val('');
-			$('#addstudentmarksform-cw_percentage').val('');
-			$('#addstudentmarksform-cw_marks').val('');
-	if($('#addstudentmarksform-student_id').val() == ''){
-			$('.studenterr').show();
+$('#addmarksform').on('keyup','.sewmarks', function(){
+	var value = $(this).val();
+	var index = $(this).attr("index");
+	if(value!=''){
+	if($.isNumeric(value)){
+		$('.ew_num_error_'+index).hide();
+		if(value > 100){
+			$('.ew_max_error_'+index).show();
 		}else{
-			$('.studenterr').hide();
-			var getstuddentmarksurl = '<?php echo SITE_URL.yii::getAlias("@web"); ?>/lecturer/get-students-marks';
-			var userid = '<?php echo Yii::$app->user->id; ?>';
-			var semister = $('#addstudentmarksform-semister').val();
-			var moduleid = $('#addstudentmarksform-module_id').val();
-			var studentid = $('#addstudentmarksform-student_id').val();
-			var uhtml = '';
-			$.ajax({
-                    url: getstuddentmarksurl,
-                    type: "get",
-                    data: {semister:semister, moduleid:moduleid, studentid:studentid, userid:userid},
-                    success: function (data) {
-						var sdata = JSON.parse(data);
-						var nstudents = sdata.length;
-						if(nstudents > 0){
-							var ew_percentage = sdata[0]['ew_percentage'];
-							var ew_marks = sdata[0]['ew_marks'];
-							var cw_percentage = sdata[0]['cw_percentage'];
-							var cw_marks = sdata[0]['cw_marks'];
-							var previd = sdata[0]['id'];
-						}else{
-							var ew_percentage = '';
-							var ew_marks = '';
-							var cw_percentage = '';
-							var cw_marks = '';
-							var previd = '';
-						}
-						
-						
-						var mhtml = '';
-						 mhtml += '<div class="form-group field-addstudentmarksform-marks">';
-						 mhtml += '<label class="control-label" for="addstudentmarksform-marks">Exam Weight</label>';
-						 mhtml += '<div class="ewmarks">';
-						 mhtml += '<div class="form-group field-addstudentmarksform-ew_percentage">';
-						 mhtml += '<label class="control-label" for="addstudentmarksform-ew_percentage">Percentage</label>';
-						 mhtml += '<input type="text" id="addstudentmarksform-ew_percentage" class="form-control" name="AddStudentMarksForm[ew_percentage]" value="'+ew_percentage+'" autocomplete="off">';
-						 mhtml += '</div>';
-						 mhtml += '<div class="ewpercentageerr" style="display:none">Please enter the marks</div>';
-						 mhtml += '<div class="ewpercentageerrnum" style="display:none">Please enter only digits</div>';
-						 mhtml += '<div class="ewpercentageerrmax" style="display:none">Marks should not exceed 100</div>';
-						 mhtml += '<div class="form-group field-addstudentmarksform-ew_marks">';
-						 mhtml += '<label class="control-label" for="addstudentmarksform-ew_marks">Marks</label>';
-						 mhtml += '<input type="text" id="addstudentmarksform-ew_marks" class="form-control" name="AddStudentMarksForm[ew_marks]" value="'+ew_marks+'" autocomplete="off">';
-						 mhtml += '</div>';
-						 mhtml += '<div class="ewmarkserr" style="display:none">Please enter the marks</div>';
-						 mhtml += '<div class="ewmarkserrnum" style="display:none">Please enter only digits</div>';
-						 mhtml += '<div class="ewmarkserrmax" style="display:none">Marks should not exceed 100</div>';
-						 mhtml += '</div>';
-						 mhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd]" value="'+previd+'" autocomplete="off">';
-						 mhtml += '</div>';
-						 
-						 mhtml += '<div class="form-group field-addstudentmarksform-marks">';
-						 mhtml += '<label class="control-label" for="addstudentmarksform-marks">Course Work Weight</label>';
-						 mhtml += '<div class="cwmarks">';
-						 mhtml += '<div class="form-group field-addstudentmarksform-cw_percentage">';
-						 mhtml += '<label class="control-label" for="addstudentmarksform-cw_percentage">Percentage</label>';
-						 mhtml += '<input type="text" id="addstudentmarksform-cw_percentage" class="form-control" name="AddStudentMarksForm[cw_percentage]" value="'+cw_percentage+'" autocomplete="off">';
-						 mhtml += '</div>';
-						 mhtml += '<div class="cwpercentageerr" style="display:none">Please enter the marks</div>';
-						 mhtml += '<div class="cwpercentageerrnum" style="display:none">Please enter only digits</div>';
-						 mhtml += '<div class="cwpercentageerrmax" style="display:none">Marks should not exceed 100</div>';
-						 mhtml += '<div class="form-group field-addstudentmarksform-cw_marks">';
-						 mhtml += '<label class="control-label" for="addstudentmarksform-cw_marks">Marks</label>';
-						 mhtml += '<input type="text" id="addstudentmarksform-cw_marks" class="form-control" name="AddStudentMarksForm[cw_marks]" value="'+cw_marks+'" autocomplete="off">';
-						 mhtml += '</div>';
-						 mhtml += '<div class="cwmarkserr" style="display:none">Please enter the marks</div>';
-						 mhtml += '<div class="cwmarkserrnum" style="display:none">Please enter only digits</div>';
-						 mhtml += '<div class="cwmarkserrmax" style="display:none">Marks should not exceed 100</div>';
-						 mhtml += '</div>';
-						 mhtml += '<input type="hidden" id="addstudentmarksform-previd" class="form-control" name="AddStudentMarksForm[previd]" value="'+previd+'" autocomplete="off">';
-						 mhtml += '</div>';
-						$('#modulemarks').append(mhtml);
-					}
-			});
+			$('.ew_max_error_'+index).hide();
 		}
+	}else{
+		$('.ew_num_error_'+index).show();
+	}
+	}
+});
+
+$('#addmarksform').on('keyup','.scwmarks', function(){
+	var value = $(this).val();
+	var index = $(this).attr("index");
+	if(value!=''){
+	if($.isNumeric(value)){
+		$('.cw_num_error_'+index).hide();
+		if(value > 100){
+			$('.cw_max_error_'+index).show();
+		}else{
+			$('.cw_max_error_'+index).hide();
+		}
+	}else{
+		$('.cw_num_error_'+index).show();
+	}
+	}
 });
 
 $('#addmarksform').on('change','#addstudentmarksform-ew_percentage', function(){
@@ -410,28 +408,6 @@ $('#addmarksform').on('change','#addstudentmarksform-ew_percentage', function(){
 				}
 			}else{
 				$('.ewpercentageerrnum').show();
-			}
-		}
-			});
-			
-$('#addmarksform').on('change','#addstudentmarksform-ew_marks', function(){
-	var marks = $('#addstudentmarksform-ew_marks').val();
-	$('.ewmarkserr').hide();
-	$('.ewmarkserrnum').hide();
-	$('.ewmarkserrmax').hide();
-	if(marks == ''){
-			$('.ewmarkserr').show();
-		}else{
-			$('.ewmarkserr').hide();
-			if($.isNumeric(marks)){
-				$('.ewmarkserrnum').hide();
-				if(marks > 100){
-					$('.ewmarkserrmax').show();
-				}else{
-					$('.ewmarkserrmax').hide();
-				}
-			}else{
-				$('.ewmarkserrnum').show();
 			}
 		}
 			});
@@ -457,28 +433,7 @@ $('#addmarksform').on('change','#addstudentmarksform-cw_percentage', function(){
 			}
 		}
 			});
-			
-$('#addmarksform').on('change','#addstudentmarksform-cw_marks', function(){
-	var marks = $('#addstudentmarksform-cw_marks').val();
-	$('.cwmarkserr').hide();
-	$('.cwmarkserrnum').hide();
-	$('.cwmarkserrmax').hide();
-	if(marks == ''){
-			$('.cwmarkserr').show();
-		}else{
-			$('.cwmarkserr').hide();
-			if($.isNumeric(marks)){
-				$('.cwmarkserrnum').hide();
-				if(marks > 100){
-					$('.cwmarkserrmax').show();
-				}else{
-					$('.cwmarkserrmax').hide();
-				}
-			}else{
-				$('.cwmarkserrnum').show();
-			}
-		}
-			});
+
 			});
 			
 </script>

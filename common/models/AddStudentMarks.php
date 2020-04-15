@@ -35,18 +35,16 @@ class AddStudentMarks extends \yii\db\ActiveRecord
         return $data;
     }
 	
-	public static function getStudentsMarks($semister, $moduleid, $studentid, $userid){
-	    $uQuery = (new Query())->select('*')
-        ->from('student_marks')
-		->where(['semister' => $semister])
-		->andWhere(['module_id' => $moduleid])
-		->andWhere(['student_id' => $studentid])->distinct()->all();
-    //print_r($uQuery);exit;
+	public static function getStudentsMarks($semister, $moduleid, $userid){
+	    $uQuery = (new Query())->select('sm.*')
+		->from('student_marks AS sm')
+		->where(['sm.module_id' => $moduleid])
+		->andWhere(['sm.semister' => $semister])->distinct()->all();
 		return $uQuery;
     }
 	
 	public static function getStudentFirstYearMarks($studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid, ew_percentage, cw_percentage')
 		->from('student_marks AS sm')
 		->where(1);
 		if($studentid){
@@ -54,13 +52,14 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		}
 		$uQuery->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mp', 'mp.module_id = sm.module_id')
 		->andWhere('sm.semister = 1 or sm.semister = 2');
 		$uQuery = $uQuery->all();
 		return $uQuery;
 	}
 	
 	public static function getStudentSecondYearMarks($studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid, ew_percentage, cw_percentage')
 		->from('student_marks AS sm')
 		->where(1);
 		if($studentid){
@@ -68,13 +67,14 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		}
 		$uQuery->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mp', 'mp.module_id = sm.module_id')
 		->andWhere('sm.semister = 3 or sm.semister = 4');
 		$uQuery = $uQuery->all();
 		return $uQuery;
 	}
 	
 	public static function getStudentThirdYearMarks($studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid, ew_percentage, cw_percentage')
 		->from('student_marks AS sm')
 		->where(1);
 		if($studentid){
@@ -82,13 +82,14 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		}
 		$uQuery->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mp', 'mp.module_id = sm.module_id')
 		->andWhere('sm.semister = 5 or sm.semister = 6');
 		$uQuery = $uQuery->all();
 		return $uQuery;
 	}
 	
 	public static function getStudentFourthYearMarks($studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, s.id AS studentid, ew_percentage, cw_percentage')
 		->from('student_marks AS sm')
 		->where(1);
 		if($studentid){
@@ -96,18 +97,20 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 		}
 		$uQuery->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mp', 'mp.module_id = sm.module_id')
 		->andWhere('sm.semister = 7 or sm.semister = 8');
 		$uQuery = $uQuery->all();
 		return $uQuery;
 	}
 	
 	public static function getStudentFirstYearMarksLecturer($uid,$studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, ew_percentage,cw_percentage')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
 		->join('INNER JOIN', 'lecturer_to_module AS lm', 'm.id = lm.module_id')
 		->join('INNER JOIN', 'module_to_programme AS mp', 'lm.module_id = mp.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
 		->where('sm.semister = 1 or sm.semister = 2');
 		if($uid){
 		$uQuery->andWhere(['lm.lecturer_id' => $uid]);
@@ -120,12 +123,13 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 	}
 	
 	public static function getStudentSecondYearMarksLecturer($uid,$studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no,ew_percentage,cw_percentage')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
 		->join('INNER JOIN', 'lecturer_to_module AS lm', 'm.id = lm.module_id')
 		->join('INNER JOIN', 'module_to_programme AS mp', 'lm.module_id = mp.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
 		->where('sm.semister = 3 or sm.semister = 4');
 		if($uid){
 		$uQuery->andWhere(['lm.lecturer_id' => $uid]);
@@ -138,12 +142,13 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 	}
 	
 	public static function getStudentThirdYearMarksLecturer($uid,$studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no,ew_percentage,cw_percentage')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
 		->join('INNER JOIN', 'lecturer_to_module AS lm', 'm.id = lm.module_id')
 		->join('INNER JOIN', 'module_to_programme AS mp', 'lm.module_id = mp.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
 		->where('sm.semister = 5 or sm.semister = 6');
 		if($uid){
 		$uQuery->andWhere(['lm.lecturer_id' => $uid]);
@@ -158,12 +163,13 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 	}
 	
 	public static function getStudentFourthYearMarksLecturer($uid,$studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no,ew_percentage,cw_percentage')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
 		->join('INNER JOIN', 'lecturer_to_module AS lm', 'm.id = lm.module_id')
 		->join('INNER JOIN', 'module_to_programme AS mp', 'lm.module_id = mp.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
 		->where('sm.semister = 7 or sm.semister = 8');
 		if($uid){
 		$uQuery->andWhere(['lm.lecturer_id' => $uid]);
@@ -176,10 +182,11 @@ class AddStudentMarks extends \yii\db\ActiveRecord
 	}
 	
 	public static function getStudentSemWiseMarks($year, $studentid){
-		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no')
+		$uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, ew_percentage,cw_percentage')
 		->from('student_marks AS sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
+		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
 		->where(1);
 		if($year == 1){
 		$uQuery->andWhere('sm.semister = 1 or sm.semister = 2');

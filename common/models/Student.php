@@ -166,13 +166,23 @@ class Student extends \yii\db\ActiveRecord
     }
 	
 	public static function getStudentsByLecturer($moduleid,$userid){
-	    $uQuery = (new Query())->select(['s.id as studentid','name as studentname'])
+	    $uQuery = (new Query())->select(['s.id as studentid','name as studentname','rollno','ic_no'])
         ->from('module_to_programme AS mp')
         ->join('INNER JOIN', 'student AS s', 's.programme_name = mp.programme_id')
 		->where(['mp.module_id' => $moduleid])
 		->orderBy(['name'=>SORT_DESC])->distinct()->all();
     //print_r($uQuery);exit;
 		return $uQuery;
+		
+    }
+    
+    public static function getMarksPercentage($moduleid,$semister){
+	    $uQuery = (new Query())->select('mp.*')
+        ->from('marks_percentage AS mp')
+		->where(['mp.module_id' => $moduleid])
+		->andWhere(['mp.semister' => $semister])->all();
+		return $uQuery;
+		
     }
 	
 	public function attributeLabels()

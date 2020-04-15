@@ -21,6 +21,7 @@ class AddStudentMarksForm extends \yii\db\ActiveRecord
 	public $grade_definition;
 	public $entered_by;
 	public $updated_by;
+	public $studentid;
    
     /**
      * @inheritdoc

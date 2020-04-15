@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 12, 2020 at 01:05 PM
+-- Generation Time: Apr 15, 2020 at 08:19 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 5.6.40
 
@@ -501,6 +501,30 @@ INSERT INTO `login_attempts` (`id`, `user_ref_id`, `attempts`, `ip`, `reset_at`,
 (8, 37, 1, NULL, NULL, '2020-02-13 23:09:38'),
 (9, 42, 2, NULL, NULL, '2020-04-06 13:32:41'),
 (10, 50, 2, NULL, NULL, '2020-04-06 13:33:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marks_percentage`
+--
+
+DROP TABLE IF EXISTS `marks_percentage`;
+CREATE TABLE IF NOT EXISTS `marks_percentage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `semister` int(11) NOT NULL,
+  `module_id` int(11) NOT NULL,
+  `ew_percentage` int(11) NOT NULL,
+  `cw_percentage` int(11) NOT NULL,
+  `created_by` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `marks_percentage`
+--
+
+INSERT INTO `marks_percentage` (`id`, `semister`, `module_id`, `ew_percentage`, `cw_percentage`, `created_by`) VALUES
+(2, 5, 1, 40, 40, 59);
 
 -- --------------------------------------------------------
 
@@ -1598,12 +1622,8 @@ CREATE TABLE IF NOT EXISTS `session` (
 --
 
 INSERT INTO `session` (`id`, `expire`, `data`) VALUES
-('0l26p2pr6u7a64svcq50khcfr1', 1586698249, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a34383b5f5f6578706972657c693a313538363639383030393b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32323a226578616d6f6666696365723140676d61696c2e636f6d223b75736572526f6c657c693a333b6973456141646d696e7c693a313b),
-('f5d94bhakduj9pk8ljn66looq5', 1586697099, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a34383b5f5f6578706972657c693a313538363639363835393b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32323a226578616d6f6666696365723140676d61696c2e636f6d223b75736572526f6c657c693a333b6973456141646d696e7c693a313b),
-('gadpd8bvhumcs7h8gsoim32p13', 1586698715, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a34383b5f5f6578706972657c693a313538363639383437353b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32323a226578616d6f6666696365723140676d61696c2e636f6d223b75736572526f6c657c693a333b6973456141646d696e7c693a313b),
-('in568rj625cjf9vajp3nulb4h4', 1586699846, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a34383b5f5f6578706972657c693a313538363639393630353b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32323a226578616d6f6666696365723140676d61696c2e636f6d223b75736572526f6c657c693a333b6973456141646d696e7c693a313b),
-('qkuep6v7vl5aepc951p0iqhke0', 1586699470, 0x5f5f666c6173687c613a303a7b7d),
-('r5bksfnc8mtabob7s9tnd9c745', 1586698132, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a34383b5f5f6578706972657c693a313538363639373839313b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32323a226578616d6f6666696365723140676d61696c2e636f6d223b75736572526f6c657c693a333b6973456141646d696e7c693a313b);
+('0vrac6a7dif9gb9nbf8a8brar1', 1586984884, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a373b5f5f6578706972657c693a313538363938343634333b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a31373a2273747564656e7440676d61696c2e636f6d223b75736572526f6c657c693a323b),
+('l1k50hul3thp02tdsc9c34f4f6', 1586983295, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a34383b5f5f6578706972657c693a313538363938333035343b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32323a226578616d6f6666696365723140676d61696c2e636f6d223b75736572526f6c657c693a333b6973456141646d696e7c693a313b);
 
 -- --------------------------------------------------------
 
@@ -1742,7 +1762,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 
 INSERT INTO `student` (`id`, `name`, `rollno`, `rumpun`, `nationality`, `passportno`, `race`, `religion`, `gender`, `martial_status`, `dob`, `place_of_birth`, `telephone_mobile`, `tele_home`, `emailother`, `lastschoolname`, `type_of_entry`, `specialneeds`, `father_name`, `fathericno`, `father_mobile`, `mother_name`, `mothericno`, `mother_mobile`, `address`, `address2`, `address3`, `postal_code`, `bank_name`, `account_no`, `programme_name`, `intake`, `entry`, `user_image`, `email`, `user_ref_id`, `nationalityother`, `raceother`, `religionother`, `typeofentryother`, `sponsor_type`, `sponsor_type_other`, `ic_no`, `ic_color`, `gaurdian_relation`, `mobile_home`, `father_ic_color`, `gaurdian_employment`, `gaurdian_employer`, `remarks`, `telphone_work`, `mother_ic_color`, `status_of_student`, `status_remarks`, `mode`, `utb_email_address`, `degree_classification`, `date_of_registration`, `date_of_leaving`, `previous_roll_no`, `previous_programme_name`, `previous_intake_no`, `previous_utb_email`, `title`, `ic_no_format`, `age`, `highest_qualification`, `highestqualificationother`, `countrycode`, `state`, `district`, `mailing_permanent`, `mailing_address`, `mailing_address2`, `mailing_address3`, `mailing_countrycode`, `mailing_state`, `mailing_district`, `mailing_postal_code`, `type_of_residential`, `typeofresidentialother`, `type_of_programme`, `school`, `bank_name_other`, `bank_account_name`, `bank_terms`, `is_submit`) VALUES
 (1, 'student1', '88880', 'XLR8', 'Other', '99990', 'Other', 'Other', 'Female', 'Married', '09-02-1968', 'hyderabad', '8080808080', '0409898980', 'emailother@gmail.com', 'school attended 0', 'Other', 'special needs0', 'father / gaurdian name 0', '89898 0', '0000000000 0', 'Mother\'s name 0', '777 0', '8999988880 0', 'postal address 1 0', 'postal address 1 2 0', 'postal address 1 3 0', '0000-0', 'Other', '7777 8888 9999 0', '2', '2001', 'Second Year', '', 'student@gmail.com', 7, 'other', 'other', 'other', 'other', 'Other', 'other', '999990', 'Red', 'father 0', '1111111110', 'Red', 'father emp 0', 'father employer 0', 'remarks 1 0', '2222222 0', 'Red', 'Current Student', NULL, 'Part Time', 'utbemail1@gmail.com', NULL, '14-02-2012', '14-02-2016', NULL, NULL, NULL, NULL, 'Datin', 80, 52, 'Other', 'other ', 'Albania', '', 'JJJJJJ', '0', 'postal address 1 0', 'postal address 1 2 0', 'postal address 1 3 0', '', '', 'JJJJJJ', '0000-0', 'Other', 'other', 'Masters by Coursework', 'School of Computing and Informatics', 'other', 'bank account name 0', '0', 'submit'),
-(56, 'rajitha', '8337', 'XLR8', 'Malay', '32323', 'Malay', 'Muslim', 'Female', 'Single', '21-04-1950', 'jj', '3232', '2323', 'rajithaother@gmail.com', 'ssdd', 'HECAS', 'sdsd', 'ssdd', '2323', '2323', 'fdf', '233', '3434', 'sdsd', 'sdsd', 'sdsd', '2323', 'BAIDURI', '232', '27', '2011', 'Second Year', '', 'rajitha@gmail.com', 58, '', '', '', '', 'Government Scholarship', '', 'ss', 'Yellow', 'ss', '323', 'Yellow', 'dsd', '32sds', 'sdsd', '223', 'Yellow', 'Current Student', NULL, 'Full Time', 'rajithautb@gmail.com', NULL, '08-04-1950', '26-04-1950', NULL, NULL, NULL, NULL, 'Datin', 23, 69, 'A Level', '', 'Afganistan', '', 'sdsd', '1', 'sdsd', 'sdsd', 'sdsd', '', '', 'sdsd', '2323', 'Own House', '', 'Undergraduate Degree', 'School of Business', '', 'sdds', '1', 'submit');
+(56, 'rajitha', '8337', 'XLR8', 'Malay', '32323', 'Malay', 'Muslim', 'Female', 'Single', '21-04-1950', 'jj', '3232', '2323', 'rajithaother@gmail.com', 'ssdd', 'HECAS', 'sdsd', 'ssdd', '2323', '2323', 'fdf', '233', '3434', 'sdsd', 'sdsd', 'sdsd', '2323', 'BAIDURI', '232', '2', '2011', 'Second Year', '', 'rajitha@gmail.com', 58, '', '', '', '', 'Government Scholarship', '', 'ss', 'Yellow', 'ss', '323', 'Yellow', 'dsd', '32sds', 'sdsd', '223', 'Yellow', 'Current Student', NULL, 'Full Time', 'rajithautb@gmail.com', NULL, '08-04-1950', '26-04-1950', NULL, NULL, NULL, NULL, 'Datin', 23, 69, 'A Level', '', 'Afganistan', '', 'sdsd', '1', 'sdsd', 'sdsd', 'sdsd', '', '', 'sdsd', '2323', 'Own House', '', 'Undergraduate Degree', 'School of Business', '', 'sdds', '1', 'submit');
 
 -- --------------------------------------------------------
 
@@ -1756,44 +1776,26 @@ CREATE TABLE IF NOT EXISTS `student_marks` (
   `semister` int(11) NOT NULL,
   `module_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
-  `ew_percentage` int(11) NOT NULL,
-  `ew_marks` int(11) NOT NULL,
-  `cw_percentage` int(11) NOT NULL,
-  `cw_marks` int(11) NOT NULL,
   `ew_total_percentage` int(11) NOT NULL,
+  `ew_marks` int(11) NOT NULL,
   `cw_total_percentage` int(11) NOT NULL,
+  `cw_marks` int(11) NOT NULL,
   `total_percentage` int(11) NOT NULL,
   `is_pass` int(11) NOT NULL,
   `grade` varchar(10) NOT NULL,
   `grade_definition` varchar(50) NOT NULL,
   `entered_by` int(11) NOT NULL,
-  `updated_by` int(11) NOT NULL,
+  `updated_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_marks`
 --
 
-INSERT INTO `student_marks` (`id`, `semister`, `module_id`, `student_id`, `ew_percentage`, `ew_marks`, `cw_percentage`, `cw_marks`, `ew_total_percentage`, `cw_total_percentage`, `total_percentage`, `is_pass`, `grade`, `grade_definition`, `entered_by`, `updated_by`) VALUES
-(7, 5, 1, 1, 30, 60, 70, 40, 18, 28, 46, 1, 'D', 'Satisfactory', 59, 0),
-(8, 5, 26, 1, 40, 70, 60, 50, 28, 30, 58, 1, 'C', 'Good', 59, 0),
-(9, 1, 1, 1, 40, 75, 60, 75, 30, 45, 75, 1, 'A', 'Excellent', 59, 48),
-(10, 2, 225, 1, 20, 75, 80, 75, 15, 60, 75, 1, 'A', 'Excellent', 59, 48),
-(11, 3, 1, 1, 40, 60, 60, 70, 24, 42, 66, 1, 'B', 'Very Good', 59, 0),
-(12, 4, 225, 1, 35, 50, 65, 70, 17, 45, 63, 1, 'C+', 'Good', 59, 0),
-(13, 6, 226, 1, 75, 60, 25, 50, 45, 12, 57, 1, 'C', 'Good', 59, 0),
-(14, 7, 26, 1, 50, 50, 50, 50, 25, 25, 50, 1, 'D+', 'Satisfactory', 59, 0),
-(15, 8, 26, 1, 10, 40, 90, 70, 4, 62, 67, 1, 'B', 'Very Good', 59, 0),
-(16, 5, 1, 56, 30, 60, 70, 40, 18, 28, 46, 1, 'D', 'Satisfactory', 59, 0),
-(17, 5, 26, 56, 40, 70, 60, 50, 28, 30, 58, 1, 'C', 'Good', 59, 0),
-(18, 1, 1, 56, 40, 60, 60, 40, 24, 24, 48, 1, 'D', 'Satisfactory', 59, 0),
-(19, 2, 225, 56, 20, 40, 80, 60, 8, 48, 56, 1, 'C', 'Good', 59, 0),
-(20, 3, 1, 56, 40, 60, 60, 70, 24, 42, 66, 1, 'B', 'Very Good', 59, 0),
-(21, 4, 225, 56, 35, 50, 65, 70, 17, 45, 63, 1, 'C+', 'Good', 59, 0),
-(22, 6, 226, 56, 75, 60, 25, 50, 45, 12, 57, 1, 'C', 'Good', 59, 0),
-(23, 7, 26, 56, 50, 50, 50, 50, 25, 25, 50, 1, 'D+', 'Satisfactory', 59, 0),
-(24, 8, 26, 56, 10, 40, 90, 70, 4, 62, 67, 1, 'B', 'Very Good', 59, 0);
+INSERT INTO `student_marks` (`id`, `semister`, `module_id`, `student_id`, `ew_total_percentage`, `ew_marks`, `cw_total_percentage`, `cw_marks`, `total_percentage`, `is_pass`, `grade`, `grade_definition`, `entered_by`, `updated_by`) VALUES
+(29, 5, 1, 1, 36, 90, 36, 90, 72, 1, 'B+', 'Very Good', 59, 59),
+(30, 5, 1, 56, 12, 30, 12, 30, 24, 0, 'F', 'Fail', 59, NULL);
 
 -- --------------------------------------------------------
 
@@ -1807,9 +1809,7 @@ CREATE TABLE IF NOT EXISTS `student_marks_temporary` (
   `semister` int(11) NOT NULL,
   `module_id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
-  `ew_percentage` int(11) NOT NULL,
   `ew_marks` int(11) NOT NULL,
-  `cw_percentage` int(11) NOT NULL,
   `cw_marks` int(11) NOT NULL,
   `ew_total_percentage` int(11) NOT NULL,
   `cw_total_percentage` int(11) NOT NULL,
@@ -1823,20 +1823,17 @@ CREATE TABLE IF NOT EXISTS `student_marks_temporary` (
   `is_submit` varchar(50) NOT NULL,
   `stage` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=72 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_marks_temporary`
 --
 
-INSERT INTO `student_marks_temporary` (`id`, `semister`, `module_id`, `student_id`, `ew_percentage`, `ew_marks`, `cw_percentage`, `cw_marks`, `ew_total_percentage`, `cw_total_percentage`, `total_percentage`, `is_pass`, `grade`, `grade_definition`, `entered_by`, `marks_id`, `updated_by`, `is_submit`, `stage`) VALUES
-(57, 1, 1, 1, 40, 35, 60, 35, 14, 21, 35, 0, 'F', 'Fail', 59, 9, 48, 'submit', 'pasubmit'),
-(58, 2, 225, 1, 20, 35, 80, 35, 7, 28, 35, 0, 'F', 'Fail', 59, 10, 48, 'submit', 'pasubmit'),
-(59, 1, 1, 1, 40, 55, 60, 55, 22, 33, 55, 1, 'C', 'Good', 59, 9, 48, 'submit', 'fssubmit'),
-(60, 2, 225, 1, 20, 55, 80, 55, 11, 44, 55, 1, 'C', 'Good', 59, 10, 48, 'submit', 'fssubmit'),
-(65, 2, 225, 1, 20, 75, 80, 75, 15, 60, 75, 1, 'A', 'Excellent', 59, 10, 48, 'submit', 'uebsubmit'),
-(63, 1, 1, 1, 40, 75, 60, 75, 30, 45, 75, 1, 'A', 'Excellent', 59, 9, 48, 'submit', 'uebsubmit'),
-(64, 1, 1, 1, 40, 75, 60, 75, 30, 45, 75, 1, 'A', 'Excellent', 59, 9, 48, 'submit', 'uebsubmit');
+INSERT INTO `student_marks_temporary` (`id`, `semister`, `module_id`, `student_id`, `ew_marks`, `cw_marks`, `ew_total_percentage`, `cw_total_percentage`, `total_percentage`, `is_pass`, `grade`, `grade_definition`, `entered_by`, `marks_id`, `updated_by`, `is_submit`, `stage`) VALUES
+(71, 5, 1, 56, 50, 50, 20, 20, 40, 1, 'E', 'Marginal', 59, 30, 48, 'save', 'pasaved'),
+(70, 5, 1, 1, 90, 90, 36, 36, 72, 1, 'B+', 'Very Good', 59, 29, 59, 'submit', 'uebsubmit'),
+(68, 5, 1, 1, 60, 60, 24, 24, 48, 1, 'D', 'Satisfactory', 59, 29, 59, 'submit', 'pasubmit'),
+(69, 5, 1, 1, 75, 75, 30, 30, 60, 1, 'C+', 'Good', 59, 29, 59, 'submit', 'fssubmit');
 
 -- --------------------------------------------------------
 

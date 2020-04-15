@@ -33,6 +33,15 @@ class AddStudentMarksTemporary extends \yii\db\ActiveRecord
 	    if($year == 1){
 		    $sem1 = 1;
 		    $sem2 = 2;
+	    }else if($year == 2){
+		    $sem1 = 3;
+		    $sem2 = 4;
+	    }else if($year == 3){
+		    $sem1 = 5;
+		    $sem2 = 6;
+	    }else if($year == 4){
+		    $sem1 = 7;
+		    $sem2 = 8;
 	    }
 	    $uQuery = (new Query())->select('*')
         ->from('student_marks_temporary')
@@ -51,14 +60,24 @@ class AddStudentMarksTemporary extends \yii\db\ActiveRecord
 	    if($year == 1){
 		    $sem1 = 1;
 		    $sem2 = 2;
+	    }else if($year == 2){
+		    $sem1 = 3;
+		    $sem2 = 4;
+	    }else if($year == 3){
+		    $sem1 = 5;
+		    $sem2 = 6;
+	    }else if($year == 4){
+		    $sem1 = 7;
+		    $sem2 = 8;
 	    }
-	    $uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no')
+	    $uQuery = (new Query())->select('sm.*, m.module_name, m.module_id AS moduleid, s.name AS studentname, s.ic_no, ew_percentage,cw_percentage')
 		->from('student_marks_temporary as sm')
 		->join('INNER JOIN', 'student AS s', 's.id = sm.student_id')
 		->join('INNER JOIN', 'modules AS m', 'm.id = sm.module_id')
-		->where(['semister' => $sem1])
-		->orWhere(['semister' => $sem2])
-		->andWhere(['student_id' => $studentid]);
+		->join('LEFT JOIN', 'marks_percentage AS mrp', 'mrp.module_id = sm.module_id')
+		->where(['sm.semister' => $sem1])
+		->orWhere(['sm.semister' => $sem2])
+		->andWhere(['sm.student_id' => $studentid]);
 		if($stage){
 			if($stage == 'pa' && $is_submit == 'save'){
 				$uQuery->andWhere(['stage' => 'pasaved']);
