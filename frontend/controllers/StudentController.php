@@ -1231,7 +1231,7 @@ Yii::$app->cache->flush();
 					$model->stage=$stg;
 					//print_r($model);exit;
 					$model->save();
-					if($issubmit == 'submit'){
+					/*if($issubmit == 'submit'){
 						$smodel = AddStudentMarks::find()->where(['id' => $postvariable['prev3_marks_id'][$i]])->one();
 						$smodel->semister = $postvariable['prev3_semister'][$i];
 						$smodel->module_id = $postvariable['prev3_module_id'][$i];
@@ -1246,7 +1246,7 @@ Yii::$app->cache->flush();
 						$smodel->grade_definition = $postvariable['prev3_grade_definition'][$i];
 						$smodel->updated_by = Yii::$app->user->id;
 						$smodel->save();
-					}
+					}*/
 				}
 			}
 				return $this->redirect('all-students-marks');
