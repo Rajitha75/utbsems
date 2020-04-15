@@ -20,15 +20,11 @@ echo "<h1 class='box-title'>$this->title </h1>";
 </style>
 <div class="user-view participation-border fl-left">
 <div class="profileimage">
-<?php //print_r($studentdetails);exit;
-
- if (!file_exists('../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
-<img style="width:120px; height:130px"src="<?php echo '../../../frontend/web/images/avatar.png'; ?>" />
-
+<div class="profileimage">
+    <?php if (!file_exists('../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image'])) { ?>
+<img style="width:120px; height:130px"src="<?php echo 'images/avatar.png'; ?>" />
 <?php }else{ ?>
-
-    <img style="width:120px; height:130px"src="<?php echo '../../../frontend/web/uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />
-
+    <img style="width:120px; height:130px"src="<?php echo 'uploads/profile_images/'.$studentdetails['user_ref_id'].'/'.$studentdetails['user_image']; ?>" />
 <?php } ?>
 </div>
 <a class="btn btn-success" href="<?php echo Yii::$app->request->BaseUrl; ?>/admin/student-update?id=<?php echo $studentdetails['id']; ?>">Edit Profile</a>
@@ -37,11 +33,11 @@ echo "<h1 class='box-title'>$this->title </h1>";
 <?php //print_r($studentdetails); exit;
         echo DetailView::widget([
                 'model' => $studentdetails,
-				'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+				'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
                 'attributes' => [
                     [
                         'attribute' => 'Name',
-                        'value' => stripslashes($studentdetails['name']),
+                        'value' => stripslashes($studentdetails['title']).' '.stripslashes($studentdetails['name']),
                     ], 
                     [
                         'attribute'=>'Roll No',
@@ -62,7 +58,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
                     ],
                     [
                         'attribute'=>'IC No',
-                        'value' => stripslashes($studentdetails['ic_no']),
+                        'value' => stripslashes($studentdetails['ic_no_format']).' - '.stripslashes($studentdetails['ic_no']),
                     ],
                     [
                         'attribute'=>'IC Color',
@@ -113,8 +109,16 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'value' => stripslashes($studentdetails['tele_home']),
                     ],
                     [
-                        'attribute'=>'Email (other)',       
+                        'attribute'=>'Email',       
                         'value' => stripslashes($studentdetails['email']),
+                    ],
+		    [
+                        'attribute'=>'Highest Qualification',       
+                        'value' => stripslashes($studentdetails['highest_qualification']),
+                    ],
+                    [
+                        'attribute'=>'Highest Qualification (Other)',       
+                        'value' => ($studentdetails['highest_qualification'] == 'Other') ? stripslashes($studentdetails['highestqualificationother']) : 'NA',
                     ],
                     [
                         'attribute'=>'Name of Last School Attended',       
@@ -124,7 +128,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'attribute'=>'Type of Entry',       
                         'value' => stripslashes($studentdetails['type_of_entry']),
                     ],
-                   /* [
+                    /*[
                         'attribute'=>'Type of Entry (Other)',       
                         'value' => ($studentdetails['type_of_entry'] == 'Other') ? stripslashes($studentdetails['typeofentryother']) : 'NA',
                     ],*/
@@ -138,7 +142,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
         <h1 class="box-title" style="background-color:#31539c;"><?php echo "Parents Information"; ?></h1> 
     <?php    echo DetailView::widget([
             'model' => $studentdetails,
-            'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+            'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
             'attributes' => [
                     [
                         'attribute'=>'Father/Guardian Name',       
@@ -202,10 +206,18 @@ echo "<h1 class='box-title'>$this->title </h1>";
     <h1 class="box-title" style="background-color:#31539c;"><?php echo "Postal Address"; ?></h1> 
 <?php    echo DetailView::widget([
         'model' => $studentdetails,
-        'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+        'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
         'attributes' => [
+		    [
+                        'attribute'=>'Type of Residential',       
+                        'value' => stripslashes($studentdetails['type_of_residential']),
+                    ],
+		    [
+                        'attribute'=>'Type of Residential (Other)',       
+                        'value' => ($studentdetails['type_of_residential'] == 'Other') ? stripslashes($studentdetails['typeofresidentialother']) : 'NA',
+                    ],
                     [
-                        'attribute'=>'Postal Address',       
+                        'attribute'=>'Address Line 1',       
                         'value' => stripslashes($studentdetails['address']),
                     ],
                     [
@@ -216,6 +228,10 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'attribute'=>'Address Line 3',       
                         'value' => stripslashes($studentdetails['address3']),
                     ],
+		    [
+                        'attribute'=>'Country',       
+                        'value' => stripslashes($studentdetails['countrycode']),
+                    ],
                     [
                         'attribute'=>'Postal Code',       
                         'value' => stripslashes($studentdetails['postal_code']),
@@ -223,14 +239,18 @@ echo "<h1 class='box-title'>$this->title </h1>";
                 ],
                 ]);
             ?>
-                <h1 class="box-title" style="background-color:#31539c;"><?php echo "Bank Information"; ?></h1> 
+                <h1 class="box-title" style="background-color:#31539c;"><?php echo "Bank Details"; ?></h1> 
             <?php    echo DetailView::widget([
                     'model' => $studentdetails,
-                    'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+                    'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
                     'attributes' => [
                     [
                         'attribute'=>'Bank Name',       
                         'value' => stripslashes($studentdetails['bank_name']),
+                    ],
+		    [
+                        'attribute'=>'Bank Account Name',       
+                        'value' => stripslashes($studentdetails['bank_account_name']),
                     ],
                     [
                         'attribute'=>'Bank Account No',       
@@ -242,7 +262,7 @@ echo "<h1 class='box-title'>$this->title </h1>";
                 <h1 class="box-title" style="background-color:#31539c;"><?php echo "Programme Information"; ?></h1> 
             <?php    echo DetailView::widget([
                     'model' => $studentdetails,
-                    'template' => '<tr><td style="width: 20% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
+                    'template' => '<tr><td style="width: 40% !important; font-weight:bold">{label}</td><td style="width: 80% !important;">{value}</td></tr>',
                     'attributes' => [
                         [
                             'attribute'=>'Sponsor Type',       
@@ -252,9 +272,17 @@ echo "<h1 class='box-title'>$this->title </h1>";
                             'attribute'=>'Sponsor Type (Other)',       
                             'value' => ($studentdetails['sponsor_type'] == 'Other') ? stripslashes($studentdetails['sponsor_type_other']) : 'NA',
                         ],*/
+			[
+                        'attribute'=>'Type of Programme',       
+                        'value' => stripslashes($studentdetails['type_of_programme']),
+                    ],
                     [
                         'attribute'=>'Programme Name',       
                         'value' => stripslashes($studentdetails['programmename']),
+                    ],
+		    [
+                        'attribute'=>'School/Faculty',       
+                        'value' => stripslashes($studentdetails['school']),
                     ],
                     [
                         'attribute'=>'Entry',       
@@ -265,16 +293,8 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'value' => stripslashes($studentdetails['status_of_student']),
                     ],
                     [
-                        'attribute'=>'Status Remarks',       
-                        'value' => stripslashes($studentdetails['status_remarks']),
-                    ],
-                    [
-                        'attribute'=>'Intake',       
+                        'attribute'=>'Intake No',       
                         'value' => stripslashes($studentdetails['intake']),
-                    ],
-                    [
-                        'attribute'=>'Entry',       
-                        'value' => stripslashes($studentdetails['entry']),
                     ],
                     [
                         'attribute'=>'Mode',       
@@ -285,10 +305,6 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'value' => stripslashes($studentdetails['utb_email_address']),
                     ],
                     [
-                        'attribute'=>'Degree Classification',       
-                        'value' => stripslashes($studentdetails['degree_classification']),
-                    ],
-                    [
                         'attribute'=>'Date of Registration',       
                         'value' => stripslashes($studentdetails['date_of_registration']),
                     ],
@@ -296,25 +312,8 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'attribute'=>'Date of Leaving',       
                         'value' => stripslashes($studentdetails['date_of_leaving']),
                     ],
-                    [
-                        'attribute'=>'Previous Roll No',       
-                        'value' => stripslashes($studentdetails['previous_roll_no']),
-                    ],
-                    [
-                        'attribute'=>'Previous Programme Name',       
-                        'value' => stripslashes($studentdetails['previous_programme_name']),
-                    ],
-                    [
-                        'attribute'=>'Previous Intake No',       
-                        'value' => stripslashes($studentdetails['previous_intake_no']),
-                    ],
-                    [
-                        'attribute'=>'Previous UTB Email',       
-                        'value' => stripslashes($studentdetails['previous_utb_email']),
-                    ],
 
                 ],
             ]);
     ?>
-
 </div>

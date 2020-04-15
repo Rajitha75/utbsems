@@ -92,8 +92,27 @@ $this->title = 'Student Marks';
 echo "<h1 class='box-title'>$this->title </h1>";  ?> 
 <div class="downloadall">
 <?php $vurl = Url::toRoute(['../../view-all-marks-pdf']); ?>
+<?php if(count($studentmarks1)>0){
+	$programmename = $studentmarks1[0]['programme_name'];
+	$facultyname = $studentmarks1[0]['faculty_name'];
+}else if(count($studentmarks2)>0){
+	$programmename = $studentmarks2[0]['programme_name'];
+	$facultyname = $studentmarks2[0]['faculty_name'];
+}else if(count($studentmarks3)>0){
+	$programmename = $studentmarks3[0]['programme_name'];
+	$facultyname = $studentmarks3[0]['faculty_name'];
+}else if(count($studentmarks4)>0){
+	$programmename = $studentmarks4[0]['programme_name'];
+	$facultyname = $studentmarks4[0]['faculty_name'];
+} ?>
  <a href="<?php echo $vurl; ?>" id="downloadall" class="btn btn-primary" target="_blank">Download</a>
  </div>
+ <?php if(isset($programmename) && $programmename != '') { ?>
+ <div class="">Programme Name : <?php echo $programmename;  ?></div>
+ <?php } ?>
+ <?php if(isset($facultyname) && $facultyname != '') { ?>
+ <div class="">Faculty Name :  <?php echo $facultyname; ?></div>
+ <?php } ?>
 <?php //print_r($studentmarks1); exit; 
 $smarks1 = []; $semisterArray1 = [];
  $moduleidArray1 = []; $modulenameArray1 = []; $moduleArrayid1 = []; 
@@ -144,6 +163,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['grade'] = $studentmarks1[$i]['grade'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['studentname'] = $studentmarks1[$i]['studentname'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['ic_no'] = $studentmarks1[$i]['ic_no'];
+	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['rollno'] = $studentmarks1[$i]['rollno'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['student_id'] = $studentmarks1[$i]['student_id'];
 	
 } 
@@ -199,6 +219,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['grade'] = $studentmarks2[$i]['grade'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['studentname'] = $studentmarks2[$i]['studentname'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['ic_no'] = $studentmarks2[$i]['ic_no'];
+	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['rollno'] = $studentmarks2[$i]['rollno'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['student_id'] = $studentmarks2[$i]['student_id'];
 	
 } 
@@ -254,6 +275,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['grade'] = $studentmarks3[$i]['grade'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['studentname'] = $studentmarks3[$i]['studentname'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['ic_no'] = $studentmarks3[$i]['ic_no'];
+	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['rollno'] = $studentmarks3[$i]['rollno'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['student_id'] = $studentmarks3[$i]['student_id'];
 } 
  }//echo '<pre>';print_r($moduleArrayid56);exit;
@@ -308,6 +330,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['grade'] = $studentmarks4[$i]['grade'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['studentname'] = $studentmarks4[$i]['studentname'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['ic_no'] = $studentmarks4[$i]['ic_no'];
+	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['rollno'] = $studentmarks4[$i]['rollno'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['student_id'] = $studentmarks4[$i]['student_id'];
 } 
  }//echo '<pre>';print_r($smarks4);exit;
@@ -333,17 +356,20 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td colspan="<?php echo count($moduleArrayid12)*4; ?>">Year 1</td>
+  <td class="noborder"></td>
+  <td colspan="<?php echo (count($moduleArrayid12)*4)+1; ?>">Year 1</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray1)>0) { ?><td colspan="<?php echo count($moduleidArray1)*4; ?>">Semester 1</td><?php } ?>
-  <?php if(count($moduleidArray2)>0) { ?><td colspan="<?php echo count($moduleidArray2)*4; ?>">Semester 2</td><?php } ?>
+  <td class="noborder"></td>
+  <?php if(count($moduleidArray1)>0) { ?><td colspan="<?php echo (count($moduleidArray1)*4)+1; ?>">Semester 1</td><?php } ?>
+  <?php if(count($moduleidArray2)>0) { ?><td colspan="<?php echo (count($moduleidArray2)*4)+1; ?>">Semester 2</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid12);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid12[$i]; ?></td>
    <?php } ?>
@@ -390,6 +416,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['cw_total_percentage']; ?></td>
@@ -399,7 +426,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php 
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 1, 'id' => $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['student_id']]);
 			?>
-			<a href = "<?php echo $url; ?>">Edit</a>
+			<a href = "<?php echo $url; ?>"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>
 			</td>
 			<?php } $m=$m+1; } 
 		array_push($arr1, $semisterArray1[$j].$moduleidArray12[$i].$studentArray1[$k]);		?>
@@ -417,17 +444,18 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td colspan="<?php echo count($moduleArrayid34)*4; ?>">Year 2</td>
+  <td colspan="<?php echo (count($moduleArrayid34)*4)+1; ?>">Year 2</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray3)>0) { ?><td colspan="<?php echo count($moduleidArray3)*4; ?>">Semester 3</td><?php } ?>
-  <?php if(count($moduleidArray4)>0) { ?><td colspan="<?php echo count($moduleidArray4)*4; ?>">Semester 4</td><?php } ?>
+  <?php if(count($moduleidArray3)>0) { ?><td colspan="<?php echo (count($moduleidArray3)*4)+1; ?>">Semester 3</td><?php } ?>
+  <?php if(count($moduleidArray4)>0) { ?><td colspan="<?php echo (count($moduleidArray4)*4)+1; ?>">Semester 4</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid34);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid34[$i]; ?></td>
    <?php } ?>
@@ -474,6 +502,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['cw_total_percentage']; ?></td>
@@ -483,7 +512,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php 
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 2, 'id' => $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['student_id']]);
 			?>
-			<a href = "<?php echo $url; ?>">Edit</a>
+			<a href = "<?php echo $url; ?>"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>
 			</td>
 			<?php } $m=$m+1; } 
 		array_push($arr1, $semisterArray2[$j].$moduleidArray34[$i].$studentArray2[$k]);		?>
@@ -504,17 +533,18 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td colspan="<?php echo count($moduleArrayid56)*4; ?>">Year 3</td>
+  <td colspan="<?php echo (count($moduleArrayid56)*4)+1; ?>">Year 3</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray5)>0) { ?><td colspan="<?php echo count($moduleidArray5)*4; ?>">Semester 5</td><?php } ?>
-  <?php if(count($moduleidArray6)>0) { ?><td colspan="<?php echo count($moduleidArray6)*4; ?>">Semester 6</td><?php } ?>
+  <?php if(count($moduleidArray5)>0) { ?><td colspan="<?php echo (count($moduleidArray5)*4)+1; ?>">Semester 5</td><?php } ?>
+  <?php if(count($moduleidArray6)>0) { ?><td colspan="<?php echo (count($moduleidArray6)*4)+1; ?>">Semester 6</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid56);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid56[$i]; ?></td>
    <?php } ?>
@@ -560,6 +590,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['cw_total_percentage']; ?></td>
@@ -569,7 +600,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php 
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 3, 'id' => $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['student_id']]);
 			?>
-			<a href = "<?php echo $url; ?>">Edit</a>
+			<a href = "<?php echo $url; ?>"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>
 			</td>
 			<?php } $m=$m+1; } 
 		array_push($arr1, $semisterArray3[$j].$moduleidArray56[$i].$studentArray3[$k]);		?>
@@ -587,17 +618,18 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <td colspan="<?php echo count($moduleArrayid78)*4; ?>">Year 4</td>
+  <td colspan="<?php echo (count($moduleArrayid78)*4)+1; ?>">Year 4</td>
   </tr>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
-  <?php if(count($moduleidArray7)>0) { ?><td colspan="<?php echo count($moduleidArray7)*4; ?>">Semester 7</td><?php } ?>
-  <?php if(count($moduleidArray8)>0) { ?><td colspan="<?php echo count($moduleidArray8)*4; ?>">Semester 8</td><?php } ?>
+  <?php if(count($moduleidArray7)>0) { ?><td colspan="<?php echo (count($moduleidArray7)*4)+1; ?>">Semester 7</td><?php } ?>
+  <?php if(count($moduleidArray8)>0) { ?><td colspan="<?php echo (count($moduleidArray8)*4)+1; ?>">Semester 8</td><?php } ?>
   </tr>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid78);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid78[$i]; ?></td>
    <?php } ?>
@@ -644,6 +676,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['cw_total_percentage']; ?></td>
@@ -653,7 +686,7 @@ if(count($studentArray1)>0) { ?>
 			<td><?php 
 			$url = Url::toRoute(['../../edit-student-marks', 'year' => 4, 'id' => $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['student_id']]);
 			?>
-			<a href = "<?php echo $url; ?>">Edit</a>
+			<a href = "<?php echo $url; ?>"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a>
 			</td>
 			<?php } $m=$m+1; } 
 		array_push($arr1, $semisterArray4[$j].$moduleidArray78[$i].$studentArray4[$k]);		?>

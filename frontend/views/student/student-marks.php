@@ -85,6 +85,7 @@ td, th {
 <?php 
 $this->title = 'Student Marks';
 echo "<h1 class='box-title'>$this->title </h1>"; ?>
+
 <div class="login_page" style="padding-top:2%;">
 <div class="site-login container">
  <div class="row">
@@ -95,18 +96,46 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 <?php if(count($studentmarks1)>0){
 	$studentname = $studentmarks1[0]['studentname'];
 	$ic_no = $studentmarks1[0]['ic_no'];
+	$rollno = $studentmarks1[0]['rollno'];
+	$programmename = $studentmarks1[0]['programme_name'];
+	$facultyname = $studentmarks1[0]['faculty_name'];
 }else if(count($studentmarks2)>0){
 	$studentname = $studentmarks2[0]['studentname'];
 	$ic_no = $studentmarks2[0]['ic_no'];
+	$rollno = $studentmarks2[0]['rollno'];
+	$programmename = $studentmarks2[0]['programme_name'];
+	$facultyname = $studentmarks2[0]['faculty_name'];
 }else if(count($studentmarks3)>0){
 	$studentname = $studentmarks3[0]['studentname'];
 	$ic_no = $studentmarks3[0]['ic_no'];
+	$rollno = $studentmarks3[0]['rollno'];
+	$programmename = $studentmarks3[0]['programme_name'];
+	$facultyname = $studentmarks3[0]['faculty_name'];
 }else if(count($studentmarks4)>0){
 	$studentname = $studentmarks4[0]['studentname'];
 	$ic_no = $studentmarks4[0]['ic_no'];
+	$rollno = $studentmarks4[0]['rollno'];
+	$programmename = $studentmarks4[0]['programme_name'];
+	$facultyname = $studentmarks4[0]['faculty_name'];
 } ?>
+
+
  <h1 class='box-title'><?php echo 'Student Name: '.$studentname; ?></h1></br>
+ <?php if(isset($ic_no) && $ic_no != '') { ?>
+ <div class="">IC No. : <?php echo $ic_no;  ?></div>
+ <?php } ?>
+ <?php if(isset($rollno) && $rollno != '') { ?>
+ <div class="">Roll No :  <?php echo $rollno; ?></div>
+ <?php } ?>
+ 
+ <?php if(isset($programmename) && $programmename != '') { ?>
+ <div class="">Programme Name : <?php echo $programmename;  ?></div>
+ <?php } ?>
+ <?php if(isset($facultyname) && $facultyname != '') { ?>
+ <div class="">Faculty Name :  <?php echo $facultyname; ?></div>
+ <?php } ?>
 <div id="pjax-list" data-pjax-container=""><div id="w0" class="grid-view">
+
 <div class="year_1_2">
 <?php if(count($studentmarks1)>0) { ?>
 <div class="year_1">

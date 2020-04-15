@@ -67,15 +67,28 @@ width: 18%;
 <?php 
 $this->title = 'Exam Officers List';
 echo "<h1 class='box-title'>$this->title </h1>"; ?>
-<div class="login_page" style="padding-top:2%;">
-<div class="site-login container">
+        <?php $form = ActiveForm::begin(); ?>
+        <div class="col-sm-2 col-xs-12 p-left0 ad-lst">
+            <?php echo $form->field($model, 'name')->textInput(array('placeholder' => 'Name'), ['class' => 'form-control']) ?>
+        </div>
+        <div class="col-sm-2 col-xs-12 p-left0 ad-lst">
+        <?php echo $form->field($model, 'email')->textInput(array('placeholder' => 'Email'), ['class' => 'form-control']) ?>
+
+        </div>
+       
+        <div class="searchBtn">
+                <?php echo Html::submitButton('<i class="fa fa-search"></i>', ['class' => 'btn btn-success', 'id' => 'btnSearch']) ?>
+                <input type="hidden" value="<?php echo Yii::$app->request->BaseUrl; ?>/../../students-list" id="searchUrl">
+            </div>
+            <div class="searchBtn" style="padding:0;">
+                <?php echo Html::submitButton('<i class="fa fa-repeat"> </i>', ['class' => 'btn btn-success res-bnt', 'id' => 'btnReset']) ?>
+            </div>
+
  <div class="row">
         <div class="col-xs-12 col-sm-12">
         <div class="panel panel-default">
        
         	<div class="panel-body">
-
- 
 <?php
 \yii\widgets\Pjax::begin([
     'id' => 'pjax-list',
@@ -149,6 +162,10 @@ echo GridView::widget([
 ]);
 \yii\widgets\Pjax::end();
 ?>
+</div>
+</div>
+</div>
+</div>
 <div id="dataConfirmModal" class="confirm-box" style="display:none;">
     <h3 id="dataConfirmLabel" >Please Confirm</h3>   
     <div style="text-align:right;margin-top:10px;">

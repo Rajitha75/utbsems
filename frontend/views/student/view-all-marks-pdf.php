@@ -114,6 +114,26 @@ td, th {
 <?php 
 $this->title = 'STUDENTS MARKS';  ?> 
 <div class="tit"><?php echo $this->title; ?></div>
+<?php if(count($studentmarks1)>0){
+	$programmename = $studentmarks1[0]['programme_name'];
+	$facultyname = $studentmarks1[0]['faculty_name'];
+}else if(count($studentmarks2)>0){
+	$programmename = $studentmarks2[0]['programme_name'];
+	$facultyname = $studentmarks2[0]['faculty_name'];
+}else if(count($studentmarks3)>0){
+	$programmename = $studentmarks3[0]['programme_name'];
+	$facultyname = $studentmarks3[0]['faculty_name'];
+}else if(count($studentmarks4)>0){
+	$programmename = $studentmarks4[0]['programme_name'];
+	$facultyname = $studentmarks4[0]['faculty_name'];
+} ?>
+ </div>
+ <?php if(isset($programmename) && $programmename != '') { ?>
+ <div class="">Programme Name : <?php echo $programmename;  ?></div>
+ <?php } ?>
+ <?php if(isset($facultyname) && $facultyname != '') { ?>
+ <div class="">Faculty Name :  <?php echo $facultyname; ?></div>
+ <?php } ?>
 <?php //print_r($studentmarks1); exit; 
 $smarks1 = []; $semisterArray1 = [];
  $moduleidArray1 = []; $modulenameArray1 = []; $moduleArrayid1 = []; 
@@ -164,6 +184,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['grade'] = $studentmarks1[$i]['grade'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['studentname'] = $studentmarks1[$i]['studentname'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['ic_no'] = $studentmarks1[$i]['ic_no'];
+	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['rollno'] = $studentmarks1[$i]['rollno'];
 	$smarks1[$studentmarks1[$i]['semister']][$studentmarks1[$i]['module_id']][$studentmarks1[$i]['student_id']]['student_id'] = $studentmarks1[$i]['student_id'];
 	
 } 
@@ -219,6 +240,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['grade'] = $studentmarks2[$i]['grade'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['studentname'] = $studentmarks2[$i]['studentname'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['ic_no'] = $studentmarks2[$i]['ic_no'];
+	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['rollno'] = $studentmarks2[$i]['rollno'];
 	$smarks2[$studentmarks2[$i]['semister']][$studentmarks2[$i]['module_id']][$studentmarks2[$i]['student_id']]['student_id'] = $studentmarks2[$i]['student_id'];
 	
 } 
@@ -274,6 +296,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['grade'] = $studentmarks3[$i]['grade'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['studentname'] = $studentmarks3[$i]['studentname'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['ic_no'] = $studentmarks3[$i]['ic_no'];
+	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['rollno'] = $studentmarks3[$i]['rollno'];
 	$smarks3[$studentmarks3[$i]['semister']][$studentmarks3[$i]['module_id']][$studentmarks3[$i]['student_id']]['student_id'] = $studentmarks3[$i]['student_id'];
 } 
  }//echo '<pre>';print_r($moduleArrayid56);exit;
@@ -328,6 +351,7 @@ $smarks1 = []; $semisterArray1 = [];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['grade'] = $studentmarks4[$i]['grade'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['studentname'] = $studentmarks4[$i]['studentname'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['ic_no'] = $studentmarks4[$i]['ic_no'];
+	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['rollno'] = $studentmarks4[$i]['rollno'];
 	$smarks4[$studentmarks4[$i]['semister']][$studentmarks4[$i]['module_id']][$studentmarks4[$i]['student_id']]['student_id'] = $studentmarks4[$i]['student_id'];
 } 
  }//echo '<pre>';print_r($smarks4);exit;
@@ -353,9 +377,11 @@ if(count($studentArray1)>0) { ?>
   <tr>
   <td class="noborder"></td>
   <td class="noborder"></td>
+  <td class="noborder"></td>
   <td colspan="<?php echo count($moduleArrayid12)*4; ?>">Year 1</td>
   </tr>
   <tr>
+  <td class="noborder"></td>
   <td class="noborder"></td>
   <td class="noborder"></td>
   <?php if(count($moduleidArray1)>0) { ?><td colspan="<?php echo count($moduleidArray1)*4; ?>">Semester 1</td><?php } ?>
@@ -364,6 +390,7 @@ if(count($studentArray1)>0) { ?>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid12);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid12[$i]; ?></td>
    <?php } ?>
@@ -371,9 +398,9 @@ if(count($studentArray1)>0) { ?>
   <tr>
    <?php for($i=0;$i<count($moduleidArray12);$i++){ ?>
   <td>CW</td>
-<td> EW </td>
+<td>EW</td>
 <td>Total</td>
-<td rowspan="2">Grade</td>
+<td>Grade</td>
    <?php } ?>
   </tr>
   
@@ -390,6 +417,7 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ew_percentage'].'%'; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['cw_percentage'].'%'; ?></td>
 		<td><?php echo '100%'; ?></td>
+		<td><?php echo '' ?></td>
 			<?php $m=$m+1; } 
 		array_push($arr1, $semisterArray1[$j].$moduleidArray12[$i].$studentArray1[$k]);		?>
 		<?php } } } ?>
@@ -408,6 +436,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks1[$semisterArray1[$j]][$moduleidArray12[$i]][$studentArray1[$k]]['cw_total_percentage']; ?></td>
@@ -440,6 +469,7 @@ if(count($studentArray1)>0) { ?>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid34);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid34[$i]; ?></td>
    <?php } ?>
@@ -449,7 +479,7 @@ if(count($studentArray1)>0) { ?>
   <td>CW</td>
 <td>EW</td>
 <td>Total</td>
-<td rowspan="2">Grade</td>
+<td>Grade</td>
    <?php } ?>
   </tr>
   
@@ -466,6 +496,7 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['ew_percentage'].'%'; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['cw_percentage'].'%'; ?></td>
 		<td><?php echo '100%'; ?></td>
+		<td><?php echo '' ?></td>
 			<?php $m=$m+1; } 
 		array_push($arr1, $semisterArray2[$j].$moduleidArray34[$i].$studentArray2[$k]);		?>
 		<?php } } } ?>
@@ -484,6 +515,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks2[$semisterArray2[$j]][$moduleidArray34[$i]][$studentArray2[$k]]['cw_total_percentage']; ?></td>
@@ -519,6 +551,7 @@ if(count($studentArray1)>0) { ?>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid56);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid56[$i]; ?></td>
    <?php } ?>
@@ -563,6 +596,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks3[$semisterArray3[$j]][$moduleidArray56[$i]][$studentArray3[$k]]['cw_total_percentage']; ?></td>
@@ -595,6 +629,7 @@ if(count($studentArray1)>0) { ?>
    <tr>
    <td rowspan="3">Name</td>
    <td rowspan="3">IC No</td>
+   <td rowspan="3">Roll No</td>
    <?php for($i=0;$i<count($moduleArrayid78);$i++){ ?>
   <td colspan="4"><?php echo $moduleArrayid78[$i]; ?></td>
    <?php } ?>
@@ -604,7 +639,7 @@ if(count($studentArray1)>0) { ?>
   <td>CW</td>
 <td>EW</td>
 <td>Total</td>
-<td rowspan="2">Grade</td>
+<td>Grade</td>
    <?php } ?>
   </tr>
   
@@ -621,6 +656,7 @@ if(count($studentArray1)>0) { ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['ew_percentage'].'%'; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['cw_percentage'].'%'; ?></td>
 		<td><?php echo '100%'; ?></td>
+		<td><?php echo '' ?></td>
 			<?php $m=$m+1; } 
 		array_push($arr1, $semisterArray4[$j].$moduleidArray78[$i].$studentArray4[$k]);		?>
 		<?php } } } ?>
@@ -639,6 +675,7 @@ if(count($studentArray1)>0) { ?>
 		<?php if($m==0) { ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['studentname']; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['ic_no']; ?></td>
+		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['rollno']; ?></td>
 		<?php } ?>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['ew_total_percentage']; ?></td>
 		<td><?php echo $smarks4[$semisterArray4[$j]][$moduleidArray78[$i]][$studentArray4[$k]]['cw_total_percentage']; ?></td>
