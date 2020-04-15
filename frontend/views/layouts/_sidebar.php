@@ -72,7 +72,7 @@
                                 </li>
 				</ul>
                         </li>
-						<?php } if((Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3) && (Yii::$app->session['isEaAdmin'] && Yii::$app->session['isEaAdmin'] == 1)){ ?>
+			<?php } if((Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3) && (Yii::$app->session['isEaAdmin'] && Yii::$app->session['isEaAdmin'] == 1)){ ?>
 						 <li class="nav-item">
 			 <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-user" style="margin-top: 5px;"></i>
@@ -101,8 +101,8 @@
 				</li>
 				</ul>
                         </li>
-						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 4){ ?>
-						 <li class="nav-item">
+			<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 4){ ?>
+			 <li class="nav-item">
 			 <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-user" style="margin-top: 5px;"></i>
                                 <span class="title">Student</span>
@@ -124,7 +124,15 @@
 
 				</ul>
                         </li>
-						<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>
+			
+			<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 2){?>
+			 <li class="nav-item">
+			 <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("../../student-marks");?>" class="nav-link nav-toggle">
+                                <i class="icon-list" style="margin-top: 5px;"></i>
+                                <span class="title">Marks</span>
+                            </a>
+                        </li>
+			<?php } if(Yii::$app->session['userRole'] && Yii::$app->session['userRole'] == 3){ ?>
 			 <li class="nav-item">
 			 <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-plus-sign-alt" style="margin-top: 5px;"></i>

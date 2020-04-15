@@ -982,7 +982,13 @@ Yii::$app->cache->flush();
 	public function actionStudentMarks(){
 			
 	    //try{
+		    if(Yii::$app->session['userRole'] == 2){
+			$sid = Yii::$app->user->id;
+			$student = Student::find()->where(['user_ref_id' => $sid])->one();
+			$studentid = $student['id'];
+		    }else{
 			$studentid = Yii::$app->request->get('id');
+		    }
 			$studentmarks = [];
 			$studentmarksquery1 = AddStudentMarks::getStudentFirstYearMarks($studentid);
 			$studentmarksquery2 = AddStudentMarks::getStudentSecondYearMarks($studentid);
