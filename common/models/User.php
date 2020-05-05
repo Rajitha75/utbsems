@@ -494,8 +494,13 @@ class User extends ActiveRecord implements IdentityInterface
 
     public static function getReportDetails($category){
         if($category){
+			if($category == 'programme_name'){
+				$sql = "SELECT p.".$category." AS category,COUNT(*) AS studentscount FROM student AS s LEFT JOIN programme AS p ON p.id = s.programme_name WHERE s.".$category." IS NOT NULL GROUP BY s.".$category ;
+				$studentdata = yii::$app->db->createCommand($sql)->queryAll();
+			}else{
             $sql = "SELECT ".$category." AS category,COUNT(*) AS studentscount FROM student WHERE ".$category." IS NOT NULL GROUP BY ".$category ;
             $studentdata = yii::$app->db->createCommand($sql)->queryAll();
+			}
             return json_encode($studentdata);
         }
         }

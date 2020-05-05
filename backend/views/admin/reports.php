@@ -36,7 +36,7 @@
 <button type="button" class="btn btn-danger" category="age" categoryname="Age">Age</button>
 <button type="button" class="btn btn-warning" category="highest_qualification" categoryname="Highest Qualification Obtained">Highest Qualification Obtained</button>
 <button type="button" class="btn btn-info" category="type_of_programme" categoryname="Type of Programme">Type of Programme</button>
-<button type="button" class="btn btn-grn" category="school_faculty" categoryname="School/Faculty">School/Faculty</button>
+<button type="button" class="btn btn-grn" category="school" categoryname="School/Faculty">School/Faculty</button>
 
 
 <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>

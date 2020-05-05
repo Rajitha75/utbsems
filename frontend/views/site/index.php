@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4">
-                        <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../professor-login">
+                        <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../lecturer-login">
                              <div class="imagediv">
 							<img class="homeimage" src="frontend/images/lecturers.png">
 							</div>

@@ -663,6 +663,9 @@ $("#usercreateform").validate({
 				},
 				"CreateStudentForm[ic_no]": {
                     required: true,
+					digits: true,
+					minlength: 6,
+					maxlength: 6
 				},
 				"CreateStudentForm[ic_no_format]": {
                     required: true,
@@ -802,12 +805,15 @@ $("#usercreateform").validate({
 				},
 				"CreateStudentForm[ic_no]": {
                     required: "Please enter IC No",
+					digits: "Please enter a valid IC No",
+					minlength: "IC No must be 6 digits length",
+					maxlength: "IC No must be 6 digits length"
 				},
 				"CreateStudentForm[ic_no_format]": {
                     required: "Please enter IC No Format",
-					digits: "Please enter a valid IC No Format",
-					minlength: "IC No Format must be 2 digits length",
-					maxlength: "IC No Format must be 2 digits length"
+					digits: "IC No Format is invalid",
+					minlength: "Must be 2 digits length",
+					maxlength: "Must be 2 digits length"
 				},
 				"CreateStudentForm[ic_color]": {
                     required: "Please select IC Color",

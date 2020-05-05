@@ -362,7 +362,7 @@ echo GridView::widget([
                 'attribute' => 'ic_no',
                 'label' => 'IC No',
                 'value' => function($model) {
-                    return $model['ic_no'] ? stripslashes($model['ic_no']) : '-';
+                    return ($model['ic_no_format'] ? $model['ic_no_format'].' - ' : '') . ($model['ic_no'] ? stripslashes($model['ic_no']) : '-');
                 }
             ],
             [
@@ -436,7 +436,7 @@ echo GridView::widget([
                                                 'class' => 'ajaxVerify', 
                                                 'verify-url' => $url, 
                                                 'pjax-container' => 'pjax-list',
-                                                'data-confirm'=>'Are you sure you want to Verify this Student?',
+                                                'data-confirm'=>'Are you sure you want to undo Verify this Student?',
                                             ]);                               
                                             }else if(@$model['is_verified'] == 0){
                                                 return HTML::a('<span class="glyphicon glyphicon-remove"></span>',$url,[
@@ -445,7 +445,7 @@ echo GridView::widget([
                                                     'class' => 'ajaxVerify', 
                                                     'verify-url' => $url, 
                                                     'pjax-container' => 'pjax-list',
-                                                    'data-confirm'=>'Are you sure you want to undo Verify this Student?',
+                                                    'data-confirm'=>'Are you sure you want to Verify this Student?',
                                                 ]);        
                                             }
                                           },

@@ -42,12 +42,17 @@ width: 18%;
   .field-createstudentform-ic_no {
     width: 52%;
     margin-left: 0px !important;
-    margin-top: 28px !important;
+    margin-top: 24px !important;
     }
 .field-createstudentform-ic_no_format, .field-createstudentform-ic_no {
   float: left;
   margin-right: 5px;
 }
+.banktermserror{
+color: #ff0000;
+    font-weight: normal;
+	font-size:13px;
+	}
 </style>
 <?php 
 $fromyear = date('Y', strtotime('-20 years'));
@@ -379,7 +384,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		
 		<?php echo $form->field($userformmodel, 'bank_terms')->checkbox(['label'=>'I agree to the terms'])->label(false) ?>
 		</br><span class="bankterms">I declare that all the particulars and information provided in this form are true to my best knowledge and belief.</span>
-		
+		<div class="banktermserror">Please accept the terms</div>
 	</fieldset>
  </div>
  
@@ -398,6 +403,14 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
  
 <script>
 $(document).ready(function(){
+	$('.banktermserror').hide();
+	$('#createstudentform-bank_terms').change(function(){
+	if($('#createstudentform-bank_terms:checked').length>0){
+		$('.banktermserror').hide();
+	}else{
+		$('.banktermserror').show();
+	}
+	});
 	var mailing_permanent = <?php echo (isset($studentdata['mailing_permanent']) && $studentdata['mailing_permanent'] == 1) ? 1 : 0 ?>;
 	$('#createstudentform-mailing_permanent').prop('checked', mailing_permanent);
 	
@@ -657,18 +670,31 @@ $(document).ready(function(){
 	})
 })
 $('.usersignup_save').click(function(){
+	$('.banktermserror').hide();
+	if($('#createstudentform-bank_terms:checked').length>0){
 	$('#createstudentform-is_submit').val('save');
 if($("#usercreateform").valid()){
 }else{
 	return false;
 }
+}else{
+		$('.banktermserror').show();
+		return false;
+	}
 });
 $('.usersignup_submit').click(function(){
+	$('.banktermserror').hide();
+	if($('#createstudentform-bank_terms:checked').length>0){
+		$('.banktermserror').hide();
 	$('#createstudentform-is_submit').val('submit');
 if($("#usercreateform").valid()){
 }else{
 	return false;
 }
+	}else{
+		$('.banktermserror').show();
+		return false;
+	}
 });
 $('.usersignup_cancel').click(function(){
 	window.location.href = "<?php echo Yii::getAlias('@web').'../../../student-profile' ?>";
@@ -691,6 +717,9 @@ $("#usercreateform").validate({
 				},
 				"CreateStudentForm[ic_no]": {
                     required: true,
+					digits: true,
+					minlength: 6,
+					maxlength: 6
 				},
 				"CreateStudentForm[ic_no_format]": {
                     required: true,
@@ -830,12 +859,15 @@ $("#usercreateform").validate({
 				},
 				"CreateStudentForm[ic_no]": {
                     required: "Please enter IC No",
+					digits: "Please enter a valid IC No",
+					minlength: "IC No must be 6 digits length",
+					maxlength: "IC No must be 6 digits length"
 				},
 				"CreateStudentForm[ic_no_format]": {
                     required: "Please enter IC No Format",
-					digits: "Please enter a valid IC No Format",
-					minlength: "IC No Format must be 2 digits length",
-					maxlength: "IC No Format must be 2 digits length"
+					digits: "IC No Format is invalid",
+					minlength: "Must be 2 digits length",
+					maxlength: "Must be 2 digits length"
 				},
 				"CreateStudentForm[ic_color]": {
                     required: "Please select IC Color",

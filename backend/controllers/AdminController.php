@@ -714,21 +714,21 @@ class AdminController extends \common\controllers\CommonController
                         $student->rollno = isset($studentdetails['Roll No']) ? $studentdetails['Roll No'] : '';
                         $student->rumpun = isset($studentdetails['Rumpun']) ? $studentdetails['Rumpun'] : '';
                         $student->nationality = isset($studentdetails['Nationality']) ? $studentdetails['Nationality'] : '';
-                        $student->nationalityother = isset($postvariable['Nationality (other)']) ? $postvariable['Nationality (other)'] : '';
-						$student->ic_no_format = isset($postvariable['IC No Format']) ? $postvariable['IC No Format'] : '';
-						$student->ic_no = isset($postvariable['IC No Format']) ? $postvariable['IC No'] : '';
-						$student->ic_color = isset($postvariable['IC Color']) ? $postvariable['IC Color'] : '';
+                        $student->nationalityother = isset($studentdetails['Nationality (other)']) ? $studentdetails['Nationality (other)'] : '';
+						$student->ic_no_format = isset($studentdetails['IC No Format']) ? $studentdetails['IC No Format'] : '';
+						$student->ic_no = isset($studentdetails['IC No']) ? $studentdetails['IC No'] : '';
+						$student->ic_color = isset($studentdetails['IC Color']) ? $studentdetails['IC Color'] : '';
                         $student->passportno = isset($studentdetails['Passport No']) ? $studentdetails['Passport No'] : '';
                         $student->race = isset($studentdetails['Race']) ? $studentdetails['Race'] : '';
-                        $student->raceother = isset($postvariable['Race (other)']) ? $postvariable['Race (other)'] : '';
+                        $student->raceother = isset($studentdetails['Race (other)']) ? $studentdetails['Race (other)'] : '';
                         $student->religion = isset($studentdetails['Religion']) ? $studentdetails['Religion'] : '';
-                        $student->religionother = isset($postvariable['Religion (other)']) ? $postvariable['Religion (other)'] : '';
+                        $student->religionother = isset($studentdetails['Religion (other)']) ? $studentdetails['Religion (other)'] : '';
                         $student->gender = isset($studentdetails['Gender']) ? $studentdetails['Gender'] : '';
                         $student->martial_status = isset($studentdetails['Martial Status']) ? $studentdetails['Martial Status'] : '';
                         $userDob = isset($studentdetails['Date of Birth']) ? str_replace('/', '-',$studentdetails['Date of Birth']) : '';
+						$student->dob = $userDob;
 						$userDob = explode('-',$userDob);
 						$age = (date("md",date("U",mktime(0,0,0,$userDob[0],$userDob[1],$userDob[2]))) > date('md') ? ((date("Y") - $userDob[2]) - 1) : (date("Y") - $userDob[2])) ;
-						$student->dob = $userDob;
 						$student->age = $age;
 						$student->place_of_birth = isset($studentdetails['Place of Birth']) ? $studentdetails['Place of Birth'] : '';
 						$student->telephone_mobile = isset($studentdetails['Telephone No(Mobile)']) ? $studentdetails['Telephone No(Mobile)'] : '';
@@ -791,9 +791,9 @@ class AdminController extends \common\controllers\CommonController
                         $student->status_of_student = isset($studentdetails['Status of Student']) ? $studentdetails['Status of Student'] : '';
                         $student->intake = isset($studentdetails['Intake']) ? $studentdetails['Intake'] : '';
                         $student->mode = isset($studentdetails['Mode']) ? $studentdetails['Mode'] : '';
-						$student->utb_email_address = isset($postvariable['UTB Email Address']) ? $postvariable['UTB Email Address'] : '';
-						$student->date_of_registration = isset($postvariable['Date of Registration']) ? str_replace('/', '-', $postvariable['Date of Registration']) : '';
-						$student->date_of_leaving = isset($postvariable['Date of Leaving']) ? str_replace('/', '-',$postvariable['Date of Leaving']) : '';
+						$student->utb_email_address = isset($studentdetails['UTB Email Address']) ? $studentdetails['UTB Email Address'] : '';
+						$student->date_of_registration = isset($studentdetails['Date of Registration']) ? str_replace('/', '-', $studentdetails['Date of Registration']) : '';
+						$student->date_of_leaving = isset($studentdetails['Date of Leaving']) ? str_replace('/', '-',$studentdetails['Date of Leaving']) : '';
 				
                             if ($user = $signup->signup()){
                                 
