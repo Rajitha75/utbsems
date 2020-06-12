@@ -337,7 +337,47 @@ Yii::$app->cache->flush();
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }
     }
+	
+	public function actionChangePassword($username = '') {
+		try{
+            $model = new \common\models\ChangePasswordForm();
+            
+			Yii::$app->cache->flush();
+			if(Yii::$app->request->post()) {
+                if(!empty(Yii::$app->request->post('ChangePasswordForm'))) {
+					$postvariable =Yii::$app->request->post('ChangePasswordForm'); 
+					$signup = new \frontend\models\SignupForm();
+					$signup->password = $postvariable['password'];
+					$signup->userid = Yii::$app->user->id;
+                    if ($user = $signup->savepassword()) {
+						Yii::$app->user->logout();        
+							Yii::$app->session->setFlash('change_password', "<div class='update-created'> <div class='header-flash-msg' style='text-align: center; padding: 20px 10px;'><span class='lnr lnr-checkmark-circle'></span></div><div class='success-msg'>Success!</div><div class='head-text'>Password changed successfully!</div><div class='flash-content'>&nbsp;</div><div class='button-sucess'><input type='button' class='button-ok' data-dismiss='alert' aria-hidden='true' value='OK'></div></div>");
+							return $this->redirect(Yii::$app->getUrlManager()->getBaseUrl() . '/../../');
+					}
+				}
+			}else{
+				return $this->render('change-password',[
+                'model'=>$model,
+                    ]);
+			}
+           
+		} catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
 
+	public function actionValidatePassword() {
+		 try{
+			 $userData = User::find()->where(['id' => Yii::$app->user->id])->one();
+			if(!$userData || !Yii::$app->getSecurity()->validatePassword($_POST['oldpassword'], $userData->password_hash)){
+			  echo 'false'; exit;
+		  }else{
+			  echo 'true'; exit;
+		  }
+		  } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+	}
 
     public function actionProfessorLogin($username = '') {
 		try{

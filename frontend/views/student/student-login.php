@@ -93,7 +93,7 @@ html.intro-over, html.intro-over body {
                 
                 <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Email','autocomplete' => 'off']) ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'password')->passwordInput(['autofocus' => true, 'placeholder' => 'Password','autocomplete' => 'off']) ?>
 				<?php if($captcha) { ?>
 				<?= $form->field($model, 'pageVerifyCode')->widget(Captcha::className(), 
             ['template' => '<div class="captcha_img"><span class="refresh_captcha">'.Html::img(Yii::getAlias('@web').'/themes/metronic/assets/global/plugins/ckeditor/skins/moono/images/refresh.png',[]).'</span>{image}</div><div class="captcha-err" style="float:right;font-size: 10px !important;font-weight: normal !important;color: #e7505a;position: relative;bottom:25px;"></div>'. '{input}'])->label(FALSE); ?>     
@@ -103,9 +103,9 @@ html.intro-over, html.intro-over body {
                 <?php //echo $form->field($model, 'rememberMeLogin')->checkbox() ?>
 				<?php //echo $form->field($model, 'encusername')->hiddenInput()->label(false) ?>
 				<?php //echo $form->field($model, 'encpassword')->hiddenInput()->label(false) ?>
-				<div class="login-page-cont">
-                    Not Registered? <?= Html::a('Sign up', Yii::$app->request->BaseUrl . '/../../student-register') ?>.
-                </div>
+				<!--<div class="login-page-cont">
+                    Not Registered? <?php //echo Html::a('Sign up', Yii::$app->request->BaseUrl . '/../../student-register') ?>.
+                </div>-->
 				
                 <div class="button-container1">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary lg-pgbtn', 'id' => 'loginpagebtn', 'name' => 'login-button']) ?>

@@ -18,7 +18,7 @@ use yii\bootstrap\Alert;
 use common\models\Storage;
 use yii\db\Query;
 $storagemodel = new \common\models\Storage();
-if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit')) ) {
+if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit') || $flash = Yii::$app->session->getFlash('change_password')) ) {
    // echo Alert::widget(['options' => ['class' => 'alert-success front-noti', 'id' => 'flashmodal', 'style' => 'z-index: 999999'], 'body' => $flash]);
 }
 ?>
@@ -48,6 +48,7 @@ if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$ap
                     <?php if(Yii::$app->user->id){ ?>
 					<?php $user = (new Query())->select(['user_image'])->from('user AS u')->where(['id' => Yii::$app->user->id])->one(); ?>
                     <?php if(Yii::$app->session['userRole'] == 2) { ?><li><a class="myprofile" href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-profile">My profile </a> </li><?php } ?>
+					<?php if(Yii::$app->session['userRole'] == 2) { ?><li><a class="myprofile" href="<?php echo Yii::$app->request->BaseUrl; ?>/../../change-password">Change Password </a> </li><?php } ?>
                      <?php }else{ ?>
                     <li><a href="<?php echo Yii::$app->request->BaseUrl; ?>/../../student-login">Student Login</a></li>
                     <li> <a href="<?=Yii::$app->getUrlManager()->getBaseUrl();?>/../../lecturer-login">Lecturers Login</a> </li>                   
@@ -160,7 +161,7 @@ position: absolute;
 
 
 </style>
-<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified') || $flash = Yii::$app->session->getFlash('examofficerupdate') || $flash = Yii::$app->session->getFlash('examofficercreate') || $flash = Yii::$app->session->getFlash('examofficerdelete') || $flash = Yii::$app->session->getFlash('examofficerundodelete') || $flash = Yii::$app->session->getFlash('lecturerdelete') || $flash = Yii::$app->session->getFlash('lecturerundodelete') || $flash = Yii::$app->session->getFlash('lecturerupdate') || $flash = Yii::$app->session->getFlash('lecturercreate') || $flash = Yii::$app->session->getFlash('studentcreated') || $flash = Yii::$app->session->getFlash('studentupdatesuccess') || $flash = Yii::$app->session->getFlash('studentdelete') || $flash = Yii::$app->session->getFlash('studentundodelete') || $flash = Yii::$app->session->getFlash('editformpasaved') || $flash = Yii::$app->session->getFlash('editformpasubmitted') || $flash = Yii::$app->session->getFlash('editformfssaved') || $flash = Yii::$app->session->getFlash('editformfssubmitted') || $flash = Yii::$app->session->getFlash('editformuebsaved') || $flash = Yii::$app->session->getFlash('editformuebsubmitted')) ) { 
+<?php if (($flash = Yii::$app->session->getFlash('signupsuccess') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssubmit') || $flash = Yii::$app->session->getFlash('studentupdatesuccesssave') || $flash = Yii::$app->session->getFlash('studentdetails') || $flash = Yii::$app->session->getFlash('studentdetailsverified') || $flash = Yii::$app->session->getFlash('examofficerupdate') || $flash = Yii::$app->session->getFlash('examofficercreate') || $flash = Yii::$app->session->getFlash('examofficerdelete') || $flash = Yii::$app->session->getFlash('examofficerundodelete') || $flash = Yii::$app->session->getFlash('lecturerdelete') || $flash = Yii::$app->session->getFlash('lecturerundodelete') || $flash = Yii::$app->session->getFlash('lecturerupdate') || $flash = Yii::$app->session->getFlash('lecturercreate') || $flash = Yii::$app->session->getFlash('studentcreated') || $flash = Yii::$app->session->getFlash('studentupdatesuccess') || $flash = Yii::$app->session->getFlash('studentdelete') || $flash = Yii::$app->session->getFlash('studentundodelete') || $flash = Yii::$app->session->getFlash('editformpasaved') || $flash = Yii::$app->session->getFlash('editformpasubmitted') || $flash = Yii::$app->session->getFlash('editformfssaved') || $flash = Yii::$app->session->getFlash('editformfssubmitted') || $flash = Yii::$app->session->getFlash('editformuebsaved') || $flash = Yii::$app->session->getFlash('editformuebsubmitted') || $flash = Yii::$app->session->getFlash('change_password')) ) { 
     if(Yii::$app->session->getFlash('studentdelete')){
     $flashmsg = 'Student Deleted successfully!'; 
     }
@@ -229,6 +230,9 @@ position: absolute;
             }
 			if(Yii::$app->session->getFlash('editformuebsubmitted')){
             $flashmsg = 'Submitted to Stage University Exam Board'; 
+            }
+			if(Yii::$app->session->getFlash('change_password')){
+            $flashmsg = 'Password Changed Successfully'; 
             }
         ?>
 <div id="manualfeedback" ><div id="forceflashmodal" class="alert-success front-noti alert fade in" style="z-index: 999999">

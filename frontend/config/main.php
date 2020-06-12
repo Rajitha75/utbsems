@@ -25,6 +25,7 @@ return [
                 'professor-login'=>'site/professor-login',
                 'exam-officers-login'=>'exam-officer/exam-officers-login',
 		'exam-officers-dashboard'=>'exam-officer/exam-officers-dashboard',
+		'change-password'=>'site/change-password',
 		'create-exam-officer'=>'exam-officer/create-exam-officer',
 		'exam-officer-view'=>'exam-officer/exam-officer-view',
 		'exam-officers-list'=>'exam-officer/exam-officers-list',

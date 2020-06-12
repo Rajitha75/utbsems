@@ -696,109 +696,77 @@ class AdminController extends \common\controllers\CommonController
                             'setIndexSheetByName' => true, // set this if your excel data with multiple worksheet, the index of array will be set with the sheet name. If this not set, the index will use numeric. 
                             'getOnlySheet' => 'sheet1', // you can set this property if you want to get the specified sheet from the excel data with multiple worksheet.
                         ]);
+						
 						for($i=0;$i<count($data);$i++){
 						$signup = new \frontend\models\SignupForm();
 						$student = new Student;
                         $studentdetails = $data[$i];
-						if(isset($studentdetails['Email']) && $studentdetails['Email'] != ''){
-						$user = User::find()->where(['email' => $studentdetails['Email']])->orWhere(['username' => $studentdetails['Email']])->all();
+						if(isset($studentdetails['other_email']) && $studentdetails['other_email'] != ''){
+						$user = User::find()->where(['email' => $studentdetails['other_email']])->orWhere(['username' => $studentdetails['other_email']])->all();
 						if(count($user)==0){
                         $signup->password = 'utbsemspassword';
-                        $signup->email = $studentdetails['Email'];
-                        $signup->username = $studentdetails['Email'];
+                        $signup->email = $studentdetails['other_email'];
+                        $signup->username = $studentdetails['other_email'];
                         $signup->is_verified = 1;
-						
 						$student->is_submit = 'submit';
-                        $student->title = isset($studentdetails['Title']) ? $studentdetails['Title'] : '';
-                        $student->name = isset($studentdetails['Name']) ? $studentdetails['Name'] : '';
-                        $student->rollno = isset($studentdetails['Roll No']) ? $studentdetails['Roll No'] : '';
-                        $student->rumpun = isset($studentdetails['Rumpun']) ? $studentdetails['Rumpun'] : '';
-                        $student->nationality = isset($studentdetails['Nationality']) ? $studentdetails['Nationality'] : '';
-                        $student->nationalityother = isset($studentdetails['Nationality (other)']) ? $studentdetails['Nationality (other)'] : '';
-						$student->ic_no_format = isset($studentdetails['IC No Format']) ? $studentdetails['IC No Format'] : '';
-						$student->ic_no = isset($studentdetails['IC No']) ? $studentdetails['IC No'] : '';
-						$student->ic_color = isset($studentdetails['IC Color']) ? $studentdetails['IC Color'] : '';
-                        $student->passportno = isset($studentdetails['Passport No']) ? $studentdetails['Passport No'] : '';
-                        $student->race = isset($studentdetails['Race']) ? $studentdetails['Race'] : '';
-                        $student->raceother = isset($studentdetails['Race (other)']) ? $studentdetails['Race (other)'] : '';
-                        $student->religion = isset($studentdetails['Religion']) ? $studentdetails['Religion'] : '';
-                        $student->religionother = isset($studentdetails['Religion (other)']) ? $studentdetails['Religion (other)'] : '';
-                        $student->gender = isset($studentdetails['Gender']) ? $studentdetails['Gender'] : '';
-                        $student->martial_status = isset($studentdetails['Martial Status']) ? $studentdetails['Martial Status'] : '';
-                        $userDob = isset($studentdetails['Date of Birth']) ? str_replace('/', '-',$studentdetails['Date of Birth']) : '';
+						
+                        $student->type_of_entry = isset($studentdetails['type_entry']) ? $studentdetails['type_entry'] : '';
+                        $student->name = isset($studentdetails['name']) ? $studentdetails['name'] : '';
+						$nationality = isset($studentdetails['nationality']) ? $studentdetails['nationality'] : '';
+						if(strtolower($nationality) == 'other' || strtolower($nationality) == 'others'){
+							$student->nationality = 'Other';
+							$student->nationalityother = isset($studentdetails['other_nationality']) ? $studentdetails['other_nationality'] : '';
+						}else{
+							$student->nationality = $nationality;
+						}
+						$student->ic_no = isset($studentdetails['ic_number']) ? $studentdetails['ic_number'] : '';
+						$student->passportno = isset($studentdetails['passport_number']) ? $studentdetails['passport_number'] : '';
+						$student->martial_status = isset($studentdetails['marital_status']) ? $studentdetails['marital_status'] : '';
+						$student->gender = isset($studentdetails['gender']) ? $studentdetails['gender'] : '';
+						$race = isset($studentdetails['race']) ? $studentdetails['race'] : '';
+						if(strtolower($race) == 'other' || strtolower($race) == 'others'){
+							$student->race = 'Other';
+							$student->raceother = isset($studentdetails['other_race']) ? $studentdetails['other_race'] : '';
+						}else{
+							$student->race = $race;
+						}
+						$religion = isset($studentdetails['religion']) ? $studentdetails['religion'] : '';
+						if(strtolower($religion) == 'other' || strtolower($religion) == 'others'){
+							$student->religion = 'Other';
+							$student->religionother = isset($studentdetails['other_religion']) ? $studentdetails['other_religion'] : '';
+						}else{
+							$student->religion = $religion;
+						}
+						$userDob = isset($studentdetails['dob']) ? str_replace('/','-',$studentdetails['dob']) : '';
+						if($userDob != ''){
 						$student->dob = $userDob;
 						$userDob = explode('-',$userDob);
 						$age = (date("md",date("U",mktime(0,0,0,$userDob[0],$userDob[1],$userDob[2]))) > date('md') ? ((date("Y") - $userDob[2]) - 1) : (date("Y") - $userDob[2])) ;
 						$student->age = $age;
-						$student->place_of_birth = isset($studentdetails['Place of Birth']) ? $studentdetails['Place of Birth'] : '';
-						$student->telephone_mobile = isset($studentdetails['Telephone No(Mobile)']) ? $studentdetails['Telephone No(Mobile)'] : '';
-                        $student->tele_home = isset($studentdetails['Telephone No (Home)']) ? $studentdetails['Telephone No (Home)'] : '';
-                        $student->email = isset($studentdetails['Email']) ? $studentdetails['Email'] : '';
-						$student->emailother = isset($studentdetails['Email (other)']) ? $studentdetails['Email (other)'] : '';
-						$student->highest_qualification = isset($studentdetails['Highest Qualification Obtained']) ? $studentdetails['Highest Qualification Obtained'] : '';
-						$student->highestqualificationother = isset($studentdetails['Highest Qualification Obtained (other)']) ? $studentdetails['Highest Qualification Obtained (other)'] : '';
-						$student->lastschoolname = isset($studentdetails['Name of Last School Attended']) ? $studentdetails['Name of Last School Attended'] : '';
-                        $student->type_of_entry = isset($studentdetails['Type of Entry']) ? $studentdetails['Type of Entry'] : '';
-                        $student->typeofentryother = isset($studentdetails['Type of Entry (other)']) ? $studentdetails['Type of Entry (other)'] : '';
-                        $student->specialneeds = isset($studentdetails['Special Needs']) ? $studentdetails['Special Needs'] : '';
-                        $student->father_name = isset($studentdetails['Father / Gaurdian Name']) ? $studentdetails['Father / Gaurdian Name'] : '';
-						$student->gaurdian_relation = isset($studentdetails['Gaurdian Relation']) ? $studentdetails['Gaurdian Relation'] : '';
-                        $student->fathericno = isset($studentdetails['Father / Gaurdian IC No']) ? $studentdetails['Father / Gaurdian IC No'] : '';
-						$student->father_ic_color = isset($studentdetails['Father/Guardian IC Colour']) ? $studentdetails['Father/Guardian IC Colour'] : '';
-                        $student->father_mobile = isset($studentdetails['Father Telephone No']) ? $studentdetails['Father Telephone No'] : '';
-						$student->mobile_home = isset($studentdetails['Telephone No.(Home)']) ? $studentdetails['Telephone No.(Home)'] : '';
-						$student->gaurdian_employment = isset($studentdetails['Father/Guardian Employment']) ? $studentdetails['Father/Guardian Employment'] : '';
-						$student->gaurdian_employer = isset($studentdetails['Father/Guardian Employer']) ? $studentdetails['Father/Guardian Employer'] : '';
-						$student->remarks = isset($studentdetails['Remarks']) ? $studentdetails['Remarks'] : '';
-						$student->telphone_work = isset($studentdetails['Telephone No. (Work)']) ? $studentdetails['Telephone No. (Work)'] : '';
-						$student->mother_name = isset($studentdetails['Mother Name']) ? $studentdetails['Mother Name'] : '';
-                        $student->mothericno = isset($studentdetails['Mother IC No']) ? $studentdetails['Mother IC No'] : '';
-						$student->mother_ic_color = isset($studentdetails['Mother IC Color']) ? $studentdetails['Mother IC Color'] : '';
-                        $student->mother_mobile = isset($studentdetails['Mother Telephone No']) ? $studentdetails['Mother Telephone No'] : '';
-						$student->type_of_residential = isset($studentdetails['Type of Residential']) ? $studentdetails['Type of Residential'] : '';
-						$student->typeofresidentialother = isset($studentdetails['Type of Residential (other)']) ? $studentdetails['Type of Residential (other)'] : '';
-						$student->address = isset($studentdetails['Postal Address']) ? $studentdetails['Postal Address'] : '';
-                        $student->address2 = isset($studentdetails['Address Line 2']) ? $studentdetails['Address Line 2'] : '';
-                        $student->address3 = isset($studentdetails['Address Line 3']) ? $studentdetails['Address Line 3'] : '';
-						$student->countrycode = isset($studentdetails['Country']) ? $studentdetails['Country'] : '';
-						$student->state = isset($studentdetails['State']) ? $studentdetails['State'] : '';
-						$student->district = isset($studentdetails['District']) ? $studentdetails['District'] : '';
-                        $student->postal_code = isset($studentdetails['Postal Code']) ? $studentdetails['Postal Code'] : '';
-                        $student->bank_name = isset($studentdetails['Bank Name']) ? $studentdetails['Bank Name'] : '';
-						$student->bank_name_other = isset($studentdetails['Bank Name (other)']) ? $studentdetails['Bank Name (other)'] : '';
-						$student->bank_account_name = isset($studentdetails['Bank Account Name']) ? $studentdetails['Bank Account Name'] : '';
-                        $student->account_no = isset($studentdetails['Bank Account No']) ? $studentdetails['Bank Account No'] : '';                        
-						$student->sponsor_type = isset($studentdetails['Sponsor Type']) ? $studentdetails['Sponsor Type'] : '';
-						$student->sponsor_type_other = isset($studentdetails['Sponsor Type (other)']) ? $studentdetails['Sponsor Type (other)'] : '';
-						$student->type_of_programme = isset($studentdetails['Type of Programme']) ? $studentdetails['Type of Programme'] : '';
-						$school = isset($studentdetails['School/Faculty']) ? $studentdetails['School/Faculty'] : '';
-						$schoolname = Faculty::find()->where('lower(faculty_name) = "'.strtolower($school).'"')->one();
-						if(count($schoolname)>0){
-							$school_name = $schoolname['id'];
-						}else{
-							$school_name = '';
 						}
-						$student->school = $school_name;
-                        $programme_name = isset($studentdetails['Programme Name']) ? $studentdetails['Programme Name'] : '';
-						$progname = Programme::find()->where('lower(programme_name) = "'.strtolower($programme_name).'"')->one();
-						if(count($progname)>0){
-							$progrmname = $progname['id'];
-						}else{
-							$progrmname = '';
-						}
-						$student->programme_name = $progrmname;
-                        $student->entry = isset($studentdetails['Entry']) ? $studentdetails['Entry'] : '';
-                        $student->status_of_student = isset($studentdetails['Status of Student']) ? $studentdetails['Status of Student'] : '';
-                        $student->intake = isset($studentdetails['Intake']) ? $studentdetails['Intake'] : '';
-                        $student->mode = isset($studentdetails['Mode']) ? $studentdetails['Mode'] : '';
-						$student->utb_email_address = isset($studentdetails['UTB Email Address']) ? $studentdetails['UTB Email Address'] : '';
-						$student->date_of_registration = isset($studentdetails['Date of Registration']) ? str_replace('/', '-', $studentdetails['Date of Registration']) : '';
-						$student->date_of_leaving = isset($studentdetails['Date of Leaving']) ? str_replace('/', '-',$studentdetails['Date of Leaving']) : '';
-				
+						$student->place_of_birth = isset($studentdetails['pob']) ? $studentdetails['pob'] : '';
+						$student->address = isset($studentdetails['postal_address1']) ? $studentdetails['postal_address1'] : '';
+                        $student->address2 = isset($studentdetails['postal_address2']) ? $studentdetails['postal_address2'] : '';
+                        $student->postal_code = isset($studentdetails['postcode']) ? $studentdetails['postcode'] : '';
+						$student->telephone_mobile = isset($studentdetails['mobile_no']) ? $studentdetails['mobile_no'] : '';
+                        $student->tele_home = isset($studentdetails['telno_home']) ? $studentdetails['telno_home'] : '';
+                        $student->email = isset($studentdetails['other_email']) ? $studentdetails['other_email'] : '';
+						$student->lastschoolname = isset($studentdetails['last_school_attend']) ? $studentdetails['last_school_attend'] : '';
+                        $student->specialneeds = isset($studentdetails['special_needs']) ? $studentdetails['special_needs'] : '';
+                        $student->father_name = isset($studentdetails['guardian_name1']) ? $studentdetails['guardian_name1'] : '';
+                        $student->fathericno = isset($studentdetails['guardian_icno1']) ? $studentdetails['guardian_icno1'] : '';
+                        $student->father_mobile = isset($studentdetails['guardian_telno1']) ? $studentdetails['guardian_telno1'] : '';
+						$student->mother_name = isset($studentdetails['guardian_name2']) ? $studentdetails['guardian_name2'] : '';
+                        $student->mothericno = isset($studentdetails['guardian_icno2']) ? $studentdetails['guardian_icno2'] : '';
+                        $student->mother_mobile = isset($studentdetails['guardian_telno2']) ? $studentdetails['guardian_telno2'] : '';	
+                        $student->bank_name = isset($studentdetails['bankname']) ? $studentdetails['bankname'] : '';
+						$student->account_no = isset($studentdetails['bankaccountno']) ? $studentdetails['bankaccountno'] : '';
+						$student->utb_email_address = isset($studentdetails['itbemail']) ? $studentdetails['itbemail'] : '';
+                        $student->rumpun = isset($studentdetails['rumpun']) ? $studentdetails['rumpun'] : '';
+                        $student->rollno = isset($studentdetails['roll_number']) ? $studentdetails['roll_number'] : '';
                             if ($user = $signup->signup()){
-                                
-                    $userid = Yii::$app->db->getLastInsertID();
-                    $student->user_ref_id = $userid;
+								$userid = Yii::$app->db->getLastInsertID();
+								$student->user_ref_id = $userid;
                                 $student->save();
                             }
 						}

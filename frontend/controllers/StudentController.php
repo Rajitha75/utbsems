@@ -488,11 +488,12 @@ Yii::$app->cache->flush();
                 }
 				}
             if($student->save(false)){
+                $user = User::find()->where(['id'=>$student->user_ref_id])->one();
+				$user->is_verified = 0;
                 if(count($storagemodel->user_image)>0){
-                    $user = User::find()->where(['id'=>$student->user_ref_id])->one();
                     $user->user_image = $studentimage;
-                if($user->save(false)){}
                 }
+					if($user->save(false)){}
 		if($postvariable['is_submit'] == 'submit'){
 			Yii::$app->session->setFlash('studentupdatesuccesssubmit', '<div class="update-created"> <div class="header-flash-msg" style="text-align: center; padding: 20px 10px;"><span class="lnr lnr-checkmark-circle"></span></div><div class="success-msg">Success!</div><div class="head-text">Profile Updated successfully! </div><div class="flash-content">&nbsp;</div><div class="button-sucess"><input type="button" class="button-ok" data-dismiss="alert" aria-hidden="true" value="OK"></div></div>'); 
 		}else if($postvariable['is_submit'] == 'save'){

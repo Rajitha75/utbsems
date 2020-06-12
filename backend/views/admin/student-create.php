@@ -200,7 +200,7 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 		
 		<?php echo $form->field($userformmodel, 'lastschoolname')->textInput(['value' => (isset($studentdata['lastschoolname'])? $studentdata['lastschoolname'] : ''), 'autocomplete' => 'off' ])->label('Name of Last School Attended <span class="mandatory">*</span>');?>
 
-		<?php echo $form->field($userformmodel, 'type_of_entry')->dropDownList(['HECAS' => 'HECAS', 'In-service' => 'In-service', 'BDGS (MOFA)' => 'BDGS (MOFA)', 'Other' => 'Other'],['prompt' => 'Select Type of Entry'])->label('Type of Entry');?>
+		<?php echo $form->field($userformmodel, 'type_of_entry')->dropDownList(['HECAS (for Bachelor Degree only)' => 'HECAS (for Bachelor Degree only)', 'In-Service' => 'In-Service', 'MOFA BDGS (International Student)' => 'MOFA BDGS (International Student)', 'Others' => 'Others'],['prompt' => 'Select Type of Entry'])->label('Type of Entry');?>
 
 		<?php echo $form->field($userformmodel, 'typeofentryother')->textInput(['value' => (isset($studentdata['typeofentryother'])? $studentdata['typeofentryother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
 
