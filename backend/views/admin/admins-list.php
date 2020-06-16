@@ -126,8 +126,13 @@ echo GridView::widget([
                             'header'=> 'Delete' ,
                             //'options' => ['width' => '85'],
                             'headerOptions' => ['style' => 'width:142px'],
-                            'template'=>'{delete}',
+                            'template'=>'{update}{delete}',
                             'buttons'=>[
+                                        'update' => function ($url, $model) {
+										  return Html::a('<span class="glyphicon glyphicon-pencil" title="Edit"></span>', $url, [
+                                                  'title' => Yii::t('yii', 'update'),'data-pjax' => 0
+                                          ]); 
+                                        },
                                         'delete'=>function ($url, $model) { 
                                             if(@$model['status'] == 1){    
                                             return HTML::a('<span class="glyphicon glyphicon-trash"></span>',$url,[
@@ -153,6 +158,8 @@ echo GridView::widget([
                             'urlCreator' => function ($action, $model, $key, $index) {
                                 if($action === 'delete'){
                                     return Url::toRoute(['admin-delete', 'id' => $model['user_ref_id'], 'status' => $model['status']]);
+                                }elseif ($action === 'update') {
+                                    return Url::toRoute(['../../update-admin', 'id' => $model['user_ref_id']]);
                                 }
                             } 
                         ],

@@ -78,6 +78,7 @@ $issuperadmin = $users['superadmin'];
                             </ul>                           
                         </li>
 						<?php } ?>
+						<?php if($issuperadmin == 1) { ?>
 						<li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-user" style="margin-top: 5px;"></i>
@@ -99,6 +100,7 @@ $issuperadmin = $users['superadmin'];
                                 </li>
                             </ul>                           
                         </li>
+						<?php } ?>
                         <li class="nav-item">
                             <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/import-students");?>" class="nav-link nav-toggle">
                                 <i class="icon-cloud-upload" style="margin-top: 5px;"></i>
