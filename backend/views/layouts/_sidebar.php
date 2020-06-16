@@ -1,9 +1,16 @@
+<?php 
+use common\models\User;
+?>
 <style>
 .page-sidebar .page-sidebar-menu>li.start>a{border-top-color:#3d4957 !important;}
 .page-sidebar{
     margin-top: 32px;
 }
 </style>
+<?php 
+$users = User::find()->where(['id' => Yii::$app->user->id])->one();
+$issuperadmin = $users['superadmin'];
+?>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <!-- BEGIN CONTAINER -->
 <!--        <div class="page-container">-->
@@ -48,7 +55,7 @@
                                 </li>
                             </ul>                           
                         </li>
-						
+							<?php if($issuperadmin == 1) { ?>
 						<li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-user" style="margin-top: 5px;"></i>
@@ -70,6 +77,7 @@
                                 </li>
                             </ul>                           
                         </li>
+						<?php } ?>
 						<li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link nav-toggle">
                                 <i class="icon-user" style="margin-top: 5px;"></i>
