@@ -197,7 +197,7 @@ html.intro-over, html.intro-over body {
 
 		<?php echo $form->field($userformmodel, 'fathericno')->textInput(['autocomplete' => 'off'])->label('Father/Guardian IC No <span class="mandatory">*</span>');?>
 
-		<?php echo $form->field($userformmodel, 'father_ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select Father/Gaurdian IC Color'])->label('Father/Gaurdian IC Color <span class="mandatory">*</span>');?>
+		<?php echo $form->field($userformmodel, 'father_ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select Father/Guardian IC Color'])->label('Father/Guardian IC Color <span class="mandatory">*</span>');?>
 
 		<?php echo $form->field($userformmodel, 'father_mobile')->textInput(['autocomplete' => 'off'])->label('Father\'s Telephone No <span class="mandatory">*</span>');?>
 
@@ -606,10 +606,10 @@ $("#register-student-form").validate({
                     required: "Please enter Father's Name",
 				},
 				"CreateStudentForm[fathericno]": {
-                    required: "Please enter Father's/Gaurdian IC No",
+                    required: "Please enter Father's/Guardian IC No",
 				},
 				"CreateStudentForm[father_ic_color]": {
-                    required: "Please select Father/Gaurdian IC Color",
+                    required: "Please select Father/Guardian IC Color",
 				},
 				"CreateStudentForm[mother_ic_color]": {
                     required: "Please select Mother IC Color",

@@ -39095,3 +39095,1516 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1591962571.624
     'REQUEST_TIME' => 1591962571
 ]
+2020-08-24 16:45:28 [::1][-][du729agrkprc66scb5gg1qq5f7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:45:27 [::1][-][du729agrkprc66scb5gg1qq5f7][info][application] $_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    'PHPSESSID' => 'du729agrkprc66scb5gg1qq5f7'
+    '_csrf' => '90d6bb83511deb79a672025cc3c06027944e234401b97a4c68a5b0dfece0bcd9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oMNQnViv9X6qALxAsAZBk7l0wecZZC72\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; PHPSESSID=du729agrkprc66scb5gg1qq5f7; _csrf=90d6bb83511deb79a672025cc3c06027944e234401b97a4c68a5b0dfece0bcd9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oMNQnViv9X6qALxAsAZBk7l0wecZZC72%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1180'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267727.642
+    'REQUEST_TIME' => 1598267727
+]
+2020-08-24 16:45:30 [::1][-][du729agrkprc66scb5gg1qq5f7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:45:30 [::1][-][du729agrkprc66scb5gg1qq5f7][info][application] $_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    'PHPSESSID' => 'du729agrkprc66scb5gg1qq5f7'
+    '_csrf' => '90d6bb83511deb79a672025cc3c06027944e234401b97a4c68a5b0dfece0bcd9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oMNQnViv9X6qALxAsAZBk7l0wecZZC72\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; PHPSESSID=du729agrkprc66scb5gg1qq5f7; _csrf=90d6bb83511deb79a672025cc3c06027944e234401b97a4c68a5b0dfece0bcd9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oMNQnViv9X6qALxAsAZBk7l0wecZZC72%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1175'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267730.56
+    'REQUEST_TIME' => 1598267730
+]
+2020-08-24 16:50:26 [::1][-][7sgmj2jeev5jl80ong3cfq0j64][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:50:25 [::1][-][7sgmj2jeev5jl80ong3cfq0j64][info][application] $_COOKIE = [
+    'PHPSESSID' => '7sgmj2jeev5jl80ong3cfq0j64'
+    '_csrf' => 'de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=7sgmj2jeev5jl80ong3cfq0j64; _csrf=de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1537'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268025.657
+    'REQUEST_TIME' => 1598268025
+]
+2020-08-24 16:50:27 [::1][-][7sgmj2jeev5jl80ong3cfq0j64][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "images/favicon.png".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('images/favicon....', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:50:27 [::1][-][7sgmj2jeev5jl80ong3cfq0j64][info][application] $_COOKIE = [
+    'PHPSESSID' => '7sgmj2jeev5jl80ong3cfq0j64'
+    '_csrf' => 'de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'image'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=7sgmj2jeev5jl80ong3cfq0j64; _csrf=de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1540'
+    'REDIRECT_URL' => '/utbsems/frontend/web/images/favicon.png'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/images/favicon.png'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268027.048
+    'REQUEST_TIME' => 1598268027
+]
+2020-08-24 16:50:51 [::1][335][u8j0utjsbkas7m54l3n0arej17][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Undefined offset: 0' in C:\wamp64\www\utbsems\common\controllers\CommonController.php:25
+Stack trace:
+#0 C:\wamp64\www\utbsems\frontend\controllers\StudentController.php(333): common\controllers\CommonController::exceptionMessage('Undefined offse...')
+#1 [internal function]: frontend\controllers\StudentController->actionStudentProfile()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('student-profile', Array)
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('student/student...', Array)
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#8 {main}
+2020-08-24 16:50:51 [::1][335][u8j0utjsbkas7m54l3n0arej17][info][application] $_COOKIE = [
+    '_csrf' => 'de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B\";}'
+    'PHPSESSID' => 'u8j0utjsbkas7m54l3n0arej17'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 335
+    '__expire' => 1598269251
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'sabrina.esa7@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B%22%3B%7D; PHPSESSID=u8j0utjsbkas7m54l3n0arej17'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1562'
+    'REDIRECT_URL' => '/utbsems/student-profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/student-profile'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PATH_INFO' => '/student-profile'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\student-profile'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php/student-profile'
+    'REQUEST_TIME_FLOAT' => 1598268051.025
+    'REQUEST_TIME' => 1598268051
+]
+2020-08-24 16:50:51 [::1][335][u8j0utjsbkas7m54l3n0arej17][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:50:51 [::1][335][u8j0utjsbkas7m54l3n0arej17][info][application] $_COOKIE = [
+    '_csrf' => 'de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B\";}'
+    'PHPSESSID' => 'u8j0utjsbkas7m54l3n0arej17'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 335
+    '__expire' => 1598269251
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'sabrina.esa7@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B%22%3B%7D; PHPSESSID=u8j0utjsbkas7m54l3n0arej17'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1565'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268051.634
+    'REQUEST_TIME' => 1598268051
+]
+2020-08-24 16:51:39 [::1][335][u8j0utjsbkas7m54l3n0arej17][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined offset: 0' in C:\wamp64\www\utbsems\frontend\controllers\StudentController.php:330
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#6 {main}
+2020-08-24 16:51:39 [::1][335][u8j0utjsbkas7m54l3n0arej17][info][application] $_COOKIE = [
+    '_csrf' => 'de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B\";}'
+    'PHPSESSID' => 'u8j0utjsbkas7m54l3n0arej17'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 335
+    '__expire' => 1598269299
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'sabrina.esa7@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=de2cbe2f85605f8f115ffa0dbbc8f9f89152e3bff37da0ec39cf078e614b81dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LfsfCLiNsgYLaDQ_AHE1rdPt6kXI5h8B%22%3B%7D; PHPSESSID=u8j0utjsbkas7m54l3n0arej17'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1568'
+    'REDIRECT_URL' => '/utbsems/student-profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/student-profile'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PATH_INFO' => '/student-profile'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\student-profile'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php/student-profile'
+    'REQUEST_TIME_FLOAT' => 1598268099.48
+    'REQUEST_TIME' => 1598268099
+]
+2020-08-24 17:07:57 [::1][-][fcklo6grsrmbgh1hblqe9pe9q7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 17:07:56 [::1][-][fcklo6grsrmbgh1hblqe9pe9q7][info][application] $_COOKIE = [
+    'PHPSESSID' => 'fcklo6grsrmbgh1hblqe9pe9q7'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=fcklo6grsrmbgh1hblqe9pe9q7; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1901'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598269076.876
+    'REQUEST_TIME' => 1598269076
+]
+2020-08-24 17:08:28 [::1][536][e5idobj5um695f8vidckns0vc6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 17:08:28 [::1][536][e5idobj5um695f8vidckns0vc6][info][application] $_COOKIE = [
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+    'PHPSESSID' => 'e5idobj5um695f8vidckns0vc6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 536
+    '__expire' => 1598270309
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D; PHPSESSID=e5idobj5um695f8vidckns0vc6'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1927'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598269108.855
+    'REQUEST_TIME' => 1598269108
+]
+2020-08-24 17:12:50 [::1][536][e5idobj5um695f8vidckns0vc6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 17:12:50 [::1][536][e5idobj5um695f8vidckns0vc6][info][application] $_COOKIE = [
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+    'PHPSESSID' => 'e5idobj5um695f8vidckns0vc6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 536
+    '__expire' => 1598270570
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D; PHPSESSID=e5idobj5um695f8vidckns0vc6'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '1964'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598269370.409
+    'REQUEST_TIME' => 1598269370
+]
+2020-08-24 16:41:35 [::1][-][e5idobj5um695f8vidckns0vc6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:41:35 [::1][-][e5idobj5um695f8vidckns0vc6][info][application] $_COOKIE = [
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+    'PHPSESSID' => 'e5idobj5um695f8vidckns0vc6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 536
+    '__expire' => 1598270570
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D; PHPSESSID=e5idobj5um695f8vidckns0vc6'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2907'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267495.433
+    'REQUEST_TIME' => 1598267495
+]
+2020-08-24 16:41:38 [::1][-][e5idobj5um695f8vidckns0vc6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:41:38 [::1][-][e5idobj5um695f8vidckns0vc6][info][application] $_COOKIE = [
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+    'PHPSESSID' => 'e5idobj5um695f8vidckns0vc6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 536
+    '__expire' => 1598270570
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D; PHPSESSID=e5idobj5um695f8vidckns0vc6'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2907'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267498.026
+    'REQUEST_TIME' => 1598267498
+]
+2020-08-24 16:42:19 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `student` `s` LEFT JOIN `user` `u` ON u.id = s.user_ref_id LEFT JOIN `progr' at line 1' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\wamp64\www\utbsems\common\models\Student.php(70): yii\db\Query->all()
+#4 C:\wamp64\www\utbsems\frontend\controllers\StudentController.php(328): common\models\Student::findByUserId('<span class="nu...')
+#5 [internal function]: frontend\controllers\StudentController->actionStudentProfile()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `student` `s` LEFT JOIN `user` `u` ON u.id = s.user_ref_id LEFT JOIN `progr' at line 1
+The SQL being executed was: SELECT `s`.*, `u`.`user_image`, `p`.`programme_name` AS `programmename`, `faculty_name`, lpad(ic_no_format, `2`, `0)` AS `ic_no_format` FROM `student` `s` LEFT JOIN `user` `u` ON u.id = s.user_ref_id LEFT JOIN `programme` `p` ON p.id = s.programme_name LEFT JOIN `faculty` `f` ON f.id = s.school WHERE `user_ref_id`=910' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT `s`.*, `...')
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#3 C:\wamp64\www\utbsems\common\models\Student.php(70): yii\db\Query->all()
+#4 C:\wamp64\www\utbsems\frontend\controllers\StudentController.php(328): common\models\Student::findByUserId('<span class="nu...')
+#5 [internal function]: frontend\controllers\StudentController->actionStudentProfile()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `student` `s` LEFT JOIN `user` `u` ON u.id = s.user_ref_id LEFT JOIN `progr' at line 1
+)
+
+2020-08-24 16:42:19 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598268739
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2917'
+    'REDIRECT_URL' => '/utbsems/student-profile'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/student-profile'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PATH_INFO' => '/student-profile'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\student-profile'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php/student-profile'
+    'REQUEST_TIME_FLOAT' => 1598267539.311
+    'REQUEST_TIME' => 1598267539
+]
+2020-08-24 16:43:41 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:43:41 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598268822
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2940'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267621.796
+    'REQUEST_TIME' => 1598267621
+]
+2020-08-24 16:44:32 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:44:32 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598268872
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2945'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267672.385
+    'REQUEST_TIME' => 1598267672
+]
+2020-08-24 16:51:29 [::1][1][j6ohskq2nbq64f553ta53q3mp5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:51:29 [::1][1][j6ohskq2nbq64f553ta53q3mp5][info][application] $_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    'PHPSESSID' => 'j6ohskq2nbq64f553ta53q3mp5'
+    '_csrf' => '0d21adc43cf5fe22c6493e4581c710b5fdf6effad6b3969cd5f1c1b4a808b7d8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-fyHmJP7OuXm7K3Oz3ZKFZpt7KKfjBE6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1598269289
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/update-exam-officer?id=48'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; PHPSESSID=j6ohskq2nbq64f553ta53q3mp5; _csrf=0d21adc43cf5fe22c6493e4581c710b5fdf6effad6b3969cd5f1c1b4a808b7d8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-fyHmJP7OuXm7K3Oz3ZKFZpt7KKfjBE6%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2964'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268089.451
+    'REQUEST_TIME' => 1598268089
+]
+2020-08-24 16:52:08 [::1][1][j6ohskq2nbq64f553ta53q3mp5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:52:08 [::1][1][j6ohskq2nbq64f553ta53q3mp5][info][application] $_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    'PHPSESSID' => 'j6ohskq2nbq64f553ta53q3mp5'
+    '_csrf' => '406ff694bbcdb079241ece6ca83e0aaba35116a79b601299b8a91924a63fb1b0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"TBtff47EHiR_WOjc_cCimBuxRJQz4jNr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1598269328
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/update-exam-officer?id=48'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; PHPSESSID=j6ohskq2nbq64f553ta53q3mp5; _csrf=406ff694bbcdb079241ece6ca83e0aaba35116a79b601299b8a91924a63fb1b0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TBtff47EHiR_WOjc_cCimBuxRJQz4jNr%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '2972'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268128.635
+    'REQUEST_TIME' => 1598268128
+]
+2020-08-24 16:58:46 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:58:46 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598269726
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '3045'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268526.112
+    'REQUEST_TIME' => 1598268526
+]
+2020-08-24 16:59:01 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 16:59:00 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598269741
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '3050'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268540.917
+    'REQUEST_TIME' => 1598268540
+]
+2020-08-24 17:00:02 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 17:00:02 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598269802
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-edit-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '3057'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268602.025
+    'REQUEST_TIME' => 1598268602
+]
+2020-08-24 17:01:17 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "themes/metronic/assets/layouts/global/scripts/fancybox.min.js".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('themes/metronic...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\frontend\web\index.php(35): yii\base\Application->run()
+#2 {main}
+2020-08-24 17:01:17 [::1][910][db14dsfn75ii3jdmnvm5qkcnj0][info][application] $_COOKIE = [
+    'PHPSESSID' => 'db14dsfn75ii3jdmnvm5qkcnj0'
+    '_csrf' => '1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HbYqTzI87hMz0AopACmSHrymyay451fD\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__auth_last_update' => 1592304399
+    'email' => 'abdul.nassiq@utbsems.com'
+    'userRole' => null
+    '__id' => 910
+    '__expire' => 1598269877
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'script'
+    'HTTP_REFERER' => 'http://localhost/utbsems/student-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=db14dsfn75ii3jdmnvm5qkcnj0; _csrf=1e7bcb9b2b4562fe24710b621a8bfbc9bfaf68c0cad23862baa8650495e32f1da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HbYqTzI87hMz0AopACmSHrymyay451fD%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/frontend/web/index.php'
+    'REMOTE_PORT' => '3059'
+    'REDIRECT_URL' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/frontend/web/themes/metronic/assets/layouts/global/scripts/fancybox.min.js'
+    'SCRIPT_NAME' => '/utbsems/frontend/web/index.php'
+    'PHP_SELF' => '/utbsems/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268677.765
+    'REQUEST_TIME' => 1598268677
+]

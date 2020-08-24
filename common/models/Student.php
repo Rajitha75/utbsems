@@ -62,7 +62,7 @@ class Student extends \yii\db\ActiveRecord
      */
 
     public static function findByUserId($userid){
-        $data = (new Query())->select('s.*, u.user_image, p.programme_name as programmename, faculty_name')
+        $data = (new Query())->select(['s.*', 'u.user_image', 'p.programme_name as programmename', 'faculty_name', 'lpad(ic_no_format,2,0) as ic_no_format'])
                 ->from('student AS s')
                 ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id')
 				->join('LEFT JOIN', 'programme AS p', 'p.id = s.programme_name')
@@ -72,7 +72,7 @@ class Student extends \yii\db\ActiveRecord
     }
 
     public static function findByStudentId($userid){
-        $data = (new Query())->select('s.*, u.user_image, p.programme_name as programmename, faculty_name')
+        $data = (new Query())->select(['s.*', 'u.user_image', 'p.programme_name as programmename', 'faculty_name', 'lpad(ic_no_format,2,0) as ic_no_format'])
                 ->from('student AS s')
                 ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id')
 				->join('LEFT JOIN', 'programme AS p', 'p.id = s.programme_name')
@@ -159,7 +159,7 @@ class Student extends \yii\db\ActiveRecord
 	public static function getStudentsListAdmin($role,$studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name)
     {
        
-		 $uQuery = (new Query())->select(['s.id','name','rollno','rumpun','nationality','gender','user_ref_id','status','utb_email_address','u.email','entry','ic_no','ic_no_format','passportno', 'is_verified'])
+		 $uQuery = (new Query())->select(['s.id','name','rollno','rumpun','nationality','gender','user_ref_id','status','utb_email_address','u.email','entry','ic_no','lpad(ic_no_format,2,0) as ic_no_format','passportno', 'is_verified'])
         ->from('student AS s')
         ->join('LEFT JOIN', 'user AS u', 'u.id = s.user_ref_id');
 	
@@ -231,14 +231,14 @@ class Student extends \yii\db\ActiveRecord
     }
 
     public static function getStudentsData($id){
-        $data = (new Query())->select('*')
-        ->from('student')->where(['id' => $id])->all();
+        $data = (new Query())->select(['s.*', 'lpad(ic_no_format,2,0) as ic_no_format'])
+        ->from('student AS s')->where(['id' => $id])->all();
         return $data;
     }
 
     public static function getStudentsDataByUserRefId($id){
-        $data = (new Query())->select('*')
-        ->from('student')->where(['user_ref_id' => $id])->all();
+        $data = (new Query())->select(['s.*', 'lpad(ic_no_format,2,0) as ic_no_format'])
+        ->from('student AS s')->where(['user_ref_id' => $id])->all();
         return $data;
     }
 	

@@ -316,16 +316,16 @@ ul li{list-style:none;}
    
     <tbody>
       <tr>
-        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Gaurdian Name :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Guardian Name :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['father_name']) ? $studentdata['father_name'] : ''; ?>&nbsp;</td>
         <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Guardian Relation :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['gaurdian_relation']) ? $studentdata['gaurdian_relation'] : ''; ?>&nbsp;</td>
       </tr>
       
       <tr style="background:#f8f8f8;">
-        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Gaurdian IC No :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Guardian IC No :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['fathericno']) ? $studentdata['fathericno'] : ''; ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Gaurdian IC Color :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Father / Guardian IC Color :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['father_ic_color']) ? $studentdata['father_ic_color'] : ''; ?>&nbsp;</td>
       </tr>
 

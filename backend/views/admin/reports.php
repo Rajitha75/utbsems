@@ -24,7 +24,7 @@
 <button type="button" class="btn btn-violet" category="gender" categoryname="Gender">Gender</button>
 <button type="button" class="btn btn-pnk" category="martial_status" categoryname="Martial Status">Martial Status</button>
 <button type="button" class="btn btn-gry" category="type_of_entry" categoryname="Type of Entry">Type of Entry</button>
-<button type="button" class="btn btn-org" category="father_ic_color" categoryname="Father / Gaurdian IC Color">Father / Gaurdian IC Color</button>
+<button type="button" class="btn btn-org" category="father_ic_color" categoryname="Father / Guardian IC Color">Father / Guardian IC Color</button>
 <button type="button" class="btn btn-drkgrn" category="mother_ic_color" categoryname="Mother IC Color">Mother IC Color</button>
 <button type="button" class="btn btn-ylw" category="sponsor_type" categoryname="Sponsor Type">Sponsor Type</button>
 <button type="button" class="btn btn-success" category="programme_name" categoryname="Programme Name">Programme Name</button>

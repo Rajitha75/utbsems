@@ -323,15 +323,15 @@ Yii::$app->cache->flush();
      * @return mixed
      */
     public function actionStudentProfile(){
-		try{
+		//try{
         $student = new Student();
         $student = Student::findByUserId(Yii::$app->user->id);
         return $this->render('student-profile',[
             'studentdetails'=>$student[0],
         ]);
-		} catch (\Exception $e) {
+		/*} catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
-        }
+        }*/
     }
 
     public function actionStudentEditProfile(){

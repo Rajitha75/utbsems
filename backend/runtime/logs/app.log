@@ -52105,3 +52105,421 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1591962865.861
     'REQUEST_TIME' => 1591962865
 ]
+2020-08-24 16:48:06 [::1][1][j6ohskq2nbq64f553ta53q3mp5][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: common\models\User::getError()' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(776): yii\base\Component->__call('getError', Array)
+#1 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(776): common\models\User->getError()
+#2 [internal function]: backend\controllers\AdminController->actionImportStudents()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('import-students', Array)
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/import-st...', Array)
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#9 {main}
+2020-08-24 16:48:00 [::1][1][j6ohskq2nbq64f553ta53q3mp5][info][application] $_POST = [
+    '_csrf' => 'dFZObDI5UG8AYCggXxQyBAE9PjwFehcwHRoAKkJPNAYcMiw0e2Y0XQ=='
+    'ImportFileForm' => [
+        'importfile' => ''
+    ]
+]
+
+$_FILES = [
+    'ImportFileForm' => [
+        'name' => [
+            'importfile' => 'Undergradute.xlsx'
+        ]
+        'type' => [
+            'importfile' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'importfile' => 'C:\\wamp64\\tmp\\phpD9FC.tmp'
+        ]
+        'error' => [
+            'importfile' => 0
+        ]
+        'size' => [
+            'importfile' => 148294
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    '_csrf' => '38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2\";}'
+    'PHPSESSID' => 'j6ohskq2nbq64f553ta53q3mp5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1598269080
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '148823'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary6hlTneCqPYsdXVw9'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/import-students'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; _csrf=38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2%22%3B%7D; PHPSESSID=j6ohskq2nbq64f553ta53q3mp5'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1497'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/import-students'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/import-students'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267880.187
+    'REQUEST_TIME' => 1598267880
+]
+2020-08-24 16:50:29 [::1][1][j6ohskq2nbq64f553ta53q3mp5][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Maximum execution time of 120 seconds exceeded' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Security.php:606
+Stack trace:
+#0 C:\wamp64\www\utbsems\frontend\models\SignupForm.php(80): common\models\User->setPassword()
+#1 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(776): frontend\models\SignupForm->signup()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionImportStudents()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#9 {main}
+2020-08-24 16:48:28 [::1][1][j6ohskq2nbq64f553ta53q3mp5][info][application] $_POST = [
+    '_csrf' => 'dFZObDI5UG8AYCggXxQyBAE9PjwFehcwHRoAKkJPNAYcMiw0e2Y0XQ=='
+    'ImportFileForm' => [
+        'importfile' => ''
+    ]
+]
+
+$_FILES = [
+    'ImportFileForm' => [
+        'name' => [
+            'importfile' => 'Undergradute.xlsx'
+        ]
+        'type' => [
+            'importfile' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'importfile' => 'C:\\wamp64\\tmp\\php4A2B.tmp'
+        ]
+        'error' => [
+            'importfile' => 0
+        ]
+        'size' => [
+            'importfile' => 148294
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    '_csrf' => '38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2\";}'
+    'PHPSESSID' => 'j6ohskq2nbq64f553ta53q3mp5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1598269109
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '148823'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary6hlTneCqPYsdXVw9'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/import-students'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; _csrf=38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2%22%3B%7D; PHPSESSID=j6ohskq2nbq64f553ta53q3mp5'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1511'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/import-students'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/import-students'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598267908.902
+    'REQUEST_TIME' => 1598267908
+]
+2020-08-24 17:05:24 [::1][1][j6ohskq2nbq64f553ta53q3mp5][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Maximum execution time of 120 seconds exceeded' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Security.php:606
+Stack trace:
+#0 C:\wamp64\www\utbsems\frontend\models\SignupForm.php(80): common\models\User->setPassword()
+#1 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(776): frontend\models\SignupForm->signup()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionImportStudents()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#8 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#9 {main}
+2020-08-24 17:03:23 [::1][1][j6ohskq2nbq64f553ta53q3mp5][info][application] $_POST = [
+    '_csrf' => 'ajQ4RDdkRjAeAl4IWkkkWx9fSBQAJwFvA3h2AkcSIlkCUFocfjsiAg=='
+    'ImportFileForm' => [
+        'importfile' => ''
+    ]
+]
+
+$_FILES = [
+    'ImportFileForm' => [
+        'name' => [
+            'importfile' => 'Undergradute.xlsx'
+        ]
+        'type' => [
+            'importfile' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'importfile' => 'C:\\wamp64\\tmp\\phpEECE.tmp'
+        ]
+        'error' => [
+            'importfile' => 0
+        ]
+        'size' => [
+            'importfile' => 35091
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    '_csrf' => '38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2\";}'
+    'PHPSESSID' => 'j6ohskq2nbq64f553ta53q3mp5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1598270003
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35620'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryxLRl3a5OHaBCTSS7'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/import-students'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; _csrf=38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2%22%3B%7D; PHPSESSID=j6ohskq2nbq64f553ta53q3mp5'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1799'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/import-students'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/import-students'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598268803.018
+    'REQUEST_TIME' => 1598268803
+]
+2020-08-24 16:28:41 [::1][1][j6ohskq2nbq64f553ta53q3mp5][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'unlink(../../frontend/web/uploads/student-data/Undergradute.xlsx): No such file or directory' in C:\wamp64\www\utbsems\backend\controllers\AdminController.php:792
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionImportStudents()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#6 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#7 {main}
+2020-08-24 16:27:22 [::1][1][j6ohskq2nbq64f553ta53q3mp5][info][application] $_POST = [
+    '_csrf' => 'VFRGUlNZODYgYiAePnRaXSE/NgJkGn9pPRgIFCMvXF88MCQKGgZcBA=='
+    'ImportFileForm' => [
+        'importfile' => ''
+    ]
+]
+
+$_FILES = [
+    'ImportFileForm' => [
+        'name' => [
+            'importfile' => 'Undergradute.xlsx'
+        ]
+        'type' => [
+            'importfile' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        ]
+        'tmp_name' => [
+            'importfile' => 'C:\\wamp64\\tmp\\phpE5AF.tmp'
+        ]
+        'error' => [
+            'importfile' => 0
+        ]
+        'size' => [
+            'importfile' => 35091
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'SESS990b8eada18e9ddc3aa5614805b46b98' => 'uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw'
+    '_csrf' => '38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2\";}'
+    'PHPSESSID' => 'j6ohskq2nbq64f553ta53q3mp5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1598267842
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '35620'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryiRFCjBOqj7raoGN2'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/import-students'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'SESS990b8eada18e9ddc3aa5614805b46b98=uAqD5s5M-346Bi8df3A0NWYjD-DTWuhoUpiMfrEwWWw; _csrf=38bbad0392b92ec5c87949ca0dd7c395d17ed392510af856892b6cc93369a46ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22t6fLm-bkukpP7CG_iLNFpvdihdbXI_d2%22%3B%7D; PHPSESSID=j6ohskq2nbq64f553ta53q3mp5'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '2441'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/import-students'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/import-students'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1598266642.363
+    'REQUEST_TIME' => 1598266642
+]

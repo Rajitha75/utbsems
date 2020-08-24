@@ -701,16 +701,33 @@ class AdminController extends \common\controllers\CommonController
 						$signup = new \frontend\models\SignupForm();
 						$student = new Student;
                         $studentdetails = $data[$i];
-						if(isset($studentdetails['other_email']) && $studentdetails['other_email'] != ''){
-						$user = User::find()->where(['email' => $studentdetails['other_email']])->orWhere(['username' => $studentdetails['other_email']])->all();
+						if(isset($studentdetails['UTB Email']) && $studentdetails['UTB Email'] != ''){
+						$user = User::find()->where(['email' => $studentdetails['UTB Email']])->orWhere(['username' => $studentdetails['UTB Email']])->all();
 						if(count($user)==0){
                         $signup->password = 'utbsemspassword';
-                        $signup->email = $studentdetails['other_email'];
-                        $signup->username = $studentdetails['other_email'];
+                        $signup->email = $studentdetails['UTB Email'];
+                        $signup->username = $studentdetails['UTB Email'];
                         $signup->is_verified = 1;
 						$student->is_submit = 'submit';
 						
-                        $student->type_of_entry = isset($studentdetails['type_entry']) ? $studentdetails['type_entry'] : '';
+						$student->name = isset($studentdetails['Applicant Name']) ? $studentdetails['Applicant Name'] : '';
+						$student->utb_email_address = isset($studentdetails['UTB Email']) ? $studentdetails['UTB Email'] : '';
+						$student->email = isset($studentdetails['Email']) ? $studentdetails['Email'] : '';
+						$icno = isset($studentdetails['IC Number']) ? $studentdetails['IC Number'] : '';
+						if($icno != ''){
+						$icnumber = explode('-',$icno);
+							if(isset($icnumber[0])){
+							$student->ic_no_format = str_replace(' ', '', $icnumber[0]);
+							}
+							if(isset($icnumber[1])){
+							$student->ic_no = str_replace(' ', '', $icnumber[1]);
+							}
+						}
+						$student->telephone_mobile = isset($studentdetails['Mobile No.']) ? $studentdetails['Mobile No.'] : '';
+						$student->rollno = isset($studentdetails['Roll Number']) ? $studentdetails['Roll Number'] : '';
+						$student->type_of_entry = isset($studentdetails['Type of Entry']) ? $studentdetails['Type of Entry'] : '';
+						
+                        /*$student->type_of_entry = isset($studentdetails['type_entry']) ? $studentdetails['type_entry'] : '';
                         $student->name = isset($studentdetails['name']) ? $studentdetails['name'] : '';
 						$nationality = isset($studentdetails['nationality']) ? $studentdetails['nationality'] : '';
 						if(strtolower($nationality) == 'other' || strtolower($nationality) == 'others'){
@@ -763,7 +780,7 @@ class AdminController extends \common\controllers\CommonController
 						$student->account_no = isset($studentdetails['bankaccountno']) ? $studentdetails['bankaccountno'] : '';
 						$student->utb_email_address = isset($studentdetails['itbemail']) ? $studentdetails['itbemail'] : '';
                         $student->rumpun = isset($studentdetails['rumpun']) ? $studentdetails['rumpun'] : '';
-                        $student->rollno = isset($studentdetails['roll_number']) ? $studentdetails['roll_number'] : '';
+                        $student->rollno = isset($studentdetails['roll_number']) ? $studentdetails['roll_number'] : '';*/
                             if ($user = $signup->signup()){
 								$userid = Yii::$app->db->getLastInsertID();
 								$student->user_ref_id = $userid;
