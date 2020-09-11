@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 15, 2020 at 08:30 PM
+-- Generation Time: Sep 11, 2020 at 01:32 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 5.6.40
 
@@ -490,17 +490,7 @@ CREATE TABLE IF NOT EXISTS `login_attempts` (
   `reset_at` timestamp NULL DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `user_ref_id`, `attempts`, `ip`, `reset_at`, `created_at`) VALUES
-(7, 38, 2, NULL, NULL, '2020-02-13 23:09:29'),
-(8, 37, 1, NULL, NULL, '2020-02-13 23:09:38'),
-(9, 42, 2, NULL, NULL, '2020-04-06 13:32:41'),
-(10, 50, 2, NULL, NULL, '2020-04-06 13:33:34');
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1626,11 +1616,12 @@ CREATE TABLE IF NOT EXISTS `session` (
 --
 
 INSERT INTO `session` (`id`, `expire`, `data`) VALUES
-('9h105s2d1m4h03udl3e8nojn40', 1586983890, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f69647c693a313b5f5f6578706972657c693a313538363938333635303b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d),
-('ieqoubalqs6gqqquefhq4m0323', 1586983259, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a35393b5f5f6578706972657c693a313538363938333031393b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32383a227368616973746177617369757a7a616d616e40676d61696c2e636f6d223b75736572526f6c657c693a343b6973456141646d696e7c693a303b),
-('ke5pes6emrsk301a3r1gthu2v1', 1586983601, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a37323b5f5f6578706972657c693a313538363938333336313b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a31353a22746573743140676d61696c2e636f6d223b75736572526f6c657c693a323b),
-('qai1enf2h8op5s9n1ikt6ll8n5', 1587111866, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a35393b5f5f6578706972657c693a313538373131313632363b5f5f617574685f6c6173745f7570646174657c693a313538373039383830383b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a32383a227368616973746177617369757a7a616d616e40676d61696c2e636f6d223b75736572526f6c657c693a343b),
-('tp97sdhu23l7k363r87gl8j345', 1586985672, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f69647c693a313b5f5f6578706972657c693a313538363938353433323b5f5f617574685f6c6173745f7570646174657c693a313537323330333731323b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d);
+('2pu1lr560tb7k5u5qgi99deah0', 1599830873, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f69647c693a313b5f5f6578706972657c693a313539393833303633333b5f5f617574685f6c6173745f7570646174657c693a313539323330343339393b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d),
+('4um34be10r155od0di62knfck5', 1599832397, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f617574685f6c6173745f7570646174657c693a313539323330343339393b5f5f69647c693a313b5f5f6578706972657c693a313539393833323135373b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d),
+('5n0f2kf85h75q0fjbn3necm5k3', 1599831642, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f69647c693a373b5f5f6578706972657c693a313539393833313430313b5f5f617574685f6c6173745f7570646174657c693a313539323330343339393b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a31373a2273747564656e7440676d61696c2e636f6d223b75736572526f6c657c693a323b),
+('g7snl29974ga9urcuhaniac9v3', 1599829967, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a373b5f5f6578706972657c693a313539393832393732373b5f5f617574685f6c6173745f7570646174657c693a313539323330343339393b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a31373a2273747564656e7440676d61696c2e636f6d223b75736572526f6c657c693a323b),
+('hpk6k7f66nu71khppqv0djk0i2', 1599831804, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f69647c693a313b5f5f6578706972657c693a313539393833313536343b5f5f617574685f6c6173745f7570646174657c693a313539323330343339393b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d),
+('lvjjk2fstj9ldtpcq2r6hgo1t7', 1599831205, 0x5f5f666c6173687c613a303a7b7d7365637265746b65797c733a31383a22242525457175695050504032303138252524223b5f5f69647c693a373b5f5f6578706972657c693a313539393833303936343b5f5f617574685f6c6173745f7570646174657c693a313539323330343339393b5f5f75736572526f6c65737c613a303a7b7d5f5f757365725065726d697373696f6e737c613a303a7b7d5f5f75736572526f757465737c613a303a7b7d656d61696c7c733a31373a2273747564656e7440676d61696c2e636f6d223b75736572526f6c657c693a323b);
 
 -- --------------------------------------------------------
 
@@ -1706,6 +1697,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `programme_name` varchar(255) DEFAULT NULL,
   `intake` text DEFAULT NULL,
   `entry` text DEFAULT NULL,
+  `entry_other` text DEFAULT NULL,
   `user_image` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `user_ref_id` int(11) DEFAULT NULL,
@@ -1726,6 +1718,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `telphone_work` varchar(255) DEFAULT NULL,
   `mother_ic_color` varchar(255) DEFAULT NULL,
   `status_of_student` varchar(255) DEFAULT NULL,
+  `status_of_student_other` varchar(255) DEFAULT NULL,
   `status_remarks` text DEFAULT NULL,
   `mode` varchar(255) DEFAULT NULL,
   `utb_email_address` varchar(255) DEFAULT NULL,
@@ -1741,6 +1734,8 @@ CREATE TABLE IF NOT EXISTS `student` (
   `age` int(11) DEFAULT NULL,
   `highest_qualification` varchar(255) DEFAULT NULL,
   `highestqualificationother` varchar(255) DEFAULT NULL,
+  `highestqualification_coursetaken` text DEFAULT NULL,
+  `highestqualification_result` text DEFAULT NULL,
   `countrycode` varchar(255) DEFAULT NULL,
   `state` varchar(255) DEFAULT NULL,
   `district` varchar(255) DEFAULT NULL,
@@ -1759,17 +1754,96 @@ CREATE TABLE IF NOT EXISTS `student` (
   `bank_name_other` varchar(255) DEFAULT NULL,
   `bank_account_name` varchar(255) DEFAULT NULL,
   `bank_terms` varchar(255) DEFAULT NULL,
+  `emergency_relationship` varchar(255) DEFAULT NULL,
+  `emergency_relationship_others` varchar(255) DEFAULT NULL,
+  `emergency_name` varchar(400) DEFAULT NULL,
+  `emergency_address` text DEFAULT NULL,
+  `emergency_address2` text DEFAULT NULL,
+  `emergency_address3` text DEFAULT NULL,
+  `emergency_phone_country_code` varchar(255) DEFAULT NULL,
+  `emergency_phone` varchar(255) DEFAULT NULL,
+  `emergency_mobile_country_code` varchar(255) DEFAULT NULL,
+  `emergency_mobile` varchar(255) DEFAULT NULL,
+  `emergency_officeno_country_code` varchar(255) DEFAULT NULL,
+  `emergency_officeno` varchar(255) DEFAULT NULL,
+  `emergency_email` varchar(255) DEFAULT NULL,
   `is_submit` varchar(255) DEFAULT NULL,
+  `is_change` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=801 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`id`, `name`, `rollno`, `rumpun`, `nationality`, `passportno`, `race`, `religion`, `gender`, `martial_status`, `dob`, `place_of_birth`, `telephone_mobile`, `tele_home`, `emailother`, `lastschoolname`, `type_of_entry`, `specialneeds`, `father_name`, `fathericno`, `father_mobile`, `mother_name`, `mothericno`, `mother_mobile`, `address`, `address2`, `address3`, `postal_code`, `bank_name`, `account_no`, `programme_name`, `intake`, `entry`, `user_image`, `email`, `user_ref_id`, `nationalityother`, `raceother`, `religionother`, `typeofentryother`, `sponsor_type`, `sponsor_type_other`, `ic_no`, `ic_color`, `gaurdian_relation`, `mobile_home`, `father_ic_color`, `gaurdian_employment`, `gaurdian_employer`, `remarks`, `telphone_work`, `mother_ic_color`, `status_of_student`, `status_remarks`, `mode`, `utb_email_address`, `degree_classification`, `date_of_registration`, `date_of_leaving`, `previous_roll_no`, `previous_programme_name`, `previous_intake_no`, `previous_utb_email`, `title`, `ic_no_format`, `age`, `highest_qualification`, `highestqualificationother`, `countrycode`, `state`, `district`, `mailing_permanent`, `mailing_address`, `mailing_address2`, `mailing_address3`, `mailing_countrycode`, `mailing_state`, `mailing_district`, `mailing_postal_code`, `type_of_residential`, `typeofresidentialother`, `type_of_programme`, `school`, `bank_name_other`, `bank_account_name`, `bank_terms`, `is_submit`) VALUES
-(56, 'rajitha', '8337', 'XLR8', 'Malay', '32323', 'Malay', 'Muslim', 'Female', 'Single', '21-04-1950', 'jj', '3232', '2323', 'rajithaother@gmail.com', 'ssdd', 'HECAS', 'sdsd', 'ssdd', '2323', '2323', 'fdf', '233', '3434', 'sdsd', 'sdsd', 'sdsd', '2323', 'BAIDURI', '232', '2', '2011', 'Second Year', '', 'rajitha@gmail.com', 58, '', '', '', '', 'Government Scholarship', '', 'ss', 'Yellow', 'ss', '323', 'Yellow', 'dsd', '32sds', 'sdsd', '223', 'Yellow', 'Current Student', NULL, 'Full Time', 'rajithautb@gmail.com', NULL, '08-04-1950', '26-04-1950', NULL, NULL, NULL, NULL, 'Datin', 23, 69, 'A Level', '', 'Afganistan', '', 'sdsd', '1', 'sdsd', 'sdsd', 'sdsd', '', '', 'sdsd', '2323', 'Own House', '', 'Undergraduate Degree', 'School of Business', '', 'sdds', '1', 'submit'),
-(1, 'student1', '88880', 'XLR8', 'Other', '99990', 'Other', 'Other', 'Female', 'Married', '09-02-1968', 'hyderabad', '8080808080', '0409898980', 'emailother@gmail.com', 'school attended 0', 'Other', 'special needs0', 'father / gaurdian name 0', '89898 0', '0000000000 0', 'Mother\'s name 0', '777 0', '8999988880 0', 'postal address 1 0', 'postal address 1 2 0', 'postal address 1 3 0', '0000-0', 'Other', '7777 8888 9999 0', '2', '2001', 'Second Year', '', 'student@gmail.com', 7, 'other', 'other', 'other', 'other', 'Other', 'other', '999990', 'Red', 'father 0', '1111111110', 'Red', 'father emp 0', 'father employer 0', 'remarks 1 0', '2222222 0', 'Red', 'Current Student', NULL, 'Part Time', 'utbemail1@gmail.com', NULL, '14-02-2012', '14-02-2016', NULL, NULL, NULL, NULL, 'Datin', 80, 52, 'Other', 'other ', 'Albania', '', 'JJJJJJ', '0', 'postal address 1 0', 'postal address 1 2 0', 'postal address 1 3 0', '', '', 'JJJJJJ', '0000-0', 'Other', 'other', 'Masters by Coursework', 'School of Computing and Informatics', 'other', 'bank account name 0', '0', 'submit');
+INSERT INTO `student` (`id`, `name`, `rollno`, `rumpun`, `nationality`, `passportno`, `race`, `religion`, `gender`, `martial_status`, `dob`, `place_of_birth`, `telephone_mobile`, `tele_home`, `emailother`, `lastschoolname`, `type_of_entry`, `specialneeds`, `father_name`, `fathericno`, `father_mobile`, `mother_name`, `mothericno`, `mother_mobile`, `address`, `address2`, `address3`, `postal_code`, `bank_name`, `account_no`, `programme_name`, `intake`, `entry`, `entry_other`, `user_image`, `email`, `user_ref_id`, `nationalityother`, `raceother`, `religionother`, `typeofentryother`, `sponsor_type`, `sponsor_type_other`, `ic_no`, `ic_color`, `gaurdian_relation`, `mobile_home`, `father_ic_color`, `gaurdian_employment`, `gaurdian_employer`, `remarks`, `telphone_work`, `mother_ic_color`, `status_of_student`, `status_of_student_other`, `status_remarks`, `mode`, `utb_email_address`, `degree_classification`, `date_of_registration`, `date_of_leaving`, `previous_roll_no`, `previous_programme_name`, `previous_intake_no`, `previous_utb_email`, `title`, `ic_no_format`, `age`, `highest_qualification`, `highestqualificationother`, `highestqualification_coursetaken`, `highestqualification_result`, `countrycode`, `state`, `district`, `mailing_permanent`, `mailing_address`, `mailing_address2`, `mailing_address3`, `mailing_countrycode`, `mailing_state`, `mailing_district`, `mailing_postal_code`, `type_of_residential`, `typeofresidentialother`, `type_of_programme`, `school`, `bank_name_other`, `bank_account_name`, `bank_terms`, `emergency_relationship`, `emergency_relationship_others`, `emergency_name`, `emergency_address`, `emergency_address2`, `emergency_address3`, `emergency_phone_country_code`, `emergency_phone`, `emergency_mobile_country_code`, `emergency_mobile`, `emergency_officeno_country_code`, `emergency_officeno`, `emergency_email`, `is_submit`, `is_change`) VALUES
+(1, 'student1', '88880', 'XLR8', 'Other', '99990', 'Other', 'Other', 'Female', 'Married', '09-02-1968', 'hyderabad', '8080808080', '0409898980', 'emailother@gmail.com', 'school attended 0', 'Other', 'special needs0', 'father / gaurdian name 0', '89898 0', '0000000000 0', 'Mother\'s name 0', '777 0', '8999988880 0', 'postal address 1 0', 'postal address 1 2 0', 'postal address 1 3 0', '0000-0', 'Other', '7777 8888 9999 0', '2', '2001', 'Other', 'entry other', '', 'student@gmail.com', 7, 'other', 'other', 'other', 'other', 'Other', 'other', '999990', 'Red', 'father 0', '1111111110', 'Red', 'father emp 0', 'father employer 0', 'remarks 1 0', '2222222 0', 'Red', 'Current Student', NULL, NULL, 'Part Time', 'utbemail1@gmail.com', NULL, '14-02-2012', '14-02-2016', NULL, NULL, NULL, NULL, 'Datin', 80, 52, 'Other', 'other ', NULL, NULL, 'Albania', '', 'JJJJJJ', '0', 'postal address 1 0', 'postal address 1 2 0', 'postal address 1 3 0', '', '', 'JJJJJJ', '0000-0', 'Other', 'other', 'Masters by Coursework', '2', 'other', 'bank account name 0', '1', 'Guardian', '', 'eee name', 'eee add 1', 'eee add 2', 'eee add 3', '1-264', '11111111', '506', '22222222', '218', '33333', 'eee@gmail.com', 'submit', NULL),
+(793, 'ABDUL NASSIQ BIN HAJI RAZALI', 'B20200011', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '6377144786', NULL, NULL, NULL, 'HECAS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'abdul.nassiq@gmail.com', 910, NULL, NULL, NULL, NULL, NULL, NULL, '091373', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'abdul.nassiq@utbsems.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(792, 'ABDUL HADI BIN HUSSAIN', 'B20200059', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '6737267206', NULL, NULL, NULL, 'HECAS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ahbh257@gmail.com', 909, NULL, NULL, NULL, NULL, NULL, NULL, '093870', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ahbh257@utbsems.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(791, 'Abdulmalik Said', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '+254792329517', NULL, NULL, NULL, 'HECAS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'abdulmaliksaid982@gmail.com', 908, NULL, NULL, NULL, NULL, NULL, NULL, '093872', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'abdulmaliksaid982@utbsems.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(794, 'test kin', 'jkkjjj', 'XLR8', 'Chinese', '323', 'Tutong', 'Sikh', 'Female', 'Single', '04-08-1950', 'sdsd', '909', '0909', 'sds@sd.com', 'sdsdds', 'HECAS (for Bachelor Degree only)', 'dssddsd', NULL, NULL, NULL, NULL, NULL, NULL, 'sdsd', NULL, NULL, '89889', 'BAIDURI', '232323', '2', '2000', 'First Year', NULL, '', 'jjjh@ssd.com', 911, '', '', '', '', 'Government Scholarship', '', '323232', 'Yellow', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Current Student', NULL, NULL, 'Full Time', 'sdsd@sds.com', NULL, '26-08-1950', '26-08-1950', NULL, NULL, NULL, NULL, 'Datin', 32, 70, 'Advanced National Diploma', '', NULL, NULL, 'Albania', '', 'sds', '1', 'sdsd', NULL, NULL, '', '', 'sds', '89889', 'Own House', '', 'Undergraduate Degree', '3', '', 'sdsdads', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(795, 'test kin', 'jkkjjj', 'XLR8', 'Chinese', '323', 'Tutong', 'Sikh', 'Female', 'Single', '04-08-1950', 'sdsd', '909', '0909', 'sds@sd.com', 'sdsdds', 'HECAS (for Bachelor Degree only)', 'dssddsd', NULL, NULL, NULL, NULL, NULL, NULL, 'sdsd', NULL, NULL, '89889', 'BAIDURI', '232323', '2', '2000', 'First Year', NULL, '', 'jjjh@ssd.com', 912, '', '', '', '', 'Government Scholarship', '', '323232', 'Yellow', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Current Student', NULL, NULL, 'Full Time', 'sdsd@sds.com', NULL, '26-08-1950', '26-08-1950', NULL, NULL, NULL, NULL, 'Datin', 32, 70, 'Advanced National Diploma', '', NULL, NULL, 'Albania', '', 'sds', '1', 'sdsd', NULL, NULL, '', '', 'sds', '89889', 'Own House', '', 'Undergraduate Degree', '3', '', 'sdsdads', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(796, 'testkin2', '9899', 'XLR8', 'Malay', 'sdsdd', 'Iban', 'Muslim', 'Female', 'Single', '19-08-1950', 'aads', '999', '999', '2wessd@sd.com', 'dasdsd', '', 'adsdsd', NULL, NULL, NULL, NULL, NULL, NULL, 'dsds', NULL, NULL, '1332', 'BAIDURI', '33434343', '1', '2001', 'First Year', '', '', 'dsds@sdsd.com', 913, '', '', '', '', 'Government Scholarship', '', '232323', 'Red', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Current Student', '', NULL, 'Part Time', 'sdsd@sds.com', NULL, '09-08-1950', '24-08-1950', NULL, NULL, NULL, NULL, 'Datin', 32, 70, 'A Level', '', '', '', 'Afganistan', '', 'dsd', '0', 'sdsd', NULL, NULL, 'St Barthelemy', '', 'sdsd', '2233', 'Own House', '', 'Masters by Coursework', '3', '', 'sdsdsdds', '1', 'Others', 'emer other', 'emer name', 'emer add 1', 'emer add 2 ', 'emer add 3', '1-684', '1111111', '63', '222222', '1-670', '33333', 'emer@email.com', 'submit', NULL),
+(797, 'studentotherstest', '898989', 'XLR8', 'Malay', '3434', 'Malay', 'Buddist', 'Female', 'Single', '16-09-1950', 'hjhjhj', '90990', '090909', 'sdsd@wwe.com', 'dss', 'In-Service', 'hjhjh', NULL, NULL, NULL, NULL, NULL, NULL, 'dssdds', NULL, NULL, '8989898', 'BIBD', '3232', '10', '2000', 'Second Year', NULL, '', 'sdsd@sdds.com', 914, '', '', '', '', 'Government Scholarship', '', '898898', 'Yellow', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Withdrawn', NULL, NULL, 'Full Time', 'dsd@sdsx.com', NULL, '16-09-1950', '06-09-1950', NULL, NULL, NULL, NULL, 'Datin', 32, 69, 'A Level', '', NULL, NULL, 'Albania', '', 'jhhj', '1', 'dssdds', NULL, NULL, '', '', 'jhhj', '8989898', 'Own House', '', 'Undergraduate Degree', '3', '', 'dsdsdd', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(798, 'studentotherstest', '898989', 'XLR8', 'Malay', '3434', 'Malay', 'Buddist', 'Female', 'Single', '16-09-1950', 'hjhjhj', '90990', '090909', 'sdsd@wwe.com', 'dss', 'In-Service', 'hjhjh', NULL, NULL, NULL, NULL, NULL, NULL, 'dssdds', NULL, NULL, '8989898', 'BIBD', '3232', '10', '2000', 'Second Year', NULL, '', 'sdsd@sdds.com', 915, '', '', '', '', 'Government Scholarship', '', '898898', 'Yellow', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Withdrawn', NULL, NULL, 'Full Time', 'dsd@sdsx.com', NULL, '16-09-1950', '06-09-1950', NULL, NULL, NULL, NULL, 'Datin', 32, 69, 'A Level', '', NULL, NULL, 'Albania', '', 'jhhj', '1', 'dssdds', NULL, NULL, '', '', 'jhhj', '8989898', 'Own House', '', 'Undergraduate Degree', '3', '', 'dsdsdd', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(799, 'jjjk', '989898', 'XLR8', 'Malay', 'jkjkj', 'Malay', 'Buddist', 'Female', 'Single', '09-09-1950', 'kmkjkj', '090909', '998', 'dsd@sd.com', 'dsd', 'In-Service', 'dsdds', NULL, NULL, NULL, NULL, NULL, NULL, 'sddsd', NULL, NULL, '32334', 'BIBD', '232323', '2', '2000', 'Second Year', NULL, '', 'jj@sd.com', 916, '', '', '', '', 'Government Scholarship', '', '898989', 'Yellow', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Current Student', NULL, NULL, 'Full Time', 'sdsd@sd.com', NULL, '28-09-1950', '08-09-1950', NULL, NULL, NULL, NULL, 'Dayang', 99, 70, 'A Level', '', NULL, NULL, 'Afganistan', '', 'hjhj', '1', 'sddsd', NULL, NULL, '', '', 'hjhj', '32334', 'Own House', '', 'Undergraduate Degree', '4', '', 'dsdd', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL),
+(800, 'jjjk', '989898', 'XLR8', 'Malay', 'jkjkj', 'Malay', 'Buddist', 'Female', 'Single', '09-09-1950', 'kmkjkj', '090909', '998', 'dsd@sd.com', 'dsd', '', 'dsdds', NULL, NULL, NULL, NULL, NULL, NULL, 'sddsd', NULL, NULL, '32334', 'BIBD', '232323', '2', '2000', 'Second Year', NULL, '', 'jj@sd.com', 917, '', '', '', '', 'Government Scholarship', '', '898989', 'Yellow', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Current Student', NULL, NULL, 'Full Time', 'sdsd@sd.com', NULL, '28-09-1950', '08-09-1950', NULL, NULL, NULL, NULL, 'Dayang', 99, 70, 'A Level', '', NULL, NULL, 'Afganistan', '', 'hjhj', '1', 'sddsd', NULL, NULL, '', '', 'hjhj', '32334', 'Own House', '', 'Undergraduate Degree', '4', '', 'dsdd', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'submit', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_highest_qualification_details`
+--
+
+DROP TABLE IF EXISTS `student_highest_qualification_details`;
+CREATE TABLE IF NOT EXISTS `student_highest_qualification_details` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` int(11) NOT NULL,
+  `hq_a_level_year` varchar(255) DEFAULT NULL,
+  `hq_a_level_subject` varchar(255) DEFAULT NULL,
+  `hq_a_level_grade` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_kin_details`
+--
+
+DROP TABLE IF EXISTS `student_kin_details`;
+CREATE TABLE IF NOT EXISTS `student_kin_details` (
+  `kin_id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` int(11) NOT NULL,
+  `kin_relationship` varchar(200) DEFAULT NULL,
+  `kin_relationship_others` varchar(300) DEFAULT NULL,
+  `kin_name` varchar(300) DEFAULT NULL,
+  `kin_address` text DEFAULT NULL,
+  `kin_address2` text DEFAULT NULL,
+  `kin_address3` text DEFAULT NULL,
+  `kin_id_card_no_code` varchar(100) DEFAULT NULL,
+  `kin_id_card_no` varchar(200) DEFAULT NULL,
+  `kin_phone_country_code` varchar(100) DEFAULT NULL,
+  `kin_phone` varchar(200) DEFAULT NULL,
+  `kin_mobile_country_code` varchar(100) DEFAULT NULL,
+  `kin_mobile` varchar(200) DEFAULT NULL,
+  `kin_email` varchar(300) DEFAULT NULL,
+  `kin_occupation` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`kin_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_kin_details`
+--
+
+INSERT INTO `student_kin_details` (`kin_id`, `student_id`, `kin_relationship`, `kin_relationship_others`, `kin_name`, `kin_address`, `kin_address2`, `kin_address3`, `kin_id_card_no_code`, `kin_id_card_no`, `kin_phone_country_code`, `kin_phone`, `kin_mobile_country_code`, `kin_mobile`, `kin_email`, `kin_occupation`) VALUES
+(1, 795, 'Father', NULL, 'father name', 'address 1', 'address 2', 'address 3', '00', 'idcardno', '01', '99999', '02', '9393939', 'sdsd@sds.com', 'sdsd'),
+(10, 796, 'Mother', '', 'sdsd', 'hjhj', 'jhjhjh', 'jhjhjh', '99', '90909', '99', '090909', '99', '090909', 'sdsd@sd.com', 'ssdds'),
+(18, 796, 'Others', '', 'kjj', 'kjkjj', 'kjj', 'kkjk', '99', '9090909', '99', '99099', '99', '90909', 'bhh@sd.com', 'sdsd'),
+(14, 797, 'Son', '', 'j', 'bnkkj', 'bjkjk', 'kjjkjk', '9', '00', '99999', '0909', '09', '090909', 'sdsdd@sds.com', 'kjkhkjkkjhjh'),
+(15, 800, 'Others', 'sdsdsd', 'mmmkj', 'kkkjkj', 'kjkj', 'kj', '909', '0909090', '9', '9090909', '9', '090909', 'dsd@sd.com', '9jjhh'),
+(16, 800, 'Others', '0000', 'mnnn', 'mnmnmn', 'mnmnmn', 'mnmnmn', '999', '99999', '99', '9999', '99', '9999', 'ssd@sds.com', 'njnn'),
+(17, 800, 'Guardian', '', 'sdsd', 'sdsd', 'sdsd', 'sdsd9898', '89889', '89099090', '99', '999999', '99', '99999', 'sdsds@sdsd.com', 'hjbj');
 
 -- --------------------------------------------------------
 
@@ -1865,7 +1939,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `is_verified` tinyint(1) DEFAULT NULL,
   `is_admin` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=918 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -1873,15 +1947,18 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `confirmation_token`, `status`, `superadmin`, `created_at`, `updated_at`, `email`, `user_role_ref_id`, `created_by`, `modified_by`, `user_image`, `is_verified`, `is_admin`) VALUES
 (1, 'superadmin', '7YMx4se_msau87jzbRh3_iiQ2nJiqNHA', '$2y$13$ansaxS7vk1U8i5pnStrsW.EztLV6Yo26NZqmX.gkFBxHdocHVsRFm', NULL, 1, 1, 1458643778, 1458643778, 'jdas12@bodhtree.com', NULL, NULL, NULL, NULL, NULL, 0),
-(7, 'student@gmail.com', '7YMx4se_msau87jzbRh3_iiQ2nJiqNHA', '$2y$13$ansaxS7vk1U8i5pnStrsW.EztLV6Yo26NZqmX.gkFBxHdocHVsRFm', NULL, 1, 0, 1565517504, 1586981799, 'student@gmail.com', 2, NULL, NULL, 'flower.jpg', 1, 0),
+(7, 'student@gmail.com', 'JjPHZhvL9y9SbQlEiHKpE5vFnNRs99Vj', '$2y$13$86/ZmDgFlMRGltib3zrsweCzsGO/L9vL3r894tuwNDJEE4crzihzu', NULL, 1, 0, 1565517504, 1599830072, 'student@gmail.com', 2, NULL, NULL, 'flower.jpg', 1, 0),
 (48, 'examofficer1@gmail.com', 'ACsOtjzXn4xtHEjrL03-KzR-DYcgUJ91', '$2y$13$ansaxS7vk1U8i5pnStrsW.EztLV6Yo26NZqmX.gkFBxHdocHVsRFm', NULL, 1, 0, 1585730678, 1585730678, 'examofficer1@gmail.com', 3, NULL, NULL, NULL, 1, 1),
-(51, 'examofficer2@gmail.com', 'aIi-ZMdnXoZBJ1lhWMFsQnoYYMHlJklB', '$2y$13$5wnqocMevYdG7dedIz7WH.oBkyyArbbZn9g55BjyVRJ5ehaWdK0da', NULL, 1, 0, 1586160711, 1586160711, 'examofficer2@gmail.com', 3, NULL, NULL, NULL, 1, 0),
-(52, 'examofficer3@gmail.com', 'DGMwQ5BHeci2_ZWoe3-2zFWVdWBeH6O5', '$2y$13$MW82oMecyL8k/xkTjcXY0edl6Qnf41wEVsTmhuoXiruwqTxB5EOeS', NULL, 1, 0, 1586160803, 1586160803, 'examofficer3@gmail.com', 3, NULL, NULL, NULL, 1, 1),
-(57, 'examofficer4@gmail.com', 'Y2DPvpgswYa4YnmIp8DT1p-mtDJzoSf1', '$2y$13$efFFvdae2hlUIlNeT0/C8eYmF/nRsSR2RnP1jYCInhWEsol/1TRNK', NULL, 1, 0, 1586162046, 1586162046, 'examofficer4@gmail.com', 3, NULL, NULL, NULL, 1, 0),
-(58, 'rajitha@gmail.com', 'yODu5zf7KSHuPBa0luVTMZBcYNdXv2X8', '$2y$13$ggVWhpOQg3rspjxLTUYEzeZs9sRcnapEzCsnMVkerluzyMtW504Q.', NULL, 1, 0, 1586160493, 1586983539, 'rajitha@gmail.com', 2, NULL, NULL, NULL, 0, 0),
-(59, 'shaistawasiuzzaman@gmail.com', '-QhDC9_wkExbSFrucQrZdSv_euPg9tGK', '$2y$13$izK0s8xiU6tTcs48GTeTw.AHsfj.6jIMaymSO6Y7.w4A7DjbBsM.G', NULL, 1, 0, 1586160783, 1586160783, 'shaistawasiuzzaman@gmail.com', 4, NULL, NULL, NULL, 1, 0),
-(60, 'ibrahimaramidesalihu@gmail.com', 'GDtKM1Dnnz6JUK00cqcZ6nHQcH527zHU', '$2y$13$l.3zNyz2tqI7cmDHGqK/WuE.upsw9IqdS/MTgnTfB656bp2wl.U.O', NULL, 1, 0, 1586160828, 1586160828, 'ibrahimaramidesalihu@gmail.com', 4, NULL, NULL, NULL, 1, 0),
-(61, 'hjhfarahiyahbintihjkawi@gmail.com', 'hDpqSa2RNyxRRZV-nFcBhzd6Us6BOQti', '$2y$13$BUIbla4k0e6yeU1YtrefAOscGpC6YCzOID8hi6slVG.IfYHSmGJ6G', NULL, 1, 0, 1586160926, 1586160926, 'hjhfarahiyahbintihjkawi@gmail.com', 4, NULL, NULL, NULL, 1, 0);
+(908, 'abdulmaliksaid982@utbsems.com', 'eMmu7H7r0g-i1p1JXIA0iuMCrk55chCn', '$2y$13$2FIJrfVnwCc4uQOyuMmRCuKrXxkKn0nuiaUrfDltUss60hU8r1.LO', NULL, 1, 0, 1598267128, 1598267128, 'abdulmaliksaid982@utbsems.com', NULL, NULL, NULL, NULL, 1, 0),
+(909, 'ahbh257@utbsems.com', 'T237mKS1YV7XwM1-kba1tK-Q2XGRgde2', '$2y$13$hSw.HHzsPTJHzJA.PKN61eON2O4jPElEozXOxzKAf/oAvFAaVkr4m', NULL, 1, 0, 1598267129, 1598267129, 'ahbh257@utbsems.com', NULL, NULL, NULL, NULL, 1, 0),
+(910, 'abdul.nassiq@utbsems.com', 'uw0cC-qCHMEvcHEnEW5gvdh6IBJ0b7Hp', '$2y$13$ux/BHGmPGPItO2GXWF/5nO9rGcbl0r49vVMpUBRGWSUrVdxfdD3nS', NULL, 1, 0, 1598267130, 1598267130, 'abdul.nassiq@utbsems.com', NULL, NULL, NULL, NULL, 1, 0),
+(911, 'jjjh@ssd.com', 'dOFIPrF9V63bwF5dFmq3t8D32rbPvt_x', '$2y$13$XH7UbJhl/sv/F4Rk/u1IN.sYXkEMqIXdAl.OzTMJ3PP77R1TKLrlu', NULL, 1, 0, 1598888940, 1598888940, 'jjjh@ssd.com', 2, NULL, NULL, NULL, 1, 0),
+(912, 'jjjh@ssd.com', '-ucCd4eN4bPqcleRA6pSiYN_BTORFIBw', '$2y$13$iZ83HaCf/TAX0XYn62fotO8zfABjmtKDSg1jMyk4SwpAtcrEuSukK', NULL, 1, 0, 1598888995, 1598888995, 'jjjh@ssd.com', 2, NULL, NULL, NULL, 1, 0),
+(913, 'dsds@sdsd.com', '2YHG_4JdMg3XNJFteko64Kl90CQA3tK-', '$2y$13$8CA3P66VSB6mhI7QzcRC2ufNXtiQvSNfIqCrnfxw8StcLD2zSS/tC', NULL, 1, 0, 1598885815, 1598885815, 'dsds@sdsd.com', 2, NULL, NULL, NULL, 1, 0),
+(914, 'sdsd@sdds.com', '3tftolhSJfsiT9u96j6blFA4J54F9QjE', '$2y$13$q35K2ijyIfggiBdxry00jeKWA27yY3qZHVTK7qtnMnPfclsEwqtTe', NULL, 1, 0, 1599828115, 1599828115, 'sdsd@sdds.com', 2, NULL, NULL, NULL, 1, 0),
+(915, 'sdsd@sdds.com', 'sObQX489ludsaaCvqYw7d6VZ1csEecMw', '$2y$13$7gZsfzh9Nowx5vM33Froz.Bpg8A1DTVK/z.gVdruBDXRjXmuccu4q', NULL, 1, 0, 1599828172, 1599828172, 'sdsd@sdds.com', 2, NULL, NULL, NULL, 1, 0),
+(916, 'jj@sd.com', 'R6eszOLiIBTGCQ6noInD4DLZ1c9FFyqn', '$2y$13$igyvoF6hKcep88zr0mp14OcYNcsmWgf9lfXpLd67puSWsO0afINCi', NULL, 1, 0, 1599828785, 1599828785, 'jj@sd.com', 2, NULL, NULL, NULL, 1, 0),
+(917, 'jj@sd.com', 'IooNYHRJC--L0teoVfD7GGPOmgXX21mL', '$2y$13$hEeFvGpxIl9NcmBt8lKiv.SCRsvXfPC9QRmRxqjDbu.uTwTQl7dt6', NULL, 1, 0, 1599828807, 1599828807, 'jj@sd.com', 2, NULL, NULL, NULL, 1, 0);
 
 -- --------------------------------------------------------
 
