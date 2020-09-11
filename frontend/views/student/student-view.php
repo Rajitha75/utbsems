@@ -124,6 +124,14 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'attribute'=>'Highest Qualification (Other)',       
                         'value' => ($studentdetails['highest_qualification'] == 'Other') ? stripslashes($studentdetails['highestqualificationother']) : 'NA',
                     ],
+					[
+                        'attribute'=>'Course Taken',
+                        'value' => ($studentdetails['highest_qualification'] == 'Advanced National Diploma' || $studentdetails['highest_qualification'] == 'Higher National Diploma' || $studentdetails['highest_qualification'] == 'International Baccalaureate' || $studentdetails['highest_qualification'] == 'Undergraduate Degree' || $studentdetails['highest_qualification'] == 'Masters by Coursework' || $studentdetails['highest_qualification'] == 'Masters by Research' || $studentdetails['highest_qualification'] == 'Doctor of Philosophy (PhD)') ? stripslashes($studentdetails['highestqualification_coursetaken']) : 'NA',
+                    ],
+					[
+                        'attribute'=>'Result',       
+                        'value' => ($studentdetails['highest_qualification'] == 'Advanced National Diploma' || $studentdetails['highest_qualification'] == 'Higher National Diploma' || $studentdetails['highest_qualification'] == 'International Baccalaureate' || $studentdetails['highest_qualification'] == 'Undergraduate Degree' || $studentdetails['highest_qualification'] == 'Masters by Coursework' || $studentdetails['highest_qualification'] == 'Masters by Research' || $studentdetails['highest_qualification'] == 'Doctor of Philosophy (PhD)') ? stripslashes($studentdetails['highestqualification_result']) : 'NA',
+                    ],
                     [
                         'attribute'=>'Name of Last School Attended',       
                         'value' => stripslashes($studentdetails['lastschoolname']),
@@ -221,17 +229,17 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'value' => ($studentdetails['type_of_residential'] == 'Other') ? stripslashes($studentdetails['typeofresidentialother']) : 'NA',
                     ],
                     [
-                        'attribute'=>'Address Line 1',       
+                        'attribute'=>'Address Line',       
                         'value' => stripslashes($studentdetails['address']),
                     ],
-                    [
+                    /*[
                         'attribute'=>'Address Line 2',       
                         'value' => stripslashes($studentdetails['address2']),
                     ],
                     [
                         'attribute'=>'Address Line 3',       
                         'value' => stripslashes($studentdetails['address3']),
-                    ],
+                    ],*/
 		    [
                         'attribute'=>'Country',       
                         'value' => stripslashes($studentdetails['countrycode']),
@@ -292,9 +300,17 @@ echo "<h1 class='box-title'>$this->title </h1>";
                         'attribute'=>'Entry',       
                         'value' => stripslashes($studentdetails['entry']),
                     ],
+					[
+                        'attribute'=>'Entry (Other)',       
+                        'value' => ($studentdetails['entry'] == 'Other') ? stripslashes($studentdetails['entry_other']) : 'NA',
+                    ],
                     [
                         'attribute'=>'Status of Student',       
                         'value' => stripslashes($studentdetails['status_of_student']),
+                    ],
+					[
+                        'attribute'=>'Status of Student (Other)',       
+                        'value' => ($studentdetails['status_of_student_other'] == 'Other') ? stripslashes($studentdetails['status_of_student_other']) : 'NA',
                     ],
                     [
                         'attribute'=>'Intake No',       

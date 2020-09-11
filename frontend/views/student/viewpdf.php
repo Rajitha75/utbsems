@@ -220,6 +220,16 @@ ul li{list-style:none;}
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['highest_qualification']) ? $studentdata['highest_qualification'] : (!empty($studentdata['highestqualificationother']) ? $studentdata['highestqualificationother'] : ''); ?>&nbsp;</td>
        
       </tr>
+	  
+	  <?php if($studentdata['highest_qualification'] == 'Advanced National Diploma' || $studentdata['highest_qualification'] == 'Higher National Diploma' || $studentdata['highest_qualification'] == 'International Baccalaureate' || $studentdata['highest_qualification'] == 'Undergraduate Degree' || $studentdata['highest_qualification'] == 'Masters by Coursework' || $studentdata['highest_qualification'] == 'Masters by Research' || $studentdata['highest_qualification'] == 'Doctor of Philosophy (PhD)'){ ?>
+	  <tr style="background:#f8f8f8;">
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Course Taken:</td>
+       <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['highestqualification_coursetaken']) ? $studentdata['highestqualification_coursetaken'] : ''; ?>&nbsp;</td>
+       <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Result :</td>
+        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['highestqualification_result']) ? $studentdata['highestqualification_result'] : ''; ?>&nbsp;</td>
+       
+      </tr>
+	  <?php } ?>
 		
 		<tr>
 		<td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Name of Last School Attended :</td>
@@ -252,17 +262,17 @@ ul li{list-style:none;}
 	<tr>
         <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Type of Residential :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['type_of_residential']) ? $studentdata['type_of_residential'] : (!empty($studentdata['typeofresidentialother']) ? $studentdata['typeofresidentialother'] : ''); ?>&nbsp;</td>
-        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Address Line 1 :</td>
+        <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Address Line :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['address']) ? $studentdata['address'] : ''; ?>&nbsp;</td>
       </tr>
-	  
+	  <!--
       <tr style="background:#f8f8f8;">
         <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Address Line 2 :</td>
-        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['address2']) ? $studentdata['address2'] : ''; ?>&nbsp;</td>
+        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php //echo  !empty($studentdata['address2']) ? $studentdata['address2'] : ''; ?>&nbsp;</td>
         <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Address Line 3 :</td>
-        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['address3']) ? $studentdata['address3'] : ''; ?>&nbsp;</td>
+        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php //echo !empty($studentdata['address3']) ? $studentdata['address3'] : ''; ?>&nbsp;</td>
       </tr>
-
+-->
       <tr>
         <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Country :</td>
         <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['countrycode']) ? $studentdata['countrycode'] : ''; ?></td>
@@ -396,9 +406,9 @@ ul li{list-style:none;}
 	  
 	  <tr style="background:#f8f8f8;">
 	  <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Entry :</td>
-        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo  !empty($studentdata['entry']) ? $studentdata['entry'] : ''; ?>&nbsp;</td>
+		<td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['entry']) ? $studentdata['entry'] : (!empty($studentdata['entry_other']) ? $studentdata['entry_other'] : ''); ?></td>
         <td style="padding:15px!important;font-size: 12px !important;font-weight:bold;color:#484848;">Status of Student :</td>
-        <td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['status_of_student']) ? $studentdata['status_of_student'] : ''; ?>&nbsp;</td>
+		<td style="padding:15px!important;font-size: 12px !important;color:#121212 !important;"><?php echo !empty($studentdata['status_of_student']) ? $studentdata['status_of_student'] : (!empty($studentdata['status_of_student_other']) ? $studentdata['status_of_student_other'] : ''); ?></td>
       </tr>
 
       <tr>

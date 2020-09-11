@@ -104,6 +104,40 @@ class CreateStudentForm extends \yii\db\ActiveRecord
 	public $title;
 	public $retype_password;
 	public $is_submit;
+	public $kin_relationship;
+	public $kin_relationship_others;
+	public $kin_name;
+	public $kin_address;
+	public $kin_address2;
+	public $kin_address3;
+	public $kin_id_card_no_code;
+	public $kin_id_card_no;
+	public $kin_phone_country_code;
+	public $kin_phone;
+	public $kin_mobile;
+	public $kin_mobile_country_code;
+	
+	public $emergency_relationship;
+	public $emergency_relationship_others;
+	public $emergency_name;
+	public $emergency_address;
+	public $emergency_address2;
+	public $emergency_address3;
+	public $emergency_phone_country_code;
+	public $emergency_phone;
+	public $emergency_mobile_country_code;
+	public $emergency_mobile;
+	public $emergency_officeno_country_code;
+	public $emergency_officeno;
+	public $emergency_email;
+	
+	public $kin_email;
+	public $kin_occupation;
+	
+	public $hq_a_level_year;
+	public $hq_a_level_subject;
+	public $hq_a_level_grade;
+	public $hq_id;
    
     /**
      * @inheritdoc

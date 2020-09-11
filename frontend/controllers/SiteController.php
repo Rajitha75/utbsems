@@ -723,6 +723,15 @@ Yii::$app->cache->flush();
                 }else{
                     $student->highestqualificationother = '';
                 }
+				
+				if($postvariable['highest_qualification'] == 'Advanced National Diploma' || $postvariable['highest_qualification'] == 'Higher National Diploma' || $postvariable['highest_qualification'] == 'International Baccalaureate' || $postvariable['highest_qualification'] == 'Undergraduate Degree' || $postvariable['highest_qualification'] == 'Masters by Coursework' || $postvariable['highest_qualification'] == 'Masters by Research' || $postvariable['highest_qualification'] == 'Doctor of Philosophy (PhD)'){
+                    $student->highestqualification_coursetaken = isset($postvariable['highestqualification_coursetaken']) ? $postvariable['highestqualification_coursetaken'] : '';
+					$student->highestqualification_result = isset($postvariable['highestqualification_result']) ? $postvariable['highestqualification_result'] : '';
+                }else{
+                    $student->highestqualification_coursetaken = '';
+					$student->highestqualification_result = '';
+                }
+				
                 $student->type_of_entry = isset($postvariable['type_of_entry']) ? $postvariable['type_of_entry'] : '';
                 if($postvariable['type_of_entry'] == 'Other'){
                     $student->typeofentryother = isset($postvariable['typeofentryother']) ? $postvariable['typeofentryother'] : '';
@@ -752,36 +761,45 @@ Yii::$app->cache->flush();
                 $student->mothericno = isset($postvariable['mothericno']) ? $postvariable['mothericno'] : '';
                 $student->mother_mobile = isset($postvariable['mother_mobile']) ? $postvariable['mother_mobile'] : '';
                 $student->address = isset($postvariable['address']) ? $postvariable['address'] : '';
-                $student->address2 = isset($postvariable['address2']) ? $postvariable['address2'] : '';
-                $student->address3 = isset($postvariable['address3']) ? $postvariable['address3'] : '';
+                //$student->address2 = isset($postvariable['address2']) ? $postvariable['address2'] : '';
+                //$student->address3 = isset($postvariable['address3']) ? $postvariable['address3'] : '';
 				$student->countrycode = isset($postvariable['countrycode']) ? $postvariable['countrycode'] : '';
                 $student->state = isset($postvariable['state']) ? $postvariable['state'] : '';
 				$student->district = isset($postvariable['district']) ? $postvariable['district'] : '';
                 $student->postal_code = isset($postvariable['postal_code']) ? $postvariable['postal_code'] : '';
 				$student->mailing_address = isset($postvariable['mailing_address']) ? $postvariable['mailing_address'] : '';
-                $student->mailing_address2 = isset($postvariable['mailing_address2']) ? $postvariable['mailing_address2'] : '';
-                $student->mailing_address3 = isset($postvariable['mailing_address3']) ? $postvariable['mailing_address3'] : '';
+                //$student->mailing_address2 = isset($postvariable['mailing_address2']) ? $postvariable['mailing_address2'] : '';
+                //$student->mailing_address3 = isset($postvariable['mailing_address3']) ? $postvariable['mailing_address3'] : '';
 				$student->mailing_countrycode = isset($postvariable['mailing_countrycode']) ? $postvariable['mailing_countrycode'] : '';
                 $student->mailing_state = isset($postvariable['mailing_state']) ? $postvariable['mailing_state'] : '';
 				$student->mailing_district = isset($postvariable['mailing_district']) ? $postvariable['mailing_district'] : '';
                 $student->mailing_postal_code = isset($postvariable['mailing_postal_code']) ? $postvariable['mailing_postal_code'] : '';
 				$student->mailing_permanent = isset($postvariable['mailing_permanent']) ? $postvariable['mailing_permanent'] : '';
 				$student->bank_terms = isset($postvariable['bank_terms']) ? $postvariable['bank_terms'] : '';
-                $student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
 				$student->date_of_registration = isset($postvariable['date_of_registration']) ? $postvariable['date_of_registration'] : '';
-				if($postvariable['bank_name'] == 'Other'){
-                    $student->bank_name_other = isset($postvariable['bank_name_other']) ? $postvariable['bank_name_other'] : '';
-                }else{
-                    $student->bank_name_other = '';
-                }
-				$student->bank_account_name = isset($postvariable['bank_account_name']) ? $postvariable['bank_account_name'] : '';
-                $student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
                 $student->sponsor_type = isset($postvariable['sponsor_type']) ? $postvariable['sponsor_type'] : '';
 				if($postvariable['sponsor_type'] == 'Other'){
                     $student->sponsor_type_other = isset($postvariable['sponsor_type_other']) ? $postvariable['sponsor_type_other'] : '';
                 }else{
                     $student->sponsor_type_other = '';
                 }
+				
+				if($postvariable['sponsor_type'] == 'Government Scholarship' || $postvariable['sponsor_type'] == 'UTB Scholarship'){
+					$student->bank_name = isset($postvariable['bank_name']) ? $postvariable['bank_name'] : '';
+					if($postvariable['bank_name'] == 'Other'){
+						$student->bank_name_other = isset($postvariable['bank_name_other']) ? $postvariable['bank_name_other'] : '';
+					}else{
+						$student->bank_name_other = '';
+					}
+					$student->bank_account_name = isset($postvariable['bank_account_name']) ? $postvariable['bank_account_name'] : '';
+					$student->account_no = isset($postvariable['account_no']) ? $postvariable['account_no'] : '';
+				}else{
+					$student->bank_name = '';
+					$student->bank_name_other = '';
+					$student->bank_account_name = '';
+					$student->account_no = '';
+				}
+				
                 $student->type_of_programme = isset($postvariable['type_of_programme']) ? $postvariable['type_of_programme'] : '';
                 $student->school = isset($postvariable['school']) ? $postvariable['school'] : '';
 
@@ -800,6 +818,11 @@ Yii::$app->cache->flush();
                 $student->programme_name = isset($postvariable['programme_name']) ? $postvariable['programme_name'] : '';
                 $student->intake = isset($postvariable['intake']) ? $postvariable['intake'] : '';
                 $student->entry = isset($postvariable['entry']) ? $postvariable['entry'] : '';
+				if($postvariable['entry'] == 'Other'){
+                    $student->entry_other = isset($postvariable['entry_other']) ? $postvariable['entry_other'] : '';
+                }else{
+                    $student->entry_other = '';
+                }
 				$student->ic_no_format = isset($postvariable['ic_no_format']) ? $postvariable['ic_no_format'] : '';
                 $student->ic_no = isset($postvariable['ic_no']) ? $postvariable['ic_no'] : '';
                 $student->ic_color = isset($postvariable['ic_color']) ? $postvariable['ic_color'] : '';

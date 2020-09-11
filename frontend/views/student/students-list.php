@@ -181,11 +181,11 @@ echo "<div class='participation-border fl-left all-userlst'>";
 	
 <?php echo $form->field($model, 'sponsor_type')->textInput(array('placeholder' => 'Sponsor Type'),['autocomplete' => 'off' ])->label(false); ?>
 		
-		<?php echo $form->field($model, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy PhD' => 'Doctor of Philosophy PhD'], ['prompt' => 'Type of Programme'])->label(false);?>
+		<?php echo $form->field($model, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy (PhD)' => 'Doctor of Philosophy (PhD)'], ['prompt' => 'Type of Programme'])->label(false);?>
 	
 		<?php echo $form->field($model, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label(false); ?>
 		
-		<?php echo $form->field($model, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year'], ['prompt' => 'Entry'])->label(false);?>
+		<?php echo $form->field($model, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year', 'Other' => 'Other'], ['prompt' => 'Entry'])->label(false);?>
 
 		
 		<?php //echo $form->field($model, 'status_of_student')->dropDownList(['Current Student' => 'Current Student', 'Withdrawn' => 'Withdrawn'], ['prompt' => 'Status of Student'])->label(false);?>
