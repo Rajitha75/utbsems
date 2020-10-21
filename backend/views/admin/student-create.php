@@ -10,6 +10,62 @@ use yii\helpers\Url;
 $storagemodel = new Storage();
 ?>
 <style>
+
+	.field-createstudentform-kin_phone_country_code, .field-createstudentform-kin_mobile_country_code{
+		width: 30%;
+		float: left;
+	}
+	
+	.kin-country-code, .kin-mobile-code{
+		float: left;
+		margin-top: 6%;
+		width: auto;
+		margin-left: 5%;
+	}
+	
+	.field-createstudentform-kin_phone, .field-createstudentform-kin_mobile{
+		width: 50%;
+		float: left;
+		margin-top: 5%;
+		margin-left: 5%;
+	}
+
+	.idcard-hiphen{
+		    float: left;
+			margin-top: 6%;
+			margin-left: 5%;
+	}
+
+	.field-createstudentform-kin_id_card_no_code {
+		width: 30%;
+		float: left;
+	}
+	
+	.field-createstudentform-kin_id_card_no{
+		    width: 48%;
+			float: left;
+			margin-left: 5%;
+			margin-top: 4.8%;
+	}
+
+	.usercreateformrow .col-sm-6 {
+		width:48%;
+	}
+	
+	.leftform{
+		margin-right: 4%;
+	}
+	
+	#usercreateform .usercreateformrow fieldset {
+		width:95%
+	}
+	
+	#usercreateform .usercreateformrow legend{
+	color: #FFFFFF;
+    background: #6a7988;
+    padding: 2px 10px;
+    margin-left: 28px;
+	}
 	
 	.field-createstudentform-emergency_phone_country_code, .field-createstudentform-emergency_mobile_country_code, .field-createstudentform-emergency_officeno_country_code{
 		float: left;
@@ -93,7 +149,7 @@ $storagemodel = new Storage();
 	}
 	img.ui-datepicker-trigger {
     position: absolute;
-    right: 72px;
+    right: 18px;
     margin-top: -29px;
 }
 .icnoformat {
@@ -175,8 +231,7 @@ $this->title = 'Create Student';
 echo "<h1 class='box-title'>$this->title </h1>"; ?>
 <div class="login_page" style="padding-top:2%;">
 <div class="site-login container">
- <div class="row">
-        <div class="col-xs-12 col-sm-12">
+ 
         <div class="panel panel-default">
        
         	<div class="panel-body">
@@ -187,406 +242,442 @@ echo "<h1 class='box-title'>$this->title </h1>"; ?>
 			'id' => 'usercreateform',
 			'options' => ['enctype' => 'multipart/form-data'],
 			]); ?>
-	<div class="col-xs-8 col-sm-6">
-	<fieldset>
-    <legend>Personal Information:</legend>
-	<div class="titlename">
-	<?php echo $form->field($userformmodel, 'title')->dropDownList(['Dato' => 'Dato', 'Datin' => 'Datin', 'Dayangku' => 'Dayangku', 'Awangku' => 'Awangku', 'Dayang' => 'Dayang', 'Awang' => 'Awang', 'Mister' => 'Mister', 'Mrs' => 'Mrs', 'Miss' => 'Miss', 'Ms' => 'Ms', 'Ampuan' => 'Ampuan', 'Malai' => 'Malai', 'Pehin' => 'Pehin', 'Pengiran Anak Isteri' => 'Pengiran Anak Isteri', 'Pengiran Anak Isteri Pengiran' => 'Pengiran Anak Isteri Pengiran', 'Pengiran Anak Puteri' => 'Pengiran Anak Puteri', 'Yang Teramat Mulia' => 'Yang Teramat Mulia', 'Yang Amat Mulia' => 'Yang Amat Mulia', 'Pengiran Anak' => 'Pengiran Anak', 'Haji Awang' => 'Haji Awang', 'Hajah Dayang' => 'Hajah Dayang', 'Professor' => 'Professor', 'Associate Professor' => 'Associate Professor'], ['prompt' => 'Select Title'])->label('Title');?>
-	
-	<?php echo $form->field($userformmodel, 'name')->textInput(['value' => (isset($studentdata['name'])? $studentdata['name'] : ''), 'autocomplete' => 'off' ])->label('Name <span class="mandatory">*</span>');?>
-	</div>
-	
-	<?php echo $form->field($userformmodel, 'password')->textInput(['autocomplete' => 'off'])->passwordInput()->label('Password <span class="mandatory">*</span>');?>
+			<div class="row usercreateformrow">
+				<fieldset>
+				<legend>Personal Information:</legend>
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-xs-8 col-sm-6 leftform">
+						<div class="titlename">
+						<?php echo $form->field($userformmodel, 'title')->dropDownList(['Dato' => 'Dato', 'Datin' => 'Datin', 'Dayangku' => 'Dayangku', 'Awangku' => 'Awangku', 'Dayang' => 'Dayang', 'Awang' => 'Awang', 'Mister' => 'Mister', 'Mrs' => 'Mrs', 'Miss' => 'Miss', 'Ms' => 'Ms', 'Ampuan' => 'Ampuan', 'Malai' => 'Malai', 'Pehin' => 'Pehin', 'Pengiran Anak Isteri' => 'Pengiran Anak Isteri', 'Pengiran Anak Isteri Pengiran' => 'Pengiran Anak Isteri Pengiran', 'Pengiran Anak Puteri' => 'Pengiran Anak Puteri', 'Yang Teramat Mulia' => 'Yang Teramat Mulia', 'Yang Amat Mulia' => 'Yang Amat Mulia', 'Pengiran Anak' => 'Pengiran Anak', 'Haji Awang' => 'Haji Awang', 'Hajah Dayang' => 'Hajah Dayang', 'Professor' => 'Professor', 'Associate Professor' => 'Associate Professor'], ['prompt' => 'Select Title'])->label('Title');?>
+						
+						<?php echo $form->field($userformmodel, 'name')->textInput(['value' => (isset($studentdata['name'])? $studentdata['name'] : ''), 'autocomplete' => 'off' ])->label('Name <span class="mandatory">*</span>');?>
+						</div>
+						
+						<?php echo $form->field($userformmodel, 'password')->textInput(['autocomplete' => 'off'])->passwordInput()->label('Password <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'confirmpassword')->textInput(['autocomplete' => 'off'])->passwordInput()->label('Confirm Password <span class="mandatory">*</span>');?>
-	
-	<?php echo $form->field($userformmodel, 'rollno')->textInput(['value' => (isset($studentdata['rollno'])? $studentdata['rollno'] : ''), 'autocomplete' => 'off' ])->label('Roll No <span class="mandatory">*</span>');?>
+						<?php echo $form->field($userformmodel, 'confirmpassword')->textInput(['autocomplete' => 'off'])->passwordInput()->label('Confirm Password <span class="mandatory">*</span>');?>
+						
+						<?php echo $form->field($userformmodel, 'rollno')->textInput(['value' => (isset($studentdata['rollno'])? $studentdata['rollno'] : ''), 'autocomplete' => 'off' ])->label('Roll No <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'rumpun')->dropDownList([  'XLR8' => 'XLR8', 'PRO-XTIV' => 'PRO-XTIV', 'XCEL' => 'XCEL', 'CRTIV' => 'CRTIV'],['prompt' => 'Select Rumpun'])->label('Rumpun'); ?>
+						<?php echo $form->field($userformmodel, 'rumpun')->dropDownList([  'XLR8' => 'XLR8', 'PRO-XTIV' => 'PRO-XTIV', 'XCEL' => 'XCEL', 'CRTIV' => 'CRTIV'],['prompt' => 'Select Rumpun'])->label('Rumpun'); ?>
 
-	<?php echo $form->field($userformmodel, 'nationality')->dropDownList([ 'Malay' => 'Malay', 'Chinese' => 'Chinese', 'Indian' => 'Indian', 'Other' => 'Other'],['prompt' => 'Select Nationality'])->label('Nationality <span class="mandatory">*</span>'); ?>
-	
-	<?php echo $form->field($userformmodel, 'nationalityother')->textInput(['value' => (isset($studentdata['nationalityother'])? $studentdata['nationalityother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-	
-	<div class="icnoformat">
-	<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
-	
-	<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label(false);?>
-	</div>
-	<?php echo $form->field($userformmodel, 'ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select IC Color'])->label('IC Color <span class="mandatory">*</span>');?>
+						<?php echo $form->field($userformmodel, 'nationality')->dropDownList([ 'Malay' => 'Malay', 'Chinese' => 'Chinese', 'Indian' => 'Indian', 'Other' => 'Other'],['prompt' => 'Select Nationality'])->label('Nationality <span class="mandatory">*</span>'); ?>
+						
+						<?php echo $form->field($userformmodel, 'nationalityother')->textInput(['value' => (isset($studentdata['nationalityother'])? $studentdata['nationalityother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+						
+						<div class="icnoformat">
+						<?php echo $form->field($userformmodel, 'ic_no_format')->textInput(['value' => (isset($studentdata['ic_no_format'])? $studentdata['ic_no_format'] : ''), 'autocomplete' => 'off'])->label('IC No. <span class="mandatory">*</span>');?>
+						
+						<?php echo $form->field($userformmodel, 'ic_no')->textInput(['value' => (isset($studentdata['ic_no'])? $studentdata['ic_no'] : ''), 'autocomplete' => 'off'])->label(false);?>
+						</div>
+						<?php echo $form->field($userformmodel, 'ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select IC Color'])->label('IC Color <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'passportno')->textInput(['value' => (isset($studentdata['passportno'])? $studentdata['passportno'] : ''), 'autocomplete' => 'off' ])->label('Passport No <span class="mandatory">*</span>');?>
+						<?php echo $form->field($userformmodel, 'passportno')->textInput(['value' => (isset($studentdata['passportno'])? $studentdata['passportno'] : ''), 'autocomplete' => 'off' ])->label('Passport No <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'race')->dropDownList(['Malay' => 'Malay', 'Kedayan' => 'Kedayan', 'Dusun' => 'Dusun', 'Murut' => 'Murut', 'Bisaya' => 'Bisaya', 'Belait' => 'Belait', 'Tutong' => 'Tutong', 'Brunei' => 'Brunei', 'Iban' => 'Iban', 'Batak' => 'Batak', 'Kenyah' => 'Kenyah', 'Dayak' => 'Dayak', 'Kedazan' => 'Kedazan', 'Chinese' => 'Chinese', 'Indian' => 'Indian', 'Other' => 'Other'], ['prompt' => 'Select Race'])->label('Race <span class="mandatory">*</span>');?>
+						
+						<?php echo $form->field($userformmodel, 'race')->dropDownList(['Malay' => 'Malay', 'Kedayan' => 'Kedayan', 'Dusun' => 'Dusun', 'Murut' => 'Murut', 'Bisaya' => 'Bisaya', 'Belait' => 'Belait', 'Tutong' => 'Tutong', 'Brunei' => 'Brunei', 'Iban' => 'Iban', 'Batak' => 'Batak', 'Kenyah' => 'Kenyah', 'Dayak' => 'Dayak', 'Kedazan' => 'Kedazan', 'Chinese' => 'Chinese', 'Indian' => 'Indian', 'Other' => 'Other'], ['prompt' => 'Select Race'])->label('Race <span class="mandatory">*</span>');?>
 
-	<?php echo $form->field($userformmodel, 'raceother')->textInput(['value' => (isset($studentdata['raceother'])? $studentdata['raceother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+						<?php echo $form->field($userformmodel, 'raceother')->textInput(['value' => (isset($studentdata['raceother'])? $studentdata['raceother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
 
-	<?php echo $form->field($userformmodel, 'religion')->dropDownList([ 'Muslim' => 'Muslim', 'Buddist' => 'Buddist', 'Christian' => 'Christian', 'Hindu' => 'Hindu', 'Sikh' => 'Sikh', 'No Religion' => 'No Religion', 'Other' => 'Other'],['prompt' => 'Select Religion'])->label('Religion <span class="mandatory">*</span>'); ?>
-	
-	<?php echo $form->field($userformmodel, 'religionother')->textInput(['value' => (isset($studentdata['religionother'])? $studentdata['religionother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+						<?php echo $form->field($userformmodel, 'religion')->dropDownList([ 'Muslim' => 'Muslim', 'Buddist' => 'Buddist', 'Christian' => 'Christian', 'Hindu' => 'Hindu', 'Sikh' => 'Sikh', 'No Religion' => 'No Religion', 'Other' => 'Other'],['prompt' => 'Select Religion'])->label('Religion <span class="mandatory">*</span>'); ?>
+						
+						<?php echo $form->field($userformmodel, 'religionother')->textInput(['value' => (isset($studentdata['religionother'])? $studentdata['religionother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
 
-	<?php echo $form->field($userformmodel,'gender')->radioList(['Male' => 'Male', 'Female' => 'Female'])->label('Gender <span class="mandatory">*</span>'); ?>
+						<?php echo $form->field($userformmodel,'gender')->radioList(['Male' => 'Male', 'Female' => 'Female'])->label('Gender <span class="mandatory">*</span>'); ?>
 
-	<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>');
-    echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
-                        'options' => ['class' => 'form-control'],            
-                        'clientOptions' => [
-                            'changeMonth' => true,
-                            'yearRange'=> '-70:-18',
-                            'defaultDate' => '-70y',
-                            'changeYear' => true,
-                            'maxDate' => 0, 
-                            'showOn' => 'button',
-                            'buttonImage' => 'images/calendar.gif',
-                            'buttonImageOnly' => true,
-                            'buttonText' => 'Select date',
-                             'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
-                        ],
-		])->textInput(['readonly' => true])->label('Date of Birth <span class="mandatory">*</span>'); ?>
+						<?php echo $form->field($userformmodel,'martial_status')->radioList(['Married' => 'Married', 'Single' => 'Single'])->label('Martial Status <span class="mandatory">*</span>'); ?>
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					<?php echo $form->field($userformmodel, 'dob')->widget(\yii\jui\DatePicker::classname(), [
+						'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
+									'options' => ['class' => 'form-control'],            
+									'clientOptions' => [
+										'changeMonth' => true,
+										'yearRange'=> '-70:-18',
+										'defaultDate' => '-70y',
+										'changeYear' => true,
+										'maxDate' => 0, 
+										'showOn' => 'button',
+										'buttonImage' => 'images/calendar.gif',
+										'buttonImageOnly' => true,
+										'buttonText' => 'Select date',
+										 'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
+									],
+					])->textInput(['readonly' => true])->label('Date of Birth <span class="mandatory">*</span>'); ?>
+					
+					<?php echo $form->field($userformmodel, 'age')->textInput(['value' => (isset($studentdata['age'])? $studentdata['age'] : ''), 'autocomplete' => 'off','readonly' => true ])->label('Age');?>
+					
+					<?php echo $form->field($userformmodel, 'place_of_birth')->textInput(['value' => (isset($studentdata['place_of_birth'])? $studentdata['place_of_birth'] : ''), 'autocomplete' => 'off' ])->label('Place of Birth <span class="mandatory">*</span>');?>
+
+					<?php echo $form->field($userformmodel, 'telephone_mobile')->textInput(['value' => (isset($studentdata['telephone_mobile'])? $studentdata['telephone_mobile'] : ''), 'autocomplete' => 'off' ])->label('Telephone No. (Mobile): <span class="mandatory">*</span>');?>
+
+					<?php echo $form->field($userformmodel, 'tele_home')->textInput(['value' => (isset($studentdata['tele_home'])? $studentdata['tele_home'] : ''), 'autocomplete' => 'off' ])->label('Telephone No. (Home):');?>
+
+					<?php echo $form->field($userformmodel, 'email')->textInput(['value' => (isset($studentdata['email'])? $studentdata['email'] : ''), 'autocomplete' => 'off' ])->label('Email <span class="mandatory">*</span>');?>
+				
+					<?php echo $form->field($userformmodel, 'emailother')->textInput(['value' => (isset($studentdata['emailother'])? $studentdata['emailother'] : ''), 'autocomplete' => 'off' ])->label('Email (other)');?>
+					
+					<?php echo $form->field($userformmodel, 'highest_qualification')->dropDownList(['A Level' => 'A Level', 'Advanced National Diploma' => 'Advanced National Diploma', 'Higher National Diploma' => 'Higher National Diploma', 'International Baccalaureate' => 'International Baccalaureate', 'Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy (PhD)' => 'Doctor of Philosophy (PhD)', 'Diploma Level 5' => 'Diploma Level 5', 'Other' => 'Other'], ['prompt' => 'Select Highest Qualification Obtained'])->label('Highest Qualification Obtained');?>
+					
+					<?php echo $form->field($userformmodel, 'highestqualificationother')->textInput(['value' => (isset($studentdata['highestqualificationother'])? $studentdata['highestqualificationother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+					
+					<div id="highest_qualification_details">
+					<?php echo $form->field($userformmodel, 'highestqualification_coursetaken')->textInput(['value' => (isset($studentdata['highestqualification_coursetaken'])? $studentdata['highestqualification_coursetaken'] : ''), 'autocomplete' => 'off' ])->label('Course Taken'); ?>
+					
+					<?php echo $form->field($userformmodel, 'highestqualification_result')->textInput(['value' => (isset($studentdata['highestqualification_result'])? $studentdata['highestqualification_result'] : ''), 'autocomplete' => 'off' ])->label('Result'); ?>
+					</div>
+					
+					<div id="hq_a_level_details">
+					
+					<div id="hq_a_level_addmore">+ Add</div>
+						<div class="hqfields">
+						<?php echo $form->field($userformmodel, 'hq_a_level_year[]')->textInput(['placeholder' => 'Year', 'autocomplete' => 'off' ])->label('Year'); ?>
+						</div>
+						
+						<div class="hqfields">
+						<?php echo $form->field($userformmodel, 'hq_a_level_subject[]')->textInput(['placeholder' => 'Subject', 'autocomplete' => 'off' ])->label('Subject');?>
+						</div>
+						
+						<div class="hqfields">
+						<?php echo $form->field($userformmodel, 'hq_a_level_grade[]')->textInput(['placeholder' => 'Grade', 'autocomplete' => 'off' ])->label('Grade');?>
+						</div>
+					</div>
+					
+					<div id="hq_a_level_addmore_fields"></div>
+					
+					<?php echo $form->field($userformmodel, 'lastschoolname')->textInput(['value' => (isset($studentdata['lastschoolname'])? $studentdata['lastschoolname'] : ''), 'autocomplete' => 'off' ])->label('Name of Last School Attended <span class="mandatory">*</span>');?>
+
+					<?php echo $form->field($userformmodel, 'type_of_entry')->dropDownList(['Hecas' => 'Hecas', 'Non-Hecas' => 'Non-Hecas'],['prompt' => 'Select Type of Entry'])->label('Type of Entry');?>
+
+					<?php echo $form->field($userformmodel, 'typeofentryother')->textInput(['value' => (isset($studentdata['typeofentryother'])? $studentdata['typeofentryother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+
+					<?php echo $form->field($userformmodel, 'specialneeds')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['specialneeds'])? $studentdata['specialneeds'] : '') ])->label('Special Needs'); ?>
+
+					<?php echo $form->field($userformmodel, 'user_image')->fileInput(['class' => 'with-preview accept-gif|jpg|png|jpeg|bmp profile-img'])->label('Profile Image'); ?>
+					</div>
+				</div>
+				</fieldset>
+			</div>
+			<div class="row usercreateformrow">
+					<fieldset>
+					<legend>Postal Address:</legend>
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-xs-8 col-sm-6 leftform">
+					
+					<?php echo $form->field($userformmodel, 'type_of_residential')->dropDownList(['Own House' => 'Own House', 'Hostel' => 'Hostel', 'Core' => 'Core', 'Rental' => 'Rental', 'Other' => 'Other'], ['prompt' => 'Select Type of Residential'])->label('Type of Residential <span class="mandatory">*</span>');?>
 		
-		<?php echo $form->field($userformmodel, 'age')->textInput(['value' => (isset($studentdata['age'])? $studentdata['age'] : ''), 'autocomplete' => 'off','readonly' => true ])->label('Age');?>
+					<?php echo $form->field($userformmodel, 'typeofresidentialother')->textInput(['value' => (isset($studentdata['typeofresidentialother'])? $studentdata['typeofresidentialother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
 		
-		<?php echo $form->field($userformmodel, 'place_of_birth')->textInput(['value' => (isset($studentdata['place_of_birth'])? $studentdata['place_of_birth'] : ''), 'autocomplete' => 'off' ])->label('Place of Birth <span class="mandatory">*</span>');?>
+					<?php echo $form->field($userformmodel, 'address')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['address'])? $studentdata['address'] : '') ])->label('Address Line <span class="mandatory">*</span>'); ?>
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					
+					<?php //echo $form->field($userformmodel, 'address2')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['address2'])? $studentdata['address2'] : '') ])->label('Address Line 2 <span class="mandatory">*</span>'); ?>
 
-		<?php echo $form->field($userformmodel, 'telephone_mobile')->textInput(['value' => (isset($studentdata['telephone_mobile'])? $studentdata['telephone_mobile'] : ''), 'autocomplete' => 'off' ])->label('Telephone No. (Mobile): <span class="mandatory">*</span>');?>
+					<?php //echo $form->field($userformmodel, 'address3')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['address3'])? $studentdata['address3'] : '') ])->label('Address Line 3 <span class="mandatory">*</span>'); ?>
+					
+					<?php			
+						//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
+						echo $form->field($userformmodel, 'countrycode',[
+						'inputOptions' => [                      	
+							'id'=>'createstudentform-countrycode', 'class'=>'form-control']])->dropDownList($countries, ['prompt' => 'Select Country'])->label('Country');
+					?>  
+					
+					<?php echo $form->field($userformmodel, 'state')->dropDownList(['Brunei-Muara' => 'Brunei-Muara', 'Tutong' => 'Tutong', 'Kuala Belait' => 'Kuala Belait', 'Temburong' => 'Temburong'], ['prompt' => 'Select District/State'])->label('District/State <span class="mandatory">*</span>');?>
+					
+					<?php echo $form->field($userformmodel, 'district')->textInput(['value' => (isset($studentdata['district'])? $studentdata['district'] : ''), 'autocomplete' => 'off' ])->label('District/State');?>
 
-		<?php echo $form->field($userformmodel, 'tele_home')->textInput(['value' => (isset($studentdata['tele_home'])? $studentdata['tele_home'] : ''), 'autocomplete' => 'off' ])->label('Telephone No. (Home):');?>
-
-		<?php echo $form->field($userformmodel, 'email')->textInput(['value' => (isset($studentdata['email'])? $studentdata['email'] : ''), 'autocomplete' => 'off' ])->label('Email <span class="mandatory">*</span>');?>
-	
-		<?php echo $form->field($userformmodel, 'emailother')->textInput(['value' => (isset($studentdata['emailother'])? $studentdata['emailother'] : ''), 'autocomplete' => 'off' ])->label('Email (other)');?>
-		
-		<?php echo $form->field($userformmodel, 'highest_qualification')->dropDownList(['A Level' => 'A Level', 'Advanced National Diploma' => 'Advanced National Diploma', 'Higher National Diploma' => 'Higher National Diploma', 'International Baccalaureate' => 'International Baccalaureate', 'Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy (PhD)' => 'Doctor of Philosophy (PhD)', 'Diploma Level 5' => 'Diploma Level 5', 'Other' => 'Other'], ['prompt' => 'Select Highest Qualification Obtained'])->label('Highest Qualification Obtained');?>
-		
-		<?php echo $form->field($userformmodel, 'highestqualificationother')->textInput(['value' => (isset($studentdata['highestqualificationother'])? $studentdata['highestqualificationother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-		
-		<div id="highest_qualification_details">
-		<?php echo $form->field($userformmodel, 'highestqualification_coursetaken')->textInput(['value' => (isset($studentdata['highestqualification_coursetaken'])? $studentdata['highestqualification_coursetaken'] : ''), 'autocomplete' => 'off' ])->label('Course Taken'); ?>
-		
-		<?php echo $form->field($userformmodel, 'highestqualification_result')->textInput(['value' => (isset($studentdata['highestqualification_result'])? $studentdata['highestqualification_result'] : ''), 'autocomplete' => 'off' ])->label('Result'); ?>
-		</div>
-		
-		<div id="hq_a_level_details">
-		
-		<div id="hq_a_level_addmore">+ Add</div>
-			<div class="hqfields">
-			<?php echo $form->field($userformmodel, 'hq_a_level_year[]')->textInput(['placeholder' => 'Year', 'autocomplete' => 'off' ])->label('Year'); ?>
+					<?php echo $form->field($userformmodel, 'postal_code')->textInput(['value' => (isset($studentdata['postal_code'])? $studentdata['postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
+					
+					</div>
+				</div>
+				</fieldset>
 			</div>
 			
-			<div class="hqfields">
-			<?php echo $form->field($userformmodel, 'hq_a_level_subject[]')->textInput(['placeholder' => 'Subject', 'autocomplete' => 'off' ])->label('Subject');?>
-			</div>
-			
-			<div class="hqfields">
-			<?php echo $form->field($userformmodel, 'hq_a_level_grade[]')->textInput(['placeholder' => 'Grade', 'autocomplete' => 'off' ])->label('Grade');?>
-			</div>
-		</div>
-		
-		<div id="hq_a_level_addmore_fields"></div>
-		
-		<?php echo $form->field($userformmodel, 'lastschoolname')->textInput(['value' => (isset($studentdata['lastschoolname'])? $studentdata['lastschoolname'] : ''), 'autocomplete' => 'off' ])->label('Name of Last School Attended <span class="mandatory">*</span>');?>
-
-		<?php echo $form->field($userformmodel, 'type_of_entry')->dropDownList(['Hecas' => 'Hecas', 'Non-Hecas' => 'Non-Hecas'],['prompt' => 'Select Type of Entry'])->label('Type of Entry');?>
-
-		<?php echo $form->field($userformmodel, 'typeofentryother')->textInput(['value' => (isset($studentdata['typeofentryother'])? $studentdata['typeofentryother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-
-		<?php echo $form->field($userformmodel, 'specialneeds')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['specialneeds'])? $studentdata['specialneeds'] : '') ])->label('Special Needs'); ?>
-
-		<?php echo $form->field($userformmodel, 'user_image')->fileInput(['class' => 'with-preview accept-gif|jpg|png|jpeg|bmp profile-img'])->label('Profile Image'); ?>
-		</fieldset>
-	
-		<fieldset>
-	<legend>Programme Information:</legend>
-		
-		<?php echo $form->field($userformmodel, 'sponsor_type')->dropDownList([ 'Government Scholarship' => 'Government Scholarship', 'BSP Scholarship' => 'BSP Scholarship', 'Fee Paying' => 'Fee Paying', 'In-Service' => 'In-Service', 'MFA Scholarship (BDGS)' => 'MFA Scholarship (BDGS)', 'UTB Scholarship' => 'UTB Scholarship', 'Other' => 'Other'],['prompt' => 'Select Sponsor Type'])->label('Sponsor Type <span class="mandatory">*</span>');?>	
-		
-		<?php echo $form->field($userformmodel, 'sponsor_type_other')->textInput(['value' => (isset($studentdata['sponsor_type_other'])? $studentdata['sponsor_type_other'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-		
-		<?php echo $form->field($userformmodel, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy (PhD)' => 'Doctor of Philosophy (PhD)'], ['prompt' => 'Select Type of Programme'])->label('Type of Programme <span class="mandatory">*</span>');?>
-		
-		<?php echo $form->field($userformmodel, 'school')->dropDownList(ArrayHelper::map($faculty,'id','faculty_name'),['prompt'=>'Please select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>'); ?>
-	
-		<?php echo $form->field($userformmodel, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label('Programme'); ?>
-		
-		<?php echo $form->field($userformmodel, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year', 'Other' => 'Other'], ['prompt' => 'Select Entry'])->label('Entry <span class="mandatory">*</span>');?>
-
-		<?php echo $form->field($userformmodel, 'status_of_student')->dropDownList(['Current Student' => 'Current Student', 'Withdrawn' => 'Withdrawn', 'Repeat' => 'Repeat', 'Interruption of study' => 'Interruption of study', 'Other' => 'Other'], ['prompt' => 'Select Status of Student'])->label('Status of Student <span class="mandatory">*</span>');?>
-		
-		<?php echo $form->field($userformmodel, 'status_of_student_other')->textInput(['value' => (isset($studentdata['status_of_student_other'])? $studentdata['status_of_student_other'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-
-		<?php //echo $form->field($userformmodel, 'status_remarks')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['status_remarks'])? $studentdata['status_remarks'] : '')])->label('Status Remarks');?>
-
-		<?php echo $form->field($userformmodel, 'intake')->dropDownList($years,['prompt' => 'Select Intake No'])->label('Intake No. <span class="mandatory">*</span>');?>
-
-		<?php echo $form->field($userformmodel, 'mode')->dropDownList(['Full Time' => 'Full Time', 'Part Time'=> 'Part Time'],['prompt' => 'Select Mode'])->label('Mode <span class="mandatory">*</span>');?>
-
-		<?php echo $form->field($userformmodel, 'utb_email_address')->textInput(['value' => (isset($studentdata['utb_email_address'])? $studentdata['utb_email_address'] : ''), 'autocomplete' => 'off'])->label('UTB Email Address <span class="mandatory">*</span>');?>
-
-		<?php //echo $form->field($userformmodel, 'degree_classification')->textInput(['value' => (isset($studentdata['degree_classification'])? $studentdata['degree_classification'] : ''), 'autocomplete' => 'off'])->label('Degree Classification <span class="mandatory">*</span>');?>
-
-		<?php 
-		echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
-                        'options' => ['class' => 'form-control'],            
-                        'clientOptions' => [
-                            'changeMonth' => true,
-                            'yearRange'=> '-20:+0',
-                            'defaultDate' => '-70y',
-                            'changeYear' => true,
-                            'maxDate' => 0, 
-                            'showOn' => 'button',
-                            'buttonImage' => 'images/calendar.gif',
-                            'buttonImageOnly' => true,
-                            'buttonText' => 'Select date',
-                             'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
-                        ],
-		])->textInput(['readonly' => true])->label('Date of Registration <span class="mandatory">*</span>'); ?>
-
-<?php 
-		echo $form->field($userformmodel, 'date_of_leaving')->widget(\yii\jui\DatePicker::classname(), [
-			'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
-                        'options' => ['class' => 'form-control'],            
-                        'clientOptions' => [
-                            'changeMonth' => true,
-                            'yearRange'=> '-20:+0',
-                            'defaultDate' => '-70y',
-                            'changeYear' => true,
-                            'maxDate' => 0, 
-                            'showOn' => 'button',
-                            'buttonImage' => 'images/calendar.gif',
-                            'buttonImageOnly' => true,
-                            'buttonText' => 'Select date',
-                             'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
-                        ],
-		])->textInput(['readonly' => true])->label('Date of Leaving'); ?>
-
-<?php //echo $form->field($userformmodel, 'previous_roll_no')->textInput(['value' => (isset($studentdata['previous_roll_no'])? $studentdata['previous_roll_no'] : ''), 'autocomplete' => 'off'])->label('Previous Roll No');?>
-
-<?php //echo $form->field($userformmodel, 'previous_programme_name')->textInput(['value' => (isset($studentdata['previous_programme_name'])? $studentdata['previous_programme_name'] : ''), 'autocomplete' => 'off'])->label('Previous Programmme Name');?>
-
-<?php //echo $form->field($userformmodel, 'previous_intake_no')->dropDownList($years,['prompt' => 'Select Previous Intake No'])->label('Previous Intake No');?>
-
-<?php //echo $form->field($userformmodel, 'previous_utb_email')->textInput(['value' => (isset($studentdata['previous_utb_email'])? $studentdata['previous_utb_email'] : ''), 'autocomplete' => 'off'])->label('Previous UTB Email');?>
-
-
-	<?php echo $form->field($userformmodel, 'studentid')->hiddenInput(['autocomplete' => 'off','value'=>!empty(Yii::$app->getRequest()->getQueryParam('id')) ? Yii::$app->getRequest()->getQueryParam('id') : ''])->label(false);?>
-	</fieldset>
-	
-	
-	<fieldset id="bankdetails">
-	<legend>Bank Details:</legend>
-	
-		<?php echo $form->field($userformmodel, 'bank_name')->dropDownList([ 'BAIDURI' => 'BAIDURI', 'BIBD' => 'BIBD', 'STANDARD CHARTERED BANK' => 'STANDARD CHARTERED BANK', 'TAIB' => 'TAIB', 'Other' => 'Other'],['prompt' => 'Select Bank'])->label('Bank Name <span class="mandatory">*</span>'); ?>
-		
-		<?php echo $form->field($userformmodel, 'bank_name_other')->textInput(['value' => (isset($studentdata['bank_name_other'])? $studentdata['bank_name_other'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-		
-		<?php echo $form->field($userformmodel, 'bank_account_name')->textInput(['value' => (isset($studentdata['bank_account_name'])? $studentdata['bank_account_name'] : ''), 'autocomplete' => 'off' ])->label('Bank Account Name'); ?>
-
-		<?php echo $form->field($userformmodel, 'account_no')->textInput(['value' => (isset($studentdata['account_no'])? $studentdata['account_no'] : ''), 'autocomplete' => 'off' ])->label('Bank Account No <span class="mandatory">*</span>');?>
-		
-		</fieldset>
-		</div>
-	<div class="col-xs-8 col-sm-6">
-	
-	<fieldset>
-	<legend>Emergency Contact Details:</legend>
-	
-<?php echo $form->field($userformmodel, 'emergency_relationship')->dropDownList(['Father' => 'Father', 'Mother' => 'Mother', 'Guardian' => 'Guardian', 'Husband' => 'Husband', 'Wife' => 'Wife', 'Sibling' => 'Sibling', 'Son' => 'Son', 'Daughter' => 'Daughter', 'Relative' => 'Relative', 'Others' => 'Others'], ['prompt' => 'Select Relationship'])->label('Relationship');?>
-
-<div class="emergencyothers" style="display:none">
-<?php echo $form->field($userformmodel, 'emergency_relationship_others')->textInput(['autocomplete' => 'off' ])->label('Others');?>
-</div>
-
-<?php echo $form->field($userformmodel, 'emergency_name')->textInput(['autocomplete' => 'off' ])->label('Name');?>
-
-<?php echo $form->field($userformmodel, 'emergency_address')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line One' ])->label('Address'); ?>
-
-<?php echo $form->field($userformmodel, 'emergency_address2')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Two' ])->label(false); ?>
-
-<?php echo $form->field($userformmodel, 'emergency_address3')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Three' ])->label(false); ?>
-
-<div class="icnoformat emergencyphone">
-
-<?php			
-			//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
-			echo $form->field($userformmodel, 'emergency_phone_country_code',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-emergency_phone_country_code', 'class'=>'form-control emergencyphonecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Phone No.');
-		?>  
-<div class="emergency-country-code"></div>
-<?php echo $form->field($userformmodel, 'emergency_phone')->textInput(['placeholder' =>  'Phone No', 'autocomplete' => 'off'])->label(false);?>
-</div>
-
-<div class="icnoformat emergencymobile">
-
-<?php			
-			echo $form->field($userformmodel, 'emergency_mobile_country_code',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-emergency_mobile_country_code', 'class'=>'form-control emergencymobilecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Mobile No.');
-		?>  
-<div class="emergency-mobile-code"></div>
-
-<?php echo $form->field($userformmodel, 'emergency_mobile')->textInput(['placeholder' =>  'Mobile No', 'autocomplete' => 'off'])->label(false);?>
-</div>
-
-<div class="icnoformat emergencyofficeno">
-
-<?php			
-			echo $form->field($userformmodel, 'emergency_officeno_country_code',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-emergency_officeno_country_code', 'class'=>'form-control emergencyofficenocode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Office No.');
-		?>  
-<div class="emergency-officeno-code"></div>
-
-<?php echo $form->field($userformmodel, 'emergency_officeno')->textInput(['placeholder' =>  'Office No', 'autocomplete' => 'off'])->label(false);?>
-</div>
-
-<?php echo $form->field($userformmodel, 'emergency_email')->textInput(['autocomplete' => 'off'])->label('Email');?>
-		
-		</fieldset>
-	<fieldset>
-    <!--<legend>Parents Information:</legend>-->
-	<?php //echo $form->field($userformmodel, 'father_name')->textInput(['value' => (isset($studentdata['father_name'])? $studentdata['father_name'] : ''), 'autocomplete' => 'off' ])->label('Father/Guardian Name <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'gaurdian_relation')->textInput(['value' => (isset($studentdata['gaurdian_relation'])? $studentdata['gaurdian_relation'] : ''), 'autocomplete' => 'off' ])->label('Guardian relation');?>
-
-<?php //echo $form->field($userformmodel, 'fathericno')->textInput(['value' => (isset($studentdata['fathericno'])? $studentdata['fathericno'] : ''), 'autocomplete' => 'off' ])->label('Father/Guardian IC No <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'father_ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select Father/Guardian IC Color'])->label('Father/Guardian IC Color <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'father_mobile')->textInput(['value' => (isset($studentdata['father_mobile'])? $studentdata['father_mobile'] : ''), 'autocomplete' => 'off' ])->label('Father\'s Telephone No <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'mobile_home')->textInput(['value' => (isset($studentdata['mobile_home'])? $studentdata['mobile_home'] : ''), 'autocomplete' => 'off' ])->label('Telephone No (Home)');?>
-
-<?php //echo $form->field($userformmodel, 'gaurdian_employment')->textInput(['value' => (isset($studentdata['gaurdian_employment'])? $studentdata['gaurdian_employment'] : ''), 'autocomplete' => 'off' ])->label('Father/Guardian Employment');?>
-
-<?php //echo $form->field($userformmodel, 'gaurdian_employer')->textInput(['value' => (isset($studentdata['gaurdian_employer'])? $studentdata['gaurdian_employer'] : ''), 'autocomplete' => 'off' ])->label('Father/Guardian Employer');?>
-
-<?php //echo $form->field($userformmodel, 'remarks')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['remarks'])? $studentdata['remarks'] : '')])->label('Remarks');?>
-
-<?php //echo $form->field($userformmodel, 'telphone_work')->textInput(['value' => (isset($studentdata['telphone_work'])? $studentdata['telphone_work'] : ''), 'autocomplete' => 'off' ])->label('Telephone No. (Work)');?>
-
-<?php //echo $form->field($userformmodel, 'mother_name')->textInput(['value' => (isset($studentdata['mother_name'])? $studentdata['mother_name'] : ''), 'autocomplete' => 'off' ])->label('Mother Name <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'mothericno')->textInput(['value' => (isset($studentdata['mothericno'])? $studentdata['mothericno'] : ''), 'autocomplete' => 'off' ])->label('Mother IC No <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'mother_ic_color')->dropDownList(['Yellow' => 'Yellow', 'Red' => 'Red', 'Green' => 'Green', 'Purple' => 'Purple'], ['prompt' => 'Select Mother IC Color'])->label('Mother IC Color <span class="mandatory">*</span>');?>
-
-<?php //echo $form->field($userformmodel, 'mother_mobile')->textInput(['value' => (isset($studentdata['mother_mobile'])? $studentdata['mother_mobile'] : ''), 'autocomplete' => 'off' ])->label('Mother\'s Telephone No <span class="mandatory">*</span>');?>
-
-<legend>Next of Kin:</legend>
-<div class="addmorekin">+ Add</div>
-<div class="kindata">
-<?php echo $form->field($userformmodel, 'kin_relationship[]')->dropDownList(['Father' => 'Father', 'Mother' => 'Mother', 'Guardian' => 'Guardian', 'Husband' => 'Husband', 'Wife' => 'Wife', 'Sibling' => 'Sibling', 'Son' => 'Son', 'Daughter' => 'Daughter', 'Relative' => 'Relative', 'Others' => 'Others'], ['prompt' => 'Select Relationship'])->label('Relationship');?>
-
-<div class="kinothers" style="display:none">
-<?php echo $form->field($userformmodel, 'kin_relationship_others[]')->textInput(['autocomplete' => 'off' ])->label('Others');?>
-</div>
-
-<?php echo $form->field($userformmodel, 'kin_name[]')->textInput(['autocomplete' => 'off' ])->label('Name');?>
-
-<?php echo $form->field($userformmodel, 'kin_address[]')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line One' ])->label('Address'); ?>
-
-<?php echo $form->field($userformmodel, 'kin_address2[]')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Two' ])->label(false); ?>
-
-<?php echo $form->field($userformmodel, 'kin_address3[]')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Three' ])->label(false); ?>
-
-<div class="icnoformat">
-<?php echo $form->field($userformmodel, 'kin_id_card_no_code[]')->textInput(['autocomplete' => 'off'])->label('Identity Card No. <span class="mandatory">*</span>');?>
-
-<?php echo $form->field($userformmodel, 'kin_id_card_no[]')->textInput(['autocomplete' => 'off'])->label(false);?>
-</div>
-
-<div class="icnoformat kinphone">
-
-<?php			
-			//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
-			echo $form->field($userformmodel, 'kin_phone_country_code[]',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-kin_phone_country_code', 'class'=>'form-control kinphonecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Phone No.');
-		?>  
-<div class="kin-country-code"></div>
-<?php echo $form->field($userformmodel, 'kin_phone[]')->textInput(['autocomplete' => 'off'])->label(false);?>
-</div>
-
-<div class="icnoformat kinmobile">
-
-<?php			
-			//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
-			echo $form->field($userformmodel, 'kin_mobile_country_code[]',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-kin_mobile_country_code', 'class'=>'form-control kinmobilecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Mobile No.');
-		?>  
-<div class="kin-mobile-code"></div>
-
-<?php echo $form->field($userformmodel, 'kin_mobile[]')->textInput(['autocomplete' => 'off'])->label(false);?>
-</div>
-
-<?php echo $form->field($userformmodel, 'kin_email[]')->textInput(['autocomplete' => 'off'])->label('Email');?>
-
-<?php echo $form->field($userformmodel, 'kin_occupation[]')->textInput(['autocomplete' => 'off'])->label('Occupation');?>
-
-</div>
-<div class="add-kin"></div>
-	</fieldset>
-	
-	<fieldset>
-    <legend>Postal Address:</legend>
-		<?php echo $form->field($userformmodel, 'type_of_residential')->dropDownList(['Own House' => 'Own House', 'Hostel' => 'Hostel', 'Core' => 'Core', 'Rental' => 'Rental', 'Other' => 'Other'], ['prompt' => 'Select Type of Residential'])->label('Type of Residential <span class="mandatory">*</span>');?>
-		
-		<?php echo $form->field($userformmodel, 'typeofresidentialother')->textInput(['value' => (isset($studentdata['typeofresidentialother'])? $studentdata['typeofresidentialother'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
-	</fieldset>
-
-		<fieldset>
-		<?php echo $form->field($userformmodel, 'address')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['address'])? $studentdata['address'] : '') ])->label('Address Line <span class="mandatory">*</span>'); ?>
-
-		<?php //echo $form->field($userformmodel, 'address2')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['address2'])? $studentdata['address2'] : '') ])->label('Address Line 2 <span class="mandatory">*</span>'); ?>
-
-		<?php //echo $form->field($userformmodel, 'address3')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['address3'])? $studentdata['address3'] : '') ])->label('Address Line 3 <span class="mandatory">*</span>'); ?>
-		
-		<?php			
-			//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
-			echo $form->field($userformmodel, 'countrycode',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-countrycode', 'class'=>'form-control']])->dropDownList($countries, ['prompt' => 'Select Country'])->label('Country');
-		?>  
-		
-		<?php echo $form->field($userformmodel, 'state')->dropDownList(['Brunei-Muara' => 'Brunei-Muara', 'Tutong' => 'Tutong', 'Kuala Belait' => 'Kuala Belait', 'Temburong' => 'Temburong'], ['prompt' => 'Select District/State'])->label('District/State <span class="mandatory">*</span>');?>
-		
-		<?php echo $form->field($userformmodel, 'district')->textInput(['value' => (isset($studentdata['district'])? $studentdata['district'] : ''), 'autocomplete' => 'off' ])->label('District/State');?>
-
-		<?php echo $form->field($userformmodel, 'postal_code')->textInput(['value' => (isset($studentdata['postal_code'])? $studentdata['postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
-
-	</fieldset>
-	
-	<fieldset>
-    <legend>Mailing Address:</legend>
-	
-		 <?php echo $form->field($userformmodel, 'mailing_permanent')->checkbox(['label'=>'Set mailing address same as permanent address'])->label(false) ?>
+			<div class="row usercreateformrow">				
+				<fieldset>
+				<legend>Mailing Address:</legend>
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-xs-8 col-sm-6 leftform">	
+					
+					<?php echo $form->field($userformmodel, 'mailing_permanent')->checkbox(['label'=>'Set mailing address same as permanent address'])->label(false) ?>
 		 
-		<?php echo $form->field($userformmodel, 'mailing_address')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['mailing_address'])? $studentdata['mailing_address'] : '') ])->label('Address Line <span class="mandatory">*</span>'); ?>
+					<?php echo $form->field($userformmodel, 'mailing_address')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['mailing_address'])? $studentdata['mailing_address'] : '') ])->label('Address Line <span class="mandatory">*</span>'); ?>
 
-		<?php //echo $form->field($userformmodel, 'mailing_address2')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['mailing_address2'])? $studentdata['mailing_address2'] : '') ])->label('Address Line 2 <span class="mandatory">*</span>'); ?>
+					<?php //echo $form->field($userformmodel, 'mailing_address2')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['mailing_address2'])? $studentdata['mailing_address2'] : '') ])->label('Address Line 2 <span class="mandatory">*</span>'); ?>
 
-		<?php //echo $form->field($userformmodel, 'mailing_address3')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['mailing_address3'])? $studentdata['mailing_address3'] : '') ])->label('Address Line 3 <span class="mandatory">*</span>'); ?>
+					<?php //echo $form->field($userformmodel, 'mailing_address3')->textarea(['rows' => 2,'autocomplete' => 'off', 'value'=> (isset($studentdata['mailing_address3'])? $studentdata['mailing_address3'] : '') ])->label('Address Line 3 <span class="mandatory">*</span>'); ?>
+					
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					
+					<?php			
+						//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
+						echo $form->field($userformmodel, 'mailing_countrycode',[
+						'inputOptions' => [                      	
+							'id'=>'createstudentform-mailing_countrycode', 'class'=>'form-control']])->dropDownList($countries, ['prompt' => 'Select Country'])->label('Country');
+					?>  
+					
+					<?php echo $form->field($userformmodel, 'mailing_state')->dropDownList(['Brunei-Muara' => 'Brunei-Muara', 'Tutong' => 'Tutong', 'Kuala Belait' => 'Kuala Belait', 'Temburong' => 'Temburong'], ['prompt' => 'Select District/State'])->label('District/State <span class="mandatory">*</span>');?>
 		
-		<?php			
-			//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
-			echo $form->field($userformmodel, 'mailing_countrycode',[
-			'inputOptions' => [                      	
-				'id'=>'createstudentform-mailing_countrycode', 'class'=>'form-control']])->dropDownList($countries, ['prompt' => 'Select Country'])->label('Country');
-		?>  
-		
-		<?php echo $form->field($userformmodel, 'mailing_state')->dropDownList(['Brunei-Muara' => 'Brunei-Muara', 'Tutong' => 'Tutong', 'Kuala Belait' => 'Kuala Belait', 'Temburong' => 'Temburong'], ['prompt' => 'Select District/State'])->label('District/State <span class="mandatory">*</span>');?>
-		
-		<?php echo $form->field($userformmodel, 'mailing_district')->textInput(['value' => (isset($studentdata['mailing_district'])? $studentdata['mailing_district'] : ''), 'autocomplete' => 'off' ])->label('District/State');?>
+					<?php echo $form->field($userformmodel, 'mailing_district')->textInput(['value' => (isset($studentdata['mailing_district'])? $studentdata['mailing_district'] : ''), 'autocomplete' => 'off' ])->label('District/State');?>
 
-		<?php echo $form->field($userformmodel, 'mailing_postal_code')->textInput(['value' => (isset($studentdata['mailing_postal_code'])? $studentdata['mailing_postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
-		
-		
-	</fieldset>
- </div>
+					<?php echo $form->field($userformmodel, 'mailing_postal_code')->textInput(['value' => (isset($studentdata['mailing_postal_code'])? $studentdata['mailing_postal_code'] : ''), 'autocomplete' => 'off' ])->label('Postal Code <span class="mandatory">*</span>');?>
+					
+					</div>
+				</div>
+				</fieldset>
+			</div>
+			
+			
+			<div class="row usercreateformrow">
+			<fieldset>
+				<legend>Emergency Contact Details:</legend>
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-xs-8 col-sm-6 leftform">
+					
+					<?php echo $form->field($userformmodel, 'emergency_relationship')->dropDownList(['Father' => 'Father', 'Mother' => 'Mother', 'Guardian' => 'Guardian', 'Husband' => 'Husband', 'Wife' => 'Wife', 'Sibling' => 'Sibling', 'Son' => 'Son', 'Daughter' => 'Daughter', 'Relative' => 'Relative', 'Others' => 'Others'], ['prompt' => 'Select Relationship'])->label('Relationship');?>
+
+					<div class="emergencyothers" style="display:none">
+					<?php echo $form->field($userformmodel, 'emergency_relationship_others')->textInput(['autocomplete' => 'off' ])->label('Others');?>
+					</div>
+
+					<?php echo $form->field($userformmodel, 'emergency_name')->textInput(['autocomplete' => 'off' ])->label('Name');?>
+
+					<?php echo $form->field($userformmodel, 'emergency_address')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line One' ])->label('Address'); ?>
+
+					<?php echo $form->field($userformmodel, 'emergency_address2')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Two' ])->label(false); ?>
+
+					<?php echo $form->field($userformmodel, 'emergency_address3')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Three' ])->label(false); ?>
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					
+					<div class="icnoformat emergencyphone">
+
+					<?php			
+								//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
+								echo $form->field($userformmodel, 'emergency_phone_country_code',[
+								'inputOptions' => [                      	
+									'id'=>'createstudentform-emergency_phone_country_code', 'class'=>'form-control emergencyphonecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Phone No.');
+							?>  
+					<div class="emergency-country-code"></div>
+					<?php echo $form->field($userformmodel, 'emergency_phone')->textInput(['placeholder' =>  'Phone No', 'autocomplete' => 'off'])->label(false);?>
+					</div>
+
+					<div class="icnoformat emergencymobile">
+
+					<?php			
+								echo $form->field($userformmodel, 'emergency_mobile_country_code',[
+								'inputOptions' => [                      	
+									'id'=>'createstudentform-emergency_mobile_country_code', 'class'=>'form-control emergencymobilecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Mobile No.');
+							?>  
+					<div class="emergency-mobile-code"></div>
+
+					<?php echo $form->field($userformmodel, 'emergency_mobile')->textInput(['placeholder' =>  'Mobile No', 'autocomplete' => 'off'])->label(false);?>
+					</div>
+
+					<div class="icnoformat emergencyofficeno">
+
+					<?php			
+								echo $form->field($userformmodel, 'emergency_officeno_country_code',[
+								'inputOptions' => [                      	
+									'id'=>'createstudentform-emergency_officeno_country_code', 'class'=>'form-control emergencyofficenocode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Office No.');
+							?>  
+					<div class="emergency-officeno-code"></div>
+
+					<?php echo $form->field($userformmodel, 'emergency_officeno')->textInput(['placeholder' =>  'Office No', 'autocomplete' => 'off'])->label(false);?>
+					</div>
+
+					<?php echo $form->field($userformmodel, 'emergency_email')->textInput(['autocomplete' => 'off'])->label('Email');?>
+							
+					
+					</div>
+				</div>
+				</fieldset>
+			</div>
+			
+			
+			<div class="row usercreateformrow">
+				<fieldset>
+				<legend>Next of Kin:</legend>
+				<div class="col-xs-12 col-sm-12">
+				<div class="kindata">
+				<div class="row">
+					<div class="col-xs-8 col-sm-6 leftform">
+						<div class="addmorekin">+ Add</div>
+						<!-- <div class="kindata"> -->
+						<?php echo $form->field($userformmodel, 'kin_relationship[]')->dropDownList(['Father' => 'Father', 'Mother' => 'Mother', 'Guardian' => 'Guardian', 'Husband' => 'Husband', 'Wife' => 'Wife', 'Sibling' => 'Sibling', 'Son' => 'Son', 'Daughter' => 'Daughter', 'Relative' => 'Relative', 'Others' => 'Others'], ['prompt' => 'Select Relationship'])->label('Relationship');?>
+
+						<div class="kinothers" style="display:none">
+						<?php echo $form->field($userformmodel, 'kin_relationship_others[]')->textInput(['autocomplete' => 'off' ])->label('Others');?>
+						</div>
+
+						<?php echo $form->field($userformmodel, 'kin_name[]')->textInput(['autocomplete' => 'off' ])->label('Name');?>
+
+						<?php echo $form->field($userformmodel, 'kin_address[]')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line One' ])->label('Address'); ?>
+
+						<?php echo $form->field($userformmodel, 'kin_address2[]')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Two' ])->label(false); ?>
+
+						<?php echo $form->field($userformmodel, 'kin_address3[]')->textarea(['rows' => 2,'autocomplete' => 'off', 'placeholder' => 'Address Line Three' ])->label(false); ?>
+
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					
+					<div class="icnoformat">
+						<?php echo $form->field($userformmodel, 'kin_id_card_no_code[]')->textInput(['autocomplete' => 'off'])->label('Identity Card No. <span class="mandatory">*</span>');?>
+						<div class="idcard-hiphen">&ndash;</div>
+						<?php echo $form->field($userformmodel, 'kin_id_card_no[]')->textInput(['autocomplete' => 'off'])->label(false);?>
+						</div>
+
+						<div class="icnoformat kinphone">
+
+						<?php			
+									//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
+									echo $form->field($userformmodel, 'kin_phone_country_code[]',[
+									'inputOptions' => [                      	
+										'id'=>'createstudentform-kin_phone_country_code', 'class'=>'form-control kinphonecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Phone No.');
+								?>  
+						<div class="kin-country-code"></div>
+						<?php echo $form->field($userformmodel, 'kin_phone[]')->textInput(['autocomplete' => 'off'])->label(false);?>
+						</div>
+					
+					<div class="icnoformat kinmobile">
+
+					<?php			
+								//echo $form->field($model, 'countrycode')->dropDownList($countrycodes, ['prompt' => 'Select Country Code'])->label(false);
+								echo $form->field($userformmodel, 'kin_mobile_country_code[]',[
+								'inputOptions' => [                      	
+									'id'=>'createstudentform-kin_mobile_country_code', 'class'=>'form-control kinmobilecode']])->dropDownList($countriesIsoCodes, ['prompt' => 'Select Country'])->label('Mobile No.');
+							?>  
+					<div class="kin-mobile-code"></div>
+
+					<?php echo $form->field($userformmodel, 'kin_mobile[]')->textInput(['autocomplete' => 'off'])->label(false);?>
+					</div>
+
+					<?php echo $form->field($userformmodel, 'kin_email[]')->textInput(['autocomplete' => 'off'])->label('Email');?>
+
+					<?php echo $form->field($userformmodel, 'kin_occupation[]')->textInput(['autocomplete' => 'off'])->label('Occupation');?>
+
+					
+					</div>
+					</div>
+					</div>
+					<div class="add-kin"></div>
+				</div>
+				</fieldset>
+			</div>
+			
+			
+			<div class="row usercreateformrow">
+				<fieldset>
+				<legend>Programme Information:</legend>
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-xs-8 col-sm-6 leftform">
+						
+						<?php echo $form->field($userformmodel, 'sponsor_type')->dropDownList([ 'Government Scholarship' => 'Government Scholarship', 'BSP Scholarship' => 'BSP Scholarship', 'Fee Paying' => 'Fee Paying', 'In-Service' => 'In-Service', 'MFA Scholarship (BDGS)' => 'MFA Scholarship (BDGS)', 'UTB Scholarship' => 'UTB Scholarship', 'Other' => 'Other'],['prompt' => 'Select Sponsor Type'])->label('Sponsor Type <span class="mandatory">*</span>');?>	
+						
+						<?php echo $form->field($userformmodel, 'sponsor_type_other')->textInput(['value' => (isset($studentdata['sponsor_type_other'])? $studentdata['sponsor_type_other'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+						
+						<?php echo $form->field($userformmodel, 'type_of_programme')->dropDownList(['Undergraduate Degree' => 'Undergraduate Degree', 'Masters by Coursework' => 'Masters by Coursework', 'Masters by Research' => 'Masters by Research', 'Doctor of Philosophy (PhD)' => 'Doctor of Philosophy (PhD)'], ['prompt' => 'Select Type of Programme'])->label('Type of Programme <span class="mandatory">*</span>');?>
+						
+						<?php echo $form->field($userformmodel, 'school')->dropDownList(ArrayHelper::map($faculty,'id','faculty_name'),['prompt'=>'Please select School/Faculty'])->label('School/Faculty <span class="mandatory">*</span>'); ?>
+					
+						<?php echo $form->field($userformmodel, 'programme_name')->dropDownList(ArrayHelper::map($programme,'id','programme_name'),['prompt'=>'Please select Programme'])->label('Programme'); ?>
+						
+						<?php echo $form->field($userformmodel, 'entry')->dropDownList(['First Year' => 'First Year', 'Second Year' => 'Second Year', 'Other' => 'Other'], ['prompt' => 'Select Entry'])->label('Entry <span class="mandatory">*</span>');?>
+
+						<?php echo $form->field($userformmodel, 'status_of_student')->dropDownList(['Current Student' => 'Current Student', 'Withdrawn' => 'Withdrawn', 'Repeat' => 'Repeat', 'Interruption of study' => 'Interruption of study', 'Other' => 'Other'], ['prompt' => 'Select Status of Student'])->label('Status of Student <span class="mandatory">*</span>');?>
+						
+						<?php echo $form->field($userformmodel, 'status_of_student_other')->textInput(['value' => (isset($studentdata['status_of_student_other'])? $studentdata['status_of_student_other'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					
+					
+					<?php echo $form->field($userformmodel, 'intake')->dropDownList($years,['prompt' => 'Select Intake No'])->label('Intake No. <span class="mandatory">*</span>');?>
+
+					<?php echo $form->field($userformmodel, 'mode')->dropDownList(['Full Time' => 'Full Time', 'Part Time'=> 'Part Time'],['prompt' => 'Select Mode'])->label('Mode <span class="mandatory">*</span>');?>
+
+					<?php echo $form->field($userformmodel, 'utb_email_address')->textInput(['value' => (isset($studentdata['utb_email_address'])? $studentdata['utb_email_address'] : ''), 'autocomplete' => 'off'])->label('UTB Email Address <span class="mandatory">*</span>');?>
+
+					<?php //echo $form->field($userformmodel, 'degree_classification')->textInput(['value' => (isset($studentdata['degree_classification'])? $studentdata['degree_classification'] : ''), 'autocomplete' => 'off'])->label('Degree Classification <span class="mandatory">*</span>');?>
+
+					<?php 
+					echo $form->field($userformmodel, 'date_of_registration')->widget(\yii\jui\DatePicker::classname(), [
+						'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
+									'options' => ['class' => 'form-control'],            
+									'clientOptions' => [
+										'changeMonth' => true,
+										'yearRange'=> '-20:+0',
+										'defaultDate' => '-70y',
+										'changeYear' => true,
+										'maxDate' => 0, 
+										'showOn' => 'button',
+										'buttonImage' => 'images/calendar.gif',
+										'buttonImageOnly' => true,
+										'buttonText' => 'Select date',
+										 'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
+									],
+					])->textInput(['readonly' => true])->label('Date of Registration <span class="mandatory">*</span>'); ?>
+
+			<?php 
+					echo $form->field($userformmodel, 'date_of_leaving')->widget(\yii\jui\DatePicker::classname(), [
+						'value'  => '1232', 'dateFormat' => 'dd-MM-yyyy', 'options' => ['class' => 'form-control'],
+									'options' => ['class' => 'form-control'],            
+									'clientOptions' => [
+										'changeMonth' => true,
+										'yearRange'=> '-20:+0',
+										'defaultDate' => '-70y',
+										'changeYear' => true,
+										'maxDate' => 0, 
+										'showOn' => 'button',
+										'buttonImage' => 'images/calendar.gif',
+										'buttonImageOnly' => true,
+										'buttonText' => 'Select date',
+										 'buttonImage' => Yii::$app->request->BaseUrl.'/images/calendar.gif',
+									],
+					])->textInput(['readonly' => true])->label('Date of Leaving'); ?>
+
+			<?php //echo $form->field($userformmodel, 'previous_roll_no')->textInput(['value' => (isset($studentdata['previous_roll_no'])? $studentdata['previous_roll_no'] : ''), 'autocomplete' => 'off'])->label('Previous Roll No');?>
+
+			<?php //echo $form->field($userformmodel, 'previous_programme_name')->textInput(['value' => (isset($studentdata['previous_programme_name'])? $studentdata['previous_programme_name'] : ''), 'autocomplete' => 'off'])->label('Previous Programmme Name');?>
+
+			<?php //echo $form->field($userformmodel, 'previous_intake_no')->dropDownList($years,['prompt' => 'Select Previous Intake No'])->label('Previous Intake No');?>
+
+			<?php //echo $form->field($userformmodel, 'previous_utb_email')->textInput(['value' => (isset($studentdata['previous_utb_email'])? $studentdata['previous_utb_email'] : ''), 'autocomplete' => 'off'])->label('Previous UTB Email');?>
+
+
+				<?php echo $form->field($userformmodel, 'studentid')->hiddenInput(['autocomplete' => 'off','value'=>!empty(Yii::$app->getRequest()->getQueryParam('id')) ? Yii::$app->getRequest()->getQueryParam('id') : ''])->label(false);?>
+				
+					</div>
+				</div>
+				</fieldset>
+					
+			</div>
+			
+			
+			<div class="row usercreateformrow">
+				<fieldset id="bankdetails">
+					<legend>Bank Details:</legend>
+				<div class="col-xs-12 col-sm-12">
+					<div class="col-xs-8 col-sm-6 leftform">
+					
+						<?php echo $form->field($userformmodel, 'bank_name')->dropDownList([ 'BAIDURI' => 'BAIDURI', 'BIBD' => 'BIBD', 'STANDARD CHARTERED BANK' => 'STANDARD CHARTERED BANK', 'TAIB' => 'TAIB', 'Other' => 'Other'],['prompt' => 'Select Bank'])->label('Bank Name <span class="mandatory">*</span>'); ?>
+						
+						<?php echo $form->field($userformmodel, 'bank_name_other')->textInput(['value' => (isset($studentdata['bank_name_other'])? $studentdata['bank_name_other'] : ''), 'autocomplete' => 'off' ])->label('Other'); ?>
+					</div>
+					<div class="col-xs-8 col-sm-6">
+					<?php echo $form->field($userformmodel, 'bank_account_name')->textInput(['value' => (isset($studentdata['bank_account_name'])? $studentdata['bank_account_name'] : ''), 'autocomplete' => 'off' ])->label('Bank Account Name'); ?>
+
+					<?php echo $form->field($userformmodel, 'account_no')->textInput(['value' => (isset($studentdata['account_no'])? $studentdata['account_no'] : ''), 'autocomplete' => 'off' ])->label('Bank Account No <span class="mandatory">*</span>');?>
+					</div>
+				</div>
+				</fieldset>
+					
+			</div>
+			
+			
+			
+	
  
  </div>
   <div class="row text-center">
@@ -1249,7 +1340,10 @@ $('body').on('click', '.removekin', function() {
 
 $('.addmorekin').click(function(){
 	var kinfield = '';
+	kinfield += '<div class="col-xs-12 col-sm-12">';
 	kinfield += '<div class="kindata">';
+	kinfield += '<div class="row">';
+	kinfield += '<div class="col-xs-8 col-sm-6 leftform">';
 	kinfield += '<div class="removekin">- Remove</div>';
 	kinfield += '<div class="form-group field-createstudentform-kin_relationship">';
 	kinfield += '<label class="control-label" for="createstudentform-kin_relationship">Relationship</label>';
@@ -1292,23 +1386,260 @@ $('.addmorekin').click(function(){
 	kinfield += '<div class="form-group field-createstudentform-kin_address3">';
 	kinfield += '<textarea id="createstudentform-kin_address3" class="form-control" name="CreateStudentForm[kin_address3][]" rows="2" autocomplete="off" placeholder="Address Line Three"></textarea>';
 	kinfield += '</div>';
+	kinfield += '</div>';
 
+	kinfield += '<div class="col-xs-8 col-sm-6">';
 	kinfield += '<div class="icnoformat">';
 	kinfield += '<div class="form-group field-createstudentform-kin_id_card_no_code">';
 	kinfield += '<label class="control-label" for="createstudentform-kin_id_card_no_code">Identity Card No.</label>';
 	kinfield += '<input type="text" id="createstudentform-kin_id_card_no_code" class="form-control" name="CreateStudentForm[kin_id_card_no_code][]" autocomplete="off">';
 	kinfield += '</div>';
+	
+	kinfield += '<div class="idcard-hiphen">–</div>';
 
 	kinfield += '<div class="form-group field-createstudentform-kin_id_card_no">';
 	kinfield += '<input type="text" id="createstudentform-kin_id_card_no" class="form-control" name="CreateStudentForm[kin_id_card_no][]" autocomplete="off">';
 	kinfield += '</div>';
 	kinfield += '</div>';
 
-	kinfield += '<div class="icnoformat">';
+	kinfield += '<div class="icnoformat kinphone">';
 	kinfield += '<div class="form-group field-createstudentform-kin_phone_country_code">';
 	kinfield += '<label class="control-label" for="createstudentform-kin_phone_country_code">Phone No.</label>';
-	kinfield += '<input type="text" id="createstudentform-kin_phone_country_code" class="form-control" name="CreateStudentForm[kin_phone_country_code][]" autocomplete="off">';
+	kinfield += '<select id="createstudentform-kin_phone_country_code" class="form-control kinphonecode" name="CreateStudentForm[kin_phone_country_code][]">';
+	kinfield += '<option value="">Select Country</option>';
+	kinfield += '<option value="93">Afganistan</option>';
+	kinfield += '<option value="355">Albania</option>';
+	kinfield += '<option value="213">Algeria</option>';
+	kinfield += '<option value="1-684">Samoa American</option>';
+	kinfield += '<option value="376">Andorra</option>';
+	kinfield += '<option value="244">Angola</option>';
+	kinfield += '<option value="1-264">Anguilla</option>';
+	kinfield += '<option value="1-268">Antigua &amp;amp; Barbuda</option>';
+	kinfield += '<option value="54">Argentina</option>';
+	kinfield += '<option value="374">Armenia</option>';
+	kinfield += '<option value="297">Aruba</option>';
+	kinfield += '<option value="61">Cocos Island</option>';
+	kinfield += '<option value="43">Austria</option>';
+	kinfield += '<option value="994">Azerbaijan</option>';
+	kinfield += '<option value="1-242">Bahamas</option>';
+	kinfield += '<option value="973">Bahrain</option>';
+	kinfield += '<option value="880">Bangladesh</option>';
+	kinfield += '<option value="1-246">Barbados</option>';
+	kinfield += '<option value="375">Belarus</option>';
+	kinfield += '<option value="32">Belgium</option>';
+	kinfield += '<option value="501">Belize</option>';
+	kinfield += '<option value="229">Benin</option>';
+	kinfield += '<option value="1-441">Bermuda</option>';
+	kinfield += '<option value="975">Bhutan</option>';
+	kinfield += '<option value="591">Bolivia</option>';
+	kinfield += '<option value="599-7">Bonaire</option>';
+	kinfield += '<option value="387">Bosnia &amp;amp; Herzegovina</option>';
+	kinfield += '<option value="267">Botswana</option>';
+	kinfield += '<option value="55">Brazil</option>';
+	kinfield += '<option value="246">British Indian Ocean Territory</option>';
+	kinfield += '<option value="673">Brunei</option>';
+	kinfield += '<option value="359">Bulgaria</option>';
+	kinfield += '<option value="226">Burkina Faso</option>';
+	kinfield += '<option value="257">Burundi</option>';
+	kinfield += '<option value="855">Cambodia</option>';
+	kinfield += '<option value="237">Cameroon</option>';
+	kinfield += '<option value="1">United States of America</option>';
+	kinfield += '<option value="238">Cape Verde</option>';
+	kinfield += '<option value="1-345">Cayman Islands</option>';
+	kinfield += '<option value="236">Central African Republic</option>';
+	kinfield += '<option value="235">Chad</option>';
+	kinfield += '<option value="56">Chile</option>';
+	kinfield += '<option value="86">China</option>';
+	kinfield += '<option value="57">Colombia</option>';
+	kinfield += '<option value="269">Comoros</option>';
+	kinfield += '<option value="242">Congo</option>';
+	kinfield += '<option value="682">Cook Islands</option>';
+	kinfield += '<option value="506">Costa Rica</option>';
+	kinfield += '<option value="385">Croatia</option>';
+	kinfield += '<option value="53">Cuba</option>';
+	kinfield += '<option value="599">Curaco</option>';
+	kinfield += '<option value="357">Cyprus</option>';
+	kinfield += '<option value="420">Czech Republic</option>';
+	kinfield += '<option value="45">Denmark</option>';
+	kinfield += '<option value="253">Djibouti</option>';
+	kinfield += '<option value="1-767">Dominica</option>';
+	kinfield += '<option value="1-809, 1-829, 1-849">Dominican Republic</option>';
+	kinfield += '<option value="670">East Timor</option>';
+	kinfield += '<option value="593">Ecuador</option>';
+	kinfield += '<option value="20">Egypt</option>';
+	kinfield += '<option value="503">El Salvador</option>';
+	kinfield += '<option value="240">Equatorial Guinea</option>';
+	kinfield += '<option value="291">Eritrea</option>';
+	kinfield += '<option value="372">Estonia</option>';
+	kinfield += '<option value="251">Ethiopia</option>';
+	kinfield += '<option value="500">Falkland Islands</option>';
+	kinfield += '<option value="298">Faroe Islands</option>';
+	kinfield += '<option value="679">Fiji</option>';
+	kinfield += '<option value="358">Finland</option>';
+	kinfield += '<option value="33">France</option>';
+	kinfield += '<option value="594">French Guiana</option>';
+	kinfield += '<option value="689">Tahiti</option>';
+	kinfield += '<option value="241">Gabon</option>';
+	kinfield += '<option value="220">Gambia</option>';
+	kinfield += '<option value="995">Georgia</option>';
+	kinfield += '<option value="49">Germany</option>';
+	kinfield += '<option value="233">Ghana</option>';
+	kinfield += '<option value="350">Gibraltar</option>';
+	kinfield += '<option value="30">Greece</option>';
+	kinfield += '<option value="299">Greenland</option>';
+	kinfield += '<option value="1-473">Grenada</option>';
+	kinfield += '<option value="590">St Maarten</option>';
+	kinfield += '<option value="1-671">Guam</option>';
+	kinfield += '<option value="502">Guatemala</option>';
+	kinfield += '<option value="224">Guinea</option>';
+	kinfield += '<option value="592">Guyana</option>';
+	kinfield += '<option value="509">Haiti</option>';
+	kinfield += '<option value="808">Hawaii</option>';
+	kinfield += '<option value="504">Honduras</option>';
+	kinfield += '<option value="852">Hong Kong</option>';
+	kinfield += '<option value="36">Hungary</option>';
+	kinfield += '<option value="354">Iceland</option>';
+	kinfield += '<option value="91">India</option>';
+	kinfield += '<option value="62">Indonesia</option>';
+	kinfield += '<option value="98">Iran</option>';
+	kinfield += '<option value="964">Iraq</option>';
+	kinfield += '<option value="353">Ireland</option>';
+	kinfield += '<option value="44-1624">Isle of Man</option>';
+	kinfield += '<option value="972">Israel</option>';
+	kinfield += '<option value="39">Italy</option>';
+	kinfield += '<option value="1-876">Jamaica</option>';
+	kinfield += '<option value="81">Japan</option>';
+	kinfield += '<option value="962">Jordan</option>';
+	kinfield += '<option value="7">Russia</option>';
+	kinfield += '<option value="254">Kenya</option>';
+	kinfield += '<option value="686">Kiribati</option>';
+	kinfield += '<option value="850">Korea North</option>';
+	kinfield += '<option value="82">Korea South</option>';
+	kinfield += '<option value="965">Kuwait</option>';
+	kinfield += '<option value="996">Kyrgyzstan</option>';
+	kinfield += '<option value="856">Laos</option>';
+	kinfield += '<option value="371">Latvia</option>';
+	kinfield += '<option value="961">Lebanon</option>';
+	kinfield += '<option value="266">Lesotho</option>';
+	kinfield += '<option value="231">Liberia</option>';
+	kinfield += '<option value="218">Libya</option>';
+	kinfield += '<option value="423">Liechtenstein</option>';
+	kinfield += '<option value="370">Lithuania</option>';
+	kinfield += '<option value="352">Luxembourg</option>';
+	kinfield += '<option value="853">Macau</option>';
+	kinfield += '<option value="389">Macedonia</option>';
+	kinfield += '<option value="261">Madagascar</option>';
+	kinfield += '<option value="60">Malaysia</option>';
+	kinfield += '<option value="265">Malawi</option>';
+	kinfield += '<option value="960">Maldives</option>';
+	kinfield += '<option value="223">Mali</option>';
+	kinfield += '<option value="356">Malta</option>';
+	kinfield += '<option value="692">Marshall Islands</option>';
+	kinfield += '<option value="596">Martinique</option>';
+	kinfield += '<option value="222">Mauritania</option>';
+	kinfield += '<option value="230">Mauritius</option>';
+	kinfield += '<option value="262">Reunion</option>';
+	kinfield += '<option value="52">Mexico</option>';
+	kinfield += '<option value="373">Moldova</option>';
+	kinfield += '<option value="377">Monaco</option>';
+	kinfield += '<option value="976">Mongolia</option>';
+	kinfield += '<option value="1-664">Montserrat</option>';
+	kinfield += '<option value="212">Morocco</option>';
+	kinfield += '<option value="258">Mozambique</option>';
+	kinfield += '<option value="95">Myanmar</option>';
+	kinfield += '<option value="264">Nambia</option>';
+	kinfield += '<option value="674">Nauru</option>';
+	kinfield += '<option value="977">Nepal</option>';
+	kinfield += '<option value="31">Netherlands</option>';
+	kinfield += '<option value="1-869">St Kitts-Nevis</option>';
+	kinfield += '<option value="687">New Caledonia</option>';
+	kinfield += '<option value="64">Pitcairn Island</option>';
+	kinfield += '<option value="505">Nicaragua</option>';
+	kinfield += '<option value="227">Niger</option>';
+	kinfield += '<option value="234">Nigeria</option>';
+	kinfield += '<option value="683">Niue</option>';
+	kinfield += '<option value="672-3">Norfolk Island</option>';
+	kinfield += '<option value="47">Norway</option>';
+	kinfield += '<option value="968">Oman</option>';
+	kinfield += '<option value="92">Pakistan</option>';
+	kinfield += '<option value="680">Palau Island</option>';
+	kinfield += '<option value="970">Palestine</option>';
+	kinfield += '<option value="507">Panama</option>';
+	kinfield += '<option value="675">Papua New Guinea</option>';
+	kinfield += '<option value="595">Paraguay</option>';
+	kinfield += '<option value="51">Peru</option>';
+	kinfield += '<option value="63">Phillipines</option>';
+	kinfield += '<option value="48">Poland</option>';
+	kinfield += '<option value="351">Portugal</option>';
+	kinfield += '<option value="1-787, 1-939">Puerto Rico</option>';
+	kinfield += '<option value="974">Qatar</option>';
+	kinfield += '<option value="382">Republic of Montenegro</option>';
+	kinfield += '<option value="381">Serbia</option>';
+	kinfield += '<option value="40">Romania</option>';
+	kinfield += '<option value="250">Rwanda</option>';
+	kinfield += '<option value="599-3">St Eustatius</option>';
+	kinfield += '<option value="290">St Helena</option>';
+	kinfield += '<option value="1-758">St Lucia</option>';
+	kinfield += '<option value="508">St Pierre &amp;amp; Miquelon</option>';
+	kinfield += '<option value="1-784">St Vincent &amp;amp; Grenadines</option>';
+	kinfield += '<option value="1-670">Saipan</option>';
+	kinfield += '<option value="685">Samoa</option>';
+	kinfield += '<option value="378">San Marino</option>';
+	kinfield += '<option value="239">Sao Tome &amp;amp; Principe</option>';
+	kinfield += '<option value="966">Saudi Arabia</option>';
+	kinfield += '<option value="221">Senegal</option>';
+	kinfield += '<option value="248">Seychelles</option>';
+	kinfield += '<option value="232">Sierra Leone</option>';
+	kinfield += '<option value="65">Singapore</option>';
+	kinfield += '<option value="421">Slovakia</option>';
+	kinfield += '<option value="386">Slovenia</option>';
+	kinfield += '<option value="677">Solomon Islands</option>';
+	kinfield += '<option value="252">Somalia</option>';
+	kinfield += '<option value="27">South Africa</option>';
+	kinfield += '<option value="34">Spain</option>';
+	kinfield += '<option value="94">Sri Lanka</option>';
+	kinfield += '<option value="249">Sudan</option>';
+	kinfield += '<option value="597">Suriname</option>';
+	kinfield += '<option value="268">Swaziland</option>';
+	kinfield += '<option value="46">Sweden</option>';
+	kinfield += '<option value="41">Switzerland</option>';
+	kinfield += '<option value="963">Syria</option>';
+	kinfield += '<option value="886">Taiwan</option>';
+	kinfield += '<option value="992">Tajikistan</option>';
+	kinfield += '<option value="255">Tanzania</option>';
+	kinfield += '<option value="66">Thailand</option>';
+	kinfield += '<option value="228">Togo</option>';
+	kinfield += '<option value="690">Tokelau</option>';
+	kinfield += '<option value="676">Tonga</option>';
+	kinfield += '<option value="1-868">Trinidad &amp;amp; Tobago</option>';
+	kinfield += '<option value="216">Tunisia</option>';
+	kinfield += '<option value="90">Turkey</option>';
+	kinfield += '<option value="993">Turkmenistan</option>';
+	kinfield += '<option value="1-649">Turks &amp;amp; Caicos Island</option>';
+	kinfield += '<option value="688">Tuvalu</option>';
+	kinfield += '<option value="256">Uganda</option>';
+	kinfield += '<option value="380">Ukraine</option>';
+	kinfield += '<option value="971">United Arab Erimates</option>';
+	kinfield += '<option value="44">United Kingdom</option>';
+	kinfield += '<option value="598">Uraguay</option>';
+	kinfield += '<option value="998">Uzbekistan</option>';
+	kinfield += '<option value="678">Vanuatu</option>';
+	kinfield += '<option value="379">Vatican City State</option>';
+	kinfield += '<option value="58">Venezuela</option>';
+	kinfield += '<option value="84">Vietnam</option>';
+	kinfield += '<option value="1-284">Virgin Islands (Brit)</option>';
+	kinfield += '<option value="1-340">Virgin Islands (USA)</option>';
+	kinfield += '<option value="681">Wallis &amp;amp; Futana Island</option>';
+	kinfield += '<option value="967">Yemen</option>';
+	kinfield += '<option value="243">Zaire</option>';
+	kinfield += '<option value="260">Zambia</option>';
+	kinfield += '<option value="263">Zimbabwe</option>';
+	kinfield += '</select>';
+
+	kinfield += '<div class="help-block"></div>';
 	kinfield += '</div>';
+	
+	kinfield += '<div class="kin-country-code"></div>';
 
 	kinfield += '<div class="form-group field-createstudentform-kin_phone">';
 	kinfield += '<input type="text" id="createstudentform-kin_phone" class="form-control" name="CreateStudentForm[kin_phone][]" autocomplete="off">';
@@ -1318,8 +1649,241 @@ $('.addmorekin').click(function(){
 	kinfield += '<div class="icnoformat kinmobile">';
 	kinfield += '<div class="form-group field-createstudentform-kin_mobile_country_code">';
 	kinfield += '<label class="control-label" for="createstudentform-kin_mobile_country_code">Mobile No.</label>';
-	kinfield += '<input type="text" id="createstudentform-kin_mobile_country_code" class="form-control" name="CreateStudentForm[kin_mobile_country_code][]" autocomplete="off">';
+	kinfield += '<select id="createstudentform-kin_mobile_country_code" class="form-control kinmobilecode" name="CreateStudentForm[kin_mobile_country_code][]">';
+	kinfield += '<option value="">Select Country</option>';
+	kinfield += '<option value="93">Afganistan</option>';
+	kinfield += '<option value="355">Albania</option>';
+	kinfield += '<option value="213">Algeria</option>';
+	kinfield += '<option value="1-684">Samoa American</option>';
+	kinfield += '<option value="376">Andorra</option>';
+	kinfield += '<option value="244">Angola</option>';
+	kinfield += '<option value="1-264">Anguilla</option>';
+	kinfield += '<option value="1-268">Antigua &amp;amp; Barbuda</option>';
+	kinfield += '<option value="54">Argentina</option>';
+	kinfield += '<option value="374">Armenia</option>';
+	kinfield += '<option value="297">Aruba</option>';
+	kinfield += '<option value="61">Cocos Island</option>';
+	kinfield += '<option value="43">Austria</option>';
+	kinfield += '<option value="994">Azerbaijan</option>';
+	kinfield += '<option value="1-242">Bahamas</option>';
+	kinfield += '<option value="973">Bahrain</option>';
+	kinfield += '<option value="880">Bangladesh</option>';
+	kinfield += '<option value="1-246">Barbados</option>';
+	kinfield += '<option value="375">Belarus</option>';
+	kinfield += '<option value="32">Belgium</option>';
+	kinfield += '<option value="501">Belize</option>';
+	kinfield += '<option value="229">Benin</option>';
+	kinfield += '<option value="1-441">Bermuda</option>';
+	kinfield += '<option value="975">Bhutan</option>';
+	kinfield += '<option value="591">Bolivia</option>';
+	kinfield += '<option value="599-7">Bonaire</option>';
+	kinfield += '<option value="387">Bosnia &amp;amp; Herzegovina</option>';
+	kinfield += '<option value="267">Botswana</option>';
+	kinfield += '<option value="55">Brazil</option>';
+	kinfield += '<option value="246">British Indian Ocean Territory</option>';
+	kinfield += '<option value="673">Brunei</option>';
+	kinfield += '<option value="359">Bulgaria</option>';
+	kinfield += '<option value="226">Burkina Faso</option>';
+	kinfield += '<option value="257">Burundi</option>';
+	kinfield += '<option value="855">Cambodia</option>';
+	kinfield += '<option value="237">Cameroon</option>';
+	kinfield += '<option value="1">United States of America</option>';
+	kinfield += '<option value="238">Cape Verde</option>';
+	kinfield += '<option value="1-345">Cayman Islands</option>';
+	kinfield += '<option value="236">Central African Republic</option>';
+	kinfield += '<option value="235">Chad</option>';
+	kinfield += '<option value="56">Chile</option>';
+	kinfield += '<option value="86">China</option>';
+	kinfield += '<option value="57">Colombia</option>';
+	kinfield += '<option value="269">Comoros</option>';
+	kinfield += '<option value="242">Congo</option>';
+	kinfield += '<option value="682">Cook Islands</option>';
+	kinfield += '<option value="506">Costa Rica</option>';
+	kinfield += '<option value="385">Croatia</option>';
+	kinfield += '<option value="53">Cuba</option>';
+	kinfield += '<option value="599">Curaco</option>';
+	kinfield += '<option value="357">Cyprus</option>';
+	kinfield += '<option value="420">Czech Republic</option>';
+	kinfield += '<option value="45">Denmark</option>';
+	kinfield += '<option value="253">Djibouti</option>';
+	kinfield += '<option value="1-767">Dominica</option>';
+	kinfield += '<option value="1-809, 1-829, 1-849">Dominican Republic</option>';
+	kinfield += '<option value="670">East Timor</option>';
+	kinfield += '<option value="593">Ecuador</option>';
+	kinfield += '<option value="20">Egypt</option>';
+	kinfield += '<option value="503">El Salvador</option>';
+	kinfield += '<option value="240">Equatorial Guinea</option>';
+	kinfield += '<option value="291">Eritrea</option>';
+	kinfield += '<option value="372">Estonia</option>';
+	kinfield += '<option value="251">Ethiopia</option>';
+	kinfield += '<option value="500">Falkland Islands</option>';
+	kinfield += '<option value="298">Faroe Islands</option>';
+	kinfield += '<option value="679">Fiji</option>';
+	kinfield += '<option value="358">Finland</option>';
+	kinfield += '<option value="33">France</option>';
+	kinfield += '<option value="594">French Guiana</option>';
+	kinfield += '<option value="689">Tahiti</option>';
+	kinfield += '<option value="241">Gabon</option>';
+	kinfield += '<option value="220">Gambia</option>';
+	kinfield += '<option value="995">Georgia</option>';
+	kinfield += '<option value="49">Germany</option>';
+	kinfield += '<option value="233">Ghana</option>';
+	kinfield += '<option value="350">Gibraltar</option>';
+	kinfield += '<option value="30">Greece</option>';
+	kinfield += '<option value="299">Greenland</option>';
+	kinfield += '<option value="1-473">Grenada</option>';
+	kinfield += '<option value="590">St Maarten</option>';
+	kinfield += '<option value="1-671">Guam</option>';
+	kinfield += '<option value="502">Guatemala</option>';
+	kinfield += '<option value="224">Guinea</option>';
+	kinfield += '<option value="592">Guyana</option>';
+	kinfield += '<option value="509">Haiti</option>';
+	kinfield += '<option value="808">Hawaii</option>';
+	kinfield += '<option value="504">Honduras</option>';
+	kinfield += '<option value="852">Hong Kong</option>';
+	kinfield += '<option value="36">Hungary</option>';
+	kinfield += '<option value="354">Iceland</option>';
+	kinfield += '<option value="91">India</option>';
+	kinfield += '<option value="62">Indonesia</option>';
+	kinfield += '<option value="98">Iran</option>';
+	kinfield += '<option value="964">Iraq</option>';
+	kinfield += '<option value="353">Ireland</option>';
+	kinfield += '<option value="44-1624">Isle of Man</option>';
+	kinfield += '<option value="972">Israel</option>';
+	kinfield += '<option value="39">Italy</option>';
+	kinfield += '<option value="1-876">Jamaica</option>';
+	kinfield += '<option value="81">Japan</option>';
+	kinfield += '<option value="962">Jordan</option>';
+	kinfield += '<option value="7">Russia</option>';
+	kinfield += '<option value="254">Kenya</option>';
+	kinfield += '<option value="686">Kiribati</option>';
+	kinfield += '<option value="850">Korea North</option>';
+	kinfield += '<option value="82">Korea South</option>';
+	kinfield += '<option value="965">Kuwait</option>';
+	kinfield += '<option value="996">Kyrgyzstan</option>';
+	kinfield += '<option value="856">Laos</option>';
+	kinfield += '<option value="371">Latvia</option>';
+	kinfield += '<option value="961">Lebanon</option>';
+	kinfield += '<option value="266">Lesotho</option>';
+	kinfield += '<option value="231">Liberia</option>';
+	kinfield += '<option value="218">Libya</option>';
+	kinfield += '<option value="423">Liechtenstein</option>';
+	kinfield += '<option value="370">Lithuania</option>';
+	kinfield += '<option value="352">Luxembourg</option>';
+	kinfield += '<option value="853">Macau</option>';
+	kinfield += '<option value="389">Macedonia</option>';
+	kinfield += '<option value="261">Madagascar</option>';
+	kinfield += '<option value="60">Malaysia</option>';
+	kinfield += '<option value="265">Malawi</option>';
+	kinfield += '<option value="960">Maldives</option>';
+	kinfield += '<option value="223">Mali</option>';
+	kinfield += '<option value="356">Malta</option>';
+	kinfield += '<option value="692">Marshall Islands</option>';
+	kinfield += '<option value="596">Martinique</option>';
+	kinfield += '<option value="222">Mauritania</option>';
+	kinfield += '<option value="230">Mauritius</option>';
+	kinfield += '<option value="262">Reunion</option>';
+	kinfield += '<option value="52">Mexico</option>';
+	kinfield += '<option value="373">Moldova</option>';
+	kinfield += '<option value="377">Monaco</option>';
+	kinfield += '<option value="976">Mongolia</option>';
+	kinfield += '<option value="1-664">Montserrat</option>';
+	kinfield += '<option value="212">Morocco</option>';
+	kinfield += '<option value="258">Mozambique</option>';
+	kinfield += '<option value="95">Myanmar</option>';
+	kinfield += '<option value="264">Nambia</option>';
+	kinfield += '<option value="674">Nauru</option>';
+	kinfield += '<option value="977">Nepal</option>';
+	kinfield += '<option value="31">Netherlands</option>';
+	kinfield += '<option value="1-869">St Kitts-Nevis</option>';
+	kinfield += '<option value="687">New Caledonia</option>';
+	kinfield += '<option value="64">Pitcairn Island</option>';
+	kinfield += '<option value="505">Nicaragua</option>';
+	kinfield += '<option value="227">Niger</option>';
+	kinfield += '<option value="234">Nigeria</option>';
+	kinfield += '<option value="683">Niue</option>';
+	kinfield += '<option value="672-3">Norfolk Island</option>';
+	kinfield += '<option value="47">Norway</option>';
+	kinfield += '<option value="968">Oman</option>';
+	kinfield += '<option value="92">Pakistan</option>';
+	kinfield += '<option value="680">Palau Island</option>';
+	kinfield += '<option value="970">Palestine</option>';
+	kinfield += '<option value="507">Panama</option>';
+	kinfield += '<option value="675">Papua New Guinea</option>';
+	kinfield += '<option value="595">Paraguay</option>';
+	kinfield += '<option value="51">Peru</option>';
+	kinfield += '<option value="63">Phillipines</option>';
+	kinfield += '<option value="48">Poland</option>';
+	kinfield += '<option value="351">Portugal</option>';
+	kinfield += '<option value="1-787, 1-939">Puerto Rico</option>';
+	kinfield += '<option value="974">Qatar</option>';
+	kinfield += '<option value="382">Republic of Montenegro</option>';
+	kinfield += '<option value="381">Serbia</option>';
+	kinfield += '<option value="40">Romania</option>';
+	kinfield += '<option value="250">Rwanda</option>';
+	kinfield += '<option value="599-3">St Eustatius</option>';
+	kinfield += '<option value="290">St Helena</option>';
+	kinfield += '<option value="1-758">St Lucia</option>';
+	kinfield += '<option value="508">St Pierre &amp;amp; Miquelon</option>';
+	kinfield += '<option value="1-784">St Vincent &amp;amp; Grenadines</option>';
+	kinfield += '<option value="1-670">Saipan</option>';
+	kinfield += '<option value="685">Samoa</option>';
+	kinfield += '<option value="378">San Marino</option>';
+	kinfield += '<option value="239">Sao Tome &amp;amp; Principe</option>';
+	kinfield += '<option value="966">Saudi Arabia</option>';
+	kinfield += '<option value="221">Senegal</option>';
+	kinfield += '<option value="248">Seychelles</option>';
+	kinfield += '<option value="232">Sierra Leone</option>';
+	kinfield += '<option value="65">Singapore</option>';
+	kinfield += '<option value="421">Slovakia</option>';
+	kinfield += '<option value="386">Slovenia</option>';
+	kinfield += '<option value="677">Solomon Islands</option>';
+	kinfield += '<option value="252">Somalia</option>';
+	kinfield += '<option value="27">South Africa</option>';
+	kinfield += '<option value="34">Spain</option>';
+	kinfield += '<option value="94">Sri Lanka</option>';
+	kinfield += '<option value="249">Sudan</option>';
+	kinfield += '<option value="597">Suriname</option>';
+	kinfield += '<option value="268">Swaziland</option>';
+	kinfield += '<option value="46">Sweden</option>';
+	kinfield += '<option value="41">Switzerland</option>';
+	kinfield += '<option value="963">Syria</option>';
+	kinfield += '<option value="886">Taiwan</option>';
+	kinfield += '<option value="992">Tajikistan</option>';
+	kinfield += '<option value="255">Tanzania</option>';
+	kinfield += '<option value="66">Thailand</option>';
+	kinfield += '<option value="228">Togo</option>';
+	kinfield += '<option value="690">Tokelau</option>';
+	kinfield += '<option value="676">Tonga</option>';
+	kinfield += '<option value="1-868">Trinidad &amp;amp; Tobago</option>';
+	kinfield += '<option value="216">Tunisia</option>';
+	kinfield += '<option value="90">Turkey</option>';
+	kinfield += '<option value="993">Turkmenistan</option>';
+	kinfield += '<option value="1-649">Turks &amp;amp; Caicos Island</option>';
+	kinfield += '<option value="688">Tuvalu</option>';
+	kinfield += '<option value="256">Uganda</option>';
+	kinfield += '<option value="380">Ukraine</option>';
+	kinfield += '<option value="971">United Arab Erimates</option>';
+	kinfield += '<option value="44">United Kingdom</option>';
+	kinfield += '<option value="598">Uraguay</option>';
+	kinfield += '<option value="998">Uzbekistan</option>';
+	kinfield += '<option value="678">Vanuatu</option>';
+	kinfield += '<option value="379">Vatican City State</option>';
+	kinfield += '<option value="58">Venezuela</option>';
+	kinfield += '<option value="84">Vietnam</option>';
+	kinfield += '<option value="1-284">Virgin Islands (Brit)</option>';
+	kinfield += '<option value="1-340">Virgin Islands (USA)</option>';
+	kinfield += '<option value="681">Wallis &amp;amp; Futana Island</option>';
+	kinfield += '<option value="967">Yemen</option>';
+	kinfield += '<option value="243">Zaire</option>';
+	kinfield += '<option value="260">Zambia</option>';
+	kinfield += '<option value="263">Zimbabwe</option>';
+	kinfield += '</select>';
+
+	kinfield += '<div class="help-block"></div>';
 	kinfield += '</div>';
+	
+	kinfield += '<div class="kin-mobile-code"></div>';
 
 	kinfield += '<div class="form-group field-createstudentform-kin_mobile">';
 	kinfield += '<input type="text" id="createstudentform-kin_mobile" class="form-control" name="CreateStudentForm[kin_mobile][]" autocomplete="off">';
@@ -1334,6 +1898,8 @@ $('.addmorekin').click(function(){
 	kinfield += '<div class="form-group field-createstudentform-kin_occupation">';
 	kinfield += '<label class="control-label" for="createstudentform-kin_occupation">Occupation</label>';
 	kinfield += '<input type="text" id="createstudentform-kin_occupation" class="form-control" name="CreateStudentForm[kin_occupation][]" autocomplete="off">';
+	kinfield += '</div>';
+	kinfield += '</div>';
 	kinfield += '</div>';
 	kinfield += '</div>';
 	kinfield += '</div>';
