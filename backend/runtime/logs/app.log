@@ -59278,3 +59278,1412 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1601458592.569
     'REQUEST_TIME' => 1601458592
 ]
+2020-10-21 18:27:54 [::1][1][mloa408g5bf7vjhodr998ll611][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: admin/reports-cross-tabulation' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reports-cross-t...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/reports-c...', Array)
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:27:54 [::1][1][mloa408g5bf7vjhodr998ll611][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => 'mloa408g5bf7vjhodr998ll611'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286274
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/import-students'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=mloa408g5bf7vjhodr998ll611'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1265'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603285074.051
+    'REQUEST_TIME' => 1603285074
+]
+2020-10-21 18:32:43 [::1][1][mloa408g5bf7vjhodr998ll611][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Undefined variable: query' in C:\wamp64\www\utbsems\common\controllers\CommonController.php:25
+Stack trace:
+#0 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(1137): common\controllers\CommonController::exceptionMessage('Undefined varia...')
+#1 [internal function]: backend\controllers\AdminController->actionReportsCrossTabulation()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reports-cross-t...', Array)
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('admin/reports-c...', Array)
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#8 {main}
+2020-10-21 18:32:43 [::1][1][mloa408g5bf7vjhodr998ll611][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => 'mloa408g5bf7vjhodr998ll611'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286563
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=mloa408g5bf7vjhodr998ll611'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1309'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603285363.501
+    'REQUEST_TIME' => 1603285363
+]
+2020-10-21 18:33:06 [::1][1][mloa408g5bf7vjhodr998ll611][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: query' in C:\wamp64\www\utbsems\backend\views\admin\reports-cross-tabulation.php:54
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(1135): yii\base\Controller->render()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionReportsCrossTabulation()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#11 {main}
+2020-10-21 18:33:06 [::1][1][mloa408g5bf7vjhodr998ll611][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => 'mloa408g5bf7vjhodr998ll611'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286586
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=mloa408g5bf7vjhodr998ll611'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1322'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603285386.722
+    'REQUEST_TIME' => 1603285386
+]
+2020-10-21 17:46:40 [::1][1][mloa408g5bf7vjhodr998ll611][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: years' in C:\wamp64\www\utbsems\backend\views\admin\reports-cross-tabulation.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render()
+#3 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(1135): yii\base\Controller->render()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionReportsCrossTabulation()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#10 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#11 {main}
+2020-10-21 17:46:39 [::1][1][mloa408g5bf7vjhodr998ll611][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => 'mloa408g5bf7vjhodr998ll611'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603283800
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=mloa408g5bf7vjhodr998ll611'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1399'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/reports-cross-tabulation'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603282599.952
+    'REQUEST_TIME' => 1603282599
+]
+2020-10-21 18:25:58 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/highcharts/highcharts.js.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/highcharts/h...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:25:58 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286158
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1565'
+    'REDIRECT_URL' => '/utbsems/backend/web/js/highcharts/highcharts.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/js/highcharts/highcharts.js.map'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603284958.548
+    'REQUEST_TIME' => 1603284958
+]
+2020-10-21 18:25:58 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/highcharts/exporting.js.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/highcharts/e...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:25:58 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286158
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1600'
+    'REDIRECT_URL' => '/utbsems/backend/web/js/highcharts/exporting.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/js/highcharts/exporting.js.map'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603284958.549
+    'REQUEST_TIME' => 1603284958
+]
+2020-10-21 18:25:58 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/highcharts/export-data.js.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/highcharts/e...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:25:58 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286158
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1605'
+    'REDIRECT_URL' => '/utbsems/backend/web/js/highcharts/export-data.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/js/highcharts/export-data.js.map'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603284958.571
+    'REQUEST_TIME' => 1603284958
+]
+2020-10-21 18:26:48 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/highcharts/export-data.js.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/highcharts/e...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:26:48 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286208
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1668'
+    'REDIRECT_URL' => '/utbsems/backend/web/js/highcharts/export-data.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/js/highcharts/export-data.js.map'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603285008.733
+    'REQUEST_TIME' => 1603285008
+]
+2020-10-21 18:26:48 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/highcharts/highcharts.js.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/highcharts/h...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:26:48 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286209
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1660'
+    'REDIRECT_URL' => '/utbsems/backend/web/js/highcharts/highcharts.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/js/highcharts/highcharts.js.map'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603285008.715
+    'REQUEST_TIME' => 1603285008
+]
+2020-10-21 18:26:48 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "js/highcharts/exporting.js.map".' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('js/highcharts/e...', Array)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:26:48 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286209
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'no-cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1659'
+    'REDIRECT_URL' => '/utbsems/backend/web/js/highcharts/exporting.js.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/js/highcharts/exporting.js.map'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603285008.725
+    'REQUEST_TIME' => 1603285008
+]
+2020-10-21 17:44:01 [::1][-][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('<span class="st...')
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(130): session_start()
+#13 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(563): yii\web\Session->open()
+#14 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(625): yii\web\Session->get('<span class="st...')
+#15 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(181): yii\web\User->renewAuthStatus()
+#16 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(351): yii\web\User->getIdentity()
+#17 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#18 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(38): yii\base\Component->__get('<span class="st...')
+#19 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\AdminController->beforeAction(Object(yii\base\InlineAction))
+#20 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#21 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#22 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#24 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('<span class="st...')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(130): session_start()
+#11 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(563): yii\web\Session->open()
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(625): yii\web\Session->get('<span class="st...')
+#13 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(181): yii\web\User->renewAuthStatus()
+#14 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(351): yii\web\User->getIdentity()
+#15 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#16 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(38): yii\base\Component->__get('<span class="st...')
+#17 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\AdminController->beforeAction(Object(yii\base\InlineAction))
+#18 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#20 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#22 {main}
+Additional Information:
+
+2020-10-21 17:43:41 [::1][-][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/reports-cross-tabulation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1152'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/students-list'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/students-list'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603282406.823
+    'REQUEST_TIME' => 1603282406
+]
+2020-10-21 17:44:01 [127.0.0.1][-][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('<span class="st...')
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(130): session_start()
+#13 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(563): yii\web\Session->open()
+#14 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(625): yii\web\Session->get('<span class="st...')
+#15 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(181): yii\web\User->renewAuthStatus()
+#16 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(351): yii\web\User->getIdentity()
+#17 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#18 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(38): yii\base\Component->__get('<span class="st...')
+#19 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\AdminController->beforeAction(Object(yii\base\InlineAction))
+#20 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#21 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#22 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#24 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('<span class="st...')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(130): session_start()
+#11 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(563): yii\web\Session->open()
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(625): yii\web\Session->get('<span class="st...')
+#13 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(181): yii\web\User->renewAuthStatus()
+#14 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(351): yii\web\User->getIdentity()
+#15 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#16 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(38): yii\base\Component->__get('<span class="st...')
+#17 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\AdminController->beforeAction(Object(yii\base\InlineAction))
+#18 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#20 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#22 {main}
+Additional Information:
+
+2020-10-21 17:43:41 [127.0.0.1][-][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/students-list'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1156'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/student-create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/student-create'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603282409.531
+    'REQUEST_TIME' => 1603282409
+]
+2020-10-21 17:44:01 [::1][-][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#9 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('<span class="st...')
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(130): session_start()
+#13 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(563): yii\web\Session->open()
+#14 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(625): yii\web\Session->get('<span class="st...')
+#15 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(181): yii\web\User->renewAuthStatus()
+#16 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(351): yii\web\User->getIdentity()
+#17 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#18 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(38): yii\base\Component->__get('<span class="st...')
+#19 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\AdminController->beforeAction(Object(yii\base\InlineAction))
+#20 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#21 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#22 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#24 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('<span class="st...')
+#10 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(130): session_start()
+#11 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Session.php(563): yii\web\Session->open()
+#12 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(625): yii\web\Session->get('<span class="st...')
+#13 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(181): yii\web\User->renewAuthStatus()
+#14 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\User.php(351): yii\web\User->getIdentity()
+#15 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#16 C:\wamp64\www\utbsems\backend\controllers\AdminController.php(38): yii\base\Component->__get('<span class="st...')
+#17 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\AdminController->beforeAction(Object(yii\base\InlineAction))
+#18 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#20 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#22 {main}
+Additional Information:
+
+2020-10-21 17:43:41 [::1][-][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/reports-cross-tabulation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '1151'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/reports'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/utbsems/backend/web/admin/reports'
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603282407.228
+    'REQUEST_TIME' => 1603282407
+]
+2020-10-21 18:26:05 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: role' in C:\wamp64\www\utbsems\common\models\Student.php:292
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionSearchStudents()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#6 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#7 {main}
+2020-10-21 18:26:05 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_GET = [
+    'rumpun' => ''
+    'nationality' => ''
+    'studenticcolor' => 'Yellow'
+    'race' => ''
+    'religion' => ''
+    'gender' => ''
+    'martialstatus' => ''
+    'typeofentry' => ''
+    'bankname' => ''
+    'sponsortype' => ''
+    'programme_name' => ''
+    'entry' => ''
+    'intake' => ''
+    'mode' => ''
+    'type_of_residential' => ''
+    'type_of_programme' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286165
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'VjBkUGlkVEsbSDEzWSMjGgNlNmkIPhxyOwkmEQMDMyYDaCoGIA0CAw=='
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/reports-cross-tabulation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '7884'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/search-students'
+    'REDIRECT_QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'REQUEST_URI' => '/utbsems/backend/web/admin/search-students?rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603284965.614
+    'REQUEST_TIME' => 1603284965
+]
+2020-10-21 18:26:24 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: role' in C:\wamp64\www\utbsems\common\models\Student.php:292
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): backend\controllers\AdminController->actionSearchStudents()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array:{C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\InlineAction.php:55}()
+#2 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams()
+#3 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction()
+#4 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction()
+#5 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#6 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#7 {main}
+2020-10-21 18:26:24 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_GET = [
+    'rumpun' => ''
+    'nationality' => ''
+    'studenticcolor' => 'Yellow'
+    'race' => ''
+    'religion' => ''
+    'gender' => ''
+    'martialstatus' => ''
+    'typeofentry' => ''
+    'bankname' => ''
+    'sponsortype' => ''
+    'programme_name' => ''
+    'entry' => ''
+    'intake' => ''
+    'mode' => ''
+    'type_of_residential' => ''
+    'type_of_programme' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603286184
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'OThDT2hQZW10QBYsWBcSPGxtEXYJCi1UVAEBDgI3AgBsYA0ZITkzJQ=='
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/reports-cross-tabulation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '7886'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/search-students'
+    'REDIRECT_QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'REQUEST_URI' => '/utbsems/backend/web/admin/search-students?rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603284984.199
+    'REQUEST_TIME' => 1603284984
+]
+2020-10-21 18:05:25 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Response content must not be an array.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Response.php:960
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Response.php(311): yii\web\Response->prepare()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(381): yii\web\Response->send()
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+2020-10-21 18:05:25 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_GET = [
+    'rumpun' => ''
+    'nationality' => ''
+    'studenticcolor' => 'Yellow'
+    'race' => ''
+    'religion' => ''
+    'gender' => ''
+    'martialstatus' => ''
+    'typeofentry' => ''
+    'bankname' => ''
+    'sponsortype' => ''
+    'programme_name' => ''
+    'entry' => ''
+    'intake' => ''
+    'mode' => ''
+    'type_of_residential' => ''
+    'type_of_programme' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603284925
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'SU1EVjNhLkIENRE1AyZZExwYFm9SO2Z7JHQGF1kGSS8cFQoAegh4Cg=='
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/utbsems/backend/web/admin/reports-cross-tabulation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '8845'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/search-students'
+    'REDIRECT_QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'REQUEST_URI' => '/utbsems/backend/web/admin/search-students?rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603283725.428
+    'REQUEST_TIME' => 1603283725
+]
+2020-10-21 18:05:42 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Response content must not be an array.' in C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Response.php:960
+Stack trace:
+#0 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\web\Response.php(311): yii\web\Response->prepare()
+#1 C:\wamp64\www\utbsems\vendor\yiisoft\yii2\base\Application.php(381): yii\web\Response->send()
+#2 C:\wamp64\www\utbsems\backend\web\index.php(27): yii\base\Application->run()
+#3 {main}
+2020-10-21 18:05:42 [::1][1][0mmvfs9l6lp9bg2ibor5c4mub3][info][application] $_GET = [
+    'rumpun' => ''
+    'nationality' => ''
+    'studenticcolor' => 'Yellow'
+    'race' => ''
+    'religion' => ''
+    'gender' => ''
+    'martialstatus' => ''
+    'typeofentry' => ''
+    'bankname' => ''
+    'sponsortype' => ''
+    'programme_name' => ''
+    'entry' => ''
+    'intake' => ''
+    'mode' => ''
+    'type_of_residential' => ''
+    'type_of_programme' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH\";}'
+    'PHPSESSID' => '0mmvfs9l6lp9bg2ibor5c4mub3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'secretkey' => '$%%EquiPPP@2018%%$'
+    '__id' => 1
+    '__expire' => 1603284942
+    '__auth_last_update' => 1592304399
+    '__userRoles' => []
+    '__userPermissions' => []
+    '__userRoutes' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Chromium\";v=\"86\", \"\\\"Not\\\\A;Brand\";v=\"99\", \"Google Chrome\";v=\"86\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ed13a74a0f1f6c82284022ed2ce2f801d9c1286bcaeae47dcea32226dcb42c1aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22MxUc0GwQUUR9aZH9m9BAjggmUXNVIiVH%22%3B%7D; PHPSESSID=0mmvfs9l6lp9bg2ibor5c4mub3'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\MATLAB\\R2010a\\runtime\\win64;C:\\Program Files\\MATLAB\\R2010a\\bin;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\wamp64\\bin\\php\\php7.3.12;C:\\Program Files (x86)\\DevDesktop\\drush_9;C:\\Program Files (x86)\\DevDesktop\\drush_10;C:\\Program Files (x86)\\DevDesktop\\tools;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Win64) PHP/5.6.40 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Win64) PHP/5.6.40'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/utbsems/backend/web/index.php'
+    'REMOTE_PORT' => '8846'
+    'REDIRECT_URL' => '/utbsems/backend/web/admin/search-students'
+    'REDIRECT_QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'REQUEST_URI' => '/utbsems/backend/web/admin/search-students?rumpun=&nationality=&studenticcolor=Yellow&race=&religion=&gender=&martialstatus=&typeofentry=&bankname=&sponsortype=&programme_name=&entry=&intake=&mode=&type_of_residential=&type_of_programme='
+    'SCRIPT_NAME' => '/utbsems/backend/web/index.php'
+    'PHP_SELF' => '/utbsems/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1603283742.522
+    'REQUEST_TIME' => 1603283742
+]

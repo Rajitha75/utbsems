@@ -1113,10 +1113,23 @@ class AdminController extends \common\controllers\CommonController
     }
 
     public function actionReports(){
-        //try{
+        try{
 			$student = new Student();
 			$programme = Programme::getAllProgrammes();
             return $this->render("reports", [
+			 'model'=>$student,
+			 'programme'=>$programme
+			]);
+        } catch (\Exception $e) {
+            \common\controllers\CommonController::exceptionMessage($e->getMessage());
+        }
+    }
+	
+	public function actionReportsCrossTabulation(){
+       // try{
+			$student = new Student();
+			$programme = Programme::getAllProgrammes();
+            return $this->render("reports-cross-tabulation", [
 			 'model'=>$student,
 			 'programme'=>$programme
 			]);
@@ -1127,52 +1140,52 @@ class AdminController extends \common\controllers\CommonController
 	
 	public function actionSearchStudents(){
         //try{
-		$studentname = Yii::$app->getRequest()->getQueryParam('name') ? Yii::$app->getRequest()->getQueryParam('name') : "";
+		//$studentname = Yii::$app->getRequest()->getQueryParam('name') ? Yii::$app->getRequest()->getQueryParam('name') : "";
         $progname = Yii::$app->getRequest()->getQueryParam('programme_name') ? Yii::$app->getRequest()->getQueryParam('programme_name') : "";
-        $rollno = Yii::$app->getRequest()->getQueryParam('rollno') ? Yii::$app->getRequest()->getQueryParam('rollno') : "";
+        //$rollno = Yii::$app->getRequest()->getQueryParam('rollno') ? Yii::$app->getRequest()->getQueryParam('rollno') : "";
         $rumpun = Yii::$app->getRequest()->getQueryParam('rumpun') ? Yii::$app->getRequest()->getQueryParam('rumpun') : "";
         $nationality = Yii::$app->getRequest()->getQueryParam('nationality') ? Yii::$app->getRequest()->getQueryParam('nationality') : "";
-        $studenticno = Yii::$app->getRequest()->getQueryParam('studenticno') ? Yii::$app->getRequest()->getQueryParam('studenticno') : "";
+        //$studenticno = Yii::$app->getRequest()->getQueryParam('studenticno') ? Yii::$app->getRequest()->getQueryParam('studenticno') : "";
         $studenticcolor = Yii::$app->getRequest()->getQueryParam('studenticcolor') ? Yii::$app->getRequest()->getQueryParam('studenticcolor') : "";
-        $passportno = Yii::$app->getRequest()->getQueryParam('passportno') ? Yii::$app->getRequest()->getQueryParam('passportno') : "";
+        //$passportno = Yii::$app->getRequest()->getQueryParam('passportno') ? Yii::$app->getRequest()->getQueryParam('passportno') : "";
         $race = Yii::$app->getRequest()->getQueryParam('race') ? Yii::$app->getRequest()->getQueryParam('race') : "";
         $religion = Yii::$app->getRequest()->getQueryParam('religion') ? Yii::$app->getRequest()->getQueryParam('religion') : "";
         $gender = Yii::$app->getRequest()->getQueryParam('gender') ? Yii::$app->getRequest()->getQueryParam('gender') : "";
         $martialstatus = Yii::$app->getRequest()->getQueryParam('martialstatus') ? Yii::$app->getRequest()->getQueryParam('martialstatus') : "";
-        $mobile = Yii::$app->getRequest()->getQueryParam('mobile') ? Yii::$app->getRequest()->getQueryParam('mobile') : "";
-        $telehome = Yii::$app->getRequest()->getQueryParam('telehome') ? Yii::$app->getRequest()->getQueryParam('telehome') : "";
+        //$mobile = Yii::$app->getRequest()->getQueryParam('mobile') ? Yii::$app->getRequest()->getQueryParam('mobile') : "";
+        //$telehome = Yii::$app->getRequest()->getQueryParam('telehome') ? Yii::$app->getRequest()->getQueryParam('telehome') : "";
         //$email = Yii::$app->getRequest()->getQueryParam('email') ? Yii::$app->getRequest()->getQueryParam('email') : "";
         $typeofentry = Yii::$app->getRequest()->getQueryParam('typeofentry') ? Yii::$app->getRequest()->getQueryParam('typeofentry') : "";
-        $address = Yii::$app->getRequest()->getQueryParam('address') ? Yii::$app->getRequest()->getQueryParam('address') : "";
+        //$address = Yii::$app->getRequest()->getQueryParam('address') ? Yii::$app->getRequest()->getQueryParam('address') : "";
         $bankname = Yii::$app->getRequest()->getQueryParam('bankname') ? Yii::$app->getRequest()->getQueryParam('bankname') : "";
-        $accountno = Yii::$app->getRequest()->getQueryParam('accountno') ? Yii::$app->getRequest()->getQueryParam('accountno') : "";
-        $fathername = Yii::$app->getRequest()->getQueryParam('fathername') ? Yii::$app->getRequest()->getQueryParam('fathername') : "";
-        $fathericno = Yii::$app->getRequest()->getQueryParam('fathericno') ? Yii::$app->getRequest()->getQueryParam('fathericno') : "";
-        $mothername = Yii::$app->getRequest()->getQueryParam('mothername') ? Yii::$app->getRequest()->getQueryParam('mothername') : "";
-        $mothericno = Yii::$app->getRequest()->getQueryParam('mothericno') ? Yii::$app->getRequest()->getQueryParam('mothericno') : "";
+       // $accountno = Yii::$app->getRequest()->getQueryParam('accountno') ? Yii::$app->getRequest()->getQueryParam('accountno') : "";
+        //$fathername = Yii::$app->getRequest()->getQueryParam('fathername') ? Yii::$app->getRequest()->getQueryParam('fathername') : "";
+        //$fathericno = Yii::$app->getRequest()->getQueryParam('fathericno') ? Yii::$app->getRequest()->getQueryParam('fathericno') : "";
+        //$mothername = Yii::$app->getRequest()->getQueryParam('mothername') ? Yii::$app->getRequest()->getQueryParam('mothername') : "";
+        //$mothericno = Yii::$app->getRequest()->getQueryParam('mothericno') ? Yii::$app->getRequest()->getQueryParam('mothericno') : "";
         $sponsortype = Yii::$app->getRequest()->getQueryParam('sponsortype') ? Yii::$app->getRequest()->getQueryParam('sponsortype') : "";
         $entry = Yii::$app->getRequest()->getQueryParam('entry') ? Yii::$app->getRequest()->getQueryParam('entry') : "";
         //$status = Yii::$app->getRequest()->getQueryParam('status') ? Yii::$app->getRequest()->getQueryParam('status') : "";
         $intake = Yii::$app->getRequest()->getQueryParam('intake') ? Yii::$app->getRequest()->getQueryParam('intake') : "";
         $mode = Yii::$app->getRequest()->getQueryParam('mode') ? Yii::$app->getRequest()->getQueryParam('mode') : "";
-        $utbemail = Yii::$app->getRequest()->getQueryParam('utbemail') ? Yii::$app->getRequest()->getQueryParam('utbemail') : "";
+        //$utbemail = Yii::$app->getRequest()->getQueryParam('utbemail') ? Yii::$app->getRequest()->getQueryParam('utbemail') : "";
         //$degree = Yii::$app->getRequest()->getQueryParam('degree') ? Yii::$app->getRequest()->getQueryParam('degree') : "";
-        $dateofregistration = Yii::$app->getRequest()->getQueryParam('dateofregistration') ? Yii::$app->getRequest()->getQueryParam('dateofregistration') : "";
-        $dateofleaving = Yii::$app->getRequest()->getQueryParam('dateofleaving') ? Yii::$app->getRequest()->getQueryParam('dateofleaving') : "";
+        //$dateofregistration = Yii::$app->getRequest()->getQueryParam('dateofregistration') ? Yii::$app->getRequest()->getQueryParam('dateofregistration') : "";
+        //$dateofleaving = Yii::$app->getRequest()->getQueryParam('dateofleaving') ? Yii::$app->getRequest()->getQueryParam('dateofleaving') : "";
         //$prevrollno = Yii::$app->getRequest()->getQueryParam('prevrollno') ? Yii::$app->getRequest()->getQueryParam('prevrollno') : "";
         //$prevprogname = Yii::$app->getRequest()->getQueryParam('prevprogname') ? Yii::$app->getRequest()->getQueryParam('prevprogname') : "";
         //$previntakeno = Yii::$app->getRequest()->getQueryParam('previntakeno') ? Yii::$app->getRequest()->getQueryParam('previntakeno') : "";
         //$prevutbemail = Yii::$app->getRequest()->getQueryParam('prevutbemail') ? Yii::$app->getRequest()->getQueryParam('prevutbemail') : "";
-		$age = Yii::$app->getRequest()->getQueryParam('age') ? Yii::$app->getRequest()->getQueryParam('age') : "";
-        $highest_qualification = Yii::$app->getRequest()->getQueryParam('highest_qualification') ? Yii::$app->getRequest()->getQueryParam('highest_qualification') : "";
-        $lastschoolname = Yii::$app->getRequest()->getQueryParam('lastschoolname') ? Yii::$app->getRequest()->getQueryParam('lastschoolname') : "";
-        $state_address = Yii::$app->getRequest()->getQueryParam('state_address') ? Yii::$app->getRequest()->getQueryParam('state_address') : "";
-		 $type_of_residential = Yii::$app->getRequest()->getQueryParam('type_of_residential') ? Yii::$app->getRequest()->getQueryParam('type_of_residential') : "";
+		//$age = Yii::$app->getRequest()->getQueryParam('age') ? Yii::$app->getRequest()->getQueryParam('age') : "";
+        //$highest_qualification = Yii::$app->getRequest()->getQueryParam('highest_qualification') ? Yii::$app->getRequest()->getQueryParam('highest_qualification') : "";
+        //$lastschoolname = Yii::$app->getRequest()->getQueryParam('lastschoolname') ? Yii::$app->getRequest()->getQueryParam('lastschoolname') : "";
+        //$state_address = Yii::$app->getRequest()->getQueryParam('state_address') ? Yii::$app->getRequest()->getQueryParam('state_address') : "";
+		$type_of_residential = Yii::$app->getRequest()->getQueryParam('type_of_residential') ? Yii::$app->getRequest()->getQueryParam('type_of_residential') : "";
         $type_of_programme = Yii::$app->getRequest()->getQueryParam('type_of_programme') ? Yii::$app->getRequest()->getQueryParam('type_of_programme') : "";
-        $bank_account_name = Yii::$app->getRequest()->getQueryParam('bank_account_name') ? Yii::$app->getRequest()->getQueryParam('bank_account_name') : "";
+        //$bank_account_name = Yii::$app->getRequest()->getQueryParam('bank_account_name') ? Yii::$app->getRequest()->getQueryParam('bank_account_name') : "";
 
-		$uQuery=Student::getStudentsSearchList(false,$studentname, $rollno, $rumpun, $nationality, $studenticno, $studenticcolor, $passportno, $race, $religion, $gender, $martialstatus, $mobile, $telehome, $typeofentry, $address, $bankname, $accountno, $fathername, $fathericno, $mothername, $mothericno, $sponsortype, $progname, $entry, $intake, $mode, $utbemail, $dateofregistration, $dateofleaving, $age, $highest_qualification, $lastschoolname, $state_address, $type_of_residential, $type_of_programme, $bank_account_name);
-		print_r($uQuery);exit;
+		$uQuery=Student::getStudentsSearchList($rumpun, $nationality, $studenticcolor, $race, $religion, $gender, $martialstatus, $typeofentry, $bankname, $sponsortype, $progname, $entry, $intake, $mode, $type_of_residential, $type_of_programme);
+		return json_encode($uQuery);
        /* } catch (\Exception $e) {
             \common\controllers\CommonController::exceptionMessage($e->getMessage());
         }*/

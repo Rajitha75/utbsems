@@ -107,11 +107,27 @@ $issuperadmin = $users['superadmin'];
                                 <span class="title">Import Students</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/reports");?>" class="nav-link nav-toggle">
-                                <i class="icon-bar-chart" style="margin-top: 5px;"></i>
+						
+						<li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link nav-toggle">
+                                <i class="icon-list" style="margin-top: 5px;"></i>
                                 <span class="title">Reports</span>
+                                <span class="arrow"></span>
                             </a>
+                            <ul class="sub-menu">                                
+                                <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/reports");?>" class="nav-link nav-toggle">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <span class="title">Graph</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl("admin/reports-cross-tabulation");?>" class="nav-link nav-toggle">
+                                        <i class="fa fa-table"></i>
+                                        <span class="title">Cross Tabulation</span>
+                                    </a>
+                                </li>
+                            </ul>                           
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->

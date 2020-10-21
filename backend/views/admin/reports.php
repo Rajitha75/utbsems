@@ -27,7 +27,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 ?>
 
-<h3>Report:</h3>
+<h1 class='box-title'>Report</h1>
 <button type="button" class="btn btn-success" category="rumpun" categoryname="Rumpun">Rumpun</button>
 <button type="button" class="btn btn-danger" category="nationality" categoryname="Nationality">Nationality</button>
 <button type="button" class="btn btn-warning" category="race" categoryname="Race">Race</button>
@@ -53,7 +53,7 @@ use yii\helpers\Html;
 
 <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 
-<button type="button" id="advsearch" class="btn-success">Advanced Search</button> 
+<!--<button type="button" id="advsearch" class="btn-success">Advanced Search</button> -->
 
 <div id="advancedSearch" class="confirm-box" style="display:none;">
     <h3 id="dataConfirmLabel" >Advance Search</h3>   
